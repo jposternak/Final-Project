@@ -35,10 +35,10 @@
             // 
             // DBMaintBT
             // 
-            this.DBMaintBT.Location = new System.Drawing.Point(32, 68);
-            this.DBMaintBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DBMaintBT.Location = new System.Drawing.Point(43, 84);
+            this.DBMaintBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DBMaintBT.Name = "DBMaintBT";
-            this.DBMaintBT.Size = new System.Drawing.Size(177, 89);
+            this.DBMaintBT.Size = new System.Drawing.Size(236, 282);
             this.DBMaintBT.TabIndex = 0;
             this.DBMaintBT.Text = "תחזק טבלאות מערכת";
             this.DBMaintBT.UseVisualStyleBackColor = true;
@@ -46,9 +46,10 @@
             // 
             // SchedulerBT
             // 
-            this.SchedulerBT.Location = new System.Drawing.Point(305, 82);
+            this.SchedulerBT.Location = new System.Drawing.Point(407, 101);
+            this.SchedulerBT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SchedulerBT.Name = "SchedulerBT";
-            this.SchedulerBT.Size = new System.Drawing.Size(226, 133);
+            this.SchedulerBT.Size = new System.Drawing.Size(301, 265);
             this.SchedulerBT.TabIndex = 1;
             this.SchedulerBT.Text = "פתח תכנון שבועי";
             this.SchedulerBT.UseVisualStyleBackColor = true;
@@ -56,15 +57,15 @@
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SchedulerBT);
             this.Controls.Add(this.DBMaintBT);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
