@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControlzEx.Standard;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -66,6 +67,8 @@ namespace Final_Project
 
         }
 
+        Dictionary<int, ScheduleBlock> dataPoints = new Dictionary<int, ScheduleBlock>();
+
         private void treeRooms_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             try
@@ -74,6 +77,7 @@ namespace Final_Project
 
                 List<ScheduleBlock> sb = getList(selectedRoomID);
                 luz.Series.Clear();
+                dataPoints.Clear();
                 formatChart(e.Node.Text);
 
                 foreach (ScheduleBlock block in sb)
@@ -86,6 +90,7 @@ namespace Final_Project
                     createSerie(faculty);
 
                     int p = luz.Series[faculty].Points.AddXY(block.DayOfWeek, block.StartTime, block.EndTime);
+                    dataPoints.Add(p, block);
                     luz.Series[faculty].Points[p].BorderColor = Color.Black;
                     luz.Series[faculty].Points[p].BorderWidth = 3;
                     luz.Series[faculty].Points[p].Label = block.ToString();
@@ -194,8 +199,11 @@ namespace Final_Project
             {
                 DataPoint p = (DataPoint)r.Object;
                 int idx = r.PointIndex;
-                //luz.Series[seriesName][idx].va
-                MessageBox.Show(idx.ToString());
+                ScheduleBlock sb = dataPoints[idx];
+                MessageBox.Show(sb.ToString());
+
+                BlockEdit dbfrom = new BlockEdit(sb);
+                dbfrom.Show();
             }
         }
     }

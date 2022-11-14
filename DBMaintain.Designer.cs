@@ -1894,7 +1894,7 @@
             // 
             // newCampusBT
             // 
-            this.newCampusBT.Location = new System.Drawing.Point(323, 5);
+            this.newCampusBT.Location = new System.Drawing.Point(43, 111);
             this.newCampusBT.Name = "newCampusBT";
             this.newCampusBT.Size = new System.Drawing.Size(79, 54);
             this.newCampusBT.TabIndex = 2;

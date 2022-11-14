@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Final_Project
 {
     [Serializable]
-    internal class ScheduleBlock
+    public class ScheduleBlock
     {
         public int Id { get; set; }
         public int DayOfWeek { get; set; }
