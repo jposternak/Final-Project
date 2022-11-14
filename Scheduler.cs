@@ -1,5 +1,4 @@
-﻿using ControlzEx.Standard;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -96,7 +95,8 @@ namespace Final_Project
                     luz.Series[faculty].Points[p].Label = block.ToString();
 
                 }
-            }catch(Exception e1) { }
+            }
+            catch (Exception e1) { }
 
 
         }
@@ -114,6 +114,11 @@ namespace Final_Project
                 TimeSpan endda = (TimeSpan)rows[i][3];
 
                 ScheduleBlock sb = new ScheduleBlock(id, dayOfWeek, begda, endda);
+                sb.roomID = (int)rows[i][4];
+                sb.roomName = (String)rows[i][5];
+                sb.roomFloor = (int)rows[i][6];
+                sb.buildingName = (String)rows[i][7];
+                sb.campusName = (String)rows[i][8];
                 sb.DegreeClassName = (String)(rows[i][9]);
                 sb.FacultyName = (String)(rows[i][10]);
 
@@ -147,7 +152,7 @@ namespace Final_Project
 
             luz.Titles.Add(chartName);
             luz.ChartAreas.Add(chartName);
-             
+
 
             luz.ChartAreas[chartName].AxisX.Maximum = 7;
             luz.ChartAreas[chartName].AxisX.Minimum = 0;
@@ -185,7 +190,7 @@ namespace Final_Project
         private void luz_Click(object sender, EventArgs e)
         {
 
-            
+
 
 
 

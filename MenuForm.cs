@@ -27,7 +27,11 @@ namespace Final_Project
 
         private void MenuForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Environment.Exit(0);
+            try
+            {
+                Environment.Exit(0);
+            }
+            finally { }
         }
 
         private void SchedulerBT_Click(object sender, EventArgs e)

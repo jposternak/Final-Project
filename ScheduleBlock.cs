@@ -18,6 +18,12 @@ namespace Final_Project
         TimeSpan StartTimeT { get; set; }
         TimeSpan EndTimeT { get; set; }
 
+        public int roomID { get; set; }
+        public String roomName { get; set; }
+        public int roomFloor { get; set; }
+        public String buildingName { get; set; }
+        public String campusName { get; set; }
+
 
         public String DegreeClassName { get; set; }
         public String FacultyName { get; set; }
@@ -31,6 +37,20 @@ namespace Final_Project
             this.EndTime = EndTime.Hours + EndTime.Minutes / 100.0;
             this.EndTimeT = EndTime;
         }
+
+
+        public String TimeToString()
+        {
+            String s = "";
+            String StartHour_str = StartTime.ToString();
+            double decimalTime = StartTime - Math.Truncate(StartTime);
+            if (decimalTime == 0) StartHour_str += ".00";      
+
+            s += $"({StartTimeT.ToString()}-{EndTimeT.ToString()})\n";
+
+            return s;
+        }
+
 
         public override String ToString()
         {
