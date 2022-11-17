@@ -32,24 +32,22 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.roomIDTB = new System.Windows.Forms.TextBox();
-            this.scheduleBlockDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
             this.label7 = new System.Windows.Forms.Label();
             this.roomNameTB = new System.Windows.Forms.TextBox();
-            this.buildingTB = new System.Windows.Forms.TextBox();
             this.campusTB = new System.Windows.Forms.TextBox();
-            this.scheduleBlockDetailsTableAdapter = new Final_Project.grilDataViewsSetTableAdapters.ScheduleBlockDetailsTableAdapter();
+            this.buildingTB = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.roomFloorTB = new System.Windows.Forms.TextBox();
+            this.scheduleBlockDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
+            this.scheduleBlockDetailsTableAdapter = new Final_Project.grilDataViewsSetTableAdapters.ScheduleBlockDetailsTableAdapter();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.roomFeaturesGV = new System.Windows.Forms.DataGridView();
-            this.allRoomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.allRoomsTableAdapter = new Final_Project.grilDataViewsSetTableAdapters.AllRoomsTableAdapter();
             this.featureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qualifierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +57,8 @@
             this.Qualifier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CampusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FeaturesID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allRoomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.allRoomsTableAdapter = new Final_Project.grilDataViewsSetTableAdapters.AllRoomsTableAdapter();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,6 +70,9 @@
             this.semester = new System.Windows.Forms.Label();
             this.inUse = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.editBT = new System.Windows.Forms.Button();
+            this.saveBT = new System.Windows.Forms.Button();
+            this.deleteBT = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -77,15 +80,12 @@
             this.facultyTB = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.megamaTB = new System.Windows.Forms.TextBox();
+            this.itraTB = new System.Windows.Forms.TextBox();
             this.shibutzTB = new System.Windows.Forms.TextBox();
+            this.mahzorTB = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.mahzorTB = new System.Windows.Forms.TextBox();
-            this.itraTB = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.deleteBT = new System.Windows.Forms.Button();
-            this.saveBT = new System.Windows.Forms.Button();
-            this.editBT = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -150,36 +150,6 @@
             this.label1.Text = "שדה";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(230, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "בניין";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(223, 135);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "קמפוס";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(230, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "קומה";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -209,16 +179,6 @@
             this.roomIDTB.TabIndex = 7;
             this.roomIDTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // scheduleBlockDetailsBindingSource
-            // 
-            this.scheduleBlockDetailsBindingSource.DataMember = "ScheduleBlockDetails";
-            this.scheduleBlockDetailsBindingSource.DataSource = this.grilDataViewsSet;
-            // 
-            // grilDataViewsSet
-            // 
-            this.grilDataViewsSet.DataSetName = "grilDataViewsSet";
-            this.grilDataViewsSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -238,15 +198,6 @@
             this.roomNameTB.TabIndex = 7;
             this.roomNameTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // buildingTB
-            // 
-            this.buildingTB.Enabled = false;
-            this.buildingTB.Location = new System.Drawing.Point(3, 111);
-            this.buildingTB.Name = "buildingTB";
-            this.buildingTB.Size = new System.Drawing.Size(172, 22);
-            this.buildingTB.TabIndex = 7;
-            this.buildingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // campusTB
             // 
             this.campusTB.Enabled = false;
@@ -256,9 +207,44 @@
             this.campusTB.TabIndex = 7;
             this.campusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // scheduleBlockDetailsTableAdapter
+            // buildingTB
             // 
-            this.scheduleBlockDetailsTableAdapter.ClearBeforeFill = true;
+            this.buildingTB.Enabled = false;
+            this.buildingTB.Location = new System.Drawing.Point(3, 111);
+            this.buildingTB.Name = "buildingTB";
+            this.buildingTB.Size = new System.Drawing.Size(172, 22);
+            this.buildingTB.TabIndex = 7;
+            this.buildingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(223, 135);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "קמפוס";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(230, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "בניין";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(230, 81);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 16);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "קומה";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // roomFloorTB
             // 
@@ -268,6 +254,20 @@
             this.roomFloorTB.Size = new System.Drawing.Size(172, 22);
             this.roomFloorTB.TabIndex = 7;
             this.roomFloorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // scheduleBlockDetailsBindingSource
+            // 
+            this.scheduleBlockDetailsBindingSource.DataMember = "ScheduleBlockDetails";
+            this.scheduleBlockDetailsBindingSource.DataSource = this.grilDataViewsSet;
+            // 
+            // grilDataViewsSet
+            // 
+            this.grilDataViewsSet.DataSetName = "grilDataViewsSet";
+            this.grilDataViewsSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // scheduleBlockDetailsTableAdapter
+            // 
+            this.scheduleBlockDetailsTableAdapter.ClearBeforeFill = true;
             // 
             // groupBox2
             // 
@@ -310,15 +310,6 @@
             this.roomFeaturesGV.ShowRowErrors = false;
             this.roomFeaturesGV.Size = new System.Drawing.Size(277, 292);
             this.roomFeaturesGV.TabIndex = 0;
-            // 
-            // allRoomsBindingSource
-            // 
-            this.allRoomsBindingSource.DataMember = "AllRooms";
-            this.allRoomsBindingSource.DataSource = this.grilDataViewsSet;
-            // 
-            // allRoomsTableAdapter
-            // 
-            this.allRoomsTableAdapter.ClearBeforeFill = true;
             // 
             // featureNameDataGridViewTextBoxColumn
             // 
@@ -407,6 +398,15 @@
             this.FeaturesID.ReadOnly = true;
             this.FeaturesID.Visible = false;
             this.FeaturesID.Width = 125;
+            // 
+            // allRoomsBindingSource
+            // 
+            this.allRoomsBindingSource.DataMember = "AllRooms";
+            this.allRoomsBindingSource.DataSource = this.grilDataViewsSet;
+            // 
+            // allRoomsTableAdapter
+            // 
+            this.allRoomsTableAdapter.ClearBeforeFill = true;
             // 
             // groupBox3
             // 
@@ -548,6 +548,34 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "פרטי המחזור ששובץ";
             // 
+            // editBT
+            // 
+            this.editBT.Location = new System.Drawing.Point(18, 14);
+            this.editBT.Name = "editBT";
+            this.editBT.Size = new System.Drawing.Size(75, 55);
+            this.editBT.TabIndex = 1;
+            this.editBT.Text = "ערוך";
+            this.editBT.UseVisualStyleBackColor = true;
+            this.editBT.Click += new System.EventHandler(this.editBT_Click);
+            // 
+            // saveBT
+            // 
+            this.saveBT.Location = new System.Drawing.Point(18, 77);
+            this.saveBT.Name = "saveBT";
+            this.saveBT.Size = new System.Drawing.Size(75, 55);
+            this.saveBT.TabIndex = 1;
+            this.saveBT.Text = "שמור שינויים";
+            this.saveBT.UseVisualStyleBackColor = true;
+            // 
+            // deleteBT
+            // 
+            this.deleteBT.Location = new System.Drawing.Point(18, 156);
+            this.deleteBT.Name = "deleteBT";
+            this.deleteBT.Size = new System.Drawing.Size(75, 23);
+            this.deleteBT.TabIndex = 1;
+            this.deleteBT.Text = "מחק בלוק";
+            this.deleteBT.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -635,6 +663,15 @@
             this.megamaTB.TabIndex = 7;
             this.megamaTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // itraTB
+            // 
+            this.itraTB.Enabled = false;
+            this.itraTB.Location = new System.Drawing.Point(3, 138);
+            this.itraTB.Name = "itraTB";
+            this.itraTB.Size = new System.Drawing.Size(140, 22);
+            this.itraTB.TabIndex = 7;
+            this.itraTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // shibutzTB
             // 
             this.shibutzTB.Enabled = false;
@@ -643,6 +680,15 @@
             this.shibutzTB.Size = new System.Drawing.Size(140, 22);
             this.shibutzTB.TabIndex = 7;
             this.shibutzTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // mahzorTB
+            // 
+            this.mahzorTB.Enabled = false;
+            this.mahzorTB.Location = new System.Drawing.Point(3, 84);
+            this.mahzorTB.Name = "mahzorTB";
+            this.mahzorTB.Size = new System.Drawing.Size(140, 22);
+            this.mahzorTB.TabIndex = 7;
+            this.mahzorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
             // 
@@ -664,24 +710,6 @@
             this.label18.Text = "סך שעות משובצות";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // mahzorTB
-            // 
-            this.mahzorTB.Enabled = false;
-            this.mahzorTB.Location = new System.Drawing.Point(3, 84);
-            this.mahzorTB.Name = "mahzorTB";
-            this.mahzorTB.Size = new System.Drawing.Size(140, 22);
-            this.mahzorTB.TabIndex = 7;
-            this.mahzorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // itraTB
-            // 
-            this.itraTB.Enabled = false;
-            this.itraTB.Location = new System.Drawing.Point(3, 138);
-            this.itraTB.Name = "itraTB";
-            this.itraTB.Size = new System.Drawing.Size(140, 22);
-            this.itraTB.TabIndex = 7;
-            this.itraTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -692,41 +720,16 @@
             this.label16.Text = "מחזור";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // deleteBT
-            // 
-            this.deleteBT.Location = new System.Drawing.Point(18, 156);
-            this.deleteBT.Name = "deleteBT";
-            this.deleteBT.Size = new System.Drawing.Size(75, 23);
-            this.deleteBT.TabIndex = 1;
-            this.deleteBT.Text = "מחק בלוק";
-            this.deleteBT.UseVisualStyleBackColor = true;
-            // 
-            // saveBT
-            // 
-            this.saveBT.Location = new System.Drawing.Point(18, 77);
-            this.saveBT.Name = "saveBT";
-            this.saveBT.Size = new System.Drawing.Size(75, 55);
-            this.saveBT.TabIndex = 1;
-            this.saveBT.Text = "שמור שינויים";
-            this.saveBT.UseVisualStyleBackColor = true;
-            // 
-            // editBT
-            // 
-            this.editBT.Location = new System.Drawing.Point(18, 14);
-            this.editBT.Name = "editBT";
-            this.editBT.Size = new System.Drawing.Size(75, 55);
-            this.editBT.TabIndex = 1;
-            this.editBT.Text = "ערוך";
-            this.editBT.UseVisualStyleBackColor = true;
-            this.editBT.Click += new System.EventHandler(this.editBT_Click);
-            // 
             // listBox
             // 
             this.listBox.FormattingEnabled = true;
             this.listBox.ItemHeight = 16;
-            this.listBox.Location = new System.Drawing.Point(509, 400);
+            this.listBox.Items.AddRange(new object[] {
+            "בקרוב..."});
+            this.listBox.Location = new System.Drawing.Point(344, 400);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(441, 148);
+            this.listBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.listBox.Size = new System.Drawing.Size(656, 148);
             this.listBox.TabIndex = 1;
             // 
             // BlockEdit

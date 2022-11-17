@@ -74,7 +74,7 @@ namespace Final_Project
             {
                 int selectedRoomID = int.Parse(e.Node.Name);
 
-                List<ScheduleBlock> sb = getList(selectedRoomID);
+                List<ScheduleBlock> sb = ScheduleBlock.getListbyRoom(selectedRoomID);
                 luz.Series.Clear();
                 dataPoints.Clear();
                 formatChart(e.Node.Text);
@@ -101,35 +101,7 @@ namespace Final_Project
 
         }
 
-        private List<ScheduleBlock> getList(int RoomID)
-        {
-            List<ScheduleBlock> list = new List<ScheduleBlock>();
-            DataRowCollection rows = this.scheduleBlockDetailsTableAdapter.GetDataByRoomID(RoomID).Rows;
-
-            for (int i = 0; i < rows.Count; i++)
-            {
-                int id = (int)rows[i][0];
-                int dayOfWeek = (int)rows[i][1];
-                TimeSpan begda = (TimeSpan)rows[i][2];
-                TimeSpan endda = (TimeSpan)rows[i][3];
-
-                ScheduleBlock sb = new ScheduleBlock(id, dayOfWeek, begda, endda);
-                sb.roomID = (int)rows[i][4];
-                sb.roomName = (String)rows[i][5];
-                sb.roomFloor = (int)rows[i][6];
-                sb.buildingName = (String)rows[i][7];
-                sb.campusName = (String)rows[i][8];
-                sb.DegreeClassName = (String)(rows[i][9]);
-                sb.FacultyName = (String)(rows[i][10]);
-
-                list.Add(sb);
-
-            }
-
-            return list;
-
-        }
-
+        
         private void createSerie(String seriesName)
         {
             if (luz.Series.FindByName(seriesName) == null)
@@ -205,11 +177,36 @@ namespace Final_Project
                 DataPoint p = (DataPoint)r.Object;
                 int idx = r.PointIndex;
                 ScheduleBlock sb = dataPoints[idx];
-                MessageBox.Show(sb.ToString());
 
                 BlockEdit dbfrom = new BlockEdit(sb);
                 dbfrom.Show();
             }
+        }
+
+        private void blockItraTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+            //semesterNumCurrent = (int)SemesterDataGridView.Rows[e.RowIndex].Cells[0].Value;
+            //blockItraTable[e.ColumnIndex,e.RowIndex]
+
+            int blockID = (int)blockItraTable.Rows[e.RowIndex].Cells[0].Value;
+
+            int selectedSemesterID = (int)((DataRowView)semesterCB.SelectedItem).Row[0];
+
+            if (selectedSemesterID != 0)
+            {
+
+                Semester s = Semester.getFromDatabase(selectedSemesterID);
+                DegreeClass dc = DegreeClass.getFromDatabase(blockID);
+
+                DegreeClassPlanner dcp = new DegreeClassPlanner(s, dc);
+
+                dcp.Show();
+            }
+            
+
+
         }
     }
 }

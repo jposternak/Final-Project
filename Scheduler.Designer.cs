@@ -126,6 +126,7 @@
             this.luz.ChartAreas.Add(chartArea1);
             this.luz.Dock = System.Windows.Forms.DockStyle.Left;
             this.luz.Location = new System.Drawing.Point(0, 0);
+            this.luz.Margin = new System.Windows.Forms.Padding(4);
             this.luz.Name = "luz";
             this.luz.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             series1.ChartArea = "ChartArea1";
@@ -133,7 +134,7 @@
             series1.Name = "Series1";
             series1.YValuesPerPoint = 2;
             this.luz.Series.Add(series1);
-            this.luz.Size = new System.Drawing.Size(1013, 748);
+            this.luz.Size = new System.Drawing.Size(2111, 921);
             this.luz.TabIndex = 0;
             this.luz.Text = "chart1";
             this.luz.Click += new System.EventHandler(this.luz_Click);
@@ -145,30 +146,34 @@
             this.panel1.Controls.Add(this.luz);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1013, 748);
+            this.panel1.Size = new System.Drawing.Size(2111, 921);
             this.panel1.TabIndex = 6;
             // 
             // treeRooms
             // 
-            this.treeRooms.Location = new System.Drawing.Point(3, 57);
+            this.treeRooms.Dock = System.Windows.Forms.DockStyle.Right;
+            this.treeRooms.Location = new System.Drawing.Point(4, 68);
+            this.treeRooms.Margin = new System.Windows.Forms.Padding(4);
             this.treeRooms.Name = "treeRooms";
             this.treeRooms.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.treeRooms.RightToLeftLayout = true;
-            this.treeRooms.Size = new System.Drawing.Size(202, 373);
+            this.treeRooms.Size = new System.Drawing.Size(419, 716);
             this.treeRooms.TabIndex = 4;
             this.treeRooms.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeRooms_NodeMouseDoubleClick);
             // 
             // campusCB
             // 
-            this.campusCB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.campusCB.DataSource = this.campusBindingSource;
             this.campusCB.DisplayMember = "campusName";
+            this.campusCB.Dock = System.Windows.Forms.DockStyle.Right;
             this.campusCB.FormattingEnabled = true;
-            this.campusCB.Location = new System.Drawing.Point(78, 30);
+            this.campusCB.Location = new System.Drawing.Point(88, 36);
+            this.campusCB.Margin = new System.Windows.Forms.Padding(4);
             this.campusCB.Name = "campusCB";
             this.campusCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.campusCB.Size = new System.Drawing.Size(202, 21);
+            this.campusCB.Size = new System.Drawing.Size(335, 24);
             this.campusCB.TabIndex = 5;
             this.campusCB.SelectedIndexChanged += new System.EventHandler(this.campusCB_SelectedIndexChanged);
             // 
@@ -181,9 +186,10 @@
             this.flowLayoutPanel1.Controls.Add(this.blockItraTable);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(941, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(971, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(283, 748);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(661, 921);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // semesterCB
@@ -192,10 +198,11 @@
             this.semesterCB.DisplayMember = "SemesterFullName";
             this.semesterCB.Dock = System.Windows.Forms.DockStyle.Right;
             this.semesterCB.FormattingEnabled = true;
-            this.semesterCB.Location = new System.Drawing.Point(78, 3);
+            this.semesterCB.Location = new System.Drawing.Point(155, 4);
+            this.semesterCB.Margin = new System.Windows.Forms.Padding(4);
             this.semesterCB.Name = "semesterCB";
             this.semesterCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.semesterCB.Size = new System.Drawing.Size(202, 21);
+            this.semesterCB.Size = new System.Drawing.Size(268, 24);
             this.semesterCB.TabIndex = 6;
             this.semesterCB.SelectedIndexChanged += new System.EventHandler(this.semesterCB_SelectedIndexChanged);
             // 
@@ -208,6 +215,7 @@
             // 
             this.blockItraTable.AllowUserToAddRows = false;
             this.blockItraTable.AllowUserToDeleteRows = false;
+            this.blockItraTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.blockItraTable.AutoGenerateColumns = false;
             this.blockItraTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.blockItraTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -220,73 +228,91 @@
             this.bitzuaDataGridViewTextBoxColumn,
             this.itraDataGridViewTextBoxColumn});
             this.blockItraTable.DataSource = this.degreeClassPlanExecBindingSource;
-            this.blockItraTable.Dock = System.Windows.Forms.DockStyle.Right;
-            this.blockItraTable.Location = new System.Drawing.Point(3, 436);
+            this.blockItraTable.Location = new System.Drawing.Point(431, 4);
+            this.blockItraTable.Margin = new System.Windows.Forms.Padding(4);
             this.blockItraTable.Name = "blockItraTable";
             this.blockItraTable.ReadOnly = true;
             this.blockItraTable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.blockItraTable.Size = new System.Drawing.Size(277, 150);
+            this.blockItraTable.RowHeadersWidth = 51;
+            this.blockItraTable.Size = new System.Drawing.Size(226, 185);
             this.blockItraTable.TabIndex = 7;
+            this.blockItraTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.blockItraTable_CellDoubleClick);
             // 
             // degreeClassIDDataGridViewTextBoxColumn
             // 
             this.degreeClassIDDataGridViewTextBoxColumn.DataPropertyName = "DegreeClassID";
             this.degreeClassIDDataGridViewTextBoxColumn.HeaderText = "DegreeClassID";
+            this.degreeClassIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.degreeClassIDDataGridViewTextBoxColumn.Name = "degreeClassIDDataGridViewTextBoxColumn";
             this.degreeClassIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.degreeClassIDDataGridViewTextBoxColumn.Visible = false;
+            this.degreeClassIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // mahzorDataGridViewTextBoxColumn
             // 
             this.mahzorDataGridViewTextBoxColumn.DataPropertyName = "mahzor";
             this.mahzorDataGridViewTextBoxColumn.HeaderText = "mahzor";
+            this.mahzorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.mahzorDataGridViewTextBoxColumn.Name = "mahzorDataGridViewTextBoxColumn";
             this.mahzorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mahzorDataGridViewTextBoxColumn.Width = 125;
             // 
             // isActiveDataGridViewCheckBoxColumn
             // 
             this.isActiveDataGridViewCheckBoxColumn.DataPropertyName = "IsActive";
             this.isActiveDataGridViewCheckBoxColumn.HeaderText = "IsActive";
+            this.isActiveDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.isActiveDataGridViewCheckBoxColumn.Name = "isActiveDataGridViewCheckBoxColumn";
             this.isActiveDataGridViewCheckBoxColumn.ReadOnly = true;
             this.isActiveDataGridViewCheckBoxColumn.Visible = false;
+            this.isActiveDataGridViewCheckBoxColumn.Width = 125;
             // 
             // degreeNameDataGridViewTextBoxColumn
             // 
             this.degreeNameDataGridViewTextBoxColumn.DataPropertyName = "DegreeName";
             this.degreeNameDataGridViewTextBoxColumn.HeaderText = "DegreeName";
+            this.degreeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.degreeNameDataGridViewTextBoxColumn.Name = "degreeNameDataGridViewTextBoxColumn";
             this.degreeNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.degreeNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // semesterIDDataGridViewTextBoxColumn
             // 
             this.semesterIDDataGridViewTextBoxColumn.DataPropertyName = "semesterID";
             this.semesterIDDataGridViewTextBoxColumn.HeaderText = "semesterID";
+            this.semesterIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.semesterIDDataGridViewTextBoxColumn.Name = "semesterIDDataGridViewTextBoxColumn";
             this.semesterIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.semesterIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // tihnunDataGridViewTextBoxColumn
             // 
             this.tihnunDataGridViewTextBoxColumn.DataPropertyName = "tihnun";
             this.tihnunDataGridViewTextBoxColumn.HeaderText = "tihnun";
+            this.tihnunDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tihnunDataGridViewTextBoxColumn.Name = "tihnunDataGridViewTextBoxColumn";
             this.tihnunDataGridViewTextBoxColumn.ReadOnly = true;
             this.tihnunDataGridViewTextBoxColumn.Visible = false;
+            this.tihnunDataGridViewTextBoxColumn.Width = 125;
             // 
             // bitzuaDataGridViewTextBoxColumn
             // 
             this.bitzuaDataGridViewTextBoxColumn.DataPropertyName = "bitzua";
             this.bitzuaDataGridViewTextBoxColumn.HeaderText = "bitzua";
+            this.bitzuaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.bitzuaDataGridViewTextBoxColumn.Name = "bitzuaDataGridViewTextBoxColumn";
             this.bitzuaDataGridViewTextBoxColumn.ReadOnly = true;
             this.bitzuaDataGridViewTextBoxColumn.Visible = false;
+            this.bitzuaDataGridViewTextBoxColumn.Width = 125;
             // 
             // itraDataGridViewTextBoxColumn
             // 
             this.itraDataGridViewTextBoxColumn.DataPropertyName = "itra";
             this.itraDataGridViewTextBoxColumn.HeaderText = "itra";
+            this.itraDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.itraDataGridViewTextBoxColumn.Name = "itraDataGridViewTextBoxColumn";
             this.itraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itraDataGridViewTextBoxColumn.Width = 125;
             // 
             // degreeClassPlanExecBindingSource
             // 
@@ -303,11 +329,13 @@
             // 
             // Scheduler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 748);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1632, 921);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Scheduler";
             this.Text = "Scheduler";
             this.Load += new System.EventHandler(this.Scheduler_Load);

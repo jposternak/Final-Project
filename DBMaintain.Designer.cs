@@ -1159,7 +1159,7 @@
             // deleteSemesterBT
             // 
             this.deleteSemesterBT.Location = new System.Drawing.Point(11, 485);
-            this.deleteSemesterBT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteSemesterBT.Margin = new System.Windows.Forms.Padding(4);
             this.deleteSemesterBT.Name = "deleteSemesterBT";
             this.deleteSemesterBT.Size = new System.Drawing.Size(100, 37);
             this.deleteSemesterBT.TabIndex = 3;
@@ -1170,7 +1170,7 @@
             // addNewSemesterBT
             // 
             this.addNewSemesterBT.Location = new System.Drawing.Point(123, 485);
-            this.addNewSemesterBT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addNewSemesterBT.Margin = new System.Windows.Forms.Padding(4);
             this.addNewSemesterBT.Name = "addNewSemesterBT";
             this.addNewSemesterBT.Size = new System.Drawing.Size(100, 37);
             this.addNewSemesterBT.TabIndex = 3;
@@ -1181,7 +1181,7 @@
             // saveSemesterBT
             // 
             this.saveSemesterBT.Location = new System.Drawing.Point(235, 485);
-            this.saveSemesterBT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveSemesterBT.Margin = new System.Windows.Forms.Padding(4);
             this.saveSemesterBT.Name = "saveSemesterBT";
             this.saveSemesterBT.Size = new System.Drawing.Size(100, 37);
             this.saveSemesterBT.TabIndex = 3;
@@ -1193,7 +1193,7 @@
             // 
             this.enddaSemesterPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.enddaSemesterPicker.Location = new System.Drawing.Point(347, 487);
-            this.enddaSemesterPicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.enddaSemesterPicker.Margin = new System.Windows.Forms.Padding(4);
             this.enddaSemesterPicker.Name = "enddaSemesterPicker";
             this.enddaSemesterPicker.Size = new System.Drawing.Size(156, 30);
             this.enddaSemesterPicker.TabIndex = 2;
@@ -1202,7 +1202,7 @@
             // 
             this.begdaSemesterPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.begdaSemesterPicker.Location = new System.Drawing.Point(516, 487);
-            this.begdaSemesterPicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.begdaSemesterPicker.Margin = new System.Windows.Forms.Padding(4);
             this.begdaSemesterPicker.Name = "begdaSemesterPicker";
             this.begdaSemesterPicker.Size = new System.Drawing.Size(156, 30);
             this.begdaSemesterPicker.TabIndex = 2;
@@ -1215,7 +1215,7 @@
             "אביב",
             "קיץ"});
             this.semesterTypeCB.Location = new System.Drawing.Point(685, 486);
-            this.semesterTypeCB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.semesterTypeCB.Margin = new System.Windows.Forms.Padding(4);
             this.semesterTypeCB.Name = "semesterTypeCB";
             this.semesterTypeCB.Size = new System.Drawing.Size(160, 33);
             this.semesterTypeCB.TabIndex = 1;
@@ -1232,7 +1232,7 @@
             "תשפו",
             "תשפז"});
             this.SemesterYearCB.Location = new System.Drawing.Point(859, 486);
-            this.SemesterYearCB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SemesterYearCB.Margin = new System.Windows.Forms.Padding(4);
             this.SemesterYearCB.Name = "SemesterYearCB";
             this.SemesterYearCB.Size = new System.Drawing.Size(160, 33);
             this.SemesterYearCB.TabIndex = 1;
@@ -1251,7 +1251,7 @@
             this.endDateDataGridViewTextBoxColumn});
             this.SemesterDataGridView.DataSource = this.semesterBindingSource;
             this.SemesterDataGridView.Location = new System.Drawing.Point(11, 4);
-            this.SemesterDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SemesterDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.SemesterDataGridView.Name = "SemesterDataGridView";
             this.SemesterDataGridView.ReadOnly = true;
             this.SemesterDataGridView.RowHeadersWidth = 51;
@@ -1342,7 +1342,7 @@
             // addFeatureBT
             // 
             this.addFeatureBT.Location = new System.Drawing.Point(47, 65);
-            this.addFeatureBT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addFeatureBT.Margin = new System.Windows.Forms.Padding(4);
             this.addFeatureBT.Name = "addFeatureBT";
             this.addFeatureBT.Size = new System.Drawing.Size(100, 108);
             this.addFeatureBT.TabIndex = 1;
@@ -1824,7 +1824,7 @@
             this.campusNameComboBox.DisplayMember = "BuildingName";
             this.campusNameComboBox.FormattingEnabled = true;
             this.campusNameComboBox.Location = new System.Drawing.Point(925, 63);
-            this.campusNameComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campusNameComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.campusNameComboBox.Name = "campusNameComboBox";
             this.campusNameComboBox.Size = new System.Drawing.Size(200, 33);
             this.campusNameComboBox.TabIndex = 5;
@@ -1878,7 +1878,7 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.roomsDataGrid.DefaultCellStyle = dataGridViewCellStyle8;
             this.roomsDataGrid.Location = new System.Drawing.Point(801, 107);
-            this.roomsDataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roomsDataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.roomsDataGrid.Name = "roomsDataGrid";
             this.roomsDataGrid.ReadOnly = true;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -1933,7 +1933,7 @@
             this.roomsCampusCB.DisplayMember = "campusName";
             this.roomsCampusCB.FormattingEnabled = true;
             this.roomsCampusCB.Location = new System.Drawing.Point(925, 15);
-            this.roomsCampusCB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roomsCampusCB.Margin = new System.Windows.Forms.Padding(4);
             this.roomsCampusCB.Name = "roomsCampusCB";
             this.roomsCampusCB.Size = new System.Drawing.Size(200, 33);
             this.roomsCampusCB.TabIndex = 0;
@@ -1957,7 +1957,7 @@
             // newCampusBT
             // 
             this.newCampusBT.Location = new System.Drawing.Point(57, 137);
-            this.newCampusBT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.newCampusBT.Margin = new System.Windows.Forms.Padding(4);
             this.newCampusBT.Name = "newCampusBT";
             this.newCampusBT.Size = new System.Drawing.Size(105, 66);
             this.newCampusBT.TabIndex = 2;
