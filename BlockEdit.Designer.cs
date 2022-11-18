@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BlockEdit));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -87,6 +89,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBlockDetailsBindingSource)).BeginInit();
@@ -98,12 +103,16 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox1.Location = new System.Drawing.Point(37, 37);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(6, 118);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox1.Size = new System.Drawing.Size(283, 193);
@@ -113,6 +122,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.7037F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.2963F));
@@ -128,7 +138,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.roomFloorTB, 1, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 21);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 27);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -271,8 +281,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.groupBox2.Controls.Add(this.roomFeaturesGV);
-            this.groupBox2.Location = new System.Drawing.Point(37, 236);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(6, 317);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox2.Size = new System.Drawing.Size(283, 313);
@@ -303,6 +315,11 @@
             this.roomFeaturesGV.Name = "roomFeaturesGV";
             this.roomFeaturesGV.ReadOnly = true;
             this.roomFeaturesGV.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.roomFeaturesGV.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.roomFeaturesGV.RowTemplate.Height = 24;
             this.roomFeaturesGV.ShowCellErrors = false;
             this.roomFeaturesGV.ShowCellToolTips = false;
@@ -410,8 +427,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.groupBox3.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox3.Location = new System.Drawing.Point(344, 48);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(313, 129);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox3.Size = new System.Drawing.Size(662, 107);
@@ -421,6 +441,7 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -494,9 +515,9 @@
             // 
             this.dayOfWeek.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dayOfWeek.AutoSize = true;
-            this.dayOfWeek.Location = new System.Drawing.Point(528, 30);
+            this.dayOfWeek.Location = new System.Drawing.Point(651, 38);
             this.dayOfWeek.Name = "dayOfWeek";
-            this.dayOfWeek.Size = new System.Drawing.Size(66, 16);
+            this.dayOfWeek.Size = new System.Drawing.Size(101, 25);
             this.dayOfWeek.TabIndex = 0;
             this.dayOfWeek.Text = "יום בשבוע";
             this.dayOfWeek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -505,9 +526,9 @@
             // 
             this.time.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.time.AutoSize = true;
-            this.time.Location = new System.Drawing.Point(368, 30);
+            this.time.Location = new System.Drawing.Point(451, 38);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(66, 16);
+            this.time.Size = new System.Drawing.Size(101, 25);
             this.time.TabIndex = 0;
             this.time.Text = "יום בשבוע";
             this.time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -516,9 +537,9 @@
             // 
             this.semester.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.semester.AutoSize = true;
-            this.semester.Location = new System.Drawing.Point(208, 30);
+            this.semester.Location = new System.Drawing.Point(251, 38);
             this.semester.Name = "semester";
-            this.semester.Size = new System.Drawing.Size(66, 16);
+            this.semester.Size = new System.Drawing.Size(101, 25);
             this.semester.TabIndex = 0;
             this.semester.Text = "יום בשבוע";
             this.semester.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -527,61 +548,66 @@
             // 
             this.inUse.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.inUse.AutoSize = true;
-            this.inUse.Location = new System.Drawing.Point(48, 30);
+            this.inUse.Location = new System.Drawing.Point(50, 38);
             this.inUse.Name = "inUse";
-            this.inUse.Size = new System.Drawing.Size(66, 16);
+            this.inUse.Size = new System.Drawing.Size(101, 25);
             this.inUse.TabIndex = 0;
             this.inUse.Text = "יום בשבוע";
             this.inUse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox4
             // 
+            this.groupBox4.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.groupBox4.Controls.Add(this.editBT);
             this.groupBox4.Controls.Add(this.saveBT);
             this.groupBox4.Controls.Add(this.deleteBT);
             this.groupBox4.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox4.Location = new System.Drawing.Point(344, 161);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.Location = new System.Drawing.Point(313, 258);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox4.Size = new System.Drawing.Size(656, 193);
+            this.groupBox4.Size = new System.Drawing.Size(656, 217);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "פרטי המחזור ששובץ";
             // 
             // editBT
             // 
-            this.editBT.Location = new System.Drawing.Point(18, 14);
+            this.editBT.Image = global::Final_Project.Properties.Resources.icons8_edit_50;
+            this.editBT.Location = new System.Drawing.Point(551, 35);
             this.editBT.Name = "editBT";
-            this.editBT.Size = new System.Drawing.Size(75, 55);
+            this.editBT.Size = new System.Drawing.Size(69, 69);
             this.editBT.TabIndex = 1;
-            this.editBT.Text = "ערוך";
+            this.editBT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.editBT.UseVisualStyleBackColor = true;
             this.editBT.Click += new System.EventHandler(this.editBT_Click);
             // 
             // saveBT
             // 
-            this.saveBT.Location = new System.Drawing.Point(18, 77);
+            this.saveBT.Image = global::Final_Project.Properties.Resources.icons8_save_50;
+            this.saveBT.Location = new System.Drawing.Point(551, 111);
             this.saveBT.Name = "saveBT";
-            this.saveBT.Size = new System.Drawing.Size(75, 55);
+            this.saveBT.Size = new System.Drawing.Size(69, 69);
             this.saveBT.TabIndex = 1;
-            this.saveBT.Text = "שמור שינויים";
             this.saveBT.UseVisualStyleBackColor = true;
             // 
             // deleteBT
             // 
-            this.deleteBT.Location = new System.Drawing.Point(18, 156);
+            this.deleteBT.Image = global::Final_Project.Properties.Resources.icons8_trash_can_50;
+            this.deleteBT.Location = new System.Drawing.Point(463, 111);
             this.deleteBT.Name = "deleteBT";
-            this.deleteBT.Size = new System.Drawing.Size(75, 23);
+            this.deleteBT.Size = new System.Drawing.Size(69, 69);
             this.deleteBT.TabIndex = 1;
-            this.deleteBT.Text = "מחק בלוק";
             this.deleteBT.UseVisualStyleBackColor = true;
             this.deleteBT.Click += new System.EventHandler(this.deleteBT_Click);
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.27322F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.72678F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.13921F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.86079F));
             this.tableLayoutPanel3.Controls.Add(this.label12, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label13, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label14, 0, 2);
@@ -594,7 +620,7 @@
             this.tableLayoutPanel3.Controls.Add(this.label17, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.label18, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.label16, 0, 3);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(358, 21);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(26, 35);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -603,15 +629,15 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(292, 166);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(431, 166);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(257, 0);
+            this.label12.Location = new System.Drawing.Point(381, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 16);
+            this.label12.Size = new System.Drawing.Size(47, 25);
             this.label12.TabIndex = 0;
             this.label12.Text = "שדה";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -619,9 +645,9 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(239, 27);
+            this.label13.Location = new System.Drawing.Point(352, 27);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(50, 16);
+            this.label13.Size = new System.Drawing.Size(76, 25);
             this.label13.TabIndex = 1;
             this.label13.Text = "פקולטה";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -629,74 +655,84 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(201, 54);
+            this.label14.Location = new System.Drawing.Point(296, 54);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 16);
+            this.label14.Size = new System.Drawing.Size(132, 25);
             this.label14.TabIndex = 2;
             this.label14.Text = "מגמת לימודים";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // facultyTB
             // 
+            this.facultyTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.facultyTB.Enabled = false;
+            this.facultyTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.facultyTB.Location = new System.Drawing.Point(3, 30);
             this.facultyTB.Name = "facultyTB";
-            this.facultyTB.Size = new System.Drawing.Size(140, 22);
+            this.facultyTB.Size = new System.Drawing.Size(252, 27);
             this.facultyTB.TabIndex = 7;
             this.facultyTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(113, 0);
+            this.label15.Location = new System.Drawing.Point(210, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(30, 16);
+            this.label15.Size = new System.Drawing.Size(45, 25);
             this.label15.TabIndex = 6;
             this.label15.Text = "ערך";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // megamaTB
             // 
+            this.megamaTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.megamaTB.Enabled = false;
+            this.megamaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.megamaTB.Location = new System.Drawing.Point(3, 57);
             this.megamaTB.Name = "megamaTB";
-            this.megamaTB.Size = new System.Drawing.Size(140, 22);
+            this.megamaTB.Size = new System.Drawing.Size(252, 27);
             this.megamaTB.TabIndex = 7;
             this.megamaTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // itraTB
             // 
+            this.itraTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.itraTB.Enabled = false;
+            this.itraTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.itraTB.Location = new System.Drawing.Point(3, 138);
             this.itraTB.Name = "itraTB";
-            this.itraTB.Size = new System.Drawing.Size(140, 22);
+            this.itraTB.Size = new System.Drawing.Size(252, 27);
             this.itraTB.TabIndex = 7;
             this.itraTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // shibutzTB
             // 
+            this.shibutzTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.shibutzTB.Enabled = false;
+            this.shibutzTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.shibutzTB.Location = new System.Drawing.Point(3, 111);
             this.shibutzTB.Name = "shibutzTB";
-            this.shibutzTB.Size = new System.Drawing.Size(140, 22);
+            this.shibutzTB.Size = new System.Drawing.Size(252, 27);
             this.shibutzTB.TabIndex = 7;
             this.shibutzTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mahzorTB
             // 
+            this.mahzorTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mahzorTB.Enabled = false;
+            this.mahzorTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.mahzorTB.Location = new System.Drawing.Point(3, 84);
             this.mahzorTB.Name = "mahzorTB";
-            this.mahzorTB.Size = new System.Drawing.Size(140, 22);
+            this.mahzorTB.Size = new System.Drawing.Size(252, 27);
             this.mahzorTB.TabIndex = 7;
             this.mahzorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(160, 135);
+            this.label17.Location = new System.Drawing.Point(290, 135);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(129, 16);
+            this.label17.Size = new System.Drawing.Size(138, 31);
             this.label17.TabIndex = 3;
             this.label17.Text = "סך שעות שטרם שובצו";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -704,9 +740,9 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(178, 108);
+            this.label18.Location = new System.Drawing.Point(262, 108);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(111, 16);
+            this.label18.Size = new System.Drawing.Size(166, 25);
             this.label18.TabIndex = 5;
             this.label18.Text = "סך שעות משובצות";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -714,9 +750,9 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(249, 81);
+            this.label16.Location = new System.Drawing.Point(364, 81);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 16);
+            this.label16.Size = new System.Drawing.Size(64, 25);
             this.label16.TabIndex = 5;
             this.label16.Text = "מחזור";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -727,25 +763,75 @@
             this.listBox.ItemHeight = 16;
             this.listBox.Items.AddRange(new object[] {
             "בקרוב..."});
-            this.listBox.Location = new System.Drawing.Point(344, 400);
+            this.listBox.Location = new System.Drawing.Point(313, 481);
             this.listBox.Name = "listBox";
             this.listBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.listBox.Size = new System.Drawing.Size(656, 148);
             this.listBox.TabIndex = 1;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.45098F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.54902F));
+            this.tableLayoutPanel4.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label19, 1, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 12);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(969, 100);
+            this.tableLayoutPanel4.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
+            this.pictureBox1.Image = global::Final_Project.Properties.Resources.ilutzon;
+            this.pictureBox1.Location = new System.Drawing.Point(707, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(259, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label19.Font = new System.Drawing.Font("Guttman Hatzvi", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(3, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(698, 100);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "מסך עריכת בלוק";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // BlockEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 651);
+            this.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
+            this.ClientSize = new System.Drawing.Size(987, 638);
+            this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "BlockEdit";
-            this.Text = "BlockEdit";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "מסך עריכת בלוק";
             this.Load += new System.EventHandler(this.BlockEdit_Load);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -761,6 +847,9 @@
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -825,5 +914,8 @@
         private System.Windows.Forms.Button saveBT;
         private System.Windows.Forms.Button deleteBT;
         private System.Windows.Forms.ListBox listBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label19;
     }
 }

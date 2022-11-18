@@ -137,7 +137,7 @@
             // 
             chartArea1.Name = "ChartArea1";
             this.luz.ChartAreas.Add(chartArea1);
-            this.luz.Location = new System.Drawing.Point(13, 83);
+            this.luz.Location = new System.Drawing.Point(13, 13);
             this.luz.Margin = new System.Windows.Forms.Padding(4);
             this.luz.Name = "luz";
             this.luz.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -146,7 +146,7 @@
             series1.Name = "Series1";
             series1.YValuesPerPoint = 2;
             this.luz.Series.Add(series1);
-            this.luz.Size = new System.Drawing.Size(1149, 790);
+            this.luz.Size = new System.Drawing.Size(1166, 860);
             this.luz.TabIndex = 0;
             this.luz.Text = "chart1";
             this.luz.MouseClick += new System.Windows.Forms.MouseEventHandler(this.luz_MouseClick);
@@ -181,10 +181,10 @@
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1598, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1593, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 880);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 1112);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // semesterCB
@@ -338,7 +338,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabControl1.Location = new System.Drawing.Point(1182, 58);
+            this.tabControl1.Location = new System.Drawing.Point(1177, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabControl1.RightToLeftLayout = true;
@@ -457,7 +457,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1598, 880);
+            this.ClientSize = new System.Drawing.Size(1593, 1112);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.luz);
             this.Controls.Add(this.flowLayoutPanel1);

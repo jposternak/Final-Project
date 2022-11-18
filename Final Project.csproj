@@ -257,6 +257,30 @@
   <ItemGroup>
     <None Include="Resources\icons8-maximize-48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ilutzon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ilutzon_COLO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-can-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-database-administrator-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-database-administrator-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-schedule-50.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\ImGui.NET.1.87.3\build\net40\ImGui.NET.targets" Condition="Exists('packages\ImGui.NET.1.87.3\build\net40\ImGui.NET.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

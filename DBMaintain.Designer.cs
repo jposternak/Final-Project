@@ -47,6 +47,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DBMaintain));
             this.buildingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grilDataSet = new Final_Project.grilDataSet();
@@ -121,13 +124,7 @@
             this.deleteFacultyBT = new System.Windows.Forms.Button();
             this.addFacultyBT = new System.Windows.Forms.Button();
             this.degreeGrid = new System.Windows.Forms.DataGridView();
-            this.degreeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.degreeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultyIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facultyGrid = new System.Windows.Forms.DataGridView();
-            this.facultyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FacultyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SemestersPage = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -141,19 +138,11 @@
             this.semesterTypeCB = new System.Windows.Forms.ComboBox();
             this.SemesterYearCB = new System.Windows.Forms.ComboBox();
             this.SemesterDataGridView = new System.Windows.Forms.DataGridView();
-            this.semesterIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hebrewYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semesterTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FeaturesPage = new System.Windows.Forms.TabPage();
             this.removeFeatBT = new System.Windows.Forms.Button();
             this.featureLabel = new System.Windows.Forms.Label();
             this.addFeatureBT = new System.Windows.Forms.Button();
             this.features_gridView = new System.Windows.Forms.DataGridView();
-            this.featuresIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.featureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qualifierReqDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RoomsPage = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -196,18 +185,32 @@
             this.CampusPage = new System.Windows.Forms.TabPage();
             this.newCampusBT = new System.Windows.Forms.Button();
             this.dataGridBuilding = new System.Windows.Forms.DataGridView();
-            this.buildingIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buildingNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campusIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridCampus = new System.Windows.Forms.DataGridView();
-            this.campusIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campusNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deleteButton = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.facultyTableAdapter = new Final_Project.grilDataSetTableAdapters.FacultyTableAdapter();
             this.degreeTableAdapter = new Final_Project.grilDataSetTableAdapters.DegreeTableAdapter();
             this.degreeClassTableAdapter = new Final_Project.grilDataSetTableAdapters.DegreeClassTableAdapter();
             this.tableAdapterManager1 = new Final_Project.grilDataSetTableAdapters.TableAdapterManager();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.campusIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campusNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildingIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildingNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campusIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.featuresIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.featureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qualifierReqDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.semesterIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hebrewYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semesterTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FacultyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.degreeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.degreeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultyIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             degreeClassIDLabel = new System.Windows.Forms.Label();
             degreeClassNameLabel = new System.Windows.Forms.Label();
             degreeIDLabel = new System.Windows.Forms.Label();
@@ -258,12 +261,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBuilding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCampus)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // degreeClassIDLabel
             // 
             degreeClassIDLabel.AutoSize = true;
-            degreeClassIDLabel.Location = new System.Drawing.Point(331, 0);
+            degreeClassIDLabel.Location = new System.Drawing.Point(373, 0);
             degreeClassIDLabel.Name = "degreeClassIDLabel";
             degreeClassIDLabel.Size = new System.Drawing.Size(109, 25);
             degreeClassIDLabel.TabIndex = 0;
@@ -272,7 +276,7 @@
             // degreeClassNameLabel
             // 
             degreeClassNameLabel.AutoSize = true;
-            degreeClassNameLabel.Location = new System.Drawing.Point(347, 40);
+            degreeClassNameLabel.Location = new System.Drawing.Point(389, 40);
             degreeClassNameLabel.Name = "degreeClassNameLabel";
             degreeClassNameLabel.Size = new System.Drawing.Size(93, 25);
             degreeClassNameLabel.TabIndex = 2;
@@ -281,7 +285,7 @@
             // degreeIDLabel
             // 
             degreeIDLabel.AutoSize = true;
-            degreeIDLabel.Location = new System.Drawing.Point(382, 80);
+            degreeIDLabel.Location = new System.Drawing.Point(424, 80);
             degreeIDLabel.Name = "degreeIDLabel";
             degreeIDLabel.Size = new System.Drawing.Size(58, 25);
             degreeIDLabel.TabIndex = 4;
@@ -290,7 +294,7 @@
             // numberOfStudentsLabel
             // 
             numberOfStudentsLabel.AutoSize = true;
-            numberOfStudentsLabel.Location = new System.Drawing.Point(303, 120);
+            numberOfStudentsLabel.Location = new System.Drawing.Point(345, 120);
             numberOfStudentsLabel.Name = "numberOfStudentsLabel";
             numberOfStudentsLabel.Size = new System.Drawing.Size(137, 25);
             numberOfStudentsLabel.TabIndex = 6;
@@ -299,7 +303,7 @@
             // startingSemesterLabel
             // 
             startingSemesterLabel.AutoSize = true;
-            startingSemesterLabel.Location = new System.Drawing.Point(314, 160);
+            startingSemesterLabel.Location = new System.Drawing.Point(356, 160);
             startingSemesterLabel.Name = "startingSemesterLabel";
             startingSemesterLabel.Size = new System.Drawing.Size(126, 25);
             startingSemesterLabel.TabIndex = 8;
@@ -308,7 +312,7 @@
             // durationLabel
             // 
             durationLabel.AutoSize = true;
-            durationLabel.Location = new System.Drawing.Point(301, 200);
+            durationLabel.Location = new System.Drawing.Point(343, 200);
             durationLabel.Name = "durationLabel";
             durationLabel.Size = new System.Drawing.Size(139, 25);
             durationLabel.TabIndex = 10;
@@ -317,7 +321,7 @@
             // summerLabel
             // 
             summerLabel.AutoSize = true;
-            summerLabel.Location = new System.Drawing.Point(287, 240);
+            summerLabel.Location = new System.Drawing.Point(329, 240);
             summerLabel.Name = "summerLabel";
             summerLabel.Size = new System.Drawing.Size(153, 25);
             summerLabel.TabIndex = 12;
@@ -326,9 +330,9 @@
             // weeklyHoursLabel
             // 
             weeklyHoursLabel.AutoSize = true;
-            weeklyHoursLabel.Location = new System.Drawing.Point(344, 280);
+            weeklyHoursLabel.Location = new System.Drawing.Point(316, 280);
             weeklyHoursLabel.Name = "weeklyHoursLabel";
-            weeklyHoursLabel.Size = new System.Drawing.Size(96, 45);
+            weeklyHoursLabel.Size = new System.Drawing.Size(166, 25);
             weeklyHoursLabel.TabIndex = 14;
             weeklyHoursLabel.Text = "כמות שעות שבועיות";
             // 
@@ -484,8 +488,8 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.97285F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.02715F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.23711F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.76289F));
             this.tableLayoutPanel1.Controls.Add(degreeClassIDLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.classMegamaCB, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.degreeClassIDTextBox, 1, 0);
@@ -514,7 +518,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(443, 325);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(485, 325);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
             // classMegamaCB
@@ -523,7 +527,7 @@
             this.classMegamaCB.DisplayMember = "DegreeName";
             this.classMegamaCB.Enabled = false;
             this.classMegamaCB.FormattingEnabled = true;
-            this.classMegamaCB.Location = new System.Drawing.Point(4, 82);
+            this.classMegamaCB.Location = new System.Drawing.Point(5, 82);
             this.classMegamaCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.classMegamaCB.Name = "classMegamaCB";
             this.classMegamaCB.Size = new System.Drawing.Size(277, 33);
@@ -538,7 +542,7 @@
             // 
             this.degreeClassIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeClassBindingSource, "DegreeClassID", true));
             this.degreeClassIDTextBox.Enabled = false;
-            this.degreeClassIDTextBox.Location = new System.Drawing.Point(4, 2);
+            this.degreeClassIDTextBox.Location = new System.Drawing.Point(5, 2);
             this.degreeClassIDTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.degreeClassIDTextBox.Name = "degreeClassIDTextBox";
             this.degreeClassIDTextBox.Size = new System.Drawing.Size(277, 30);
@@ -553,7 +557,7 @@
             // 
             this.degreeClassNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeClassBindingSource, "DegreeClassName", true));
             this.degreeClassNameTextBox.Enabled = false;
-            this.degreeClassNameTextBox.Location = new System.Drawing.Point(4, 42);
+            this.degreeClassNameTextBox.Location = new System.Drawing.Point(5, 42);
             this.degreeClassNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.degreeClassNameTextBox.Name = "degreeClassNameTextBox";
             this.degreeClassNameTextBox.Size = new System.Drawing.Size(277, 30);
@@ -563,7 +567,7 @@
             // 
             this.weeklyHoursNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "WeeklyHours", true));
             this.weeklyHoursNumericUpDown.Enabled = false;
-            this.weeklyHoursNumericUpDown.Location = new System.Drawing.Point(4, 282);
+            this.weeklyHoursNumericUpDown.Location = new System.Drawing.Point(5, 282);
             this.weeklyHoursNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.weeklyHoursNumericUpDown.Name = "weeklyHoursNumericUpDown";
             this.weeklyHoursNumericUpDown.Size = new System.Drawing.Size(277, 30);
@@ -573,7 +577,7 @@
             // 
             this.summerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.degreeClassBindingSource, "Summer", true));
             this.summerCheckBox.Enabled = false;
-            this.summerCheckBox.Location = new System.Drawing.Point(165, 242);
+            this.summerCheckBox.Location = new System.Drawing.Point(166, 242);
             this.summerCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.summerCheckBox.Name = "summerCheckBox";
             this.summerCheckBox.Size = new System.Drawing.Size(116, 25);
@@ -586,7 +590,7 @@
             // 
             this.durationNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "Duration", true));
             this.durationNumericUpDown.Enabled = false;
-            this.durationNumericUpDown.Location = new System.Drawing.Point(4, 202);
+            this.durationNumericUpDown.Location = new System.Drawing.Point(5, 202);
             this.durationNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.durationNumericUpDown.Name = "durationNumericUpDown";
             this.durationNumericUpDown.Size = new System.Drawing.Size(277, 30);
@@ -598,7 +602,7 @@
             this.startingSemesterComboBox.DisplayMember = "SemesterFullName";
             this.startingSemesterComboBox.Enabled = false;
             this.startingSemesterComboBox.FormattingEnabled = true;
-            this.startingSemesterComboBox.Location = new System.Drawing.Point(4, 162);
+            this.startingSemesterComboBox.Location = new System.Drawing.Point(5, 162);
             this.startingSemesterComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startingSemesterComboBox.Name = "startingSemesterComboBox";
             this.startingSemesterComboBox.Size = new System.Drawing.Size(277, 33);
@@ -608,7 +612,7 @@
             // 
             this.numberOfStudentsNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "NumberOfStudents", true));
             this.numberOfStudentsNumericUpDown.Enabled = false;
-            this.numberOfStudentsNumericUpDown.Location = new System.Drawing.Point(4, 122);
+            this.numberOfStudentsNumericUpDown.Location = new System.Drawing.Point(5, 122);
             this.numberOfStudentsNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numberOfStudentsNumericUpDown.Name = "numberOfStudentsNumericUpDown";
             this.numberOfStudentsNumericUpDown.Size = new System.Drawing.Size(277, 30);
@@ -1021,40 +1025,6 @@
             this.degreeGrid.Size = new System.Drawing.Size(623, 479);
             this.degreeGrid.TabIndex = 1;
             // 
-            // degreeIDDataGridViewTextBoxColumn
-            // 
-            this.degreeIDDataGridViewTextBoxColumn.DataPropertyName = "DegreeID";
-            this.degreeIDDataGridViewTextBoxColumn.HeaderText = "מזהה מגמה";
-            this.degreeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.degreeIDDataGridViewTextBoxColumn.Name = "degreeIDDataGridViewTextBoxColumn";
-            this.degreeIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.degreeIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // degreeNameDataGridViewTextBoxColumn
-            // 
-            this.degreeNameDataGridViewTextBoxColumn.DataPropertyName = "DegreeName";
-            this.degreeNameDataGridViewTextBoxColumn.HeaderText = "שם מגמה";
-            this.degreeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.degreeNameDataGridViewTextBoxColumn.Name = "degreeNameDataGridViewTextBoxColumn";
-            this.degreeNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // facultyIDDataGridViewTextBoxColumn1
-            // 
-            this.facultyIDDataGridViewTextBoxColumn1.DataPropertyName = "FacultyID";
-            this.facultyIDDataGridViewTextBoxColumn1.HeaderText = "מזהה פקולטה";
-            this.facultyIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.facultyIDDataGridViewTextBoxColumn1.Name = "facultyIDDataGridViewTextBoxColumn1";
-            this.facultyIDDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "FacultyName";
-            this.dataGridViewTextBoxColumn1.HeaderText = "שם פקולטה";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
             // facultyGrid
             // 
             this.facultyGrid.AllowUserToAddRows = false;
@@ -1065,33 +1035,16 @@
             this.facultyIDDataGridViewTextBoxColumn,
             this.FacultyName});
             this.facultyGrid.DataSource = this.facultyBindingSource;
-            this.facultyGrid.Location = new System.Drawing.Point(827, 14);
+            this.facultyGrid.Location = new System.Drawing.Point(755, 14);
             this.facultyGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.facultyGrid.Name = "facultyGrid";
             this.facultyGrid.RowHeadersWidth = 51;
             this.facultyGrid.RowTemplate.Height = 24;
-            this.facultyGrid.Size = new System.Drawing.Size(379, 479);
+            this.facultyGrid.Size = new System.Drawing.Size(451, 479);
             this.facultyGrid.TabIndex = 0;
             this.facultyGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.facultyGrid_CellValueChanged);
             this.facultyGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.facultyGrid_RowEnter);
             this.facultyGrid.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.facultyGrid_RowValidated);
-            // 
-            // facultyIDDataGridViewTextBoxColumn
-            // 
-            this.facultyIDDataGridViewTextBoxColumn.DataPropertyName = "FacultyID";
-            this.facultyIDDataGridViewTextBoxColumn.HeaderText = "מזהה פקולטה";
-            this.facultyIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.facultyIDDataGridViewTextBoxColumn.Name = "facultyIDDataGridViewTextBoxColumn";
-            this.facultyIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.facultyIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // FacultyName
-            // 
-            this.FacultyName.DataPropertyName = "FacultyName";
-            this.FacultyName.HeaderText = "שם פקולטה";
-            this.FacultyName.MinimumWidth = 6;
-            this.FacultyName.Name = "FacultyName";
-            this.FacultyName.Width = 125;
             // 
             // SemestersPage
             // 
@@ -1259,51 +1212,6 @@
             this.SemesterDataGridView.TabIndex = 0;
             this.SemesterDataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.SemesterDataGridView_RowEnter);
             // 
-            // semesterIDDataGridViewTextBoxColumn
-            // 
-            this.semesterIDDataGridViewTextBoxColumn.DataPropertyName = "SemesterID";
-            this.semesterIDDataGridViewTextBoxColumn.HeaderText = "מזהה סמסטר";
-            this.semesterIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.semesterIDDataGridViewTextBoxColumn.Name = "semesterIDDataGridViewTextBoxColumn";
-            this.semesterIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // hebrewYearDataGridViewTextBoxColumn
-            // 
-            this.hebrewYearDataGridViewTextBoxColumn.DataPropertyName = "HebrewYear";
-            this.hebrewYearDataGridViewTextBoxColumn.HeaderText = "שנה עברית";
-            this.hebrewYearDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.hebrewYearDataGridViewTextBoxColumn.Name = "hebrewYearDataGridViewTextBoxColumn";
-            this.hebrewYearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hebrewYearDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // semesterTypeDataGridViewTextBoxColumn
-            // 
-            this.semesterTypeDataGridViewTextBoxColumn.DataPropertyName = "SemesterType";
-            this.semesterTypeDataGridViewTextBoxColumn.HeaderText = "סוג סמסטר";
-            this.semesterTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.semesterTypeDataGridViewTextBoxColumn.Name = "semesterTypeDataGridViewTextBoxColumn";
-            this.semesterTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterTypeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "תאריך תחילה";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.startDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "תאריך סיום";
-            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.endDateDataGridViewTextBoxColumn.Width = 125;
-            // 
             // FeaturesPage
             // 
             this.FeaturesPage.Controls.Add(this.removeFeatBT);
@@ -1333,7 +1241,7 @@
             // featureLabel
             // 
             this.featureLabel.AutoSize = true;
-            this.featureLabel.Location = new System.Drawing.Point(47, 374);
+            this.featureLabel.Location = new System.Drawing.Point(71, 378);
             this.featureLabel.Name = "featureLabel";
             this.featureLabel.Size = new System.Drawing.Size(64, 25);
             this.featureLabel.TabIndex = 2;
@@ -1365,34 +1273,10 @@
             this.features_gridView.Name = "features_gridView";
             this.features_gridView.RowHeadersWidth = 51;
             this.features_gridView.RowTemplate.Height = 24;
-            this.features_gridView.Size = new System.Drawing.Size(789, 439);
+            this.features_gridView.Size = new System.Drawing.Size(974, 439);
             this.features_gridView.TabIndex = 0;
             this.features_gridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.features_gridView_RowEnter);
             this.features_gridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.features_gridView_RowValidated);
-            // 
-            // featuresIDDataGridViewTextBoxColumn
-            // 
-            this.featuresIDDataGridViewTextBoxColumn.DataPropertyName = "FeaturesID";
-            this.featuresIDDataGridViewTextBoxColumn.HeaderText = "מזהה מאפיין";
-            this.featuresIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.featuresIDDataGridViewTextBoxColumn.Name = "featuresIDDataGridViewTextBoxColumn";
-            this.featuresIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // featureNameDataGridViewTextBoxColumn
-            // 
-            this.featureNameDataGridViewTextBoxColumn.DataPropertyName = "FeatureName";
-            this.featureNameDataGridViewTextBoxColumn.HeaderText = "שם מאפיין";
-            this.featureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.featureNameDataGridViewTextBoxColumn.Name = "featureNameDataGridViewTextBoxColumn";
-            this.featureNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // qualifierReqDataGridViewCheckBoxColumn
-            // 
-            this.qualifierReqDataGridViewCheckBoxColumn.DataPropertyName = "QualifierReq";
-            this.qualifierReqDataGridViewCheckBoxColumn.HeaderText = "נדרש מספר?";
-            this.qualifierReqDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.qualifierReqDataGridViewCheckBoxColumn.Name = "qualifierReqDataGridViewCheckBoxColumn";
-            this.qualifierReqDataGridViewCheckBoxColumn.Width = 125;
             // 
             // RoomsPage
             // 
@@ -1833,7 +1717,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1133, 66);
+            this.label6.Location = new System.Drawing.Point(1144, 66);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 25);
@@ -1941,9 +1825,7 @@
             // 
             // CampusPage
             // 
-            this.CampusPage.Controls.Add(this.newCampusBT);
-            this.CampusPage.Controls.Add(this.dataGridBuilding);
-            this.CampusPage.Controls.Add(this.dataGridCampus);
+            this.CampusPage.Controls.Add(this.tableLayoutPanel2);
             this.CampusPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.CampusPage.Location = new System.Drawing.Point(4, 34);
             this.CampusPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1956,7 +1838,7 @@
             // 
             // newCampusBT
             // 
-            this.newCampusBT.Location = new System.Drawing.Point(57, 137);
+            this.newCampusBT.Location = new System.Drawing.Point(112, 4);
             this.newCampusBT.Margin = new System.Windows.Forms.Padding(4);
             this.newCampusBT.Name = "newCampusBT";
             this.newCampusBT.Size = new System.Drawing.Size(105, 66);
@@ -1969,94 +1851,76 @@
             // 
             this.dataGridBuilding.AutoGenerateColumns = false;
             this.dataGridBuilding.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridBuilding.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridBuilding.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridBuilding.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.buildingIDDataGridViewTextBoxColumn,
             this.buildingNameDataGridViewTextBoxColumn,
             this.campusIDDataGridViewTextBoxColumn1});
             this.dataGridBuilding.DataSource = this.buildingBindingSource;
-            this.dataGridBuilding.Location = new System.Drawing.Point(603, 265);
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridBuilding.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridBuilding.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridBuilding.Location = new System.Drawing.Point(224, 281);
             this.dataGridBuilding.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridBuilding.Name = "dataGridBuilding";
             this.dataGridBuilding.RowHeadersWidth = 51;
             this.dataGridBuilding.RowTemplate.Height = 24;
-            this.dataGridBuilding.Size = new System.Drawing.Size(428, 335);
+            this.dataGridBuilding.Size = new System.Drawing.Size(876, 275);
             this.dataGridBuilding.TabIndex = 1;
-            // 
-            // buildingIDDataGridViewTextBoxColumn
-            // 
-            this.buildingIDDataGridViewTextBoxColumn.DataPropertyName = "BuildingID";
-            this.buildingIDDataGridViewTextBoxColumn.HeaderText = "מזהה בניין";
-            this.buildingIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.buildingIDDataGridViewTextBoxColumn.Name = "buildingIDDataGridViewTextBoxColumn";
-            this.buildingIDDataGridViewTextBoxColumn.Width = 123;
-            // 
-            // buildingNameDataGridViewTextBoxColumn
-            // 
-            this.buildingNameDataGridViewTextBoxColumn.DataPropertyName = "BuildingName";
-            this.buildingNameDataGridViewTextBoxColumn.HeaderText = "שם בניין";
-            this.buildingNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.buildingNameDataGridViewTextBoxColumn.Name = "buildingNameDataGridViewTextBoxColumn";
-            this.buildingNameDataGridViewTextBoxColumn.Width = 107;
-            // 
-            // campusIDDataGridViewTextBoxColumn1
-            // 
-            this.campusIDDataGridViewTextBoxColumn1.DataPropertyName = "CampusID";
-            this.campusIDDataGridViewTextBoxColumn1.HeaderText = "מזהה קמפוס";
-            this.campusIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.campusIDDataGridViewTextBoxColumn1.Name = "campusIDDataGridViewTextBoxColumn1";
-            this.campusIDDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.campusIDDataGridViewTextBoxColumn1.Width = 134;
             // 
             // dataGridCampus
             // 
             this.dataGridCampus.AllowUserToAddRows = false;
             this.dataGridCampus.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridCampus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridCampus.AutoGenerateColumns = false;
             this.dataGridCampus.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridCampus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridCampus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCampus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.campusIDDataGridViewTextBoxColumn,
-            this.campusNameDataGridViewTextBoxColumn,
-            this.deleteButton});
+            this.campusNameDataGridViewTextBoxColumn});
             this.dataGridCampus.DataSource = this.campusBindingSource;
-            this.dataGridCampus.Location = new System.Drawing.Point(543, 6);
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridCampus.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridCampus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridCampus.Location = new System.Drawing.Point(224, 2);
             this.dataGridCampus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridCampus.MultiSelect = false;
             this.dataGridCampus.Name = "dataGridCampus";
             this.dataGridCampus.RowHeadersWidth = 51;
             this.dataGridCampus.RowTemplate.Height = 24;
-            this.dataGridCampus.Size = new System.Drawing.Size(492, 181);
+            this.dataGridCampus.Size = new System.Drawing.Size(876, 275);
             this.dataGridCampus.TabIndex = 0;
             this.dataGridCampus.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCampus_RowEnter);
             this.dataGridCampus.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCampus_RowValidated);
             this.dataGridCampus.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridCampus_UserDeletedRow);
-            // 
-            // campusIDDataGridViewTextBoxColumn
-            // 
-            this.campusIDDataGridViewTextBoxColumn.DataPropertyName = "campusID";
-            this.campusIDDataGridViewTextBoxColumn.HeaderText = "מזהה קמפוס";
-            this.campusIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.campusIDDataGridViewTextBoxColumn.Name = "campusIDDataGridViewTextBoxColumn";
-            this.campusIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.campusIDDataGridViewTextBoxColumn.Width = 134;
-            // 
-            // campusNameDataGridViewTextBoxColumn
-            // 
-            this.campusNameDataGridViewTextBoxColumn.DataPropertyName = "campusName";
-            this.campusNameDataGridViewTextBoxColumn.HeaderText = "שם קמפוס";
-            this.campusNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.campusNameDataGridViewTextBoxColumn.Name = "campusNameDataGridViewTextBoxColumn";
-            this.campusNameDataGridViewTextBoxColumn.Width = 118;
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.HeaderText = "מחק";
-            this.deleteButton.MinimumWidth = 6;
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Width = 52;
             // 
             // tabControl1
             // 
@@ -2067,7 +1931,7 @@
             this.tabControl1.Controls.Add(this.FacultyPage);
             this.tabControl1.Controls.Add(this.DegreeClassPage);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 50);
+            this.tabControl1.Location = new System.Drawing.Point(12, 51);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2107,10 +1971,189 @@
             this.tableAdapterManager1.SemesterTableAdapter = this.semesterTableAdapter;
             this.tableAdapterManager1.UpdateOrder = Final_Project.grilDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.newCampusBT, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dataGridBuilding, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dataGridCampus, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(56, 26);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1103, 558);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // campusIDDataGridViewTextBoxColumn
+            // 
+            this.campusIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.campusIDDataGridViewTextBoxColumn.DataPropertyName = "campusID";
+            this.campusIDDataGridViewTextBoxColumn.HeaderText = "מזהה קמפוס";
+            this.campusIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.campusIDDataGridViewTextBoxColumn.Name = "campusIDDataGridViewTextBoxColumn";
+            this.campusIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // campusNameDataGridViewTextBoxColumn
+            // 
+            this.campusNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.campusNameDataGridViewTextBoxColumn.DataPropertyName = "campusName";
+            this.campusNameDataGridViewTextBoxColumn.HeaderText = "שם קמפוס";
+            this.campusNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.campusNameDataGridViewTextBoxColumn.Name = "campusNameDataGridViewTextBoxColumn";
+            // 
+            // buildingIDDataGridViewTextBoxColumn
+            // 
+            this.buildingIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.buildingIDDataGridViewTextBoxColumn.DataPropertyName = "BuildingID";
+            this.buildingIDDataGridViewTextBoxColumn.HeaderText = "מזהה בניין";
+            this.buildingIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.buildingIDDataGridViewTextBoxColumn.Name = "buildingIDDataGridViewTextBoxColumn";
+            // 
+            // buildingNameDataGridViewTextBoxColumn
+            // 
+            this.buildingNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.buildingNameDataGridViewTextBoxColumn.DataPropertyName = "BuildingName";
+            this.buildingNameDataGridViewTextBoxColumn.HeaderText = "שם בניין";
+            this.buildingNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.buildingNameDataGridViewTextBoxColumn.Name = "buildingNameDataGridViewTextBoxColumn";
+            // 
+            // campusIDDataGridViewTextBoxColumn1
+            // 
+            this.campusIDDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.campusIDDataGridViewTextBoxColumn1.DataPropertyName = "CampusID";
+            this.campusIDDataGridViewTextBoxColumn1.HeaderText = "מזהה קמפוס";
+            this.campusIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.campusIDDataGridViewTextBoxColumn1.Name = "campusIDDataGridViewTextBoxColumn1";
+            this.campusIDDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // featuresIDDataGridViewTextBoxColumn
+            // 
+            this.featuresIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.featuresIDDataGridViewTextBoxColumn.DataPropertyName = "FeaturesID";
+            this.featuresIDDataGridViewTextBoxColumn.HeaderText = "מזהה מאפיין";
+            this.featuresIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.featuresIDDataGridViewTextBoxColumn.Name = "featuresIDDataGridViewTextBoxColumn";
+            // 
+            // featureNameDataGridViewTextBoxColumn
+            // 
+            this.featureNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.featureNameDataGridViewTextBoxColumn.DataPropertyName = "FeatureName";
+            this.featureNameDataGridViewTextBoxColumn.HeaderText = "שם מאפיין";
+            this.featureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.featureNameDataGridViewTextBoxColumn.Name = "featureNameDataGridViewTextBoxColumn";
+            // 
+            // qualifierReqDataGridViewCheckBoxColumn
+            // 
+            this.qualifierReqDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.qualifierReqDataGridViewCheckBoxColumn.DataPropertyName = "QualifierReq";
+            this.qualifierReqDataGridViewCheckBoxColumn.HeaderText = "נדרש מספר?";
+            this.qualifierReqDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.qualifierReqDataGridViewCheckBoxColumn.Name = "qualifierReqDataGridViewCheckBoxColumn";
+            // 
+            // semesterIDDataGridViewTextBoxColumn
+            // 
+            this.semesterIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.semesterIDDataGridViewTextBoxColumn.DataPropertyName = "SemesterID";
+            this.semesterIDDataGridViewTextBoxColumn.HeaderText = "מזהה סמסטר";
+            this.semesterIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.semesterIDDataGridViewTextBoxColumn.Name = "semesterIDDataGridViewTextBoxColumn";
+            this.semesterIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hebrewYearDataGridViewTextBoxColumn
+            // 
+            this.hebrewYearDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hebrewYearDataGridViewTextBoxColumn.DataPropertyName = "HebrewYear";
+            this.hebrewYearDataGridViewTextBoxColumn.HeaderText = "שנה עברית";
+            this.hebrewYearDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hebrewYearDataGridViewTextBoxColumn.Name = "hebrewYearDataGridViewTextBoxColumn";
+            this.hebrewYearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // semesterTypeDataGridViewTextBoxColumn
+            // 
+            this.semesterTypeDataGridViewTextBoxColumn.DataPropertyName = "SemesterType";
+            this.semesterTypeDataGridViewTextBoxColumn.HeaderText = "סוג סמסטר";
+            this.semesterTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.semesterTypeDataGridViewTextBoxColumn.Name = "semesterTypeDataGridViewTextBoxColumn";
+            this.semesterTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.semesterTypeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "תאריך תחילה";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // endDateDataGridViewTextBoxColumn
+            // 
+            this.endDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "תאריך סיום";
+            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // facultyIDDataGridViewTextBoxColumn
+            // 
+            this.facultyIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.facultyIDDataGridViewTextBoxColumn.DataPropertyName = "FacultyID";
+            this.facultyIDDataGridViewTextBoxColumn.HeaderText = "מזהה פקולטה";
+            this.facultyIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.facultyIDDataGridViewTextBoxColumn.Name = "facultyIDDataGridViewTextBoxColumn";
+            this.facultyIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // FacultyName
+            // 
+            this.FacultyName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FacultyName.DataPropertyName = "FacultyName";
+            this.FacultyName.HeaderText = "שם פקולטה";
+            this.FacultyName.MinimumWidth = 6;
+            this.FacultyName.Name = "FacultyName";
+            // 
+            // degreeIDDataGridViewTextBoxColumn
+            // 
+            this.degreeIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.degreeIDDataGridViewTextBoxColumn.DataPropertyName = "DegreeID";
+            this.degreeIDDataGridViewTextBoxColumn.HeaderText = "מזהה מגמה";
+            this.degreeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.degreeIDDataGridViewTextBoxColumn.Name = "degreeIDDataGridViewTextBoxColumn";
+            this.degreeIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // degreeNameDataGridViewTextBoxColumn
+            // 
+            this.degreeNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.degreeNameDataGridViewTextBoxColumn.DataPropertyName = "DegreeName";
+            this.degreeNameDataGridViewTextBoxColumn.HeaderText = "שם מגמה";
+            this.degreeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.degreeNameDataGridViewTextBoxColumn.Name = "degreeNameDataGridViewTextBoxColumn";
+            // 
+            // facultyIDDataGridViewTextBoxColumn1
+            // 
+            this.facultyIDDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.facultyIDDataGridViewTextBoxColumn1.DataPropertyName = "FacultyID";
+            this.facultyIDDataGridViewTextBoxColumn1.HeaderText = "מזהה פקולטה";
+            this.facultyIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.facultyIDDataGridViewTextBoxColumn1.Name = "facultyIDDataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "FacultyName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "שם פקולטה";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // DBMaintain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.ClientSize = new System.Drawing.Size(1251, 709);
             this.Controls.Add(this.BackToMenuBT);
             this.Controls.Add(this.tabControl1);
@@ -2171,6 +2214,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBuilding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCampus)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2215,19 +2259,11 @@
         private System.Windows.Forms.ComboBox semesterTypeCB;
         private System.Windows.Forms.ComboBox SemesterYearCB;
         private System.Windows.Forms.DataGridView SemesterDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn semesterIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hebrewYearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn semesterTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage FeaturesPage;
         private System.Windows.Forms.Button removeFeatBT;
         private System.Windows.Forms.Label featureLabel;
         private System.Windows.Forms.Button addFeatureBT;
         private System.Windows.Forms.DataGridView features_gridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn featuresIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn featureNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn qualifierReqDataGridViewCheckBoxColumn;
         private System.Windows.Forms.TabPage RoomsPage;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
@@ -2262,13 +2298,7 @@
         private System.Windows.Forms.TabPage CampusPage;
         private System.Windows.Forms.Button newCampusBT;
         private System.Windows.Forms.DataGridView dataGridBuilding;
-        private System.Windows.Forms.DataGridViewTextBoxColumn buildingIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn buildingNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn campusIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridView dataGridCampus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn campusIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn campusNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn deleteButton;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.DataGridView facultyGrid;
         private System.Windows.Forms.BindingSource facultyBindingSource;
@@ -2276,14 +2306,8 @@
         private System.Windows.Forms.DataGridView degreeGrid;
         private System.Windows.Forms.BindingSource degreeBindingSource;
         private grilDataSetTableAdapters.DegreeTableAdapter degreeTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn facultyIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FacultyName;
         private System.Windows.Forms.Button deleteFacultyBT;
         private System.Windows.Forms.Button addFacultyBT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn degreeIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn degreeNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn facultyIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button delDegBT;
         private System.Windows.Forms.Button newDegBT;
         private System.Windows.Forms.Button saveDegBT;
@@ -2336,5 +2360,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn durationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn summerDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn weeklyHoursDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn buildingIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn buildingNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn campusIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn campusIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn campusNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn degreeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn degreeNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn facultyIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn facultyIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FacultyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn semesterIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hebrewYearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn semesterTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn featuresIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn featureNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn qualifierReqDataGridViewCheckBoxColumn;
     }
 }
