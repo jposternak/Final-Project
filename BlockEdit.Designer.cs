@@ -575,6 +575,7 @@
             this.deleteBT.TabIndex = 1;
             this.deleteBT.Text = "מחק בלוק";
             this.deleteBT.UseVisualStyleBackColor = true;
+            this.deleteBT.Click += new System.EventHandler(this.deleteBT_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -745,7 +746,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BlockEdit";
             this.Text = "BlockEdit";
-            this.Load += new System.EventHandler(this.BlockEdit_Load_1);
+            this.Load += new System.EventHandler(this.BlockEdit_Load);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

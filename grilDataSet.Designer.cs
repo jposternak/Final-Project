@@ -14074,16 +14074,9 @@ SELECT ScheduleBlockID, DayOfWeek, StartTime, RoomID, DegreeClassID FROM Schedul
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "DELETE FROM [dbo].[ScheduleBlock] WHERE (([ScheduleBlockID] = @Original_ScheduleB" +
-                "lockID) AND ([DayOfWeek] = @Original_DayOfWeek) AND ([StartTime] = @Original_Sta" +
-                "rtTime) AND ([RoomID] = @Original_RoomID) AND ([DegreeClassID] = @Original_Degre" +
-                "eClassID))";
+            this._commandCollection[1].CommandText = "DELETE FROM ScheduleBlock\r\nWHERE  (ScheduleBlockID = @BlockID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ScheduleBlockID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ScheduleBlockID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DayOfWeek", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DayOfWeek", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "StartTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoomID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RoomID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DegreeClassID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeClassID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BlockID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ScheduleBlockID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = @"INSERT INTO ScheduleBlock
@@ -14260,18 +14253,9 @@ SELECT ScheduleBlockID, DayOfWeek, StartTime, RoomID, DegreeClassID FROM Schedul
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int DeleteQuery(int Original_ScheduleBlockID, int Original_DayOfWeek, string Original_StartTime, int Original_RoomID, int Original_DegreeClassID) {
+        public virtual int DeleteQuery(int BlockID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            command.Parameters[0].Value = ((int)(Original_ScheduleBlockID));
-            command.Parameters[1].Value = ((int)(Original_DayOfWeek));
-            if ((Original_StartTime == null)) {
-                throw new global::System.ArgumentNullException("Original_StartTime");
-            }
-            else {
-                command.Parameters[2].Value = ((string)(Original_StartTime));
-            }
-            command.Parameters[3].Value = ((int)(Original_RoomID));
-            command.Parameters[4].Value = ((int)(Original_DegreeClassID));
+            command.Parameters[0].Value = ((int)(BlockID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

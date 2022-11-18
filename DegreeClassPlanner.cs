@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -65,7 +60,7 @@ namespace Final_Project
             catch (Exception ex1) { }
         }
 
-        
+
 
         private void createSerie(String seriesName)
         {
@@ -113,23 +108,40 @@ namespace Final_Project
         private void add_Click(object sender, EventArgs e)
         {
             int weekday = int.Parse(dayCB.Text);
-            
+
             DateTime time = TimePicker.Value;
-            
+
             DataRowView row = (DataRowView)roomCB.SelectedItem;
-            
+
             if (row != null)
             {
                 int roomID = (int)row.Row[0];
-                ScheduleBlock.saveToDB(weekday, time, roomID, dc.Id,semester.Id);
+                ScheduleBlock.saveToDB(weekday, time, roomID, dc.Id, semester.Id);
                 plotGraph();
             }
 
-            
 
 
 
 
+
+
+        }
+
+        private void luz_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            var r = luz.HitTest(e.X, e.Y);
+
+            if (r.ChartElementType == ChartElementType.DataPointLabel)
+            {
+                DataPoint p = (DataPoint)r.Object;
+                int idx = r.PointIndex;
+                ScheduleBlock sb = dataPoints[idx];
+
+                BlockEdit dbfrom = new BlockEdit(sb);
+                dbfrom.Show();
+            }
 
         }
     }

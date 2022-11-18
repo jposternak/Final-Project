@@ -7,7 +7,10 @@ using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using System.Windows.Forms;
+using MessageBox = System.Windows.MessageBox;
 
 namespace Final_Project
 {
@@ -49,6 +52,22 @@ namespace Final_Project
             scheduleBlockTableAdapter.InsertQuery(day, time, roomID, DegreeClassID,semesterID);
         }
 
+        public static Boolean deleteFromDB(int blockID)
+        {
+            try
+            {
+                ScheduleBlockTableAdapter scheduleBlockTableAdapter = new ScheduleBlockTableAdapter();
+                scheduleBlockTableAdapter.DeleteQuery(blockID);
+                return true;
+            }
+            catch(Exception ex1)
+            {
+                MessageBox.Show("לא ניתן למחוק בלוק זה");
+            }
+
+            return false;
+
+        }
 
         public String TimeToString()
         {

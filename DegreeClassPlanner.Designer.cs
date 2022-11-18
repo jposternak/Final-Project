@@ -44,23 +44,23 @@
             this.megamaLB = new System.Windows.Forms.Label();
             this.facultyLB = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.luz = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.roomCB = new System.Windows.Forms.ComboBox();
-            this.grilDataSet = new Final_Project.grilDataSet();
-            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.roomTableAdapter = new Final_Project.grilDataSetTableAdapters.RoomTableAdapter();
-            this.dayCB = new System.Windows.Forms.ComboBox();
-            this.TimePicker = new System.Windows.Forms.DateTimePicker();
             this.add = new System.Windows.Forms.Button();
+            this.TimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dayCB = new System.Windows.Forms.ComboBox();
+            this.roomCB = new System.Windows.Forms.ComboBox();
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grilDataSet = new Final_Project.grilDataSet();
+            this.luz = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.roomTableAdapter = new Final_Project.grilDataSetTableAdapters.RoomTableAdapter();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.luz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luz)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -222,42 +222,25 @@
             this.splitContainer1.SplitterDistance = 496;
             this.splitContainer1.TabIndex = 1;
             // 
-            // luz
+            // add
             // 
-            chartArea1.Name = "ChartArea1";
-            this.luz.ChartAreas.Add(chartArea1);
-            this.luz.Location = new System.Drawing.Point(21, 28);
-            this.luz.Name = "luz";
-            series1.ChartArea = "ChartArea1";
-            series1.Name = "Series1";
-            this.luz.Series.Add(series1);
-            this.luz.Size = new System.Drawing.Size(948, 819);
-            this.luz.TabIndex = 0;
-            this.luz.Text = "chart1";
+            this.add.Location = new System.Drawing.Point(203, 348);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(172, 137);
+            this.add.TabIndex = 3;
+            this.add.Text = "הוסף";
+            this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
-            // roomCB
+            // TimePicker
             // 
-            this.roomCB.DataSource = this.roomBindingSource;
-            this.roomCB.DisplayMember = "RoomName";
-            this.roomCB.FormattingEnabled = true;
-            this.roomCB.Location = new System.Drawing.Point(140, 158);
-            this.roomCB.Name = "roomCB";
-            this.roomCB.Size = new System.Drawing.Size(260, 24);
-            this.roomCB.TabIndex = 0;
-            // 
-            // grilDataSet
-            // 
-            this.grilDataSet.DataSetName = "grilDataSet";
-            this.grilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // roomBindingSource
-            // 
-            this.roomBindingSource.DataMember = "Room";
-            this.roomBindingSource.DataSource = this.grilDataSet;
-            // 
-            // roomTableAdapter
-            // 
-            this.roomTableAdapter.ClearBeforeFill = true;
+            this.TimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.TimePicker.Location = new System.Drawing.Point(175, 286);
+            this.TimePicker.Name = "TimePicker";
+            this.TimePicker.RightToLeftLayout = true;
+            this.TimePicker.ShowUpDown = true;
+            this.TimePicker.Size = new System.Drawing.Size(200, 22);
+            this.TimePicker.TabIndex = 2;
             // 
             // dayCB
             // 
@@ -275,25 +258,43 @@
             this.dayCB.Size = new System.Drawing.Size(260, 24);
             this.dayCB.TabIndex = 1;
             // 
-            // TimePicker
+            // roomCB
             // 
-            this.TimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.TimePicker.Location = new System.Drawing.Point(175, 286);
-            this.TimePicker.Name = "TimePicker";
-            this.TimePicker.RightToLeftLayout = true;
-            this.TimePicker.ShowUpDown = true;
-            this.TimePicker.Size = new System.Drawing.Size(200, 22);
-            this.TimePicker.TabIndex = 2;
+            this.roomCB.DataSource = this.roomBindingSource;
+            this.roomCB.DisplayMember = "RoomName";
+            this.roomCB.FormattingEnabled = true;
+            this.roomCB.Location = new System.Drawing.Point(140, 158);
+            this.roomCB.Name = "roomCB";
+            this.roomCB.Size = new System.Drawing.Size(260, 24);
+            this.roomCB.TabIndex = 0;
             // 
-            // add
+            // roomBindingSource
             // 
-            this.add.Location = new System.Drawing.Point(203, 348);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(172, 137);
-            this.add.TabIndex = 3;
-            this.add.Text = "הוסף";
-            this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.grilDataSet;
+            // 
+            // grilDataSet
+            // 
+            this.grilDataSet.DataSetName = "grilDataSet";
+            this.grilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // luz
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.luz.ChartAreas.Add(chartArea1);
+            this.luz.Location = new System.Drawing.Point(21, 28);
+            this.luz.Name = "luz";
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.luz.Series.Add(series1);
+            this.luz.Size = new System.Drawing.Size(948, 819);
+            this.luz.TabIndex = 0;
+            this.luz.Text = "chart1";
+            this.luz.MouseClick += new System.Windows.Forms.MouseEventHandler(this.luz_MouseClick);
+            // 
+            // roomTableAdapter
+            // 
+            this.roomTableAdapter.ClearBeforeFill = true;
             // 
             // DegreeClassPlanner
             // 
@@ -312,9 +313,9 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.luz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luz)).EndInit();
             this.ResumeLayout(false);
 
         }

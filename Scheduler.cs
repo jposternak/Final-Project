@@ -12,6 +12,7 @@ namespace Final_Project
         public Scheduler()
         {
             InitializeComponent();
+
         }
 
         private void Scheduler_Load(object sender, EventArgs e)
@@ -67,24 +68,33 @@ namespace Final_Project
         }
 
         Dictionary<int, ScheduleBlock> dataPoints = new Dictionary<int, ScheduleBlock>();
+        int selectedRoomID;
+        String selectedRoomName;
 
         private void treeRooms_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+
+            selectedRoomID = int.Parse(e.Node.Name);
+            selectedRoomName = e.Node.Text;
+            plotChart();
+
+        }
+
+        private void plotChart()
+        {
             try
             {
-                int selectedRoomID = int.Parse(e.Node.Name);
-
                 List<ScheduleBlock> sb = ScheduleBlock.getListbyRoom(selectedRoomID);
                 luz.Series.Clear();
                 dataPoints.Clear();
-                formatChart(e.Node.Text);
+                formatChart(selectedRoomName);
 
                 foreach (ScheduleBlock block in sb)
                 {
                     //Enable for different series
                     //String faculty = block.FacultyName;
                     //Remove this line if various series is option
-                    String faculty = e.Node.Text;
+                    String faculty = selectedRoomName;
 
                     createSerie(faculty);
 
@@ -97,11 +107,8 @@ namespace Final_Project
                 }
             }
             catch (Exception e1) { }
-
-
         }
 
-        
         private void createSerie(String seriesName)
         {
             if (luz.Series.FindByName(seriesName) == null)
@@ -159,15 +166,6 @@ namespace Final_Project
 
         }
 
-        private void luz_Click(object sender, EventArgs e)
-        {
-
-
-
-
-
-        }
-
         private void luz_MouseClick(object sender, MouseEventArgs e)
         {
             var r = luz.HitTest(e.X, e.Y);
@@ -180,15 +178,17 @@ namespace Final_Project
 
                 BlockEdit dbfrom = new BlockEdit(sb);
                 dbfrom.Show();
+                dbfrom.FormClosed += Dbfrom_FormClosed;
             }
+        }
+
+        private void Dbfrom_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            plotChart();
         }
 
         private void blockItraTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
-
-            //semesterNumCurrent = (int)SemesterDataGridView.Rows[e.RowIndex].Cells[0].Value;
-            //blockItraTable[e.ColumnIndex,e.RowIndex]
 
             int blockID = (int)blockItraTable.Rows[e.RowIndex].Cells[0].Value;
 
@@ -204,7 +204,7 @@ namespace Final_Project
 
                 dcp.Show();
             }
-            
+
 
 
         }

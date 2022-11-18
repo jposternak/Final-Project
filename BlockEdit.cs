@@ -10,7 +10,7 @@ namespace Final_Project
 
         ScheduleBlock block;
         List<string> myItems = new List<string> ();
-
+    
 
         /*
          * this.allRoomsTableAdapter.FillByRoomID(this.grilDataViewsSet.AllRooms, roomID);
@@ -79,21 +79,28 @@ namespace Final_Project
 
         private void BlockEdit_Load(object sender, System.EventArgs e)
         {
-            // TODO: This line of code loads data into the 'grilDataViewsSet.ScheduleBlockDetails' table. You can move, or remove it, as needed.
-            //this.scheduleBlockDetailsTableAdapter.FillByRoomID(this.grilDataViewsSet.ScheduleBlockDetails, this.block.Id);
-
-        }
-
-        private void BlockEdit_Load_1(object sender, System.EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'grilDataViewsSet.AllRooms' table. You can move, or remove it, as needed.
-            //this.allRoomsTableAdapter.Fill(this.grilDataViewsSet.AllRooms);
+            //this.previousWindow = sender;
 
         }
 
         private void editBT_Click(object sender, System.EventArgs e)
         {
 
+        }
+
+        private void deleteBT_Click(object sender, EventArgs e)
+        {
+            String msg = $"האם בטוח שרוצה למחוק את הבלוק?";
+            DialogResult yesno = MessageBox.Show(msg, "האם בטוח", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (yesno == DialogResult.Yes)
+            {
+                if (ScheduleBlock.deleteFromDB(this.block.Id))
+                {
+                    MessageBox.Show("בלוק נמחק בהצלחה", "הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+            }
         }
     }
 }
