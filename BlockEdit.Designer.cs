@@ -515,9 +515,9 @@
             // 
             this.dayOfWeek.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dayOfWeek.AutoSize = true;
-            this.dayOfWeek.Location = new System.Drawing.Point(651, 38);
+            this.dayOfWeek.Location = new System.Drawing.Point(521, 30);
             this.dayOfWeek.Name = "dayOfWeek";
-            this.dayOfWeek.Size = new System.Drawing.Size(101, 25);
+            this.dayOfWeek.Size = new System.Drawing.Size(81, 20);
             this.dayOfWeek.TabIndex = 0;
             this.dayOfWeek.Text = "יום בשבוע";
             this.dayOfWeek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -526,9 +526,9 @@
             // 
             this.time.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.time.AutoSize = true;
-            this.time.Location = new System.Drawing.Point(451, 38);
+            this.time.Location = new System.Drawing.Point(361, 30);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(101, 25);
+            this.time.Size = new System.Drawing.Size(81, 20);
             this.time.TabIndex = 0;
             this.time.Text = "יום בשבוע";
             this.time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -537,9 +537,9 @@
             // 
             this.semester.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.semester.AutoSize = true;
-            this.semester.Location = new System.Drawing.Point(251, 38);
+            this.semester.Location = new System.Drawing.Point(201, 30);
             this.semester.Name = "semester";
-            this.semester.Size = new System.Drawing.Size(101, 25);
+            this.semester.Size = new System.Drawing.Size(81, 20);
             this.semester.TabIndex = 0;
             this.semester.Text = "יום בשבוע";
             this.semester.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -548,9 +548,9 @@
             // 
             this.inUse.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.inUse.AutoSize = true;
-            this.inUse.Location = new System.Drawing.Point(50, 38);
+            this.inUse.Location = new System.Drawing.Point(40, 30);
             this.inUse.Name = "inUse";
-            this.inUse.Size = new System.Drawing.Size(101, 25);
+            this.inUse.Size = new System.Drawing.Size(81, 20);
             this.inUse.TabIndex = 0;
             this.inUse.Text = "יום בשבוע";
             this.inUse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

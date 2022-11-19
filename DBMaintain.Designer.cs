@@ -124,7 +124,13 @@
             this.deleteFacultyBT = new System.Windows.Forms.Button();
             this.addFacultyBT = new System.Windows.Forms.Button();
             this.degreeGrid = new System.Windows.Forms.DataGridView();
+            this.degreeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.degreeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultyIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facultyGrid = new System.Windows.Forms.DataGridView();
+            this.facultyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FacultyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SemestersPage = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -138,11 +144,19 @@
             this.semesterTypeCB = new System.Windows.Forms.ComboBox();
             this.SemesterYearCB = new System.Windows.Forms.ComboBox();
             this.SemesterDataGridView = new System.Windows.Forms.DataGridView();
+            this.semesterIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hebrewYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semesterTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FeaturesPage = new System.Windows.Forms.TabPage();
             this.removeFeatBT = new System.Windows.Forms.Button();
             this.featureLabel = new System.Windows.Forms.Label();
             this.addFeatureBT = new System.Windows.Forms.Button();
             this.features_gridView = new System.Windows.Forms.DataGridView();
+            this.featuresIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.featureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qualifierReqDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RoomsPage = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -183,34 +197,20 @@
             this.floorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomsCampusCB = new System.Windows.Forms.ComboBox();
             this.CampusPage = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.newCampusBT = new System.Windows.Forms.Button();
             this.dataGridBuilding = new System.Windows.Forms.DataGridView();
+            this.buildingIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildingNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campusIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridCampus = new System.Windows.Forms.DataGridView();
+            this.campusIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campusNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.facultyTableAdapter = new Final_Project.grilDataSetTableAdapters.FacultyTableAdapter();
             this.degreeTableAdapter = new Final_Project.grilDataSetTableAdapters.DegreeTableAdapter();
             this.degreeClassTableAdapter = new Final_Project.grilDataSetTableAdapters.DegreeClassTableAdapter();
             this.tableAdapterManager1 = new Final_Project.grilDataSetTableAdapters.TableAdapterManager();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.campusIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campusNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buildingIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buildingNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campusIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.featuresIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.featureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qualifierReqDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.semesterIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hebrewYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semesterTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FacultyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.degreeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.degreeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultyIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             degreeClassIDLabel = new System.Windows.Forms.Label();
             degreeClassNameLabel = new System.Windows.Forms.Label();
             degreeIDLabel = new System.Windows.Forms.Label();
@@ -258,81 +258,89 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomsDataGrid)).BeginInit();
             this.CampusPage.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBuilding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCampus)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // degreeClassIDLabel
             // 
             degreeClassIDLabel.AutoSize = true;
-            degreeClassIDLabel.Location = new System.Drawing.Point(373, 0);
+            degreeClassIDLabel.Location = new System.Drawing.Point(271, 0);
+            degreeClassIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             degreeClassIDLabel.Name = "degreeClassIDLabel";
-            degreeClassIDLabel.Size = new System.Drawing.Size(109, 25);
+            degreeClassIDLabel.Size = new System.Drawing.Size(91, 20);
             degreeClassIDLabel.TabIndex = 0;
             degreeClassIDLabel.Text = "מזהה מחזור:";
             // 
             // degreeClassNameLabel
             // 
             degreeClassNameLabel.AutoSize = true;
-            degreeClassNameLabel.Location = new System.Drawing.Point(389, 40);
+            degreeClassNameLabel.Location = new System.Drawing.Point(285, 33);
+            degreeClassNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             degreeClassNameLabel.Name = "degreeClassNameLabel";
-            degreeClassNameLabel.Size = new System.Drawing.Size(93, 25);
+            degreeClassNameLabel.Size = new System.Drawing.Size(77, 20);
             degreeClassNameLabel.TabIndex = 2;
             degreeClassNameLabel.Text = "שם מחזור:";
             // 
             // degreeIDLabel
             // 
             degreeIDLabel.AutoSize = true;
-            degreeIDLabel.Location = new System.Drawing.Point(424, 80);
+            degreeIDLabel.Location = new System.Drawing.Point(313, 66);
+            degreeIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             degreeIDLabel.Name = "degreeIDLabel";
-            degreeIDLabel.Size = new System.Drawing.Size(58, 25);
+            degreeIDLabel.Size = new System.Drawing.Size(49, 20);
             degreeIDLabel.TabIndex = 4;
             degreeIDLabel.Text = "מגמה:";
             // 
             // numberOfStudentsLabel
             // 
             numberOfStudentsLabel.AutoSize = true;
-            numberOfStudentsLabel.Location = new System.Drawing.Point(345, 120);
+            numberOfStudentsLabel.Location = new System.Drawing.Point(246, 99);
+            numberOfStudentsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             numberOfStudentsLabel.Name = "numberOfStudentsLabel";
-            numberOfStudentsLabel.Size = new System.Drawing.Size(137, 25);
+            numberOfStudentsLabel.Size = new System.Drawing.Size(116, 20);
             numberOfStudentsLabel.TabIndex = 6;
             numberOfStudentsLabel.Text = "מספר סטודנטים:";
             // 
             // startingSemesterLabel
             // 
             startingSemesterLabel.AutoSize = true;
-            startingSemesterLabel.Location = new System.Drawing.Point(356, 160);
+            startingSemesterLabel.Location = new System.Drawing.Point(251, 132);
+            startingSemesterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             startingSemesterLabel.Name = "startingSemesterLabel";
-            startingSemesterLabel.Size = new System.Drawing.Size(126, 25);
+            startingSemesterLabel.Size = new System.Drawing.Size(111, 20);
             startingSemesterLabel.TabIndex = 8;
             startingSemesterLabel.Text = "סמסטר התחלה:";
             // 
             // durationLabel
             // 
             durationLabel.AutoSize = true;
-            durationLabel.Location = new System.Drawing.Point(343, 200);
+            durationLabel.Location = new System.Drawing.Point(242, 165);
+            durationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             durationLabel.Name = "durationLabel";
-            durationLabel.Size = new System.Drawing.Size(139, 25);
+            durationLabel.Size = new System.Drawing.Size(120, 20);
             durationLabel.TabIndex = 10;
             durationLabel.Text = "אורך בסמסטרים:";
             // 
             // summerLabel
             // 
             summerLabel.AutoSize = true;
-            summerLabel.Location = new System.Drawing.Point(329, 240);
+            summerLabel.Location = new System.Drawing.Point(234, 198);
+            summerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             summerLabel.Name = "summerLabel";
-            summerLabel.Size = new System.Drawing.Size(153, 25);
+            summerLabel.Size = new System.Drawing.Size(128, 20);
             summerLabel.TabIndex = 12;
             summerLabel.Text = "האם לומדים בקיץ:";
             // 
             // weeklyHoursLabel
             // 
             weeklyHoursLabel.AutoSize = true;
-            weeklyHoursLabel.Location = new System.Drawing.Point(316, 280);
+            weeklyHoursLabel.Location = new System.Drawing.Point(221, 231);
+            weeklyHoursLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             weeklyHoursLabel.Name = "weeklyHoursLabel";
-            weeklyHoursLabel.Size = new System.Drawing.Size(166, 25);
+            weeklyHoursLabel.Size = new System.Drawing.Size(141, 20);
             weeklyHoursLabel.TabIndex = 14;
             weeklyHoursLabel.Text = "כמות שעות שבועיות";
             // 
@@ -388,10 +396,10 @@
             // 
             // BackToMenuBT
             // 
-            this.BackToMenuBT.Location = new System.Drawing.Point(1164, 11);
-            this.BackToMenuBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BackToMenuBT.Location = new System.Drawing.Point(873, 9);
+            this.BackToMenuBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BackToMenuBT.Name = "BackToMenuBT";
-            this.BackToMenuBT.Size = new System.Drawing.Size(75, 57);
+            this.BackToMenuBT.Size = new System.Drawing.Size(56, 46);
             this.BackToMenuBT.TabIndex = 1;
             this.BackToMenuBT.Text = "חזרה לתפריט";
             this.BackToMenuBT.UseVisualStyleBackColor = true;
@@ -460,10 +468,10 @@
             this.DegreeClassPage.Controls.Add(this.groupBox4);
             this.DegreeClassPage.Controls.Add(this.groupBox3);
             this.DegreeClassPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.DegreeClassPage.Location = new System.Drawing.Point(4, 34);
-            this.DegreeClassPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DegreeClassPage.Location = new System.Drawing.Point(4, 29);
+            this.DegreeClassPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DegreeClassPage.Name = "DegreeClassPage";
-            this.DegreeClassPage.Size = new System.Drawing.Size(1219, 609);
+            this.DegreeClassPage.Size = new System.Drawing.Size(912, 493);
             this.DegreeClassPage.TabIndex = 7;
             this.DegreeClassPage.Text = "מחזורי לימודים";
             this.DegreeClassPage.UseVisualStyleBackColor = true;
@@ -475,11 +483,11 @@
             this.groupBox4.Controls.Add(this.saveClassBT);
             this.groupBox4.Controls.Add(this.editClassBT);
             this.groupBox4.Controls.Add(this.newClassBT);
-            this.groupBox4.Location = new System.Drawing.Point(13, 7);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Location = new System.Drawing.Point(10, 6);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(493, 599);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(370, 487);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "פרטי המחזור";
@@ -506,8 +514,8 @@
             this.tableLayoutPanel1.Controls.Add(this.numberOfStudentsNumericUpDown, 1, 3);
             this.tableLayoutPanel1.Controls.Add(degreeIDLabel, 0, 2);
             this.tableLayoutPanel1.Controls.Add(numberOfStudentsLabel, 0, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 34);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 28);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -518,7 +526,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(485, 325);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(364, 264);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
             // classMegamaCB
@@ -527,10 +535,10 @@
             this.classMegamaCB.DisplayMember = "DegreeName";
             this.classMegamaCB.Enabled = false;
             this.classMegamaCB.FormattingEnabled = true;
-            this.classMegamaCB.Location = new System.Drawing.Point(5, 82);
-            this.classMegamaCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.classMegamaCB.Location = new System.Drawing.Point(3, 68);
+            this.classMegamaCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.classMegamaCB.Name = "classMegamaCB";
-            this.classMegamaCB.Size = new System.Drawing.Size(277, 33);
+            this.classMegamaCB.Size = new System.Drawing.Size(209, 28);
             this.classMegamaCB.TabIndex = 17;
             // 
             // degreeBindingSource1
@@ -542,10 +550,10 @@
             // 
             this.degreeClassIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeClassBindingSource, "DegreeClassID", true));
             this.degreeClassIDTextBox.Enabled = false;
-            this.degreeClassIDTextBox.Location = new System.Drawing.Point(5, 2);
-            this.degreeClassIDTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.degreeClassIDTextBox.Location = new System.Drawing.Point(3, 2);
+            this.degreeClassIDTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.degreeClassIDTextBox.Name = "degreeClassIDTextBox";
-            this.degreeClassIDTextBox.Size = new System.Drawing.Size(277, 30);
+            this.degreeClassIDTextBox.Size = new System.Drawing.Size(209, 26);
             this.degreeClassIDTextBox.TabIndex = 1;
             // 
             // degreeClassBindingSource
@@ -557,30 +565,30 @@
             // 
             this.degreeClassNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeClassBindingSource, "DegreeClassName", true));
             this.degreeClassNameTextBox.Enabled = false;
-            this.degreeClassNameTextBox.Location = new System.Drawing.Point(5, 42);
-            this.degreeClassNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.degreeClassNameTextBox.Location = new System.Drawing.Point(3, 35);
+            this.degreeClassNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.degreeClassNameTextBox.Name = "degreeClassNameTextBox";
-            this.degreeClassNameTextBox.Size = new System.Drawing.Size(277, 30);
+            this.degreeClassNameTextBox.Size = new System.Drawing.Size(209, 26);
             this.degreeClassNameTextBox.TabIndex = 3;
             // 
             // weeklyHoursNumericUpDown
             // 
             this.weeklyHoursNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "WeeklyHours", true));
             this.weeklyHoursNumericUpDown.Enabled = false;
-            this.weeklyHoursNumericUpDown.Location = new System.Drawing.Point(5, 282);
-            this.weeklyHoursNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.weeklyHoursNumericUpDown.Location = new System.Drawing.Point(4, 233);
+            this.weeklyHoursNumericUpDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.weeklyHoursNumericUpDown.Name = "weeklyHoursNumericUpDown";
-            this.weeklyHoursNumericUpDown.Size = new System.Drawing.Size(277, 30);
+            this.weeklyHoursNumericUpDown.Size = new System.Drawing.Size(208, 26);
             this.weeklyHoursNumericUpDown.TabIndex = 15;
             // 
             // summerCheckBox
             // 
             this.summerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.degreeClassBindingSource, "Summer", true));
             this.summerCheckBox.Enabled = false;
-            this.summerCheckBox.Location = new System.Drawing.Point(166, 242);
-            this.summerCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.summerCheckBox.Location = new System.Drawing.Point(125, 200);
+            this.summerCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.summerCheckBox.Name = "summerCheckBox";
-            this.summerCheckBox.Size = new System.Drawing.Size(116, 25);
+            this.summerCheckBox.Size = new System.Drawing.Size(87, 20);
             this.summerCheckBox.TabIndex = 13;
             this.summerCheckBox.Text = "לא";
             this.summerCheckBox.UseVisualStyleBackColor = true;
@@ -590,10 +598,10 @@
             // 
             this.durationNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "Duration", true));
             this.durationNumericUpDown.Enabled = false;
-            this.durationNumericUpDown.Location = new System.Drawing.Point(5, 202);
-            this.durationNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.durationNumericUpDown.Location = new System.Drawing.Point(4, 167);
+            this.durationNumericUpDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.durationNumericUpDown.Name = "durationNumericUpDown";
-            this.durationNumericUpDown.Size = new System.Drawing.Size(277, 30);
+            this.durationNumericUpDown.Size = new System.Drawing.Size(208, 26);
             this.durationNumericUpDown.TabIndex = 11;
             // 
             // startingSemesterComboBox
@@ -602,28 +610,28 @@
             this.startingSemesterComboBox.DisplayMember = "SemesterFullName";
             this.startingSemesterComboBox.Enabled = false;
             this.startingSemesterComboBox.FormattingEnabled = true;
-            this.startingSemesterComboBox.Location = new System.Drawing.Point(5, 162);
-            this.startingSemesterComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.startingSemesterComboBox.Location = new System.Drawing.Point(3, 134);
+            this.startingSemesterComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.startingSemesterComboBox.Name = "startingSemesterComboBox";
-            this.startingSemesterComboBox.Size = new System.Drawing.Size(277, 33);
+            this.startingSemesterComboBox.Size = new System.Drawing.Size(209, 28);
             this.startingSemesterComboBox.TabIndex = 9;
             // 
             // numberOfStudentsNumericUpDown
             // 
             this.numberOfStudentsNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "NumberOfStudents", true));
             this.numberOfStudentsNumericUpDown.Enabled = false;
-            this.numberOfStudentsNumericUpDown.Location = new System.Drawing.Point(5, 122);
-            this.numberOfStudentsNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numberOfStudentsNumericUpDown.Location = new System.Drawing.Point(4, 101);
+            this.numberOfStudentsNumericUpDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numberOfStudentsNumericUpDown.Name = "numberOfStudentsNumericUpDown";
-            this.numberOfStudentsNumericUpDown.Size = new System.Drawing.Size(277, 30);
+            this.numberOfStudentsNumericUpDown.Size = new System.Drawing.Size(208, 26);
             this.numberOfStudentsNumericUpDown.TabIndex = 7;
             // 
             // delClassBT
             // 
-            this.delClassBT.Location = new System.Drawing.Point(4, 366);
-            this.delClassBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.delClassBT.Location = new System.Drawing.Point(3, 297);
+            this.delClassBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.delClassBT.Name = "delClassBT";
-            this.delClassBT.Size = new System.Drawing.Size(87, 49);
+            this.delClassBT.Size = new System.Drawing.Size(65, 40);
             this.delClassBT.TabIndex = 16;
             this.delClassBT.Text = "מחק";
             this.delClassBT.UseVisualStyleBackColor = true;
@@ -631,10 +639,10 @@
             // 
             // saveClassBT
             // 
-            this.saveClassBT.Location = new System.Drawing.Point(123, 366);
-            this.saveClassBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveClassBT.Location = new System.Drawing.Point(92, 297);
+            this.saveClassBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveClassBT.Name = "saveClassBT";
-            this.saveClassBT.Size = new System.Drawing.Size(87, 49);
+            this.saveClassBT.Size = new System.Drawing.Size(65, 40);
             this.saveClassBT.TabIndex = 16;
             this.saveClassBT.Text = "שמור";
             this.saveClassBT.UseVisualStyleBackColor = true;
@@ -642,10 +650,10 @@
             // 
             // editClassBT
             // 
-            this.editClassBT.Location = new System.Drawing.Point(243, 366);
-            this.editClassBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.editClassBT.Location = new System.Drawing.Point(182, 297);
+            this.editClassBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.editClassBT.Name = "editClassBT";
-            this.editClassBT.Size = new System.Drawing.Size(87, 49);
+            this.editClassBT.Size = new System.Drawing.Size(65, 40);
             this.editClassBT.TabIndex = 16;
             this.editClassBT.Text = "ערוך";
             this.editClassBT.UseVisualStyleBackColor = true;
@@ -653,10 +661,10 @@
             // 
             // newClassBT
             // 
-            this.newClassBT.Location = new System.Drawing.Point(361, 366);
-            this.newClassBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.newClassBT.Location = new System.Drawing.Point(271, 297);
+            this.newClassBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.newClassBT.Name = "newClassBT";
-            this.newClassBT.Size = new System.Drawing.Size(87, 49);
+            this.newClassBT.Size = new System.Drawing.Size(65, 40);
             this.newClassBT.TabIndex = 16;
             this.newClassBT.Text = "חדש";
             this.newClassBT.UseVisualStyleBackColor = true;
@@ -669,11 +677,11 @@
             this.groupBox3.Controls.Add(this.classFacCB);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Location = new System.Drawing.Point(515, 7);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Location = new System.Drawing.Point(386, 6);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(675, 599);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(506, 487);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "מחזורים";
@@ -696,13 +704,13 @@
             this.summerDataGridViewCheckBoxColumn,
             this.weeklyHoursDataGridViewTextBoxColumn});
             this.classDegGrid.DataSource = this.degreeClassBindingSource;
-            this.classDegGrid.Location = new System.Drawing.Point(13, 59);
-            this.classDegGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.classDegGrid.Location = new System.Drawing.Point(10, 48);
+            this.classDegGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.classDegGrid.Name = "classDegGrid";
             this.classDegGrid.ReadOnly = true;
             this.classDegGrid.RowHeadersWidth = 51;
             this.classDegGrid.RowTemplate.Height = 24;
-            this.classDegGrid.Size = new System.Drawing.Size(661, 528);
+            this.classDegGrid.Size = new System.Drawing.Size(496, 429);
             this.classDegGrid.TabIndex = 2;
             this.classDegGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.classDegGrid_RowEnter);
             // 
@@ -808,10 +816,10 @@
             this.classDegCB.DataSource = this.degreeBindingSource;
             this.classDegCB.DisplayMember = "DegreeName";
             this.classDegCB.FormattingEnabled = true;
-            this.classDegCB.Location = new System.Drawing.Point(13, 25);
-            this.classDegCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.classDegCB.Location = new System.Drawing.Point(10, 20);
+            this.classDegCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.classDegCB.Name = "classDegCB";
-            this.classDegCB.Size = new System.Drawing.Size(247, 33);
+            this.classDegCB.Size = new System.Drawing.Size(186, 28);
             this.classDegCB.TabIndex = 1;
             this.classDegCB.SelectedIndexChanged += new System.EventHandler(this.classDegCB_SelectedIndexChanged);
             // 
@@ -825,10 +833,10 @@
             this.classFacCB.DataSource = this.facultyBindingSource;
             this.classFacCB.DisplayMember = "FacultyName";
             this.classFacCB.FormattingEnabled = true;
-            this.classFacCB.Location = new System.Drawing.Point(335, 25);
-            this.classFacCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.classFacCB.Location = new System.Drawing.Point(251, 20);
+            this.classFacCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.classFacCB.Name = "classFacCB";
-            this.classFacCB.Size = new System.Drawing.Size(247, 33);
+            this.classFacCB.Size = new System.Drawing.Size(186, 28);
             this.classFacCB.TabIndex = 1;
             this.classFacCB.SelectedIndexChanged += new System.EventHandler(this.classFacCB_SelectedIndexChanged);
             // 
@@ -840,18 +848,20 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(273, 30);
+            this.label18.Location = new System.Drawing.Point(205, 24);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(58, 25);
+            this.label18.Size = new System.Drawing.Size(49, 20);
             this.label18.TabIndex = 0;
             this.label18.Text = "מגמה:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(595, 30);
+            this.label17.Location = new System.Drawing.Point(446, 24);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(76, 25);
+            this.label17.Size = new System.Drawing.Size(63, 20);
             this.label17.TabIndex = 0;
             this.label17.Text = "פקולטה:";
             // 
@@ -872,20 +882,20 @@
             this.FacultyPage.Controls.Add(this.degreeGrid);
             this.FacultyPage.Controls.Add(this.facultyGrid);
             this.FacultyPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.FacultyPage.Location = new System.Drawing.Point(4, 34);
-            this.FacultyPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FacultyPage.Location = new System.Drawing.Point(4, 29);
+            this.FacultyPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FacultyPage.Name = "FacultyPage";
-            this.FacultyPage.Size = new System.Drawing.Size(1219, 609);
+            this.FacultyPage.Size = new System.Drawing.Size(912, 493);
             this.FacultyPage.TabIndex = 5;
             this.FacultyPage.Text = "פקולטות ומגמות";
             this.FacultyPage.UseVisualStyleBackColor = true;
             // 
             // delDegBT
             // 
-            this.delDegBT.Location = new System.Drawing.Point(43, 540);
-            this.delDegBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.delDegBT.Location = new System.Drawing.Point(32, 439);
+            this.delDegBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.delDegBT.Name = "delDegBT";
-            this.delDegBT.Size = new System.Drawing.Size(75, 30);
+            this.delDegBT.Size = new System.Drawing.Size(56, 24);
             this.delDegBT.TabIndex = 11;
             this.delDegBT.Text = "מחק";
             this.delDegBT.UseVisualStyleBackColor = true;
@@ -893,10 +903,10 @@
             // 
             // newDegBT
             // 
-            this.newDegBT.Location = new System.Drawing.Point(43, 511);
-            this.newDegBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.newDegBT.Location = new System.Drawing.Point(32, 415);
+            this.newDegBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.newDegBT.Name = "newDegBT";
-            this.newDegBT.Size = new System.Drawing.Size(75, 30);
+            this.newDegBT.Size = new System.Drawing.Size(56, 24);
             this.newDegBT.TabIndex = 10;
             this.newDegBT.Text = "חדש";
             this.newDegBT.UseVisualStyleBackColor = true;
@@ -904,10 +914,10 @@
             // 
             // saveDegBT
             // 
-            this.saveDegBT.Location = new System.Drawing.Point(135, 540);
-            this.saveDegBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveDegBT.Location = new System.Drawing.Point(101, 439);
+            this.saveDegBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveDegBT.Name = "saveDegBT";
-            this.saveDegBT.Size = new System.Drawing.Size(75, 30);
+            this.saveDegBT.Size = new System.Drawing.Size(56, 24);
             this.saveDegBT.TabIndex = 9;
             this.saveDegBT.Text = "שמור";
             this.saveDegBT.UseVisualStyleBackColor = true;
@@ -915,10 +925,10 @@
             // 
             // editDegBT
             // 
-            this.editDegBT.Location = new System.Drawing.Point(135, 511);
-            this.editDegBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.editDegBT.Location = new System.Drawing.Point(101, 415);
+            this.editDegBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.editDegBT.Name = "editDegBT";
-            this.editDegBT.Size = new System.Drawing.Size(75, 30);
+            this.editDegBT.Size = new System.Drawing.Size(56, 24);
             this.editDegBT.TabIndex = 8;
             this.editDegBT.Text = "ערוך";
             this.editDegBT.UseVisualStyleBackColor = true;
@@ -927,27 +937,30 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(285, 511);
+            this.label16.Location = new System.Drawing.Point(214, 415);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(98, 25);
+            this.label16.Size = new System.Drawing.Size(83, 20);
             this.label16.TabIndex = 7;
             this.label16.Text = "שם פקולטה";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(475, 511);
+            this.label15.Location = new System.Drawing.Point(356, 415);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(80, 25);
+            this.label15.Size = new System.Drawing.Size(69, 20);
             this.label15.TabIndex = 7;
             this.label15.Text = "שם מגמה";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(565, 511);
+            this.label14.Location = new System.Drawing.Point(424, 415);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 25);
+            this.label14.Size = new System.Drawing.Size(83, 20);
             this.label14.TabIndex = 7;
             this.label14.Text = "מזהה מגמה";
             // 
@@ -957,38 +970,38 @@
             this.degFacCB.DisplayMember = "FacultyName";
             this.degFacCB.Enabled = false;
             this.degFacCB.FormattingEnabled = true;
-            this.degFacCB.Location = new System.Drawing.Point(227, 543);
-            this.degFacCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.degFacCB.Location = new System.Drawing.Point(170, 441);
+            this.degFacCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.degFacCB.Name = "degFacCB";
-            this.degFacCB.Size = new System.Drawing.Size(137, 33);
+            this.degFacCB.Size = new System.Drawing.Size(104, 28);
             this.degFacCB.TabIndex = 6;
             // 
             // degNameTB
             // 
             this.degNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeBindingSource, "DegreeName", true));
             this.degNameTB.Enabled = false;
-            this.degNameTB.Location = new System.Drawing.Point(371, 543);
-            this.degNameTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.degNameTB.Location = new System.Drawing.Point(278, 441);
+            this.degNameTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.degNameTB.Name = "degNameTB";
-            this.degNameTB.Size = new System.Drawing.Size(169, 30);
+            this.degNameTB.Size = new System.Drawing.Size(128, 26);
             this.degNameTB.TabIndex = 4;
             // 
             // degIDTB
             // 
             this.degIDTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeBindingSource, "DegreeID", true));
             this.degIDTB.Enabled = false;
-            this.degIDTB.Location = new System.Drawing.Point(545, 543);
-            this.degIDTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.degIDTB.Location = new System.Drawing.Point(409, 441);
+            this.degIDTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.degIDTB.Name = "degIDTB";
-            this.degIDTB.Size = new System.Drawing.Size(100, 30);
+            this.degIDTB.Size = new System.Drawing.Size(76, 26);
             this.degIDTB.TabIndex = 3;
             // 
             // deleteFacultyBT
             // 
-            this.deleteFacultyBT.Location = new System.Drawing.Point(996, 498);
-            this.deleteFacultyBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.deleteFacultyBT.Location = new System.Drawing.Point(747, 405);
+            this.deleteFacultyBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteFacultyBT.Name = "deleteFacultyBT";
-            this.deleteFacultyBT.Size = new System.Drawing.Size(75, 57);
+            this.deleteFacultyBT.Size = new System.Drawing.Size(56, 46);
             this.deleteFacultyBT.TabIndex = 2;
             this.deleteFacultyBT.Text = "מחק פקולטה";
             this.deleteFacultyBT.UseVisualStyleBackColor = true;
@@ -996,10 +1009,10 @@
             // 
             // addFacultyBT
             // 
-            this.addFacultyBT.Location = new System.Drawing.Point(1129, 498);
-            this.addFacultyBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addFacultyBT.Location = new System.Drawing.Point(847, 405);
+            this.addFacultyBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addFacultyBT.Name = "addFacultyBT";
-            this.addFacultyBT.Size = new System.Drawing.Size(75, 57);
+            this.addFacultyBT.Size = new System.Drawing.Size(56, 46);
             this.addFacultyBT.TabIndex = 2;
             this.addFacultyBT.Text = "הוסף פקולטה";
             this.addFacultyBT.UseVisualStyleBackColor = true;
@@ -1017,13 +1030,47 @@
             this.facultyIDDataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn1});
             this.degreeGrid.DataSource = this.degreeBindingSource;
-            this.degreeGrid.Location = new System.Drawing.Point(27, 14);
-            this.degreeGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.degreeGrid.Location = new System.Drawing.Point(20, 11);
+            this.degreeGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.degreeGrid.Name = "degreeGrid";
             this.degreeGrid.RowHeadersWidth = 51;
             this.degreeGrid.RowTemplate.Height = 24;
-            this.degreeGrid.Size = new System.Drawing.Size(623, 479);
+            this.degreeGrid.Size = new System.Drawing.Size(467, 389);
             this.degreeGrid.TabIndex = 1;
+            // 
+            // degreeIDDataGridViewTextBoxColumn
+            // 
+            this.degreeIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.degreeIDDataGridViewTextBoxColumn.DataPropertyName = "DegreeID";
+            this.degreeIDDataGridViewTextBoxColumn.HeaderText = "מזהה מגמה";
+            this.degreeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.degreeIDDataGridViewTextBoxColumn.Name = "degreeIDDataGridViewTextBoxColumn";
+            this.degreeIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // degreeNameDataGridViewTextBoxColumn
+            // 
+            this.degreeNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.degreeNameDataGridViewTextBoxColumn.DataPropertyName = "DegreeName";
+            this.degreeNameDataGridViewTextBoxColumn.HeaderText = "שם מגמה";
+            this.degreeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.degreeNameDataGridViewTextBoxColumn.Name = "degreeNameDataGridViewTextBoxColumn";
+            // 
+            // facultyIDDataGridViewTextBoxColumn1
+            // 
+            this.facultyIDDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.facultyIDDataGridViewTextBoxColumn1.DataPropertyName = "FacultyID";
+            this.facultyIDDataGridViewTextBoxColumn1.HeaderText = "מזהה פקולטה";
+            this.facultyIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.facultyIDDataGridViewTextBoxColumn1.Name = "facultyIDDataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "FacultyName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "שם פקולטה";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // facultyGrid
             // 
@@ -1035,16 +1082,33 @@
             this.facultyIDDataGridViewTextBoxColumn,
             this.FacultyName});
             this.facultyGrid.DataSource = this.facultyBindingSource;
-            this.facultyGrid.Location = new System.Drawing.Point(755, 14);
-            this.facultyGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.facultyGrid.Location = new System.Drawing.Point(566, 11);
+            this.facultyGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.facultyGrid.Name = "facultyGrid";
             this.facultyGrid.RowHeadersWidth = 51;
             this.facultyGrid.RowTemplate.Height = 24;
-            this.facultyGrid.Size = new System.Drawing.Size(451, 479);
+            this.facultyGrid.Size = new System.Drawing.Size(338, 389);
             this.facultyGrid.TabIndex = 0;
             this.facultyGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.facultyGrid_CellValueChanged);
             this.facultyGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.facultyGrid_RowEnter);
             this.facultyGrid.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.facultyGrid_RowValidated);
+            // 
+            // facultyIDDataGridViewTextBoxColumn
+            // 
+            this.facultyIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.facultyIDDataGridViewTextBoxColumn.DataPropertyName = "FacultyID";
+            this.facultyIDDataGridViewTextBoxColumn.HeaderText = "מזהה פקולטה";
+            this.facultyIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.facultyIDDataGridViewTextBoxColumn.Name = "facultyIDDataGridViewTextBoxColumn";
+            this.facultyIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // FacultyName
+            // 
+            this.FacultyName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FacultyName.DataPropertyName = "FacultyName";
+            this.FacultyName.HeaderText = "שם פקולטה";
+            this.FacultyName.MinimumWidth = 6;
+            this.FacultyName.Name = "FacultyName";
             // 
             // SemestersPage
             // 
@@ -1061,10 +1125,10 @@
             this.SemestersPage.Controls.Add(this.SemesterYearCB);
             this.SemestersPage.Controls.Add(this.SemesterDataGridView);
             this.SemestersPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.SemestersPage.Location = new System.Drawing.Point(4, 34);
-            this.SemestersPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SemestersPage.Location = new System.Drawing.Point(4, 29);
+            this.SemestersPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SemestersPage.Name = "SemestersPage";
-            this.SemestersPage.Size = new System.Drawing.Size(1219, 609);
+            this.SemestersPage.Size = new System.Drawing.Size(912, 493);
             this.SemestersPage.TabIndex = 4;
             this.SemestersPage.Text = "סמסטרים";
             this.SemestersPage.UseVisualStyleBackColor = true;
@@ -1072,49 +1136,44 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(385, 458);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(289, 372);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 25);
+            this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "ת. סיום";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(552, 458);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(414, 372);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 25);
+            this.label3.Size = new System.Drawing.Size(70, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "ת. תחילה";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(732, 458);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(549, 372);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 25);
+            this.label2.Size = new System.Drawing.Size(30, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "סוג";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(901, 458);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(676, 372);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 25);
+            this.label1.Size = new System.Drawing.Size(35, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "שנה";
             // 
             // deleteSemesterBT
             // 
-            this.deleteSemesterBT.Location = new System.Drawing.Point(11, 485);
-            this.deleteSemesterBT.Margin = new System.Windows.Forms.Padding(4);
+            this.deleteSemesterBT.Location = new System.Drawing.Point(8, 394);
             this.deleteSemesterBT.Name = "deleteSemesterBT";
-            this.deleteSemesterBT.Size = new System.Drawing.Size(100, 37);
+            this.deleteSemesterBT.Size = new System.Drawing.Size(75, 30);
             this.deleteSemesterBT.TabIndex = 3;
             this.deleteSemesterBT.Text = "מחק";
             this.deleteSemesterBT.UseVisualStyleBackColor = true;
@@ -1122,10 +1181,9 @@
             // 
             // addNewSemesterBT
             // 
-            this.addNewSemesterBT.Location = new System.Drawing.Point(123, 485);
-            this.addNewSemesterBT.Margin = new System.Windows.Forms.Padding(4);
+            this.addNewSemesterBT.Location = new System.Drawing.Point(92, 394);
             this.addNewSemesterBT.Name = "addNewSemesterBT";
-            this.addNewSemesterBT.Size = new System.Drawing.Size(100, 37);
+            this.addNewSemesterBT.Size = new System.Drawing.Size(75, 30);
             this.addNewSemesterBT.TabIndex = 3;
             this.addNewSemesterBT.Text = "חדש";
             this.addNewSemesterBT.UseVisualStyleBackColor = true;
@@ -1133,10 +1191,9 @@
             // 
             // saveSemesterBT
             // 
-            this.saveSemesterBT.Location = new System.Drawing.Point(235, 485);
-            this.saveSemesterBT.Margin = new System.Windows.Forms.Padding(4);
+            this.saveSemesterBT.Location = new System.Drawing.Point(176, 394);
             this.saveSemesterBT.Name = "saveSemesterBT";
-            this.saveSemesterBT.Size = new System.Drawing.Size(100, 37);
+            this.saveSemesterBT.Size = new System.Drawing.Size(75, 30);
             this.saveSemesterBT.TabIndex = 3;
             this.saveSemesterBT.Text = "שמור";
             this.saveSemesterBT.UseVisualStyleBackColor = true;
@@ -1145,19 +1202,17 @@
             // enddaSemesterPicker
             // 
             this.enddaSemesterPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.enddaSemesterPicker.Location = new System.Drawing.Point(347, 487);
-            this.enddaSemesterPicker.Margin = new System.Windows.Forms.Padding(4);
+            this.enddaSemesterPicker.Location = new System.Drawing.Point(260, 396);
             this.enddaSemesterPicker.Name = "enddaSemesterPicker";
-            this.enddaSemesterPicker.Size = new System.Drawing.Size(156, 30);
+            this.enddaSemesterPicker.Size = new System.Drawing.Size(118, 26);
             this.enddaSemesterPicker.TabIndex = 2;
             // 
             // begdaSemesterPicker
             // 
             this.begdaSemesterPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.begdaSemesterPicker.Location = new System.Drawing.Point(516, 487);
-            this.begdaSemesterPicker.Margin = new System.Windows.Forms.Padding(4);
+            this.begdaSemesterPicker.Location = new System.Drawing.Point(387, 396);
             this.begdaSemesterPicker.Name = "begdaSemesterPicker";
-            this.begdaSemesterPicker.Size = new System.Drawing.Size(156, 30);
+            this.begdaSemesterPicker.Size = new System.Drawing.Size(118, 26);
             this.begdaSemesterPicker.TabIndex = 2;
             // 
             // semesterTypeCB
@@ -1167,10 +1222,9 @@
             "חורף",
             "אביב",
             "קיץ"});
-            this.semesterTypeCB.Location = new System.Drawing.Point(685, 486);
-            this.semesterTypeCB.Margin = new System.Windows.Forms.Padding(4);
+            this.semesterTypeCB.Location = new System.Drawing.Point(514, 395);
             this.semesterTypeCB.Name = "semesterTypeCB";
-            this.semesterTypeCB.Size = new System.Drawing.Size(160, 33);
+            this.semesterTypeCB.Size = new System.Drawing.Size(121, 28);
             this.semesterTypeCB.TabIndex = 1;
             // 
             // SemesterYearCB
@@ -1184,10 +1238,9 @@
             "תשפה",
             "תשפו",
             "תשפז"});
-            this.SemesterYearCB.Location = new System.Drawing.Point(859, 486);
-            this.SemesterYearCB.Margin = new System.Windows.Forms.Padding(4);
+            this.SemesterYearCB.Location = new System.Drawing.Point(644, 395);
             this.SemesterYearCB.Name = "SemesterYearCB";
-            this.SemesterYearCB.Size = new System.Drawing.Size(160, 33);
+            this.SemesterYearCB.Size = new System.Drawing.Size(121, 28);
             this.SemesterYearCB.TabIndex = 1;
             // 
             // SemesterDataGridView
@@ -1203,14 +1256,58 @@
             this.startDateDataGridViewTextBoxColumn,
             this.endDateDataGridViewTextBoxColumn});
             this.SemesterDataGridView.DataSource = this.semesterBindingSource;
-            this.SemesterDataGridView.Location = new System.Drawing.Point(11, 4);
-            this.SemesterDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.SemesterDataGridView.Location = new System.Drawing.Point(8, 3);
             this.SemesterDataGridView.Name = "SemesterDataGridView";
             this.SemesterDataGridView.ReadOnly = true;
             this.SemesterDataGridView.RowHeadersWidth = 51;
-            this.SemesterDataGridView.Size = new System.Drawing.Size(1177, 436);
+            this.SemesterDataGridView.Size = new System.Drawing.Size(883, 354);
             this.SemesterDataGridView.TabIndex = 0;
             this.SemesterDataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.SemesterDataGridView_RowEnter);
+            // 
+            // semesterIDDataGridViewTextBoxColumn
+            // 
+            this.semesterIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.semesterIDDataGridViewTextBoxColumn.DataPropertyName = "SemesterID";
+            this.semesterIDDataGridViewTextBoxColumn.HeaderText = "מזהה סמסטר";
+            this.semesterIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.semesterIDDataGridViewTextBoxColumn.Name = "semesterIDDataGridViewTextBoxColumn";
+            this.semesterIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hebrewYearDataGridViewTextBoxColumn
+            // 
+            this.hebrewYearDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hebrewYearDataGridViewTextBoxColumn.DataPropertyName = "HebrewYear";
+            this.hebrewYearDataGridViewTextBoxColumn.HeaderText = "שנה עברית";
+            this.hebrewYearDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hebrewYearDataGridViewTextBoxColumn.Name = "hebrewYearDataGridViewTextBoxColumn";
+            this.hebrewYearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // semesterTypeDataGridViewTextBoxColumn
+            // 
+            this.semesterTypeDataGridViewTextBoxColumn.DataPropertyName = "SemesterType";
+            this.semesterTypeDataGridViewTextBoxColumn.HeaderText = "סוג סמסטר";
+            this.semesterTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.semesterTypeDataGridViewTextBoxColumn.Name = "semesterTypeDataGridViewTextBoxColumn";
+            this.semesterTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.semesterTypeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "תאריך תחילה";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // endDateDataGridViewTextBoxColumn
+            // 
+            this.endDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "תאריך סיום";
+            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FeaturesPage
             // 
@@ -1219,20 +1316,20 @@
             this.FeaturesPage.Controls.Add(this.addFeatureBT);
             this.FeaturesPage.Controls.Add(this.features_gridView);
             this.FeaturesPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.FeaturesPage.Location = new System.Drawing.Point(4, 34);
-            this.FeaturesPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FeaturesPage.Location = new System.Drawing.Point(4, 29);
+            this.FeaturesPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FeaturesPage.Name = "FeaturesPage";
-            this.FeaturesPage.Size = new System.Drawing.Size(1219, 609);
+            this.FeaturesPage.Size = new System.Drawing.Size(912, 493);
             this.FeaturesPage.TabIndex = 3;
             this.FeaturesPage.Text = "מאפיינים";
             this.FeaturesPage.UseVisualStyleBackColor = true;
             // 
             // removeFeatBT
             // 
-            this.removeFeatBT.Location = new System.Drawing.Point(47, 240);
-            this.removeFeatBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.removeFeatBT.Location = new System.Drawing.Point(35, 195);
+            this.removeFeatBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.removeFeatBT.Name = "removeFeatBT";
-            this.removeFeatBT.Size = new System.Drawing.Size(100, 76);
+            this.removeFeatBT.Size = new System.Drawing.Size(75, 62);
             this.removeFeatBT.TabIndex = 3;
             this.removeFeatBT.Text = "מחק";
             this.removeFeatBT.UseVisualStyleBackColor = true;
@@ -1241,18 +1338,18 @@
             // featureLabel
             // 
             this.featureLabel.AutoSize = true;
-            this.featureLabel.Location = new System.Drawing.Point(71, 378);
+            this.featureLabel.Location = new System.Drawing.Point(53, 307);
+            this.featureLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.featureLabel.Name = "featureLabel";
-            this.featureLabel.Size = new System.Drawing.Size(64, 25);
+            this.featureLabel.Size = new System.Drawing.Size(51, 20);
             this.featureLabel.TabIndex = 2;
             this.featureLabel.Text = "label1";
             // 
             // addFeatureBT
             // 
-            this.addFeatureBT.Location = new System.Drawing.Point(47, 65);
-            this.addFeatureBT.Margin = new System.Windows.Forms.Padding(4);
+            this.addFeatureBT.Location = new System.Drawing.Point(35, 53);
             this.addFeatureBT.Name = "addFeatureBT";
-            this.addFeatureBT.Size = new System.Drawing.Size(100, 108);
+            this.addFeatureBT.Size = new System.Drawing.Size(75, 88);
             this.addFeatureBT.TabIndex = 1;
             this.addFeatureBT.Text = "הוסף מאפיין חדש";
             this.addFeatureBT.UseVisualStyleBackColor = true;
@@ -1268,15 +1365,39 @@
             this.featureNameDataGridViewTextBoxColumn,
             this.qualifierReqDataGridViewCheckBoxColumn});
             this.features_gridView.DataSource = this.featuresBindingSource;
-            this.features_gridView.Location = new System.Drawing.Point(199, 31);
-            this.features_gridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.features_gridView.Location = new System.Drawing.Point(149, 25);
+            this.features_gridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.features_gridView.Name = "features_gridView";
             this.features_gridView.RowHeadersWidth = 51;
             this.features_gridView.RowTemplate.Height = 24;
-            this.features_gridView.Size = new System.Drawing.Size(974, 439);
+            this.features_gridView.Size = new System.Drawing.Size(730, 357);
             this.features_gridView.TabIndex = 0;
             this.features_gridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.features_gridView_RowEnter);
             this.features_gridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.features_gridView_RowValidated);
+            // 
+            // featuresIDDataGridViewTextBoxColumn
+            // 
+            this.featuresIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.featuresIDDataGridViewTextBoxColumn.DataPropertyName = "FeaturesID";
+            this.featuresIDDataGridViewTextBoxColumn.HeaderText = "מזהה מאפיין";
+            this.featuresIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.featuresIDDataGridViewTextBoxColumn.Name = "featuresIDDataGridViewTextBoxColumn";
+            // 
+            // featureNameDataGridViewTextBoxColumn
+            // 
+            this.featureNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.featureNameDataGridViewTextBoxColumn.DataPropertyName = "FeatureName";
+            this.featureNameDataGridViewTextBoxColumn.HeaderText = "שם מאפיין";
+            this.featureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.featureNameDataGridViewTextBoxColumn.Name = "featureNameDataGridViewTextBoxColumn";
+            // 
+            // qualifierReqDataGridViewCheckBoxColumn
+            // 
+            this.qualifierReqDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.qualifierReqDataGridViewCheckBoxColumn.DataPropertyName = "QualifierReq";
+            this.qualifierReqDataGridViewCheckBoxColumn.HeaderText = "נדרש מספר?";
+            this.qualifierReqDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.qualifierReqDataGridViewCheckBoxColumn.Name = "qualifierReqDataGridViewCheckBoxColumn";
             // 
             // RoomsPage
             // 
@@ -1289,10 +1410,10 @@
             this.RoomsPage.Controls.Add(this.roomsDataGrid);
             this.RoomsPage.Controls.Add(this.roomsCampusCB);
             this.RoomsPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.RoomsPage.Location = new System.Drawing.Point(4, 34);
-            this.RoomsPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RoomsPage.Location = new System.Drawing.Point(4, 29);
+            this.RoomsPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RoomsPage.Name = "RoomsPage";
-            this.RoomsPage.Size = new System.Drawing.Size(1219, 609);
+            this.RoomsPage.Size = new System.Drawing.Size(912, 493);
             this.RoomsPage.TabIndex = 2;
             this.RoomsPage.Text = "חדרים";
             this.RoomsPage.UseVisualStyleBackColor = true;
@@ -1305,11 +1426,11 @@
             this.groupBox2.Controls.Add(this.addFeatureToRoomBT);
             this.groupBox2.Controls.Add(this.featuresMenuGrid);
             this.groupBox2.Controls.Add(this.roomFeaturesGridView);
-            this.groupBox2.Location = new System.Drawing.Point(3, 231);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(2, 188);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(791, 359);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(593, 292);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "מאפיינים";
@@ -1317,27 +1438,29 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(596, 33);
+            this.label13.Location = new System.Drawing.Point(447, 27);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(128, 25);
+            this.label13.Size = new System.Drawing.Size(108, 20);
             this.label13.TabIndex = 3;
             this.label13.Text = "מאפיינים לחדר";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(116, 33);
+            this.label12.Location = new System.Drawing.Point(87, 27);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(136, 25);
+            this.label12.Size = new System.Drawing.Size(113, 20);
             this.label12.TabIndex = 3;
             this.label12.Text = "תפריט מאפיינים";
             // 
             // removeFeatureFromRoomBT
             // 
-            this.removeFeatureFromRoomBT.Location = new System.Drawing.Point(387, 172);
-            this.removeFeatureFromRoomBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.removeFeatureFromRoomBT.Location = new System.Drawing.Point(290, 140);
+            this.removeFeatureFromRoomBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.removeFeatureFromRoomBT.Name = "removeFeatureFromRoomBT";
-            this.removeFeatureFromRoomBT.Size = new System.Drawing.Size(59, 39);
+            this.removeFeatureFromRoomBT.Size = new System.Drawing.Size(44, 32);
             this.removeFeatureFromRoomBT.TabIndex = 2;
             this.removeFeatureFromRoomBT.Text = "-->";
             this.removeFeatureFromRoomBT.UseVisualStyleBackColor = true;
@@ -1346,10 +1469,10 @@
             // addFeatureToRoomBT
             // 
             this.addFeatureToRoomBT.AllowDrop = true;
-            this.addFeatureToRoomBT.Location = new System.Drawing.Point(387, 116);
-            this.addFeatureToRoomBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addFeatureToRoomBT.Location = new System.Drawing.Point(290, 94);
+            this.addFeatureToRoomBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addFeatureToRoomBT.Name = "addFeatureToRoomBT";
-            this.addFeatureToRoomBT.Size = new System.Drawing.Size(59, 39);
+            this.addFeatureToRoomBT.Size = new System.Drawing.Size(44, 32);
             this.addFeatureToRoomBT.TabIndex = 2;
             this.addFeatureToRoomBT.Text = "<--";
             this.addFeatureToRoomBT.UseVisualStyleBackColor = true;
@@ -1382,8 +1505,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.featuresMenuGrid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.featuresMenuGrid.Location = new System.Drawing.Point(5, 57);
-            this.featuresMenuGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.featuresMenuGrid.Location = new System.Drawing.Point(4, 46);
+            this.featuresMenuGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.featuresMenuGrid.MultiSelect = false;
             this.featuresMenuGrid.Name = "featuresMenuGrid";
             this.featuresMenuGrid.ReadOnly = true;
@@ -1401,7 +1524,7 @@
             this.featuresMenuGrid.ShowCellToolTips = false;
             this.featuresMenuGrid.ShowEditingIcon = false;
             this.featuresMenuGrid.ShowRowErrors = false;
-            this.featuresMenuGrid.Size = new System.Drawing.Size(357, 297);
+            this.featuresMenuGrid.Size = new System.Drawing.Size(268, 241);
             this.featuresMenuGrid.TabIndex = 1;
             this.featuresMenuGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.featuresMenuGrid_RowEnter);
             // 
@@ -1464,8 +1587,8 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.roomFeaturesGridView.DefaultCellStyle = dataGridViewCellStyle5;
-            this.roomFeaturesGridView.Location = new System.Drawing.Point(451, 57);
-            this.roomFeaturesGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roomFeaturesGridView.Location = new System.Drawing.Point(338, 46);
+            this.roomFeaturesGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomFeaturesGridView.Name = "roomFeaturesGridView";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
@@ -1481,7 +1604,7 @@
             this.roomFeaturesGridView.ShowCellToolTips = false;
             this.roomFeaturesGridView.ShowEditingIcon = false;
             this.roomFeaturesGridView.ShowRowErrors = false;
-            this.roomFeaturesGridView.Size = new System.Drawing.Size(333, 297);
+            this.roomFeaturesGridView.Size = new System.Drawing.Size(250, 241);
             this.roomFeaturesGridView.TabIndex = 0;
             this.roomFeaturesGridView.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.roomFeaturesGridView_CellValidated);
             this.roomFeaturesGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.roomFeaturesGridView_RowEnter);
@@ -1549,21 +1672,21 @@
             this.groupBox1.Controls.Add(this.roomFloorTB);
             this.groupBox1.Controls.Add(this.roomNameTB);
             this.groupBox1.Controls.Add(this.roomIDTB);
-            this.groupBox1.Location = new System.Drawing.Point(3, 17);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(2, 14);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(791, 208);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(593, 169);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "פרטי החדר";
             // 
             // roomDeleteBT
             // 
-            this.roomDeleteBT.Location = new System.Drawing.Point(253, 129);
-            this.roomDeleteBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roomDeleteBT.Location = new System.Drawing.Point(190, 105);
+            this.roomDeleteBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomDeleteBT.Name = "roomDeleteBT";
-            this.roomDeleteBT.Size = new System.Drawing.Size(75, 34);
+            this.roomDeleteBT.Size = new System.Drawing.Size(56, 28);
             this.roomDeleteBT.TabIndex = 6;
             this.roomDeleteBT.Text = "מחק";
             this.roomDeleteBT.UseVisualStyleBackColor = true;
@@ -1571,10 +1694,10 @@
             // 
             // roomNewBT
             // 
-            this.roomNewBT.Location = new System.Drawing.Point(253, 94);
-            this.roomNewBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roomNewBT.Location = new System.Drawing.Point(190, 76);
+            this.roomNewBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomNewBT.Name = "roomNewBT";
-            this.roomNewBT.Size = new System.Drawing.Size(75, 34);
+            this.roomNewBT.Size = new System.Drawing.Size(56, 28);
             this.roomNewBT.TabIndex = 6;
             this.roomNewBT.Text = "צור חדש";
             this.roomNewBT.UseVisualStyleBackColor = true;
@@ -1582,10 +1705,10 @@
             // 
             // roomSaveBT
             // 
-            this.roomSaveBT.Location = new System.Drawing.Point(253, 59);
-            this.roomSaveBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roomSaveBT.Location = new System.Drawing.Point(190, 48);
+            this.roomSaveBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomSaveBT.Name = "roomSaveBT";
-            this.roomSaveBT.Size = new System.Drawing.Size(75, 34);
+            this.roomSaveBT.Size = new System.Drawing.Size(56, 28);
             this.roomSaveBT.TabIndex = 6;
             this.roomSaveBT.Text = "שמור";
             this.roomSaveBT.UseVisualStyleBackColor = true;
@@ -1593,10 +1716,10 @@
             // 
             // roomEditBT
             // 
-            this.roomEditBT.Location = new System.Drawing.Point(253, 25);
-            this.roomEditBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roomEditBT.Location = new System.Drawing.Point(190, 20);
+            this.roomEditBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomEditBT.Name = "roomEditBT";
-            this.roomEditBT.Size = new System.Drawing.Size(75, 34);
+            this.roomEditBT.Size = new System.Drawing.Size(56, 28);
             this.roomEditBT.TabIndex = 6;
             this.roomEditBT.Text = "ערוך";
             this.roomEditBT.UseVisualStyleBackColor = true;
@@ -1605,45 +1728,50 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(549, 133);
+            this.label11.Location = new System.Drawing.Point(412, 108);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 25);
+            this.label11.Size = new System.Drawing.Size(41, 20);
             this.label11.TabIndex = 5;
             this.label11.Text = "בניין";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(549, 170);
+            this.label10.Location = new System.Drawing.Point(412, 138);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 25);
+            this.label10.Size = new System.Drawing.Size(50, 20);
             this.label10.TabIndex = 5;
             this.label10.Text = "קמפוס";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(549, 98);
+            this.label9.Location = new System.Drawing.Point(412, 80);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 25);
+            this.label9.Size = new System.Drawing.Size(42, 20);
             this.label9.TabIndex = 5;
             this.label9.Text = "קומה";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(549, 63);
+            this.label8.Location = new System.Drawing.Point(412, 51);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 25);
+            this.label8.Size = new System.Drawing.Size(70, 20);
             this.label8.TabIndex = 5;
             this.label8.Text = "שם החדר";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(549, 27);
+            this.label7.Location = new System.Drawing.Point(412, 22);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 25);
+            this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 5;
             this.label7.Text = "מזהה חדר";
             // 
@@ -1651,11 +1779,11 @@
             // 
             this.roomCampusTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "campusName", true));
             this.roomCampusTB.Enabled = false;
-            this.roomCampusTB.Location = new System.Drawing.Point(349, 167);
-            this.roomCampusTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roomCampusTB.Location = new System.Drawing.Point(262, 136);
+            this.roomCampusTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomCampusTB.Name = "roomCampusTB";
             this.roomCampusTB.ReadOnly = true;
-            this.roomCampusTB.Size = new System.Drawing.Size(193, 30);
+            this.roomCampusTB.Size = new System.Drawing.Size(146, 26);
             this.roomCampusTB.TabIndex = 4;
             // 
             // roomBuildingCB
@@ -1665,41 +1793,41 @@
             this.roomBuildingCB.DisplayMember = "BuildingName";
             this.roomBuildingCB.Enabled = false;
             this.roomBuildingCB.FormattingEnabled = true;
-            this.roomBuildingCB.Location = new System.Drawing.Point(349, 130);
-            this.roomBuildingCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roomBuildingCB.Location = new System.Drawing.Point(262, 106);
+            this.roomBuildingCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomBuildingCB.Name = "roomBuildingCB";
-            this.roomBuildingCB.Size = new System.Drawing.Size(193, 33);
+            this.roomBuildingCB.Size = new System.Drawing.Size(146, 28);
             this.roomBuildingCB.TabIndex = 3;
             // 
             // roomFloorTB
             // 
             this.roomFloorTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "Floor", true));
             this.roomFloorTB.Enabled = false;
-            this.roomFloorTB.Location = new System.Drawing.Point(349, 95);
-            this.roomFloorTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roomFloorTB.Location = new System.Drawing.Point(262, 77);
+            this.roomFloorTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomFloorTB.Name = "roomFloorTB";
-            this.roomFloorTB.Size = new System.Drawing.Size(193, 30);
+            this.roomFloorTB.Size = new System.Drawing.Size(146, 26);
             this.roomFloorTB.TabIndex = 2;
             // 
             // roomNameTB
             // 
             this.roomNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "RoomName", true));
             this.roomNameTB.Enabled = false;
-            this.roomNameTB.Location = new System.Drawing.Point(349, 60);
-            this.roomNameTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roomNameTB.Location = new System.Drawing.Point(262, 49);
+            this.roomNameTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomNameTB.Name = "roomNameTB";
-            this.roomNameTB.Size = new System.Drawing.Size(193, 30);
+            this.roomNameTB.Size = new System.Drawing.Size(146, 26);
             this.roomNameTB.TabIndex = 1;
             // 
             // roomIDTB
             // 
             this.roomIDTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "RoomID", true));
             this.roomIDTB.Enabled = false;
-            this.roomIDTB.Location = new System.Drawing.Point(349, 25);
-            this.roomIDTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roomIDTB.Location = new System.Drawing.Point(262, 20);
+            this.roomIDTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomIDTB.Name = "roomIDTB";
             this.roomIDTB.ReadOnly = true;
-            this.roomIDTB.Size = new System.Drawing.Size(193, 30);
+            this.roomIDTB.Size = new System.Drawing.Size(146, 26);
             this.roomIDTB.TabIndex = 0;
             // 
             // campusNameComboBox
@@ -1707,30 +1835,27 @@
             this.campusNameComboBox.DataSource = this.buildingsByCampusBindingSource;
             this.campusNameComboBox.DisplayMember = "BuildingName";
             this.campusNameComboBox.FormattingEnabled = true;
-            this.campusNameComboBox.Location = new System.Drawing.Point(925, 63);
-            this.campusNameComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.campusNameComboBox.Location = new System.Drawing.Point(694, 51);
             this.campusNameComboBox.Name = "campusNameComboBox";
-            this.campusNameComboBox.Size = new System.Drawing.Size(200, 33);
+            this.campusNameComboBox.Size = new System.Drawing.Size(151, 28);
             this.campusNameComboBox.TabIndex = 5;
             this.campusNameComboBox.SelectedIndexChanged += new System.EventHandler(this.campusNameComboBox_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1144, 66);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(858, 54);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 25);
+            this.label6.Size = new System.Drawing.Size(45, 20);
             this.label6.TabIndex = 2;
             this.label6.Text = "בניין:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1133, 18);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(850, 15);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 25);
+            this.label5.Size = new System.Drawing.Size(54, 20);
             this.label5.TabIndex = 2;
             this.label5.Text = "קמפוס:";
             // 
@@ -1761,8 +1886,7 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.roomsDataGrid.DefaultCellStyle = dataGridViewCellStyle8;
-            this.roomsDataGrid.Location = new System.Drawing.Point(801, 107);
-            this.roomsDataGrid.Margin = new System.Windows.Forms.Padding(4);
+            this.roomsDataGrid.Location = new System.Drawing.Point(601, 87);
             this.roomsDataGrid.Name = "roomsDataGrid";
             this.roomsDataGrid.ReadOnly = true;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -1778,7 +1902,7 @@
             this.roomsDataGrid.ShowCellToolTips = false;
             this.roomsDataGrid.ShowEditingIcon = false;
             this.roomsDataGrid.ShowRowErrors = false;
-            this.roomsDataGrid.Size = new System.Drawing.Size(387, 482);
+            this.roomsDataGrid.Size = new System.Drawing.Size(290, 392);
             this.roomsDataGrid.TabIndex = 1;
             this.roomsDataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.roomsDataGrid_RowEnter);
             // 
@@ -1790,7 +1914,7 @@
             this.roomIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.roomIDDataGridViewTextBoxColumn.Name = "roomIDDataGridViewTextBoxColumn";
             this.roomIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roomIDDataGridViewTextBoxColumn.Width = 52;
+            this.roomIDDataGridViewTextBoxColumn.Width = 43;
             // 
             // roomNameDataGridViewTextBoxColumn
             // 
@@ -1800,6 +1924,7 @@
             this.roomNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.roomNameDataGridViewTextBoxColumn.Name = "roomNameDataGridViewTextBoxColumn";
             this.roomNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roomNameDataGridViewTextBoxColumn.Width = 86;
             // 
             // floorDataGridViewTextBoxColumn
             // 
@@ -1809,17 +1934,16 @@
             this.floorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.floorDataGridViewTextBoxColumn.Name = "floorDataGridViewTextBoxColumn";
             this.floorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.floorDataGridViewTextBoxColumn.Width = 80;
+            this.floorDataGridViewTextBoxColumn.Width = 67;
             // 
             // roomsCampusCB
             // 
             this.roomsCampusCB.DataSource = this.campusBindingSource1;
             this.roomsCampusCB.DisplayMember = "campusName";
             this.roomsCampusCB.FormattingEnabled = true;
-            this.roomsCampusCB.Location = new System.Drawing.Point(925, 15);
-            this.roomsCampusCB.Margin = new System.Windows.Forms.Padding(4);
+            this.roomsCampusCB.Location = new System.Drawing.Point(694, 12);
             this.roomsCampusCB.Name = "roomsCampusCB";
-            this.roomsCampusCB.Size = new System.Drawing.Size(200, 33);
+            this.roomsCampusCB.Size = new System.Drawing.Size(151, 28);
             this.roomsCampusCB.TabIndex = 0;
             this.roomsCampusCB.SelectedIndexChanged += new System.EventHandler(this.roomsCampusCB_SelectionChangeCommitted);
             // 
@@ -1827,21 +1951,37 @@
             // 
             this.CampusPage.Controls.Add(this.tableLayoutPanel2);
             this.CampusPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.CampusPage.Location = new System.Drawing.Point(4, 34);
-            this.CampusPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CampusPage.Location = new System.Drawing.Point(4, 29);
+            this.CampusPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CampusPage.Name = "CampusPage";
-            this.CampusPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CampusPage.Size = new System.Drawing.Size(1219, 609);
+            this.CampusPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CampusPage.Size = new System.Drawing.Size(912, 493);
             this.CampusPage.TabIndex = 0;
             this.CampusPage.Text = "קמפוסים ובניינים";
             this.CampusPage.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.newCampusBT, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dataGridBuilding, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dataGridCampus, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(42, 21);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(827, 453);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
             // newCampusBT
             // 
-            this.newCampusBT.Location = new System.Drawing.Point(112, 4);
-            this.newCampusBT.Margin = new System.Windows.Forms.Padding(4);
+            this.newCampusBT.Location = new System.Drawing.Point(84, 3);
             this.newCampusBT.Name = "newCampusBT";
-            this.newCampusBT.Size = new System.Drawing.Size(105, 66);
+            this.newCampusBT.Size = new System.Drawing.Size(79, 54);
             this.newCampusBT.TabIndex = 2;
             this.newCampusBT.Text = "קמפוס חדש";
             this.newCampusBT.UseVisualStyleBackColor = true;
@@ -1874,13 +2014,38 @@
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridBuilding.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridBuilding.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridBuilding.Location = new System.Drawing.Point(224, 281);
-            this.dataGridBuilding.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridBuilding.Location = new System.Drawing.Point(168, 228);
+            this.dataGridBuilding.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridBuilding.Name = "dataGridBuilding";
             this.dataGridBuilding.RowHeadersWidth = 51;
             this.dataGridBuilding.RowTemplate.Height = 24;
-            this.dataGridBuilding.Size = new System.Drawing.Size(876, 275);
+            this.dataGridBuilding.Size = new System.Drawing.Size(657, 223);
             this.dataGridBuilding.TabIndex = 1;
+            // 
+            // buildingIDDataGridViewTextBoxColumn
+            // 
+            this.buildingIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.buildingIDDataGridViewTextBoxColumn.DataPropertyName = "BuildingID";
+            this.buildingIDDataGridViewTextBoxColumn.HeaderText = "מזהה בניין";
+            this.buildingIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.buildingIDDataGridViewTextBoxColumn.Name = "buildingIDDataGridViewTextBoxColumn";
+            // 
+            // buildingNameDataGridViewTextBoxColumn
+            // 
+            this.buildingNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.buildingNameDataGridViewTextBoxColumn.DataPropertyName = "BuildingName";
+            this.buildingNameDataGridViewTextBoxColumn.HeaderText = "שם בניין";
+            this.buildingNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.buildingNameDataGridViewTextBoxColumn.Name = "buildingNameDataGridViewTextBoxColumn";
+            // 
+            // campusIDDataGridViewTextBoxColumn1
+            // 
+            this.campusIDDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.campusIDDataGridViewTextBoxColumn1.DataPropertyName = "CampusID";
+            this.campusIDDataGridViewTextBoxColumn1.HeaderText = "מזהה קמפוס";
+            this.campusIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.campusIDDataGridViewTextBoxColumn1.Name = "campusIDDataGridViewTextBoxColumn1";
+            this.campusIDDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridCampus
             // 
@@ -1910,17 +2075,34 @@
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridCampus.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridCampus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridCampus.Location = new System.Drawing.Point(224, 2);
-            this.dataGridCampus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridCampus.Location = new System.Drawing.Point(168, 2);
+            this.dataGridCampus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridCampus.MultiSelect = false;
             this.dataGridCampus.Name = "dataGridCampus";
             this.dataGridCampus.RowHeadersWidth = 51;
             this.dataGridCampus.RowTemplate.Height = 24;
-            this.dataGridCampus.Size = new System.Drawing.Size(876, 275);
+            this.dataGridCampus.Size = new System.Drawing.Size(657, 222);
             this.dataGridCampus.TabIndex = 0;
             this.dataGridCampus.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCampus_RowEnter);
             this.dataGridCampus.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCampus_RowValidated);
             this.dataGridCampus.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridCampus_UserDeletedRow);
+            // 
+            // campusIDDataGridViewTextBoxColumn
+            // 
+            this.campusIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.campusIDDataGridViewTextBoxColumn.DataPropertyName = "campusID";
+            this.campusIDDataGridViewTextBoxColumn.HeaderText = "מזהה קמפוס";
+            this.campusIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.campusIDDataGridViewTextBoxColumn.Name = "campusIDDataGridViewTextBoxColumn";
+            this.campusIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // campusNameDataGridViewTextBoxColumn
+            // 
+            this.campusNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.campusNameDataGridViewTextBoxColumn.DataPropertyName = "campusName";
+            this.campusNameDataGridViewTextBoxColumn.HeaderText = "שם קמפוס";
+            this.campusNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.campusNameDataGridViewTextBoxColumn.Name = "campusNameDataGridViewTextBoxColumn";
             // 
             // tabControl1
             // 
@@ -1931,13 +2113,13 @@
             this.tabControl1.Controls.Add(this.FacultyPage);
             this.tabControl1.Controls.Add(this.DegreeClassPage);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 51);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Location = new System.Drawing.Point(9, 41);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabControl1.RightToLeftLayout = true;
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1227, 647);
+            this.tabControl1.Size = new System.Drawing.Size(920, 526);
             this.tabControl1.TabIndex = 0;
             // 
             // facultyTableAdapter
@@ -1971,194 +2153,16 @@
             this.tableAdapterManager1.SemesterTableAdapter = this.semesterTableAdapter;
             this.tableAdapterManager1.UpdateOrder = Final_Project.grilDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.newCampusBT, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.dataGridBuilding, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.dataGridCampus, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(56, 26);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1103, 558);
-            this.tableLayoutPanel2.TabIndex = 3;
-            // 
-            // campusIDDataGridViewTextBoxColumn
-            // 
-            this.campusIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.campusIDDataGridViewTextBoxColumn.DataPropertyName = "campusID";
-            this.campusIDDataGridViewTextBoxColumn.HeaderText = "מזהה קמפוס";
-            this.campusIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.campusIDDataGridViewTextBoxColumn.Name = "campusIDDataGridViewTextBoxColumn";
-            this.campusIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // campusNameDataGridViewTextBoxColumn
-            // 
-            this.campusNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.campusNameDataGridViewTextBoxColumn.DataPropertyName = "campusName";
-            this.campusNameDataGridViewTextBoxColumn.HeaderText = "שם קמפוס";
-            this.campusNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.campusNameDataGridViewTextBoxColumn.Name = "campusNameDataGridViewTextBoxColumn";
-            // 
-            // buildingIDDataGridViewTextBoxColumn
-            // 
-            this.buildingIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.buildingIDDataGridViewTextBoxColumn.DataPropertyName = "BuildingID";
-            this.buildingIDDataGridViewTextBoxColumn.HeaderText = "מזהה בניין";
-            this.buildingIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.buildingIDDataGridViewTextBoxColumn.Name = "buildingIDDataGridViewTextBoxColumn";
-            // 
-            // buildingNameDataGridViewTextBoxColumn
-            // 
-            this.buildingNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.buildingNameDataGridViewTextBoxColumn.DataPropertyName = "BuildingName";
-            this.buildingNameDataGridViewTextBoxColumn.HeaderText = "שם בניין";
-            this.buildingNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.buildingNameDataGridViewTextBoxColumn.Name = "buildingNameDataGridViewTextBoxColumn";
-            // 
-            // campusIDDataGridViewTextBoxColumn1
-            // 
-            this.campusIDDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.campusIDDataGridViewTextBoxColumn1.DataPropertyName = "CampusID";
-            this.campusIDDataGridViewTextBoxColumn1.HeaderText = "מזהה קמפוס";
-            this.campusIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.campusIDDataGridViewTextBoxColumn1.Name = "campusIDDataGridViewTextBoxColumn1";
-            this.campusIDDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // featuresIDDataGridViewTextBoxColumn
-            // 
-            this.featuresIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.featuresIDDataGridViewTextBoxColumn.DataPropertyName = "FeaturesID";
-            this.featuresIDDataGridViewTextBoxColumn.HeaderText = "מזהה מאפיין";
-            this.featuresIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.featuresIDDataGridViewTextBoxColumn.Name = "featuresIDDataGridViewTextBoxColumn";
-            // 
-            // featureNameDataGridViewTextBoxColumn
-            // 
-            this.featureNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.featureNameDataGridViewTextBoxColumn.DataPropertyName = "FeatureName";
-            this.featureNameDataGridViewTextBoxColumn.HeaderText = "שם מאפיין";
-            this.featureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.featureNameDataGridViewTextBoxColumn.Name = "featureNameDataGridViewTextBoxColumn";
-            // 
-            // qualifierReqDataGridViewCheckBoxColumn
-            // 
-            this.qualifierReqDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.qualifierReqDataGridViewCheckBoxColumn.DataPropertyName = "QualifierReq";
-            this.qualifierReqDataGridViewCheckBoxColumn.HeaderText = "נדרש מספר?";
-            this.qualifierReqDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.qualifierReqDataGridViewCheckBoxColumn.Name = "qualifierReqDataGridViewCheckBoxColumn";
-            // 
-            // semesterIDDataGridViewTextBoxColumn
-            // 
-            this.semesterIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.semesterIDDataGridViewTextBoxColumn.DataPropertyName = "SemesterID";
-            this.semesterIDDataGridViewTextBoxColumn.HeaderText = "מזהה סמסטר";
-            this.semesterIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.semesterIDDataGridViewTextBoxColumn.Name = "semesterIDDataGridViewTextBoxColumn";
-            this.semesterIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hebrewYearDataGridViewTextBoxColumn
-            // 
-            this.hebrewYearDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hebrewYearDataGridViewTextBoxColumn.DataPropertyName = "HebrewYear";
-            this.hebrewYearDataGridViewTextBoxColumn.HeaderText = "שנה עברית";
-            this.hebrewYearDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.hebrewYearDataGridViewTextBoxColumn.Name = "hebrewYearDataGridViewTextBoxColumn";
-            this.hebrewYearDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // semesterTypeDataGridViewTextBoxColumn
-            // 
-            this.semesterTypeDataGridViewTextBoxColumn.DataPropertyName = "SemesterType";
-            this.semesterTypeDataGridViewTextBoxColumn.HeaderText = "סוג סמסטר";
-            this.semesterTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.semesterTypeDataGridViewTextBoxColumn.Name = "semesterTypeDataGridViewTextBoxColumn";
-            this.semesterTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterTypeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "תאריך תחילה";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "תאריך סיום";
-            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // facultyIDDataGridViewTextBoxColumn
-            // 
-            this.facultyIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.facultyIDDataGridViewTextBoxColumn.DataPropertyName = "FacultyID";
-            this.facultyIDDataGridViewTextBoxColumn.HeaderText = "מזהה פקולטה";
-            this.facultyIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.facultyIDDataGridViewTextBoxColumn.Name = "facultyIDDataGridViewTextBoxColumn";
-            this.facultyIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // FacultyName
-            // 
-            this.FacultyName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FacultyName.DataPropertyName = "FacultyName";
-            this.FacultyName.HeaderText = "שם פקולטה";
-            this.FacultyName.MinimumWidth = 6;
-            this.FacultyName.Name = "FacultyName";
-            // 
-            // degreeIDDataGridViewTextBoxColumn
-            // 
-            this.degreeIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.degreeIDDataGridViewTextBoxColumn.DataPropertyName = "DegreeID";
-            this.degreeIDDataGridViewTextBoxColumn.HeaderText = "מזהה מגמה";
-            this.degreeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.degreeIDDataGridViewTextBoxColumn.Name = "degreeIDDataGridViewTextBoxColumn";
-            this.degreeIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // degreeNameDataGridViewTextBoxColumn
-            // 
-            this.degreeNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.degreeNameDataGridViewTextBoxColumn.DataPropertyName = "DegreeName";
-            this.degreeNameDataGridViewTextBoxColumn.HeaderText = "שם מגמה";
-            this.degreeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.degreeNameDataGridViewTextBoxColumn.Name = "degreeNameDataGridViewTextBoxColumn";
-            // 
-            // facultyIDDataGridViewTextBoxColumn1
-            // 
-            this.facultyIDDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.facultyIDDataGridViewTextBoxColumn1.DataPropertyName = "FacultyID";
-            this.facultyIDDataGridViewTextBoxColumn1.HeaderText = "מזהה פקולטה";
-            this.facultyIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.facultyIDDataGridViewTextBoxColumn1.Name = "facultyIDDataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "FacultyName";
-            this.dataGridViewTextBoxColumn1.HeaderText = "שם פקולטה";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // DBMaintain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
-            this.ClientSize = new System.Drawing.Size(1251, 709);
+            this.ClientSize = new System.Drawing.Size(938, 576);
             this.Controls.Add(this.BackToMenuBT);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DBMaintain";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -2211,10 +2215,10 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomsDataGrid)).EndInit();
             this.CampusPage.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBuilding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCampus)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
