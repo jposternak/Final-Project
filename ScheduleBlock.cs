@@ -31,6 +31,8 @@ namespace Final_Project
         public String buildingName { get; set; }
         public String campusName { get; set; }
 
+        public Semester semester { get; set; }
+
 
         public String DegreeClassName { get; set; }
         public String FacultyName { get; set; }
@@ -91,7 +93,7 @@ namespace Final_Project
 
             s += $"({StartTimeT.ToString()}-{EndTimeT.ToString()})\n";
 
-            s += $"{campusName}\n{buildingName}\n{roomName}";
+            s += $"{campusName}\t{buildingName}\n{roomName}";
 
             return s;
         }

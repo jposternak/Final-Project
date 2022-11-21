@@ -5553,15 +5553,18 @@ WHERE  (ScheduleBlock.DegreeClassID = @mahzorID) AND (ScheduleBlock.SemesterID =
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DegreeClassID, mahzor, IsActive, CONCAT(mahzorSemesterYear, \' \', mahzorSem" +
-                "esterType) as SemesterFullName, DegreeName, semesterID, tihnun, bitzua, itra FRO" +
-                "M dbo.DegreeClassPlanExec";
+            this._commandCollection[0].CommandText = @"SELECT        DegreeClassID, mahzor, IsActive, CONCAT(mahzorSemesterYear, ' ', mahzorSemesterType) AS SemesterFullName, DegreeName, semesterID, tihnun, bitzua, itra
+FROM            DegreeClassPlanExec
+WHERE        (DegreeClassID = @ID) AND (semesterID = @Semester) OR
+                         (semesterID = 0)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeClassID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semester", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "semesterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT DegreeClassID, DegreeName, IsActive, bitzua, itra, mahzor, semesterID, tih" +
-                "nun FROM DegreeClassPlanExec WHERE (itra > 0) AND (semesterID = @SemesterID) OR " +
-                "(semesterID = 0) AND (IsActive = 1)";
+                "nun FROM DegreeClassPlanExec WHERE (semesterID = @SemesterID) OR (semesterID = 0" +
+                ") AND (IsActive = 1)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SemesterID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "semesterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -5570,8 +5573,15 @@ WHERE  (ScheduleBlock.DegreeClassID = @mahzorID) AND (ScheduleBlock.SemesterID =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(grilDataViewsSet.DegreeClassPlanExecDataTable dataTable) {
+        public virtual int FillByDCSem(grilDataViewsSet.DegreeClassPlanExecDataTable dataTable, int ID, global::System.Nullable<int> Semester) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID));
+            if ((Semester.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Semester.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -5583,8 +5593,15 @@ WHERE  (ScheduleBlock.DegreeClassID = @mahzorID) AND (ScheduleBlock.SemesterID =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual grilDataViewsSet.DegreeClassPlanExecDataTable GetData() {
+        public virtual grilDataViewsSet.DegreeClassPlanExecDataTable GetDataDCSem(int ID, global::System.Nullable<int> Semester) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID));
+            if ((Semester.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Semester.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             grilDataViewsSet.DegreeClassPlanExecDataTable dataTable = new grilDataViewsSet.DegreeClassPlanExecDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

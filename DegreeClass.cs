@@ -1,6 +1,7 @@
 ﻿using Final_Project.grilDataSetTableAdapters;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,26 +20,44 @@ namespace Final_Project
         public int Duration { get; set; }
         public bool Summer { get; set; }
         public int WeeklyHours { get; set; }
+        public bool isActive { get; set; }
+
+        private static DegreeClassTableAdapter adapter = new DegreeClassTableAdapter();
+
+
+        public static void create(string name, Degree degree, int numberOfStudents,
+            Semester semester, int duration, bool summer, int weeklyHours, bool isActive)
+        {
+            adapter.InsertQuery(name, degree.Id, numberOfStudents, semester.Id, duration, summer, weeklyHours, isActive);
+        }
 
 
         public static DegreeClass getFromDatabase(int id)
         {
             DegreeClass dc = new DegreeClass();
             dc.Id = id;
+            DataRowCollection rows = adapter.GetDataByDCID(id).Rows;
 
-            DegreeClassTableAdapter adapter = new DegreeClassTableAdapter();
-            DegreeClassDataTable dt = adapter.GetDataByDCID(dc.Id);
+            if(rows.Count != 0)
+            {
+                dc.Name = rows[0][1].ToString();
+                dc.Degree = Degree.getFromDatabase((int)rows[0][2]);
+                dc.NumberOfStudents = (int)rows[0][3];
+                dc.StartingSemester = Semester.getFromDatabase((int)rows[0][4]);
+                dc.Duration = (int)rows[0][5];
+                dc.Summer = (Boolean)rows[0][6];
+                dc.WeeklyHours = (int)rows[0][7];
+                dc.isActive = (Boolean)rows[0][10];
+            }
 
-            dc.Name = dt.Rows[0][1].ToString();
-            dc.Degree = Degree.getFromDatabase((int)dt.Rows[0][2]);
-            dc.NumberOfStudents = (int)dt.Rows[0][3];
-            dc.StartingSemester = Semester.getFromDatabase((int)dt.Rows[0][4]);
-            dc.Duration = (int)dt.Rows[0][5];
-            dc.Summer = (Boolean)dt.Rows[0][6];
-            dc.WeeklyHours = (int)dt.Rows[0][7];
+
 
             return dc;
         }
+
+        //IMPLEMENT EDIT
+
+        //IMPLEMENT REMOVE
 
 
 

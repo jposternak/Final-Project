@@ -54,7 +54,7 @@ namespace Final_Project
             try
             {
                 Faculty faculty = getFaculty(f_id);
-                if (r != null)
+                if (faculty != null)
                 {
                     adapter.DeleteQuery(f_id);
                 }

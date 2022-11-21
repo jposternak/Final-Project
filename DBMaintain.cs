@@ -618,7 +618,7 @@ namespace Final_Project
 
             if (classID == -1)
             {
-                this.degreeClassTableAdapter.InsertQuery(className,degId,numOfStd,semesterId,semesterLen,isSummer,weeklyHours);
+                this.degreeClassTableAdapter.InsertQuery(className,degId,numOfStd,semesterId,semesterLen,isSummer,weeklyHours, true);
             }
             else
             {

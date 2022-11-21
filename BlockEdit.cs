@@ -58,7 +58,7 @@ namespace Final_Project
         {
             dayOfWeek.Text = block.DayOfWeek.ToString();
             time.Text = block.TimeToString();
-            semester.Text = "not implemented";
+            semester.Text = block.
             inUse.Text = "not implemented";
 
 

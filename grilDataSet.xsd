@@ -521,12 +521,12 @@ WHERE  (Degree.DegreeID = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DegreeClassTableAdapter" GeneratorDataComponentClassName="DegreeClassTableAdapter" Name="DegreeClass" UserDataComponentName="DegreeClassTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="grilConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="grilConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT   DegreeClass.DegreeClassID, DegreeClass.DegreeClassName, DegreeClass.DegreeID, DegreeClass.NumberOfStudents, DegreeClass.StartingSemester, DegreeClass.Duration, 
-                         DegreeClass.Summer, DegreeClass.WeeklyHours, Semester.HebrewYear, Semester.SemesterType
-FROM         DegreeClass INNER JOIN
+                    <CommandText>SELECT        DegreeClass.DegreeClassID, DegreeClass.DegreeClassName, DegreeClass.DegreeID, DegreeClass.NumberOfStudents, DegreeClass.StartingSemester, DegreeClass.Duration, DegreeClass.Summer, 
+                         DegreeClass.WeeklyHours, Semester.HebrewYear, Semester.SemesterType, DegreeClass.IsActive
+FROM            DegreeClass INNER JOIN
                          Semester ON DegreeClass.StartingSemester = Semester.SemesterID</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -544,6 +544,7 @@ FROM         DegreeClass INNER JOIN
               <Mapping SourceColumn="WeeklyHours" DataSetColumn="WeeklyHours" />
               <Mapping SourceColumn="HebrewYear" DataSetColumn="HebrewYear" />
               <Mapping SourceColumn="SemesterType" DataSetColumn="SemesterType" />
+              <Mapping SourceColumn="IsActive" DataSetColumn="IsActive" />
             </Mappings>
             <Sources>
               <DbSource ConnectionRef="grilConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
@@ -559,11 +560,11 @@ FROM         DegreeClass INNER JOIN
               <DbSource ConnectionRef="grilConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByDCID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDCID" GeneratorSourceName="FillByDCID" GetMethodModifier="Public" GetMethodName="GetDataByDCID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDCID" UserSourceName="FillByDCID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT DegreeClass.DegreeClassID, DegreeClass.DegreeClassName, DegreeClass.DegreeID, DegreeClass.NumberOfStudents, DegreeClass.StartingSemester, DegreeClass.Duration, DegreeClass.Summer, DegreeClass.WeeklyHours, 
-                  Semester.HebrewYear, Semester.SemesterType
-FROM     DegreeClass INNER JOIN
-                  Semester ON DegreeClass.StartingSemester = Semester.SemesterID
-WHERE  (DegreeClass.DegreeClassID = @id)</CommandText>
+                    <CommandText>SELECT        DegreeClass.DegreeClassID, DegreeClass.DegreeClassName, DegreeClass.DegreeID, DegreeClass.NumberOfStudents, DegreeClass.StartingSemester, DegreeClass.Duration, DegreeClass.Summer, 
+                         DegreeClass.WeeklyHours, Semester.HebrewYear, Semester.SemesterType, DegreeClass.IsActive
+FROM            DegreeClass INNER JOIN
+                         Semester ON DegreeClass.StartingSemester = Semester.SemesterID
+WHERE        (DegreeClass.DegreeClassID = @id)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="DegreeClassID" DataSourceName="gril.dbo.DegreeClass" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="DegreeClassID" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
@@ -587,8 +588,10 @@ WHERE     (DegreeClass.DegreeID = @DegreeID)</CommandText>
               <DbSource ConnectionRef="grilConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>INSERT INTO [dbo].[DegreeClass] ([DegreeClassName], [DegreeID], [NumberOfStudents], [StartingSemester], [Duration], [Summer], [WeeklyHours]) VALUES (@DegreeClassName, @DegreeID, @NumberOfStudents, @StartingSemester, @Duration, @Summer, @WeeklyHours);
-SELECT DegreeClassID, DegreeClassName, DegreeID, NumberOfStudents, StartingSemester, Duration, Summer, WeeklyHours FROM DegreeClass WHERE (DegreeClassID = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO DegreeClass
+                         (DegreeClassName, DegreeID, NumberOfStudents, StartingSemester, Duration, Summer, WeeklyHours, IsActive)
+VALUES        (@DegreeClassName,@DegreeID,@NumberOfStudents,@StartingSemester,@Duration,@Summer,@WeeklyHours,@isActive); 
+</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="DegreeClassName" ColumnName="DegreeClassName" DataSourceName="gril.dbo.DegreeClass" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@DegreeClassName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="DegreeClassName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="DegreeID" ColumnName="DegreeID" DataSourceName="gril.dbo.DegreeClass" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@DegreeID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="DegreeID" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -597,6 +600,7 @@ SELECT DegreeClassID, DegreeClassName, DegreeID, NumberOfStudents, StartingSemes
                       <Parameter AllowDbNull="false" AutogeneratedName="Duration" ColumnName="Duration" DataSourceName="gril.dbo.DegreeClass" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Duration" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Duration" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Summer" ColumnName="Summer" DataSourceName="gril.dbo.DegreeClass" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Summer" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="Summer" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="WeeklyHours" ColumnName="WeeklyHours" DataSourceName="gril.dbo.DegreeClass" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@WeeklyHours" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="WeeklyHours" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="isActive" ColumnName="IsActive" DataSourceName="gril.dbo.DegreeClass" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@isActive" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="IsActive" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -1555,6 +1559,7 @@ WHERE Campus.CampusID = @CampusID</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="IsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

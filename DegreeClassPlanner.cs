@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Final_Project.grilDataSetTableAdapters;
+using Final_Project.grilDataViewsSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -18,13 +20,14 @@ namespace Final_Project
             InitializeComponent();
             fillUpperTable();
             plotGraph();
+            fillNumbers();
 
         }
 
         private void fillUpperTable()
         {
 
-            facultyLB.Text = dc.Degree.FacultyID.ToString();
+            facultyLB.Text = dc.Degree.Faculty.Name.ToString();
             megamaLB.Text = dc.Degree.Name;
             mahzorLB.Text = dc.Name;
             shanaLB.Text = semester.HebrewYear;
@@ -102,28 +105,86 @@ namespace Final_Project
         {
             // TODO: This line of code loads data into the 'grilDataSet.Room' table. You can move, or remove it, as needed.
             this.roomTableAdapter.Fill(this.grilDataSet.Room);
+            populateTree();
+            fillNumbers();
 
         }
+
+        private void fillNumbers()
+        {
+            DegreeClassPlanExecTableAdapter planexec = new DegreeClassPlanExecTableAdapter();
+            DataRowCollection rows = planexec.GetDataDCSem(this.dc.Id,this.semester.Id).Rows;
+
+            tihnunLB.Text = rows[0][5].ToString();
+            bitzuaLB.Text = rows[0][6].ToString();
+            itraLB.Text = rows[0][7].ToString();
+            if(int.Parse(itraLB.Text) < 0)
+            {
+                itraLB.ForeColor = Color.Red;
+            }
+            else if (int.Parse(itraLB.Text) == 0)
+            {
+                itraLB.ForeColor = Color.Green;
+            }
+        }
+
+        private void populateTree()
+        {
+            treeRooms.Nodes.Clear();
+            TreeNode root = treeRooms.Nodes.Add("ONO");
+
+            campusTableAdapter adapter = new campusTableAdapter();
+            DataRowCollection CRows = adapter.GetData().Rows;
+
+            for (int h = 0; h < CRows.Count; h++)
+            {
+                String campusName = (String)CRows[h][1];
+
+                BuildingsByCampusTableAdapter b_adapter = new BuildingsByCampusTableAdapter();
+
+                TreeNode campusNode = treeRooms.Nodes[0].Nodes.Add(campusName);
+
+
+                DataRowCollection BRows = b_adapter.GetData(campusName).Rows;
+
+                for (int i = 0; i < BRows.Count; i++)
+                {
+                    String bldName = BRows[i][0].ToString();
+                    TreeNode buildingNode = treeRooms.Nodes[0].Nodes[h].Nodes.Add(bldName);
+
+                    RoomsByCampusTableAdapter room_adap = new RoomsByCampusTableAdapter();
+
+                    DataRowCollection roomsRows = room_adap.GetData(bldName).Rows;
+
+                    for (int k = 0; k < roomsRows.Count; k++)
+                    {
+                        int roomID = (int)roomsRows[k][2];
+                        String roomName = roomsRows[k][3].ToString();
+
+                        TreeNode roomNode = treeRooms.Nodes[0].Nodes[h].Nodes[i].Nodes.Add(roomID.ToString(), roomName);
+
+                    }
+
+                }
+            }
+
+        }
+
+
 
         private void add_Click(object sender, EventArgs e)
         {
             int weekday = int.Parse(dayCB.Text);
 
-            DateTime time = TimePicker.Value;
+            DateTime startTime = startPicker.Value;
 
-            DataRowView row = (DataRowView)roomCB.SelectedItem;
-
-            if (row != null)
+            if (selectedRoomID != -1)
             {
-                int roomID = (int)row.Row[0];
-                ScheduleBlock.saveToDB(weekday, time, roomID, dc.Id, semester.Id);
+                int roomID = selectedRoomID;
+                ScheduleBlock.saveToDB(weekday, startTime, roomID, dc.Id, semester.Id);
                 plotGraph();
+                fillNumbers();
             }
-
-
-
-
-
 
 
         }
@@ -141,8 +202,27 @@ namespace Final_Project
 
                 BlockEdit dbfrom = new BlockEdit(sb);
                 dbfrom.Show();
+                dbfrom.FormClosed += Dbfrom_FormClosed;
+
             }
 
+        }
+
+        private void Dbfrom_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            plotGraph();
+            fillNumbers(); 
+        }
+
+        int selectedRoomID = -1;
+        private void treeRooms_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+
+            //selectedRoomID = int.Parse(e.Node.Name);
+            int.TryParse(e.Node.Name, out selectedRoomID);
+            roomLB.Text = selectedRoomID.ToString();
+
+            
         }
     }
 }

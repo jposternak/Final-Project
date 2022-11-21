@@ -3117,6 +3117,8 @@ namespace Final_Project {
             
             private global::System.Data.DataColumn columnSemesterType;
             
+            private global::System.Data.DataColumn columnIsActive;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public DegreeClassDataTable() {
@@ -3232,6 +3234,14 @@ namespace Final_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IsActiveColumn {
+                get {
+                    return this.columnIsActive;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3267,7 +3277,7 @@ namespace Final_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DegreeClassRow AddDegreeClassRow(string DegreeClassName, DegreeRow parentDegreeRowByFK_DegreeClass_Degree, int NumberOfStudents, SemesterRow parentSemesterRowByFK_DegreeClass_Semester, int Duration, bool Summer, int WeeklyHours, string HebrewYear, string SemesterType) {
+            public DegreeClassRow AddDegreeClassRow(string DegreeClassName, DegreeRow parentDegreeRowByFK_DegreeClass_Degree, int NumberOfStudents, SemesterRow parentSemesterRowByFK_DegreeClass_Semester, int Duration, bool Summer, int WeeklyHours, string HebrewYear, string SemesterType, bool IsActive) {
                 DegreeClassRow rowDegreeClassRow = ((DegreeClassRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3279,7 +3289,8 @@ namespace Final_Project {
                         Summer,
                         WeeklyHours,
                         HebrewYear,
-                        SemesterType};
+                        SemesterType,
+                        IsActive};
                 if ((parentDegreeRowByFK_DegreeClass_Degree != null)) {
                     columnValuesArray[2] = parentDegreeRowByFK_DegreeClass_Degree[0];
                 }
@@ -3325,6 +3336,7 @@ namespace Final_Project {
                 this.columnWeeklyHours = base.Columns["WeeklyHours"];
                 this.columnHebrewYear = base.Columns["HebrewYear"];
                 this.columnSemesterType = base.Columns["SemesterType"];
+                this.columnIsActive = base.Columns["IsActive"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3350,6 +3362,8 @@ namespace Final_Project {
                 base.Columns.Add(this.columnHebrewYear);
                 this.columnSemesterType = new global::System.Data.DataColumn("SemesterType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSemesterType);
+                this.columnIsActive = new global::System.Data.DataColumn("IsActive", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsActive);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnDegreeClassID}, true));
                 this.columnDegreeClassID.AutoIncrement = true;
@@ -3370,6 +3384,7 @@ namespace Final_Project {
                 this.columnHebrewYear.MaxLength = 50;
                 this.columnSemesterType.AllowDBNull = false;
                 this.columnSemesterType.MaxLength = 10;
+                this.columnIsActive.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7035,6 +7050,17 @@ namespace Final_Project {
                 }
                 set {
                     this[this.tableDegreeClass.SemesterTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsActive {
+                get {
+                    return ((bool)(this[this.tableDegreeClass.IsActiveColumn]));
+                }
+                set {
+                    this[this.tableDegreeClass.IsActiveColumn] = value;
                 }
             }
             
@@ -11220,6 +11246,7 @@ SELECT CP_LecturerID, CP_CourseID, CP_ScheduleBlockID, CP_Status, CP_Comments FR
             tableMapping.ColumnMappings.Add("WeeklyHours", "WeeklyHours");
             tableMapping.ColumnMappings.Add("HebrewYear", "HebrewYear");
             tableMapping.ColumnMappings.Add("SemesterType", "SemesterType");
+            tableMapping.ColumnMappings.Add("IsActive", "IsActive");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -11236,9 +11263,9 @@ SELECT CP_LecturerID, CP_CourseID, CP_ScheduleBlockID, CP_Status, CP_Comments FR
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT   DegreeClass.DegreeClassID, DegreeClass.DegreeClassName, DegreeClass.DegreeID, DegreeClass.NumberOfStudents, DegreeClass.StartingSemester, DegreeClass.Duration, 
-                         DegreeClass.Summer, DegreeClass.WeeklyHours, Semester.HebrewYear, Semester.SemesterType
-FROM         DegreeClass INNER JOIN
+            this._commandCollection[0].CommandText = @"SELECT        DegreeClass.DegreeClassID, DegreeClass.DegreeClassName, DegreeClass.DegreeID, DegreeClass.NumberOfStudents, DegreeClass.StartingSemester, DegreeClass.Duration, DegreeClass.Summer, 
+                         DegreeClass.WeeklyHours, Semester.HebrewYear, Semester.SemesterType, DegreeClass.IsActive
+FROM            DegreeClass INNER JOIN
                          Semester ON DegreeClass.StartingSemester = Semester.SemesterID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
@@ -11248,11 +11275,11 @@ FROM         DegreeClass INNER JOIN
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DegreeClassID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeClassID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT DegreeClass.DegreeClassID, DegreeClass.DegreeClassName, DegreeClass.DegreeID, DegreeClass.NumberOfStudents, DegreeClass.StartingSemester, DegreeClass.Duration, DegreeClass.Summer, DegreeClass.WeeklyHours, 
-                  Semester.HebrewYear, Semester.SemesterType
-FROM     DegreeClass INNER JOIN
-                  Semester ON DegreeClass.StartingSemester = Semester.SemesterID
-WHERE  (DegreeClass.DegreeClassID = @id)";
+            this._commandCollection[2].CommandText = @"SELECT        DegreeClass.DegreeClassID, DegreeClass.DegreeClassName, DegreeClass.DegreeID, DegreeClass.NumberOfStudents, DegreeClass.StartingSemester, DegreeClass.Duration, DegreeClass.Summer, 
+                         DegreeClass.WeeklyHours, Semester.HebrewYear, Semester.SemesterType, DegreeClass.IsActive
+FROM            DegreeClass INNER JOIN
+                         Semester ON DegreeClass.StartingSemester = Semester.SemesterID
+WHERE        (DegreeClass.DegreeClassID = @id)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeClassID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
@@ -11266,8 +11293,10 @@ WHERE     (DegreeClass.DegreeID = @DegreeID)";
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DegreeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = @"INSERT INTO [dbo].[DegreeClass] ([DegreeClassName], [DegreeID], [NumberOfStudents], [StartingSemester], [Duration], [Summer], [WeeklyHours]) VALUES (@DegreeClassName, @DegreeID, @NumberOfStudents, @StartingSemester, @Duration, @Summer, @WeeklyHours);
-SELECT DegreeClassID, DegreeClassName, DegreeID, NumberOfStudents, StartingSemester, Duration, Summer, WeeklyHours FROM DegreeClass WHERE (DegreeClassID = SCOPE_IDENTITY())";
+            this._commandCollection[4].CommandText = @"INSERT INTO DegreeClass
+                         (DegreeClassName, DegreeID, NumberOfStudents, StartingSemester, Duration, Summer, WeeklyHours, IsActive)
+VALUES        (@DegreeClassName,@DegreeID,@NumberOfStudents,@StartingSemester,@Duration,@Summer,@WeeklyHours,@isActive); 
+";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DegreeClassName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeClassName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DegreeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11276,6 +11305,7 @@ SELECT DegreeClassID, DegreeClassName, DegreeID, NumberOfStudents, StartingSemes
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Duration", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Duration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Summer", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Summer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WeeklyHours", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "WeeklyHours", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isActive", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "IsActive", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
             this._commandCollection[5].CommandText = @"UPDATE [dbo].[DegreeClass] SET [DegreeClassName] = @DegreeClassName, [DegreeID] = @DegreeID, [NumberOfStudents] = @NumberOfStudents, [StartingSemester] = @StartingSemester, [Duration] = @Duration, [Summer] = @Summer, [WeeklyHours] = @WeeklyHours WHERE ([DegreeClassID] = @Original_DegreeClassID);";
@@ -11394,7 +11424,7 @@ SELECT DegreeClassID, DegreeClassName, DegreeID, NumberOfStudents, StartingSemes
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertQuery(string DegreeClassName, int DegreeID, int NumberOfStudents, int StartingSemester, int Duration, bool Summer, int WeeklyHours) {
+        public virtual int InsertQuery(string DegreeClassName, int DegreeID, int NumberOfStudents, int StartingSemester, int Duration, bool Summer, int WeeklyHours, bool isActive) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((DegreeClassName == null)) {
                 throw new global::System.ArgumentNullException("DegreeClassName");
@@ -11408,6 +11438,7 @@ SELECT DegreeClassID, DegreeClassName, DegreeID, NumberOfStudents, StartingSemes
             command.Parameters[4].Value = ((int)(Duration));
             command.Parameters[5].Value = ((bool)(Summer));
             command.Parameters[6].Value = ((int)(WeeklyHours));
+            command.Parameters[7].Value = ((bool)(isActive));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

@@ -9,6 +9,9 @@ namespace Final_Project
 {
     public partial class Scheduler : Form
     {
+        int selectedSemesterID;
+
+
         public Scheduler()
         {
             InitializeComponent();
@@ -18,7 +21,7 @@ namespace Final_Project
         private void Scheduler_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'grilDataViewsSet.DegreeClassPlanExec' table. You can move, or remove it, as needed.
-            this.degreeClassPlanExecTableAdapter.Fill(this.grilDataViewsSet.DegreeClassPlanExec);
+            this.degreeClassPlanExecTableAdapter.ClearBeforeFill = true;
             // TODO: This line of code loads data into the 'grilDataSet.Semester' table. You can move, or remove it, as needed.
             this.semesterTableAdapter.Fill(this.grilDataSet.Semester);
             // TODO: This line of code loads data into the 'grilDataSet.campus' table. You can move, or remove it, as needed.
@@ -192,7 +195,7 @@ namespace Final_Project
 
             int blockID = (int)blockItraTable.Rows[e.RowIndex].Cells[0].Value;
 
-            int selectedSemesterID = (int)((DataRowView)semesterCB.SelectedItem).Row[0];
+            selectedSemesterID = (int)((DataRowView)semesterCB.SelectedItem).Row[0];
 
             if (selectedSemesterID != 0)
             {
@@ -209,8 +212,34 @@ namespace Final_Project
 
         }
 
-        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        private void semesterCB_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            try
+            {
+                selectedSemesterID = (int)((DataRowView)semesterCB.SelectedItem).Row[0];
+                this.degreeClassPlanExecTableAdapter.FillByItra(this.grilDataViewsSet.DegreeClassPlanExec, selectedSemesterID);
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                selectedSemesterID = (int)((DataRowView)comboBox1.SelectedItem).Row[0];
+            
+                this.degreeClassPlanExecTableAdapter.FillByItra(this.grilDataViewsSet.DegreeClassPlanExec, selectedSemesterID);
+            }
+            catch (Exception)
+            {
+
+         
+            }
 
         }
     }

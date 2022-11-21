@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
             this.scheduleBlockDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.scheduleBlockDetailsTableAdapter = new Final_Project.grilDataViewsSetTableAdapters.ScheduleBlockDetailsTableAdapter();
@@ -55,21 +55,21 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.semesterCB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.semesterCB = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.degreeClassIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.degreeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mahzorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isActiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.degreeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.semesterIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tihnunDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bitzuaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -144,19 +144,18 @@
             // 
             // luz
             // 
-            chartArea2.Name = "ChartArea1";
-            this.luz.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.luz.ChartAreas.Add(chartArea1);
             this.luz.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.luz.Location = new System.Drawing.Point(4, 4);
-            this.luz.Margin = new System.Windows.Forms.Padding(4);
+            this.luz.Location = new System.Drawing.Point(-21, 3);
             this.luz.Name = "luz";
             this.luz.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
-            series2.Name = "Series1";
-            series2.YValuesPerPoint = 2;
-            this.luz.Series.Add(series2);
-            this.luz.Size = new System.Drawing.Size(1196, 904);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 2;
+            this.luz.Series.Add(series1);
+            this.luz.Size = new System.Drawing.Size(898, 736);
             this.luz.TabIndex = 0;
             this.luz.Text = "chart1";
             this.luz.MouseClick += new System.Windows.Forms.MouseEventHandler(this.luz_MouseClick);
@@ -164,12 +163,11 @@
             // treeRooms
             // 
             this.treeRooms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeRooms.Location = new System.Drawing.Point(4, 78);
-            this.treeRooms.Margin = new System.Windows.Forms.Padding(4);
+            this.treeRooms.Location = new System.Drawing.Point(3, 62);
             this.treeRooms.Name = "treeRooms";
             this.treeRooms.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.treeRooms.RightToLeftLayout = true;
-            this.treeRooms.Size = new System.Drawing.Size(367, 789);
+            this.treeRooms.Size = new System.Drawing.Size(274, 643);
             this.treeRooms.TabIndex = 4;
             this.treeRooms.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeRooms_NodeMouseDoubleClick);
             // 
@@ -178,11 +176,10 @@
             this.campusCB.DataSource = this.campusBindingSource;
             this.campusCB.DisplayMember = "campusName";
             this.campusCB.FormattingEnabled = true;
-            this.campusCB.Location = new System.Drawing.Point(30, 36);
-            this.campusCB.Margin = new System.Windows.Forms.Padding(4);
+            this.campusCB.Location = new System.Drawing.Point(9, 30);
             this.campusCB.Name = "campusCB";
             this.campusCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.campusCB.Size = new System.Drawing.Size(240, 24);
+            this.campusCB.Size = new System.Drawing.Size(181, 21);
             this.campusCB.TabIndex = 5;
             this.campusCB.SelectedIndexChanged += new System.EventHandler(this.campusCB_SelectedIndexChanged);
             // 
@@ -191,10 +188,9 @@
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1289, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(967, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 721);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 586);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // semesterBindingSource
@@ -212,17 +208,16 @@
             this.blockItraTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.blockItraTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.degreeClassIDDataGridViewTextBoxColumn,
+            this.degreeNameDataGridViewTextBoxColumn,
             this.mahzorDataGridViewTextBoxColumn,
             this.isActiveDataGridViewCheckBoxColumn,
-            this.degreeNameDataGridViewTextBoxColumn,
             this.semesterIDDataGridViewTextBoxColumn,
             this.tihnunDataGridViewTextBoxColumn,
             this.bitzuaDataGridViewTextBoxColumn,
             this.itraDataGridViewTextBoxColumn});
             this.blockItraTable.DataSource = this.degreeClassPlanExecBindingSource;
             this.blockItraTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.blockItraTable.Location = new System.Drawing.Point(4, 67);
-            this.blockItraTable.Margin = new System.Windows.Forms.Padding(4);
+            this.blockItraTable.Location = new System.Drawing.Point(3, 54);
             this.blockItraTable.MultiSelect = false;
             this.blockItraTable.Name = "blockItraTable";
             this.blockItraTable.ReadOnly = true;
@@ -232,7 +227,7 @@
             this.blockItraTable.ShowCellToolTips = false;
             this.blockItraTable.ShowEditingIcon = false;
             this.blockItraTable.ShowRowErrors = false;
-            this.blockItraTable.Size = new System.Drawing.Size(379, 559);
+            this.blockItraTable.Size = new System.Drawing.Size(284, 455);
             this.blockItraTable.TabIndex = 7;
             this.blockItraTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.blockItraTable_CellDoubleClick);
             // 
@@ -255,21 +250,23 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabControl1.Location = new System.Drawing.Point(1207, 3);
+            this.tabControl1.Location = new System.Drawing.Point(882, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabControl1.RightToLeftLayout = true;
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(389, 906);
+            this.tabControl1.Size = new System.Drawing.Size(316, 738);
             this.tabControl1.TabIndex = 8;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.tableLayoutPanel4);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(381, 877);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(284, 712);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "בחירת חדר";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -281,14 +278,14 @@
             this.tableLayoutPanel4.Controls.Add(this.treeRooms, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(375, 871);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(280, 708);
             this.tableLayoutPanel4.TabIndex = 9;
-            this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
             // 
             // tableLayoutPanel3
             // 
@@ -300,33 +297,61 @@
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(369, 68);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(276, 55);
             this.tableLayoutPanel3.TabIndex = 9;
+            // 
+            // semesterCB
+            // 
+            this.semesterCB.DataSource = this.semesterBindingSource;
+            this.semesterCB.DisplayMember = "SemesterFullName";
+            this.semesterCB.FormattingEnabled = true;
+            this.semesterCB.Location = new System.Drawing.Point(9, 3);
+            this.semesterCB.Name = "semesterCB";
+            this.semesterCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.semesterCB.Size = new System.Drawing.Size(181, 21);
+            this.semesterCB.TabIndex = 6;
+            this.semesterCB.SelectedIndexChanged += new System.EventHandler(this.semesterCB_SelectedIndexChanged_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(277, 32);
+            this.label1.Location = new System.Drawing.Point(195, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(89, 36);
+            this.label1.Size = new System.Drawing.Size(79, 28);
             this.label1.TabIndex = 6;
             this.label1.Text = "בחירת קמפוס:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(195, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(79, 27);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "בחירת סמסטר:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(381, 877);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(308, 712);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "בחירת מחזור";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -335,18 +360,32 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel1.Controls.Add(this.comboBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.blockItraTable, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 5);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(387, 630);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(290, 512);
             this.tableLayoutPanel1.TabIndex = 9;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.semesterBindingSource;
+            this.comboBox1.DisplayMember = "SemesterFullName";
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(3, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboBox1.Size = new System.Drawing.Size(284, 21);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tableLayoutPanel5
             // 
@@ -357,12 +396,13 @@
             this.tableLayoutPanel5.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.label19, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1599, 95);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1200, 78);
             this.tableLayoutPanel5.TabIndex = 9;
             // 
             // pictureBox1
@@ -370,9 +410,10 @@
             this.pictureBox1.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::Final_Project.Properties.Resources.ilutzon;
-            this.pictureBox1.Location = new System.Drawing.Point(1164, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(873, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(432, 89);
+            this.pictureBox1.Size = new System.Drawing.Size(325, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -384,9 +425,10 @@
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label19.Font = new System.Drawing.Font("Guttman Hatzvi", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(3, 0);
+            this.label19.Location = new System.Drawing.Point(2, 0);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(1155, 95);
+            this.label19.Size = new System.Drawing.Size(867, 78);
             this.label19.TabIndex = 1;
             this.label19.Text = "תכנון שבועי";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -394,16 +436,17 @@
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 395F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 320F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel6.Controls.Add(this.luz, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.tabControl1, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 104);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 84);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1599, 912);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1200, 742);
             this.tableLayoutPanel6.TabIndex = 10;
             // 
             // tableLayoutPanel7
@@ -413,49 +456,13 @@
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel6, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1605, 1019);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1204, 828);
             this.tableLayoutPanel7.TabIndex = 11;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(277, 0);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(89, 32);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "בחירת סמסטר:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // semesterCB
-            // 
-            this.semesterCB.DataSource = this.semesterBindingSource;
-            this.semesterCB.DisplayMember = "SemesterFullName";
-            this.semesterCB.FormattingEnabled = true;
-            this.semesterCB.Location = new System.Drawing.Point(30, 4);
-            this.semesterCB.Margin = new System.Windows.Forms.Padding(4);
-            this.semesterCB.Name = "semesterCB";
-            this.semesterCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.semesterCB.Size = new System.Drawing.Size(240, 24);
-            this.semesterCB.TabIndex = 6;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.semesterBindingSource;
-            this.comboBox1.DisplayMember = "SemesterFullName";
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(4, 4);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboBox1.Size = new System.Drawing.Size(379, 24);
-            this.comboBox1.TabIndex = 8;
             // 
             // degreeClassIDDataGridViewTextBoxColumn
             // 
@@ -466,17 +473,25 @@
             this.degreeClassIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.degreeClassIDDataGridViewTextBoxColumn.Visible = false;
             // 
+            // degreeNameDataGridViewTextBoxColumn
+            // 
+            this.degreeNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.degreeNameDataGridViewTextBoxColumn.DataPropertyName = "DegreeName";
+            this.degreeNameDataGridViewTextBoxColumn.FillWeight = 6F;
+            this.degreeNameDataGridViewTextBoxColumn.HeaderText = "מגמה";
+            this.degreeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.degreeNameDataGridViewTextBoxColumn.Name = "degreeNameDataGridViewTextBoxColumn";
+            this.degreeNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // mahzorDataGridViewTextBoxColumn
             // 
-            this.mahzorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.mahzorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mahzorDataGridViewTextBoxColumn.DataPropertyName = "mahzor";
-            this.mahzorDataGridViewTextBoxColumn.FillWeight = 77.62803F;
+            this.mahzorDataGridViewTextBoxColumn.FillWeight = 6F;
             this.mahzorDataGridViewTextBoxColumn.HeaderText = "מחזור";
             this.mahzorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.mahzorDataGridViewTextBoxColumn.Name = "mahzorDataGridViewTextBoxColumn";
             this.mahzorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mahzorDataGridViewTextBoxColumn.Visible = false;
-            this.mahzorDataGridViewTextBoxColumn.Width = 46;
             // 
             // isActiveDataGridViewCheckBoxColumn
             // 
@@ -487,17 +502,6 @@
             this.isActiveDataGridViewCheckBoxColumn.ReadOnly = true;
             this.isActiveDataGridViewCheckBoxColumn.Visible = false;
             // 
-            // degreeNameDataGridViewTextBoxColumn
-            // 
-            this.degreeNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.degreeNameDataGridViewTextBoxColumn.DataPropertyName = "DegreeName";
-            this.degreeNameDataGridViewTextBoxColumn.FillWeight = 93.79731F;
-            this.degreeNameDataGridViewTextBoxColumn.HeaderText = "מגמה";
-            this.degreeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.degreeNameDataGridViewTextBoxColumn.Name = "degreeNameDataGridViewTextBoxColumn";
-            this.degreeNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.degreeNameDataGridViewTextBoxColumn.Width = 66;
-            // 
             // semesterIDDataGridViewTextBoxColumn
             // 
             this.semesterIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -507,7 +511,8 @@
             this.semesterIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.semesterIDDataGridViewTextBoxColumn.Name = "semesterIDDataGridViewTextBoxColumn";
             this.semesterIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterIDDataGridViewTextBoxColumn.Width = 107;
+            this.semesterIDDataGridViewTextBoxColumn.Visible = false;
+            this.semesterIDDataGridViewTextBoxColumn.Width = 95;
             // 
             // tihnunDataGridViewTextBoxColumn
             // 
@@ -529,27 +534,25 @@
             // 
             // itraDataGridViewTextBoxColumn
             // 
-            this.itraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.itraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.itraDataGridViewTextBoxColumn.DataPropertyName = "itra";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itraDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.itraDataGridViewTextBoxColumn.FillWeight = 119.1039F;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itraDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.itraDataGridViewTextBoxColumn.FillWeight = 6F;
             this.itraDataGridViewTextBoxColumn.HeaderText = "יתרה";
-            this.itraDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itraDataGridViewTextBoxColumn.MinimumWidth = 20;
             this.itraDataGridViewTextBoxColumn.Name = "itraDataGridViewTextBoxColumn";
             this.itraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itraDataGridViewTextBoxColumn.Width = 65;
             // 
             // Scheduler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1289, 721);
+            this.ClientSize = new System.Drawing.Size(967, 586);
             this.Controls.Add(this.tableLayoutPanel7);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Scheduler";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -620,9 +623,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn degreeClassIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn degreeNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mahzorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isActiveDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn degreeNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn semesterIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tihnunDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bitzuaDataGridViewTextBoxColumn;
