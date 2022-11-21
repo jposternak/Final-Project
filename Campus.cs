@@ -17,7 +17,7 @@ namespace Final_Project
             this.Name = Name;
         }
 
-        private static void createCampus(String CampusName)
+        public void createCampus(String CampusName)
         {
             adapter.InsertQuery(CampusName);
         }
