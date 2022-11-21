@@ -23,7 +23,7 @@ namespace Final_Project
             this.Name = name;
         }
 
-        public void create(string name)
+        public static void create(string name)
         {
             adapter.InsertQuery(name);
         }

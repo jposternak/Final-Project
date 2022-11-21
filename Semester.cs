@@ -1,9 +1,11 @@
 ﻿using Final_Project.grilDataSetTableAdapters;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static Final_Project.grilDataSet;
 
 
@@ -18,24 +20,63 @@ namespace Final_Project
         public DateTime Begda { get; set; }
         public DateTime Endda { get; set; }
 
-        private grilDataSet grilDataSet = new Final_Project.grilDataSet();
+        private static SemesterTableAdapter adapter = new SemesterTableAdapter();
 
         public static Semester getFromDatabase(int semesterID)
         {
             Semester s= new Semester();
             s.Id = semesterID;
-            
-            SemesterTableAdapter adapter = new SemesterTableAdapter();
-            SemesterDataTable dt = adapter.GetDataByID(s.Id);
 
-            s.HebrewYear = dt.Rows[0][1].ToString();
-            s.SemesterType = dt.Rows[0][2].ToString();
-            s.Begda = (DateTime)dt.Rows[0][3];
-            s.Endda = (DateTime)dt.Rows[0][4];
+            DataRowCollection rows = adapter.GetDataByID(s.Id).Rows;
 
+            if (rows.Count != 0)
+            {
+                s.HebrewYear = rows[0][1].ToString();
+                s.SemesterType = rows[0][2].ToString();
+                s.Begda = (DateTime)rows[0][3];
+                s.Endda = (DateTime)rows[0][4];
+                return s;
+            }
+            else return null;
 
+        }
 
-            return s;
+        
+
+        // implement insert
+        public static void create(string hebrewYear, string type, DateTime start, DateTime end) 
+        {
+
+            adapter.InsertQuery(hebrewYear,type,start.ToString(),end.ToString());
+        }
+
+        // implement edit
+        public void edit(int id, string newYear, string newType, DateTime start, DateTime end)
+        {
+            this.HebrewYear = newYear;
+            this.SemesterType = newType;
+            this.Begda = start;
+            this.Endda = end;
+
+            adapter.UpdateQuery(HebrewYear, SemesterType, Begda.ToString(), Endda.ToString(),id);
+        }
+
+        //implement delete
+        public void delete(int id)
+        {
+            try
+            {
+                Semester s = Semester.getFromDatabase(id);
+                if (s != null)
+                {
+                    adapter.DeleteQuery(s.Id);
+                }
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show("לא ניתן למחוק פריט זה, בדוק שלא מקושר לדברים אחרים",
+                    "שגיאה", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
     }
