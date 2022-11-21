@@ -65,7 +65,7 @@ namespace Final_Project
             }
             catch (Exception e1)
             {
-                MessageBox.Show("לא נית            RoomFeatures.Remove(feature);\r\n            f_adapter.DeleteQuery(Id, feature.Id);ן למחוק מאפיין זה, בדוק שלא מקושר לדברים אחרים",
+                MessageBox.Show("לא ניתן למחוק מאפיין זה, בדוק שלא מקושר לדברים אחרים",
                     "שגיאה", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
