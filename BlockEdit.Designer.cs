@@ -109,9 +109,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox1.Location = new System.Drawing.Point(4, 96);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
@@ -156,10 +156,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(169, 0);
+            this.label1.Location = new System.Drawing.Point(167, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.Size = new System.Drawing.Size(32, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "שדה";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -167,10 +167,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 22);
+            this.label2.Location = new System.Drawing.Point(137, 22);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(62, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "מזהה חדר";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -178,10 +178,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(153, 44);
+            this.label3.Location = new System.Drawing.Point(149, 44);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(50, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "שם חדר";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -192,17 +192,17 @@
             this.roomIDTB.Location = new System.Drawing.Point(2, 24);
             this.roomIDTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomIDTB.Name = "roomIDTB";
-            this.roomIDTB.Size = new System.Drawing.Size(130, 20);
+            this.roomIDTB.Size = new System.Drawing.Size(130, 22);
             this.roomIDTB.TabIndex = 7;
             this.roomIDTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(105, 0);
+            this.label7.Location = new System.Drawing.Point(102, 0);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 13);
+            this.label7.Size = new System.Drawing.Size(30, 16);
             this.label7.TabIndex = 6;
             this.label7.Text = "ערך";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -213,7 +213,7 @@
             this.roomNameTB.Location = new System.Drawing.Point(2, 46);
             this.roomNameTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomNameTB.Name = "roomNameTB";
-            this.roomNameTB.Size = new System.Drawing.Size(130, 20);
+            this.roomNameTB.Size = new System.Drawing.Size(130, 22);
             this.roomNameTB.TabIndex = 7;
             this.roomNameTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -223,7 +223,7 @@
             this.campusTB.Location = new System.Drawing.Point(2, 112);
             this.campusTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.campusTB.Name = "campusTB";
-            this.campusTB.Size = new System.Drawing.Size(130, 20);
+            this.campusTB.Size = new System.Drawing.Size(130, 22);
             this.campusTB.TabIndex = 7;
             this.campusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -233,17 +233,17 @@
             this.buildingTB.Location = new System.Drawing.Point(2, 90);
             this.buildingTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buildingTB.Name = "buildingTB";
-            this.buildingTB.Size = new System.Drawing.Size(130, 20);
+            this.buildingTB.Size = new System.Drawing.Size(130, 22);
             this.buildingTB.TabIndex = 7;
             this.buildingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(159, 110);
+            this.label5.Location = new System.Drawing.Point(157, 110);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.Size = new System.Drawing.Size(42, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "קמפוס";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,10 +251,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(165, 88);
+            this.label4.Location = new System.Drawing.Point(164, 88);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.Size = new System.Drawing.Size(35, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "בניין";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,10 +262,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(166, 66);
+            this.label6.Location = new System.Drawing.Point(164, 66);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.Size = new System.Drawing.Size(35, 16);
             this.label6.TabIndex = 5;
             this.label6.Text = "קומה";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -276,7 +276,7 @@
             this.roomFloorTB.Location = new System.Drawing.Point(2, 68);
             this.roomFloorTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomFloorTB.Name = "roomFloorTB";
-            this.roomFloorTB.Size = new System.Drawing.Size(130, 20);
+            this.roomFloorTB.Size = new System.Drawing.Size(130, 22);
             this.roomFloorTB.TabIndex = 7;
             this.roomFloorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -296,9 +296,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.groupBox2.Controls.Add(this.roomFeaturesGV);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox2.Location = new System.Drawing.Point(4, 258);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
@@ -445,10 +444,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.groupBox3.Controls.Add(this.tableLayoutPanel2);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox3.Location = new System.Drawing.Point(235, 105);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
@@ -463,8 +461,8 @@
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.25572F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.64033F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Controls.Add(this.label8, 0, 0);
@@ -489,7 +487,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label8.Location = new System.Drawing.Point(386, 0);
+            this.label8.Location = new System.Drawing.Point(404, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(71, 13);
@@ -502,7 +500,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label9.Location = new System.Drawing.Point(285, 0);
+            this.label9.Location = new System.Drawing.Point(303, 0);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(33, 13);
@@ -540,7 +538,7 @@
             // 
             this.dayOfWeek.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dayOfWeek.AutoSize = true;
-            this.dayOfWeek.Location = new System.Drawing.Point(389, 25);
+            this.dayOfWeek.Location = new System.Drawing.Point(407, 25);
             this.dayOfWeek.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dayOfWeek.Name = "dayOfWeek";
             this.dayOfWeek.Size = new System.Drawing.Size(65, 17);
@@ -552,7 +550,7 @@
             // 
             this.time.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.time.AutoSize = true;
-            this.time.Location = new System.Drawing.Point(269, 25);
+            this.time.Location = new System.Drawing.Point(287, 25);
             this.time.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(65, 17);
@@ -586,14 +584,13 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.groupBox4.Controls.Add(this.editBT);
             this.groupBox4.Controls.Add(this.saveBT);
             this.groupBox4.Controls.Add(this.deleteBT);
             this.groupBox4.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(235, 210);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.groupBox4.Location = new System.Drawing.Point(235, 211);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -670,10 +667,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(280, 0);
+            this.label12.Location = new System.Drawing.Point(285, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 20);
+            this.label12.Size = new System.Drawing.Size(36, 18);
             this.label12.TabIndex = 0;
             this.label12.Text = "שדה";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -681,10 +678,10 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(256, 22);
+            this.label13.Location = new System.Drawing.Point(266, 22);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 20);
+            this.label13.Size = new System.Drawing.Size(55, 18);
             this.label13.TabIndex = 1;
             this.label13.Text = "פקולטה";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -692,10 +689,10 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(207, 44);
+            this.label14.Location = new System.Drawing.Point(227, 44);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(114, 20);
+            this.label14.Size = new System.Drawing.Size(94, 18);
             this.label14.TabIndex = 2;
             this.label14.Text = "מגמת לימודים";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -715,10 +712,10 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(152, 0);
+            this.label15.Location = new System.Drawing.Point(159, 0);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 20);
+            this.label15.Size = new System.Drawing.Size(33, 18);
             this.label15.TabIndex = 6;
             this.label15.Text = "ערך";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -774,10 +771,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(199, 110);
+            this.label17.Location = new System.Drawing.Point(217, 110);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(122, 25);
+            this.label17.Size = new System.Drawing.Size(104, 25);
             this.label17.TabIndex = 3;
             this.label17.Text = "סך שעות שטרם שובצו";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -785,10 +782,10 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(246, 88);
+            this.label18.Location = new System.Drawing.Point(198, 88);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(75, 22);
+            this.label18.Size = new System.Drawing.Size(123, 18);
             this.label18.TabIndex = 5;
             this.label18.Text = "סך שעות משובצות";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -796,10 +793,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(267, 66);
+            this.label16.Location = new System.Drawing.Point(277, 66);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(54, 20);
+            this.label16.Size = new System.Drawing.Size(44, 18);
             this.label16.TabIndex = 5;
             this.label16.Text = "מחזור";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

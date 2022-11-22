@@ -21,8 +21,6 @@ namespace Final_Project
         public BlockEdit(ScheduleBlock block)
         {
 
-
-
             InitializeComponent();
 
             this.block = block;
@@ -58,12 +56,12 @@ namespace Final_Project
         {
             dayOfWeek.Text = block.DayOfWeek.ToString();
             time.Text = block.TimeToString();
-            semester.Text = block.
+            //semester.Text = block.semester.ToString();
             inUse.Text = "not implemented";
 
 
             facultyTB.Text = block.FacultyName;
-
+            
             megamaTB.Text = "megama";
             mahzorTB.Text = block.DegreeClassName;
             shibutzTB.Text = "mispar shibutz";

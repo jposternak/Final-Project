@@ -151,6 +151,8 @@ namespace Final_Project
             ScheduleBlockDetailsTableAdapter adapter = new ScheduleBlockDetailsTableAdapter();
             DataRowCollection rows = adapter.GetDataByMahzor(mahzor,semester).Rows;
 
+            Semester blockSemester = Semester.getFromDatabase(semester);
+
             for (int i = 0; i < rows.Count; i++)
             {
                 int id = (int)rows[i][0];

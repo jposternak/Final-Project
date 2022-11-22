@@ -176,12 +176,19 @@ namespace Final_Project
         {
             int weekday = int.Parse(dayCB.Text);
 
-            DateTime startTime = startPicker.Value;
+            //DateTime startTime = startPicker.Value;
+            int numberOfBlocks = int.Parse(numberOfBlocksCB.SelectedItem.ToString());
 
             if (selectedRoomID != -1)
             {
                 int roomID = selectedRoomID;
-                ScheduleBlock.saveToDB(weekday, startTime, roomID, dc.Id, semester.Id);
+
+                for (int i = 0; i < numberOfBlocks; i++)
+                {
+                    ScheduleBlock.saveToDB(weekday, startTime, roomID, dc.Id, semester.Id);
+                    startTime = startTime.AddMinutes(45);
+                }
+                                
                 plotGraph();
                 fillNumbers();
             }
@@ -223,6 +230,41 @@ namespace Final_Project
             roomLB.Text = selectedRoomID.ToString();
 
             
+        }
+
+        DateTime startTime;
+        DateTime endTime;
+        private void minuteCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            try
+            {
+                int startHour = int.Parse(hourCB.SelectedItem.ToString());
+                int startMinute = int.Parse(minuteCB.SelectedItem.ToString());
+                int numberOfBlocks = int.Parse(numberOfBlocksCB.SelectedItem.ToString());
+
+                startTime = new DateTime();
+
+                startTime = startTime.AddHours(startHour);
+                startTime = startTime.AddMinutes(startMinute);
+
+                endTime = startTime;
+
+                endTime = endTime.AddMinutes(numberOfBlocks * 45);
+
+                int endHour = (int)endTime.Hour;
+                int endMinute = (int)endTime.Minute;
+
+                endHourCB.Text = endHour.ToString();
+                endMinutesCB.Text = endMinute.ToString();
+            }
+            catch (Exception)
+            {
+
+                
+            }
+            
+
         }
     }
 }
