@@ -146,7 +146,6 @@
             // 
             chartArea1.Name = "ChartArea1";
             this.luz.ChartAreas.Add(chartArea1);
-            this.luz.Dock = System.Windows.Forms.DockStyle.Fill;
             this.luz.Location = new System.Drawing.Point(-21, 3);
             this.luz.Name = "luz";
             this.luz.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -188,9 +187,9 @@
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(967, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1218, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 586);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 665);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // semesterBindingSource
@@ -549,7 +548,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(967, 586);
+            this.ClientSize = new System.Drawing.Size(1218, 665);
             this.Controls.Add(this.tableLayoutPanel7);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Scheduler";

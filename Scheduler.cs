@@ -105,7 +105,7 @@ namespace Final_Project
                     dataPoints.Add(p, block);
                     luz.Series[faculty].Points[p].BorderColor = Color.Black;
                     luz.Series[faculty].Points[p].BorderWidth = 3;
-                    luz.Series[faculty].Points[p].Label = block.ToString();
+                    luz.Series[faculty].Points[p].Label = block.ToOfflineText();
 
                 }
             }

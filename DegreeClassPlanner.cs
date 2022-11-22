@@ -185,7 +185,7 @@ namespace Final_Project
 
                 for (int i = 0; i < numberOfBlocks; i++)
                 {
-                    ScheduleBlock.saveToDB(weekday, startTime, roomID, dc.Id, semester.Id);
+                    ScheduleBlock.insertNew(weekday, startTime, roomID, dc.Id, semester.Id);
                     startTime = startTime.AddMinutes(45);
                 }
                                 

@@ -10643,12 +10643,18 @@ SELECT CP_LecturerID, CP_CourseID, CP_ScheduleBlockID, CP_Status, CP_Comments FR
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CP_LecturerID, CP_CourseID, CP_ScheduleBlockID, CP_Status, CP_Comments FRO" +
                 "M dbo.CoursePlacement";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        CP_LecturerID, CP_CourseID, CP_ScheduleBlockID, CP_Status, CP_Comme" +
+                "nts\r\nFROM            CoursePlacement\r\nWHERE        (CP_ScheduleBlockID = @SBID)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SBID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CP_ScheduleBlockID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10670,6 +10676,32 @@ SELECT CP_LecturerID, CP_CourseID, CP_ScheduleBlockID, CP_Status, CP_Comments FR
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual grilDataSet.CoursePlacementDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            grilDataSet.CoursePlacementDataTable dataTable = new grilDataSet.CoursePlacementDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBySBID(grilDataSet.CoursePlacementDataTable dataTable, int SBID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(SBID));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual grilDataSet.CoursePlacementDataTable GetDataBySBID(int SBID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(SBID));
             grilDataSet.CoursePlacementDataTable dataTable = new grilDataSet.CoursePlacementDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -11342,11 +11374,11 @@ WHERE        (DegreeClass.DegreeClassID = @id)";
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeClassID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"SELECT   DegreeClass.DegreeClassID, DegreeClass.DegreeClassName, DegreeClass.DegreeID, DegreeClass.NumberOfStudents, DegreeClass.StartingSemester, DegreeClass.Duration, 
-                         DegreeClass.Summer, DegreeClass.WeeklyHours, Semester.HebrewYear, Semester.SemesterType
-FROM         DegreeClass INNER JOIN
+            this._commandCollection[3].CommandText = @"SELECT        DegreeClass.DegreeClassID, DegreeClass.DegreeClassName, DegreeClass.DegreeID, DegreeClass.NumberOfStudents, DegreeClass.StartingSemester, DegreeClass.Duration, DegreeClass.Summer, 
+                         DegreeClass.WeeklyHours, Semester.HebrewYear, Semester.SemesterType, DegreeClass.IsActive
+FROM            DegreeClass INNER JOIN
                          Semester ON DegreeClass.StartingSemester = Semester.SemesterID
-WHERE     (DegreeClass.DegreeID = @DegreeID)";
+WHERE        (DegreeClass.DegreeID = @DegreeID)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DegreeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
@@ -11366,7 +11398,10 @@ VALUES        (@DegreeClassName,@DegreeID,@NumberOfStudents,@StartingSemester,@D
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isActive", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "IsActive", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = @"UPDATE [dbo].[DegreeClass] SET [DegreeClassName] = @DegreeClassName, [DegreeID] = @DegreeID, [NumberOfStudents] = @NumberOfStudents, [StartingSemester] = @StartingSemester, [Duration] = @Duration, [Summer] = @Summer, [WeeklyHours] = @WeeklyHours WHERE ([DegreeClassID] = @Original_DegreeClassID);";
+            this._commandCollection[5].CommandText = @"UPDATE       DegreeClass
+SET                DegreeClassName = @DegreeClassName, DegreeID = @DegreeID, NumberOfStudents = @NumberOfStudents, StartingSemester = @StartingSemester, Duration = @Duration, Summer = @Summer, 
+                         WeeklyHours = @WeeklyHours, IsActive = @IsActive 
+WHERE        (DegreeClassID = @Original_DegreeClassID)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DegreeClassName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeClassName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DegreeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11375,6 +11410,7 @@ VALUES        (@DegreeClassName,@DegreeID,@NumberOfStudents,@StartingSemester,@D
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Duration", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Duration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Summer", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Summer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WeeklyHours", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "WeeklyHours", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsActive", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "IsActive", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DegreeClassID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeClassID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -11518,7 +11554,7 @@ VALUES        (@DegreeClassName,@DegreeID,@NumberOfStudents,@StartingSemester,@D
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateQuery(string DegreeClassName, int DegreeID, int NumberOfStudents, int StartingSemester, int Duration, bool Summer, int WeeklyHours, int Original_DegreeClassID) {
+        public virtual int UpdateQuery(string DegreeClassName, int DegreeID, int NumberOfStudents, int StartingSemester, int Duration, bool Summer, int WeeklyHours, bool IsActive, int Original_DegreeClassID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
             if ((DegreeClassName == null)) {
                 throw new global::System.ArgumentNullException("DegreeClassName");
@@ -11532,7 +11568,8 @@ VALUES        (@DegreeClassName,@DegreeID,@NumberOfStudents,@StartingSemester,@D
             command.Parameters[4].Value = ((int)(Duration));
             command.Parameters[5].Value = ((bool)(Summer));
             command.Parameters[6].Value = ((int)(WeeklyHours));
-            command.Parameters[7].Value = ((int)(Original_DegreeClassID));
+            command.Parameters[7].Value = ((bool)(IsActive));
+            command.Parameters[8].Value = ((int)(Original_DegreeClassID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

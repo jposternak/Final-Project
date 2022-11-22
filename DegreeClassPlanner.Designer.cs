@@ -45,15 +45,6 @@
             this.megamaLB = new System.Windows.Forms.Label();
             this.facultyLB = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dayCB = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.treeRooms = new System.Windows.Forms.TreeView();
-            this.add = new System.Windows.Forms.Button();
-            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.grilDataSet = new Final_Project.grilDataSet();
-            this.luz = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.roomTableAdapter = new Final_Project.grilDataSetTableAdapters.RoomTableAdapter();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -61,44 +52,53 @@
             this.tihnunLB = new System.Windows.Forms.Label();
             this.bitzuaLB = new System.Windows.Forms.Label();
             this.itraLB = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.endMinutesCB = new System.Windows.Forms.ComboBox();
+            this.endHourCB = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.hourCB = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.minuteCB = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.numberOfBlocksCB = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.roomNameLB = new System.Windows.Forms.Label();
+            this.dayCB = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.roomLB = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.treeRooms = new System.Windows.Forms.TreeView();
+            this.add = new System.Windows.Forms.Button();
+            this.luz = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grilDataSet = new Final_Project.grilDataSet();
+            this.roomTableAdapter = new Final_Project.grilDataSetTableAdapters.RoomTableAdapter();
             this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
             this.degreeClassPlanExec3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.hourCB = new System.Windows.Forms.ComboBox();
-            this.minuteCB = new System.Windows.Forms.ComboBox();
-            this.endHourCB = new System.Windows.Forms.ComboBox();
-            this.endMinutesCB = new System.Windows.Forms.ComboBox();
-            this.numberOfBlocksCB = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.luz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luz)).BeginInit();
-            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilDataViewsSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.degreeClassPlanExec3BindingSource)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -287,114 +287,6 @@
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 1;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.4F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.6F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.numberOfBlocksCB, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label13, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.roomNameLB, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.dayCB, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.roomLB, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(93, 265);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(250, 188);
-            this.tableLayoutPanel2.TabIndex = 5;
-            // 
-            // dayCB
-            // 
-            this.dayCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dayCB.FormattingEnabled = true;
-            this.dayCB.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.dayCB.Location = new System.Drawing.Point(2, 33);
-            this.dayCB.Margin = new System.Windows.Forms.Padding(2);
-            this.dayCB.Name = "dayCB";
-            this.dayCB.Size = new System.Drawing.Size(165, 21);
-            this.dayCB.TabIndex = 1;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.treeRooms);
-            this.groupBox2.Location = new System.Drawing.Point(90, 23);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 233);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "הוספת הקצאה חדשה";
-            // 
-            // treeRooms
-            // 
-            this.treeRooms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeRooms.Location = new System.Drawing.Point(3, 16);
-            this.treeRooms.Name = "treeRooms";
-            this.treeRooms.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.treeRooms.RightToLeftLayout = true;
-            this.treeRooms.Size = new System.Drawing.Size(250, 214);
-            this.treeRooms.TabIndex = 5;
-            this.treeRooms.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeRooms_NodeMouseClick);
-            // 
-            // add
-            // 
-            this.add.Image = global::Final_Project.Properties.Resources.icons8_insert_page_50;
-            this.add.Location = new System.Drawing.Point(21, 265);
-            this.add.Margin = new System.Windows.Forms.Padding(2);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(63, 81);
-            this.add.TabIndex = 3;
-            this.add.Text = "הוסף";
-            this.add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
-            // 
-            // roomBindingSource
-            // 
-            this.roomBindingSource.DataMember = "Room";
-            this.roomBindingSource.DataSource = this.grilDataSet;
-            // 
-            // grilDataSet
-            // 
-            this.grilDataSet.DataSetName = "grilDataSet";
-            this.grilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // luz
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.luz.ChartAreas.Add(chartArea1);
-            this.luz.Location = new System.Drawing.Point(16, 23);
-            this.luz.Margin = new System.Windows.Forms.Padding(2);
-            this.luz.Name = "luz";
-            series1.ChartArea = "ChartArea1";
-            series1.Name = "Series1";
-            this.luz.Series.Add(series1);
-            this.luz.Size = new System.Drawing.Size(711, 665);
-            this.luz.TabIndex = 0;
-            this.luz.Text = "chart1";
-            this.luz.MouseClick += new System.Windows.Forms.MouseEventHandler(this.luz_MouseClick);
-            // 
-            // roomTableAdapter
-            // 
-            this.roomTableAdapter.ClearBeforeFill = true;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -482,6 +374,230 @@
             this.itraLB.Text = "0";
             this.itraLB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.4F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.6F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.numberOfBlocksCB, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label13, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.roomNameLB, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dayCB, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.roomLB, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(93, 265);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 6;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(250, 188);
+            this.tableLayoutPanel2.TabIndex = 5;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel6.Controls.Add(this.endMinutesCB, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.endHourCB, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label12, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 158);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(163, 27);
+            this.tableLayoutPanel6.TabIndex = 10;
+            // 
+            // endMinutesCB
+            // 
+            this.endMinutesCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.endMinutesCB.Enabled = false;
+            this.endMinutesCB.FormattingEnabled = true;
+            this.endMinutesCB.Items.AddRange(new object[] {
+            "00",
+            "15",
+            "30",
+            "45"});
+            this.endMinutesCB.Location = new System.Drawing.Point(93, 3);
+            this.endMinutesCB.Name = "endMinutesCB";
+            this.endMinutesCB.Size = new System.Drawing.Size(67, 21);
+            this.endMinutesCB.TabIndex = 7;
+            this.endMinutesCB.Text = "45";
+            // 
+            // endHourCB
+            // 
+            this.endHourCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.endHourCB.Enabled = false;
+            this.endHourCB.FormattingEnabled = true;
+            this.endHourCB.Items.AddRange(new object[] {
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"});
+            this.endHourCB.Location = new System.Drawing.Point(3, 3);
+            this.endHourCB.Name = "endHourCB";
+            this.endHourCB.Size = new System.Drawing.Size(68, 21);
+            this.endHourCB.TabIndex = 7;
+            this.endHourCB.Text = "08";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label12.Location = new System.Drawing.Point(77, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(10, 27);
+            this.label12.TabIndex = 8;
+            this.label12.Text = ":";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel5.Controls.Add(this.hourCB, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label11, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.minuteCB, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 96);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(163, 25);
+            this.tableLayoutPanel5.TabIndex = 9;
+            // 
+            // hourCB
+            // 
+            this.hourCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hourCB.FormattingEnabled = true;
+            this.hourCB.Items.AddRange(new object[] {
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22"});
+            this.hourCB.Location = new System.Drawing.Point(3, 3);
+            this.hourCB.Name = "hourCB";
+            this.hourCB.Size = new System.Drawing.Size(68, 21);
+            this.hourCB.TabIndex = 7;
+            this.hourCB.Text = "08";
+            this.hourCB.SelectedIndexChanged += new System.EventHandler(this.minuteCB_SelectedIndexChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label11.Location = new System.Drawing.Point(77, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(10, 25);
+            this.label11.TabIndex = 8;
+            this.label11.Text = ":";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // minuteCB
+            // 
+            this.minuteCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.minuteCB.FormattingEnabled = true;
+            this.minuteCB.Items.AddRange(new object[] {
+            "00",
+            "15",
+            "30",
+            "45"});
+            this.minuteCB.Location = new System.Drawing.Point(93, 3);
+            this.minuteCB.Name = "minuteCB";
+            this.minuteCB.Size = new System.Drawing.Size(67, 21);
+            this.minuteCB.TabIndex = 7;
+            this.minuteCB.Text = "00";
+            this.minuteCB.SelectedIndexChanged += new System.EventHandler(this.minuteCB_SelectedIndexChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(190, 155);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 13);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "שעת סיום";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numberOfBlocksCB
+            // 
+            this.numberOfBlocksCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numberOfBlocksCB.FormattingEnabled = true;
+            this.numberOfBlocksCB.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.numberOfBlocksCB.Location = new System.Drawing.Point(3, 127);
+            this.numberOfBlocksCB.Name = "numberOfBlocksCB";
+            this.numberOfBlocksCB.Size = new System.Drawing.Size(163, 21);
+            this.numberOfBlocksCB.TabIndex = 7;
+            this.numberOfBlocksCB.Text = "1";
+            this.numberOfBlocksCB.SelectedIndexChanged += new System.EventHandler(this.minuteCB_SelectedIndexChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(173, 124);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(74, 13);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "כמות בלוקים";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(181, 93);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 13);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "שעת תחילה";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // roomNameLB
             // 
             this.roomNameLB.AutoSize = true;
@@ -491,6 +607,24 @@
             this.roomNameLB.TabIndex = 6;
             this.roomNameLB.Text = "יום בשבוע";
             this.roomNameLB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dayCB
+            // 
+            this.dayCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dayCB.FormattingEnabled = true;
+            this.dayCB.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.dayCB.Location = new System.Drawing.Point(2, 33);
+            this.dayCB.Margin = new System.Windows.Forms.Padding(2);
+            this.dayCB.Name = "dayCB";
+            this.dayCB.Size = new System.Drawing.Size(165, 21);
+            this.dayCB.TabIndex = 1;
             // 
             // label7
             // 
@@ -511,6 +645,69 @@
             this.roomLB.TabIndex = 6;
             this.roomLB.Text = "חדר";
             this.roomLB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.treeRooms);
+            this.groupBox2.Location = new System.Drawing.Point(90, 23);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(256, 233);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "הוספת הקצאה חדשה";
+            // 
+            // treeRooms
+            // 
+            this.treeRooms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeRooms.Location = new System.Drawing.Point(3, 16);
+            this.treeRooms.Name = "treeRooms";
+            this.treeRooms.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.treeRooms.RightToLeftLayout = true;
+            this.treeRooms.Size = new System.Drawing.Size(250, 214);
+            this.treeRooms.TabIndex = 5;
+            this.treeRooms.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeRooms_NodeMouseClick);
+            // 
+            // add
+            // 
+            this.add.Image = global::Final_Project.Properties.Resources.icons8_insert_page_50;
+            this.add.Location = new System.Drawing.Point(21, 265);
+            this.add.Margin = new System.Windows.Forms.Padding(2);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(63, 81);
+            this.add.TabIndex = 3;
+            this.add.Text = "הוסף";
+            this.add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
+            // 
+            // luz
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.luz.ChartAreas.Add(chartArea1);
+            this.luz.Location = new System.Drawing.Point(16, 23);
+            this.luz.Margin = new System.Windows.Forms.Padding(2);
+            this.luz.Name = "luz";
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.luz.Series.Add(series1);
+            this.luz.Size = new System.Drawing.Size(711, 665);
+            this.luz.TabIndex = 0;
+            this.luz.Text = "chart1";
+            this.luz.MouseClick += new System.Windows.Forms.MouseEventHandler(this.luz_MouseClick);
+            // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.grilDataSet;
+            // 
+            // grilDataSet
+            // 
+            this.grilDataSet.DataSetName = "grilDataSet";
+            this.grilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roomTableAdapter
+            // 
+            this.roomTableAdapter.ClearBeforeFill = true;
             // 
             // grilDataViewsSet
             // 
@@ -535,7 +732,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1125, 84);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
@@ -567,203 +764,6 @@
             this.label19.Text = "מסך תכנון הקצאות למחזור לימודים";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // hourCB
-            // 
-            this.hourCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hourCB.FormattingEnabled = true;
-            this.hourCB.Items.AddRange(new object[] {
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22"});
-            this.hourCB.Location = new System.Drawing.Point(3, 3);
-            this.hourCB.Name = "hourCB";
-            this.hourCB.Size = new System.Drawing.Size(68, 21);
-            this.hourCB.TabIndex = 7;
-            this.hourCB.Text = "08";
-            this.hourCB.SelectedIndexChanged += new System.EventHandler(this.minuteCB_SelectedIndexChanged);
-            // 
-            // minuteCB
-            // 
-            this.minuteCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minuteCB.FormattingEnabled = true;
-            this.minuteCB.Items.AddRange(new object[] {
-            "00",
-            "15",
-            "30",
-            "45"});
-            this.minuteCB.Location = new System.Drawing.Point(93, 3);
-            this.minuteCB.Name = "minuteCB";
-            this.minuteCB.Size = new System.Drawing.Size(67, 21);
-            this.minuteCB.TabIndex = 7;
-            this.minuteCB.Text = "00";
-            this.minuteCB.SelectedIndexChanged += new System.EventHandler(this.minuteCB_SelectedIndexChanged);
-            // 
-            // endHourCB
-            // 
-            this.endHourCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.endHourCB.Enabled = false;
-            this.endHourCB.FormattingEnabled = true;
-            this.endHourCB.Items.AddRange(new object[] {
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23"});
-            this.endHourCB.Location = new System.Drawing.Point(3, 3);
-            this.endHourCB.Name = "endHourCB";
-            this.endHourCB.Size = new System.Drawing.Size(68, 21);
-            this.endHourCB.TabIndex = 7;
-            this.endHourCB.Text = "08";
-            // 
-            // endMinutesCB
-            // 
-            this.endMinutesCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.endMinutesCB.Enabled = false;
-            this.endMinutesCB.FormattingEnabled = true;
-            this.endMinutesCB.Items.AddRange(new object[] {
-            "00",
-            "15",
-            "30",
-            "45"});
-            this.endMinutesCB.Location = new System.Drawing.Point(93, 3);
-            this.endMinutesCB.Name = "endMinutesCB";
-            this.endMinutesCB.Size = new System.Drawing.Size(67, 21);
-            this.endMinutesCB.TabIndex = 7;
-            this.endMinutesCB.Text = "45";
-            // 
-            // numberOfBlocksCB
-            // 
-            this.numberOfBlocksCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numberOfBlocksCB.FormattingEnabled = true;
-            this.numberOfBlocksCB.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.numberOfBlocksCB.Location = new System.Drawing.Point(3, 127);
-            this.numberOfBlocksCB.Name = "numberOfBlocksCB";
-            this.numberOfBlocksCB.Size = new System.Drawing.Size(163, 21);
-            this.numberOfBlocksCB.TabIndex = 7;
-            this.numberOfBlocksCB.Text = "1";
-            this.numberOfBlocksCB.SelectedIndexChanged += new System.EventHandler(this.minuteCB_SelectedIndexChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label11.Location = new System.Drawing.Point(77, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(10, 25);
-            this.label11.TabIndex = 8;
-            this.label11.Text = ":";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label12.Location = new System.Drawing.Point(77, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(10, 27);
-            this.label12.TabIndex = 8;
-            this.label12.Text = ":";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(181, 93);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 13);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "שעת תחילה";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(190, 155);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 13);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "שעת סיום";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(173, 124);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(74, 13);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "כמות בלוקים";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel5.Controls.Add(this.hourCB, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label11, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.minuteCB, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 96);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(163, 25);
-            this.tableLayoutPanel5.TabIndex = 9;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 3;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel6.Controls.Add(this.endMinutesCB, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.endHourCB, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label12, 1, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 158);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(163, 27);
-            this.tableLayoutPanel6.TabIndex = 10;
-            // 
             // DegreeClassPlanner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -786,23 +786,23 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luz)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.luz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilDataViewsSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.degreeClassPlanExec3BindingSource)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }

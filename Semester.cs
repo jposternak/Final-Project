@@ -79,5 +79,11 @@ namespace Final_Project
             }
         }
 
+        public override string ToString()
+        {
+            return $"{this.SemesterType} {this.HebrewYear}";
+
+        }
+
     }
 }

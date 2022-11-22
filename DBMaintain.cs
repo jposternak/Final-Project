@@ -37,7 +37,7 @@ namespace Final_Project
                 this.campusTableAdapter.Fill(this.grilDataSet.campus);
 
                 // TODO: This line of code loads data into the 'grilDataSet.DegreeClass' table. You can move, or remove it, as needed.
-                this.degreeClassTableAdapter.Fill(this.grilDataSet.DegreeClass);
+                //this.degreeClassTableAdapter.Fill(this.grilDataSet.DegreeClass);
                 // TODO: This line of code loads data into the 'grilDataSet.Degree' table. You can move, or remove it, as needed.
                 this.degreeTableAdapter.Fill(this.grilDataSet.Degree);
                 // TODO: This line of code loads data into the 'grilDataSet.Faculty' table. You can move, or remove it, as needed.
@@ -612,17 +612,18 @@ namespace Final_Project
             int semesterLen = (int)(durationNumericUpDown.Value);
             bool isSummer = summerCheckBox.CheckState == CheckState.Checked;
             int weeklyHours = (int)(weeklyHoursNumericUpDown.Value);
+            bool is_Active = isActive.CheckState == CheckState.Checked;
 
             //update DB
 
 
             if (classID == -1)
             {
-                this.degreeClassTableAdapter.InsertQuery(className,degId,numOfStd,semesterId,semesterLen,isSummer,weeklyHours, true);
+                this.degreeClassTableAdapter.InsertQuery(className,degId,numOfStd,semesterId,semesterLen,isSummer,weeklyHours, is_Active);
             }
             else
             {
-                this.degreeClassTableAdapter.UpdateQuery(className, degId, numOfStd, semesterId, semesterLen, isSummer, weeklyHours,classID);
+                this.degreeClassTableAdapter.UpdateQuery(className, degId, numOfStd, semesterId, semesterLen, isSummer, weeklyHours, is_Active,classID);
             }
 
             this.degreeClassTableAdapter.Fill(this.grilDataSet.DegreeClass);

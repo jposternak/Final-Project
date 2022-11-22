@@ -113,9 +113,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox1.Location = new System.Drawing.Point(4, 96);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox1.Size = new System.Drawing.Size(212, 157);
             this.groupBox1.TabIndex = 0;
@@ -141,7 +141,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.roomFloorTB, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 22);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -190,7 +190,7 @@
             // 
             this.roomIDTB.Enabled = false;
             this.roomIDTB.Location = new System.Drawing.Point(2, 24);
-            this.roomIDTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomIDTB.Margin = new System.Windows.Forms.Padding(2);
             this.roomIDTB.Name = "roomIDTB";
             this.roomIDTB.Size = new System.Drawing.Size(130, 22);
             this.roomIDTB.TabIndex = 7;
@@ -211,7 +211,7 @@
             // 
             this.roomNameTB.Enabled = false;
             this.roomNameTB.Location = new System.Drawing.Point(2, 46);
-            this.roomNameTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomNameTB.Margin = new System.Windows.Forms.Padding(2);
             this.roomNameTB.Name = "roomNameTB";
             this.roomNameTB.Size = new System.Drawing.Size(130, 22);
             this.roomNameTB.TabIndex = 7;
@@ -221,7 +221,7 @@
             // 
             this.campusTB.Enabled = false;
             this.campusTB.Location = new System.Drawing.Point(2, 112);
-            this.campusTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campusTB.Margin = new System.Windows.Forms.Padding(2);
             this.campusTB.Name = "campusTB";
             this.campusTB.Size = new System.Drawing.Size(130, 22);
             this.campusTB.TabIndex = 7;
@@ -231,7 +231,7 @@
             // 
             this.buildingTB.Enabled = false;
             this.buildingTB.Location = new System.Drawing.Point(2, 90);
-            this.buildingTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buildingTB.Margin = new System.Windows.Forms.Padding(2);
             this.buildingTB.Name = "buildingTB";
             this.buildingTB.Size = new System.Drawing.Size(130, 22);
             this.buildingTB.TabIndex = 7;
@@ -274,7 +274,7 @@
             // 
             this.roomFloorTB.Enabled = false;
             this.roomFloorTB.Location = new System.Drawing.Point(2, 68);
-            this.roomFloorTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomFloorTB.Margin = new System.Windows.Forms.Padding(2);
             this.roomFloorTB.Name = "roomFloorTB";
             this.roomFloorTB.Size = new System.Drawing.Size(130, 22);
             this.roomFloorTB.TabIndex = 7;
@@ -299,9 +299,9 @@
             this.groupBox2.Controls.Add(this.roomFeaturesGV);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox2.Location = new System.Drawing.Point(4, 258);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox2.Size = new System.Drawing.Size(212, 254);
             this.groupBox2.TabIndex = 0;
@@ -328,7 +328,7 @@
             this.roomFeaturesGV.DataSource = this.allRoomsBindingSource;
             this.roomFeaturesGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.roomFeaturesGV.Location = new System.Drawing.Point(2, 15);
-            this.roomFeaturesGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomFeaturesGV.Margin = new System.Windows.Forms.Padding(2);
             this.roomFeaturesGV.Name = "roomFeaturesGV";
             this.roomFeaturesGV.ReadOnly = true;
             this.roomFeaturesGV.RowHeadersWidth = 51;
@@ -448,9 +448,9 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox3.Location = new System.Drawing.Point(235, 105);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox3.Size = new System.Drawing.Size(496, 87);
             this.groupBox3.TabIndex = 0;
@@ -474,7 +474,7 @@
             this.tableLayoutPanel2.Controls.Add(this.semester, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.inUse, 3, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(11, 23);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -591,9 +591,9 @@
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.groupBox4.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox4.Location = new System.Drawing.Point(235, 211);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox4.Size = new System.Drawing.Size(492, 176);
             this.groupBox4.TabIndex = 0;
@@ -602,11 +602,12 @@
             // 
             // editBT
             // 
+            this.editBT.Enabled = false;
             this.editBT.Image = global::Final_Project.Properties.Resources.icons8_edit_50;
-            this.editBT.Location = new System.Drawing.Point(413, 28);
-            this.editBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.editBT.Location = new System.Drawing.Point(427, 21);
+            this.editBT.Margin = new System.Windows.Forms.Padding(2);
             this.editBT.Name = "editBT";
-            this.editBT.Size = new System.Drawing.Size(52, 56);
+            this.editBT.Size = new System.Drawing.Size(52, 47);
             this.editBT.TabIndex = 1;
             this.editBT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.editBT.UseVisualStyleBackColor = true;
@@ -614,19 +615,20 @@
             // 
             // saveBT
             // 
+            this.saveBT.Enabled = false;
             this.saveBT.Image = global::Final_Project.Properties.Resources.icons8_save_50;
-            this.saveBT.Location = new System.Drawing.Point(413, 90);
-            this.saveBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveBT.Location = new System.Drawing.Point(427, 67);
+            this.saveBT.Margin = new System.Windows.Forms.Padding(2);
             this.saveBT.Name = "saveBT";
-            this.saveBT.Size = new System.Drawing.Size(52, 56);
+            this.saveBT.Size = new System.Drawing.Size(52, 45);
             this.saveBT.TabIndex = 1;
             this.saveBT.UseVisualStyleBackColor = true;
             // 
             // deleteBT
             // 
             this.deleteBT.Image = global::Final_Project.Properties.Resources.icons8_trash_can_50;
-            this.deleteBT.Location = new System.Drawing.Point(347, 90);
-            this.deleteBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteBT.Location = new System.Drawing.Point(427, 110);
+            this.deleteBT.Margin = new System.Windows.Forms.Padding(2);
             this.deleteBT.Name = "deleteBT";
             this.deleteBT.Size = new System.Drawing.Size(52, 56);
             this.deleteBT.TabIndex = 1;
@@ -651,8 +653,8 @@
             this.tableLayoutPanel3.Controls.Add(this.label17, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.label18, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.label16, 0, 3);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 28);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(7, 28);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -661,13 +663,13 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(323, 135);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(393, 135);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(285, 0);
+            this.label12.Location = new System.Drawing.Point(355, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(36, 18);
@@ -678,7 +680,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(266, 22);
+            this.label13.Location = new System.Drawing.Point(336, 22);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 18);
@@ -689,7 +691,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(227, 44);
+            this.label14.Location = new System.Drawing.Point(297, 44);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(94, 18);
@@ -703,16 +705,16 @@
             this.facultyTB.Enabled = false;
             this.facultyTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.facultyTB.Location = new System.Drawing.Point(2, 24);
-            this.facultyTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.facultyTB.Margin = new System.Windows.Forms.Padding(2);
             this.facultyTB.Name = "facultyTB";
-            this.facultyTB.Size = new System.Drawing.Size(190, 23);
+            this.facultyTB.Size = new System.Drawing.Size(232, 23);
             this.facultyTB.TabIndex = 7;
             this.facultyTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(159, 0);
+            this.label15.Location = new System.Drawing.Point(201, 0);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(33, 18);
@@ -726,9 +728,9 @@
             this.megamaTB.Enabled = false;
             this.megamaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.megamaTB.Location = new System.Drawing.Point(2, 46);
-            this.megamaTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.megamaTB.Margin = new System.Windows.Forms.Padding(2);
             this.megamaTB.Name = "megamaTB";
-            this.megamaTB.Size = new System.Drawing.Size(190, 23);
+            this.megamaTB.Size = new System.Drawing.Size(232, 23);
             this.megamaTB.TabIndex = 7;
             this.megamaTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -738,9 +740,9 @@
             this.itraTB.Enabled = false;
             this.itraTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.itraTB.Location = new System.Drawing.Point(2, 112);
-            this.itraTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.itraTB.Margin = new System.Windows.Forms.Padding(2);
             this.itraTB.Name = "itraTB";
-            this.itraTB.Size = new System.Drawing.Size(190, 23);
+            this.itraTB.Size = new System.Drawing.Size(232, 23);
             this.itraTB.TabIndex = 7;
             this.itraTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -750,9 +752,9 @@
             this.shibutzTB.Enabled = false;
             this.shibutzTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.shibutzTB.Location = new System.Drawing.Point(2, 90);
-            this.shibutzTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.shibutzTB.Margin = new System.Windows.Forms.Padding(2);
             this.shibutzTB.Name = "shibutzTB";
-            this.shibutzTB.Size = new System.Drawing.Size(190, 23);
+            this.shibutzTB.Size = new System.Drawing.Size(232, 23);
             this.shibutzTB.TabIndex = 7;
             this.shibutzTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -762,19 +764,19 @@
             this.mahzorTB.Enabled = false;
             this.mahzorTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.mahzorTB.Location = new System.Drawing.Point(2, 68);
-            this.mahzorTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mahzorTB.Margin = new System.Windows.Forms.Padding(2);
             this.mahzorTB.Name = "mahzorTB";
-            this.mahzorTB.Size = new System.Drawing.Size(190, 23);
+            this.mahzorTB.Size = new System.Drawing.Size(232, 23);
             this.mahzorTB.TabIndex = 7;
             this.mahzorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(217, 110);
+            this.label17.Location = new System.Drawing.Point(245, 110);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(104, 25);
+            this.label17.Size = new System.Drawing.Size(146, 18);
             this.label17.TabIndex = 3;
             this.label17.Text = "סך שעות שטרם שובצו";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -782,7 +784,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(198, 88);
+            this.label18.Location = new System.Drawing.Point(268, 88);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(123, 18);
@@ -793,7 +795,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(277, 66);
+            this.label16.Location = new System.Drawing.Point(347, 66);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(44, 18);
@@ -805,9 +807,9 @@
             // 
             this.listBox.FormattingEnabled = true;
             this.listBox.Items.AddRange(new object[] {
-            "בקרוב..."});
+            "\"בקרוב...\""});
             this.listBox.Location = new System.Drawing.Point(235, 391);
-            this.listBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox.Margin = new System.Windows.Forms.Padding(2);
             this.listBox.Name = "listBox";
             this.listBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.listBox.Size = new System.Drawing.Size(493, 121);
@@ -822,7 +824,7 @@
             this.tableLayoutPanel4.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label19, 1, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 10);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -835,7 +837,7 @@
             this.pictureBox1.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.pictureBox1.Image = global::Final_Project.Properties.Resources.ilutzon;
             this.pictureBox1.Location = new System.Drawing.Point(531, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(194, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

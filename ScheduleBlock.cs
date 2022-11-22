@@ -2,8 +2,8 @@
 using Final_Project.grilDataViewsSetTableAdapters;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
-using System.Runtime.CompilerServices;
 using MessageBox = System.Windows.MessageBox;
 
 namespace Final_Project
@@ -13,49 +13,39 @@ namespace Final_Project
     {
         public int Id { get; private set; }
         public int DayOfWeek { get; set; }
-
         public double StartTime { get; private set; }
         public double EndTime { get; private set; }
-
         public TimeSpan StartTimeT { get; private set; }
-
         public TimeSpan EndTimeT { get; private set; }
-
         public Room room { get; set; }
-
-        //public int roomID { get; set; }
-        //public String roomName { get; set; }
-        //public int roomFloor { get; set; }
-        //public String buildingName { get; set; }
-        //public String campusName { get; set; }
-
         public Semester semester { get; set; }
-
         public DegreeClass degreeClass { get; set; }
 
-        //public String DegreeClassName { get; set; }
-        //public String FacultyName { get; set; }
+        public bool isOffline { get; private set; }
 
+        public int roomID { get; private set; }
+        public String roomName { get; private set; }
+        public int roomFloor { get; private set; }
+        public String buildingName { get; private set; }
+        public String campusName { get; private set; }
+        public String DegreeClassName { get; private set; }
+        public String FacultyName { get; private set; }
 
         private static ScheduleBlockTableAdapter adapter = new ScheduleBlockTableAdapter();
         private static ScheduleBlockDetailsTableAdapter detailsAdapter = new ScheduleBlockDetailsTableAdapter();
 
-        public ScheduleBlock()
+        private ScheduleBlock()
         {
 
         }
 
-        /*
-        public ScheduleBlock(int Id, int DayOfWeek, TimeSpan StartTime, TimeSpan EndTime)
+        private ScheduleBlock(int Id, int DayOfWeek, TimeSpan StartTime)
         {
             this.Id = Id;
             this.DayOfWeek = DayOfWeek;
-            this.StartTime = StartTime.Hours + StartTime.Minutes/100.0;
-            this.StartTimeT = StartTime;
-            this.EndTime = EndTime.Hours + EndTime.Minutes / 100.0;
-            this.EndTimeT = EndTime;
+            this.setStartTime(StartTime);
+            this.isOffline = true;
         }
-        */
 
         private void setStartTime(TimeSpan StartTime)
         {
@@ -75,24 +65,27 @@ namespace Final_Project
         //done
         public void changeProperties(int dayOfWeek, DateTime startTime, int roomID, int dcID, int semesterID)
         {
-            this.DayOfWeek = dayOfWeek;
+            if (!this.isOffline)
+            {
+                this.DayOfWeek = dayOfWeek;
 
-            TimeSpan ts = new TimeSpan();
-            ts += TimeSpan.FromMinutes(startTime.Minute);
-            ts += TimeSpan.FromHours(startTime.Hour);
-            this.setStartTime(ts);
+                TimeSpan ts = new TimeSpan();
+                ts += TimeSpan.FromMinutes(startTime.Minute);
+                ts += TimeSpan.FromHours(startTime.Hour);
+                this.setStartTime(ts);
 
-            this.room = Room.GetRoom(roomID);
-            this.degreeClass = DegreeClass.getFromDatabase(dcID);
-            this.semester = Semester.getFromDatabase(semesterID);
+                this.room = Room.GetRoom(roomID);
+                this.degreeClass = DegreeClass.getFromDatabase(dcID);
+                this.semester = Semester.getFromDatabase(semesterID);
 
-            this.uploadChanges();
+                this.uploadChanges();
+            }
         }
 
         private void uploadChanges()
         {
             String time = $"{this.StartTimeT.Hours:00}:{this.StartTimeT.Minutes:00}:{this.StartTimeT.Seconds:00}";
-            adapter.UpdateQuery(this.DayOfWeek, time, this.room.Id, this.degreeClass.Id, this.semester.Id,this.Id);
+            adapter.UpdateQuery(this.DayOfWeek, time, this.room.Id, this.degreeClass.Id, this.semester.Id, this.Id);
         }
 
         //done
@@ -129,11 +122,13 @@ namespace Final_Project
 
                 sb.Id = scheduleBlockID;
                 sb.DayOfWeek = dayOfWeek;
-                //sb.StartTimeT = startTime;
                 sb.setStartTime(startTime);
                 sb.room = r;
                 sb.degreeClass = dc;
                 sb.semester = sem;
+
+                sb.isOffline = false;
+
                 return sb;
             }
             else return null;
@@ -158,7 +153,7 @@ namespace Final_Project
         public String RoomAndTime()
         {
             String s = TimeToString();
-            s += room.ToString();
+            s += roomName;
             return s;
         }
 
@@ -173,27 +168,87 @@ namespace Final_Project
 
         }
 
+        //
+        public String ToOfflineText()
+        {
+            /*
+            String s = TimeToString();
+            s += $"{DegreeClassName}";
+            //s += $"\n{degreeClass.Name}";
+            return s;
+            */
+            return DegreeClassName;
+
+        }
+
         //done
+        private static List<ScheduleBlock> list = new List<ScheduleBlock>();
         public static List<ScheduleBlock> getListbyRoom(int RoomID, int SemesterID)
         {
-            List<ScheduleBlock> list = new List<ScheduleBlock>();
-            DataRowCollection rows = adapter.GetDataByRoomSemester(SemesterID, RoomID).Rows;
+            list = new List<ScheduleBlock>();
+
+            ScheduleBlockDetailsTableAdapter sbd = new ScheduleBlockDetailsTableAdapter();
+            DataRowCollection rows = sbd.GetDataByRoomIDSemester(RoomID, SemesterID).Rows;
 
             for (int i = 0; i < rows.Count; i++)
             {
+                
                 int id = (int)rows[i][0];
-                ScheduleBlock block = ScheduleBlock.getFromDB(id);
+                int dayOfWeek = (int)rows[i][1];
+                TimeSpan startTime = (TimeSpan)rows[i][2];
+                ScheduleBlock block = new ScheduleBlock(id, dayOfWeek, startTime);
+
+                block.roomID = (int)rows[i][4];
+                block.roomName = rows[i][5].ToString();
+                block.roomFloor = (int) rows[i][6];
+                block.buildingName = rows[i][7].ToString();
+                block.campusName = rows[i][8].ToString();
+                block.DegreeClassName = rows[i][9].ToString();
+                block.FacultyName = rows[i][10].ToString();
                 list.Add(block);
+
             }
 
             return list;
 
         }
-
+       
+        
         public static List<ScheduleBlock> getListbyMahzorSemester(int MahzorID, int SemesterID)
         {
 
-            List<ScheduleBlock> list = new List<ScheduleBlock>();
+            list = new List<ScheduleBlock>();
+
+            ScheduleBlockDetailsTableAdapter sbd = new ScheduleBlockDetailsTableAdapter();
+            DataRowCollection rows = sbd.GetDataByMahzor(MahzorID, SemesterID).Rows;
+
+            for (int i = 0; i < rows.Count; i++)
+            {
+
+                int id = (int)rows[i][0];
+                int dayOfWeek = (int)rows[i][1];
+                TimeSpan startTime = (TimeSpan)rows[i][2];
+                ScheduleBlock block = new ScheduleBlock(id, dayOfWeek, startTime);
+
+                block.roomID = (int)rows[i][4];
+                block.roomName = rows[i][5].ToString();
+                block.roomFloor = (int)rows[i][6];
+                block.buildingName = rows[i][7].ToString();
+                block.campusName = rows[i][8].ToString();
+                block.DegreeClassName = rows[i][9].ToString();
+                block.FacultyName = rows[i][10].ToString();
+                list.Add(block);
+
+            }
+
+            return list;
+
+
+
+
+
+            /*
+            list = new List<ScheduleBlock>();
             DataRowCollection rows = detailsAdapter.GetDataByMahzor(MahzorID, SemesterID).Rows;
 
             for (int i = 0; i < rows.Count; i++)
@@ -204,8 +259,9 @@ namespace Final_Project
             }
 
             return list;
-
+            */
         }
+        
 
     }
 }

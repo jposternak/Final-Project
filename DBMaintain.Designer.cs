@@ -37,6 +37,7 @@
             System.Windows.Forms.Label durationLabel;
             System.Windows.Forms.Label summerLabel;
             System.Windows.Forms.Label weeklyHoursLabel;
+            System.Windows.Forms.Label label19;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -88,12 +89,14 @@
             this.durationNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.startingSemesterComboBox = new System.Windows.Forms.ComboBox();
             this.numberOfStudentsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.isActive = new System.Windows.Forms.CheckBox();
             this.delClassBT = new System.Windows.Forms.Button();
             this.saveClassBT = new System.Windows.Forms.Button();
             this.editClassBT = new System.Windows.Forms.Button();
             this.newClassBT = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.classDegGrid = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.hebrewYearDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.semesterTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.degreeClassIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -219,6 +222,7 @@
             durationLabel = new System.Windows.Forms.Label();
             summerLabel = new System.Windows.Forms.Label();
             weeklyHoursLabel = new System.Windows.Forms.Label();
+            label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.buildingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.campusBindingSource)).BeginInit();
@@ -277,7 +281,7 @@
             // degreeClassNameLabel
             // 
             degreeClassNameLabel.AutoSize = true;
-            degreeClassNameLabel.Location = new System.Drawing.Point(285, 33);
+            degreeClassNameLabel.Location = new System.Drawing.Point(285, 34);
             degreeClassNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             degreeClassNameLabel.Name = "degreeClassNameLabel";
             degreeClassNameLabel.Size = new System.Drawing.Size(77, 20);
@@ -287,7 +291,7 @@
             // degreeIDLabel
             // 
             degreeIDLabel.AutoSize = true;
-            degreeIDLabel.Location = new System.Drawing.Point(313, 66);
+            degreeIDLabel.Location = new System.Drawing.Point(313, 68);
             degreeIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             degreeIDLabel.Name = "degreeIDLabel";
             degreeIDLabel.Size = new System.Drawing.Size(49, 20);
@@ -297,7 +301,7 @@
             // numberOfStudentsLabel
             // 
             numberOfStudentsLabel.AutoSize = true;
-            numberOfStudentsLabel.Location = new System.Drawing.Point(246, 99);
+            numberOfStudentsLabel.Location = new System.Drawing.Point(246, 102);
             numberOfStudentsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             numberOfStudentsLabel.Name = "numberOfStudentsLabel";
             numberOfStudentsLabel.Size = new System.Drawing.Size(116, 20);
@@ -307,7 +311,7 @@
             // startingSemesterLabel
             // 
             startingSemesterLabel.AutoSize = true;
-            startingSemesterLabel.Location = new System.Drawing.Point(251, 132);
+            startingSemesterLabel.Location = new System.Drawing.Point(251, 136);
             startingSemesterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             startingSemesterLabel.Name = "startingSemesterLabel";
             startingSemesterLabel.Size = new System.Drawing.Size(111, 20);
@@ -317,7 +321,7 @@
             // durationLabel
             // 
             durationLabel.AutoSize = true;
-            durationLabel.Location = new System.Drawing.Point(242, 165);
+            durationLabel.Location = new System.Drawing.Point(242, 170);
             durationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             durationLabel.Name = "durationLabel";
             durationLabel.Size = new System.Drawing.Size(120, 20);
@@ -327,7 +331,7 @@
             // summerLabel
             // 
             summerLabel.AutoSize = true;
-            summerLabel.Location = new System.Drawing.Point(234, 198);
+            summerLabel.Location = new System.Drawing.Point(234, 204);
             summerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             summerLabel.Name = "summerLabel";
             summerLabel.Size = new System.Drawing.Size(128, 20);
@@ -337,12 +341,22 @@
             // weeklyHoursLabel
             // 
             weeklyHoursLabel.AutoSize = true;
-            weeklyHoursLabel.Location = new System.Drawing.Point(221, 231);
+            weeklyHoursLabel.Location = new System.Drawing.Point(221, 238);
             weeklyHoursLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             weeklyHoursLabel.Name = "weeklyHoursLabel";
             weeklyHoursLabel.Size = new System.Drawing.Size(141, 20);
             weeklyHoursLabel.TabIndex = 14;
             weeklyHoursLabel.Text = "כמות שעות שבועיות";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new System.Drawing.Point(232, 272);
+            label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label19.Name = "label19";
+            label19.Size = new System.Drawing.Size(130, 20);
+            label19.TabIndex = 14;
+            label19.Text = "האם המחזור פעיל:";
             // 
             // buildingBindingSource
             // 
@@ -397,7 +411,7 @@
             // BackToMenuBT
             // 
             this.BackToMenuBT.Location = new System.Drawing.Point(873, 9);
-            this.BackToMenuBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackToMenuBT.Margin = new System.Windows.Forms.Padding(2);
             this.BackToMenuBT.Name = "BackToMenuBT";
             this.BackToMenuBT.Size = new System.Drawing.Size(56, 46);
             this.BackToMenuBT.TabIndex = 1;
@@ -469,7 +483,7 @@
             this.DegreeClassPage.Controls.Add(this.groupBox3);
             this.DegreeClassPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.DegreeClassPage.Location = new System.Drawing.Point(4, 29);
-            this.DegreeClassPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DegreeClassPage.Margin = new System.Windows.Forms.Padding(2);
             this.DegreeClassPage.Name = "DegreeClassPage";
             this.DegreeClassPage.Size = new System.Drawing.Size(912, 493);
             this.DegreeClassPage.TabIndex = 7;
@@ -484,9 +498,9 @@
             this.groupBox4.Controls.Add(this.editClassBT);
             this.groupBox4.Controls.Add(this.newClassBT);
             this.groupBox4.Location = new System.Drawing.Point(10, 6);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(370, 487);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
@@ -514,10 +528,12 @@
             this.tableLayoutPanel1.Controls.Add(this.numberOfStudentsNumericUpDown, 1, 3);
             this.tableLayoutPanel1.Controls.Add(degreeIDLabel, 0, 2);
             this.tableLayoutPanel1.Controls.Add(numberOfStudentsLabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(label19, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.isActive, 1, 8);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 28);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 8;
+            this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -526,7 +542,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(364, 264);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(364, 297);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
             // classMegamaCB
@@ -535,8 +552,8 @@
             this.classMegamaCB.DisplayMember = "DegreeName";
             this.classMegamaCB.Enabled = false;
             this.classMegamaCB.FormattingEnabled = true;
-            this.classMegamaCB.Location = new System.Drawing.Point(3, 68);
-            this.classMegamaCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.classMegamaCB.Location = new System.Drawing.Point(3, 70);
+            this.classMegamaCB.Margin = new System.Windows.Forms.Padding(2);
             this.classMegamaCB.Name = "classMegamaCB";
             this.classMegamaCB.Size = new System.Drawing.Size(209, 28);
             this.classMegamaCB.TabIndex = 17;
@@ -551,7 +568,7 @@
             this.degreeClassIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeClassBindingSource, "DegreeClassID", true));
             this.degreeClassIDTextBox.Enabled = false;
             this.degreeClassIDTextBox.Location = new System.Drawing.Point(3, 2);
-            this.degreeClassIDTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.degreeClassIDTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.degreeClassIDTextBox.Name = "degreeClassIDTextBox";
             this.degreeClassIDTextBox.Size = new System.Drawing.Size(209, 26);
             this.degreeClassIDTextBox.TabIndex = 1;
@@ -565,8 +582,8 @@
             // 
             this.degreeClassNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeClassBindingSource, "DegreeClassName", true));
             this.degreeClassNameTextBox.Enabled = false;
-            this.degreeClassNameTextBox.Location = new System.Drawing.Point(3, 35);
-            this.degreeClassNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.degreeClassNameTextBox.Location = new System.Drawing.Point(3, 36);
+            this.degreeClassNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.degreeClassNameTextBox.Name = "degreeClassNameTextBox";
             this.degreeClassNameTextBox.Size = new System.Drawing.Size(209, 26);
             this.degreeClassNameTextBox.TabIndex = 3;
@@ -575,8 +592,8 @@
             // 
             this.weeklyHoursNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "WeeklyHours", true));
             this.weeklyHoursNumericUpDown.Enabled = false;
-            this.weeklyHoursNumericUpDown.Location = new System.Drawing.Point(4, 233);
-            this.weeklyHoursNumericUpDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.weeklyHoursNumericUpDown.Location = new System.Drawing.Point(4, 240);
+            this.weeklyHoursNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
             this.weeklyHoursNumericUpDown.Name = "weeklyHoursNumericUpDown";
             this.weeklyHoursNumericUpDown.Size = new System.Drawing.Size(208, 26);
             this.weeklyHoursNumericUpDown.TabIndex = 15;
@@ -585,8 +602,8 @@
             // 
             this.summerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.degreeClassBindingSource, "Summer", true));
             this.summerCheckBox.Enabled = false;
-            this.summerCheckBox.Location = new System.Drawing.Point(125, 200);
-            this.summerCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.summerCheckBox.Location = new System.Drawing.Point(125, 206);
+            this.summerCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.summerCheckBox.Name = "summerCheckBox";
             this.summerCheckBox.Size = new System.Drawing.Size(87, 20);
             this.summerCheckBox.TabIndex = 13;
@@ -598,8 +615,8 @@
             // 
             this.durationNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "Duration", true));
             this.durationNumericUpDown.Enabled = false;
-            this.durationNumericUpDown.Location = new System.Drawing.Point(4, 167);
-            this.durationNumericUpDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.durationNumericUpDown.Location = new System.Drawing.Point(4, 172);
+            this.durationNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
             this.durationNumericUpDown.Name = "durationNumericUpDown";
             this.durationNumericUpDown.Size = new System.Drawing.Size(208, 26);
             this.durationNumericUpDown.TabIndex = 11;
@@ -610,8 +627,8 @@
             this.startingSemesterComboBox.DisplayMember = "SemesterFullName";
             this.startingSemesterComboBox.Enabled = false;
             this.startingSemesterComboBox.FormattingEnabled = true;
-            this.startingSemesterComboBox.Location = new System.Drawing.Point(3, 134);
-            this.startingSemesterComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startingSemesterComboBox.Location = new System.Drawing.Point(3, 138);
+            this.startingSemesterComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.startingSemesterComboBox.Name = "startingSemesterComboBox";
             this.startingSemesterComboBox.Size = new System.Drawing.Size(209, 28);
             this.startingSemesterComboBox.TabIndex = 9;
@@ -620,16 +637,28 @@
             // 
             this.numberOfStudentsNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "NumberOfStudents", true));
             this.numberOfStudentsNumericUpDown.Enabled = false;
-            this.numberOfStudentsNumericUpDown.Location = new System.Drawing.Point(4, 101);
-            this.numberOfStudentsNumericUpDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numberOfStudentsNumericUpDown.Location = new System.Drawing.Point(4, 104);
+            this.numberOfStudentsNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
             this.numberOfStudentsNumericUpDown.Name = "numberOfStudentsNumericUpDown";
             this.numberOfStudentsNumericUpDown.Size = new System.Drawing.Size(208, 26);
             this.numberOfStudentsNumericUpDown.TabIndex = 7;
             // 
+            // isActive
+            // 
+            this.isActive.Enabled = false;
+            this.isActive.Location = new System.Drawing.Point(125, 274);
+            this.isActive.Margin = new System.Windows.Forms.Padding(2);
+            this.isActive.Name = "isActive";
+            this.isActive.Size = new System.Drawing.Size(87, 20);
+            this.isActive.TabIndex = 13;
+            this.isActive.Text = "לא";
+            this.isActive.UseVisualStyleBackColor = true;
+            this.isActive.CheckedChanged += new System.EventHandler(this.summerCheckBox_CheckedChanged);
+            // 
             // delClassBT
             // 
-            this.delClassBT.Location = new System.Drawing.Point(3, 297);
-            this.delClassBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.delClassBT.Location = new System.Drawing.Point(12, 350);
+            this.delClassBT.Margin = new System.Windows.Forms.Padding(2);
             this.delClassBT.Name = "delClassBT";
             this.delClassBT.Size = new System.Drawing.Size(65, 40);
             this.delClassBT.TabIndex = 16;
@@ -639,8 +668,8 @@
             // 
             // saveClassBT
             // 
-            this.saveClassBT.Location = new System.Drawing.Point(92, 297);
-            this.saveClassBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveClassBT.Location = new System.Drawing.Point(101, 350);
+            this.saveClassBT.Margin = new System.Windows.Forms.Padding(2);
             this.saveClassBT.Name = "saveClassBT";
             this.saveClassBT.Size = new System.Drawing.Size(65, 40);
             this.saveClassBT.TabIndex = 16;
@@ -650,8 +679,8 @@
             // 
             // editClassBT
             // 
-            this.editClassBT.Location = new System.Drawing.Point(182, 297);
-            this.editClassBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.editClassBT.Location = new System.Drawing.Point(191, 350);
+            this.editClassBT.Margin = new System.Windows.Forms.Padding(2);
             this.editClassBT.Name = "editClassBT";
             this.editClassBT.Size = new System.Drawing.Size(65, 40);
             this.editClassBT.TabIndex = 16;
@@ -661,8 +690,8 @@
             // 
             // newClassBT
             // 
-            this.newClassBT.Location = new System.Drawing.Point(271, 297);
-            this.newClassBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newClassBT.Location = new System.Drawing.Point(280, 350);
+            this.newClassBT.Margin = new System.Windows.Forms.Padding(2);
             this.newClassBT.Name = "newClassBT";
             this.newClassBT.Size = new System.Drawing.Size(65, 40);
             this.newClassBT.TabIndex = 16;
@@ -678,9 +707,9 @@
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Location = new System.Drawing.Point(386, 6);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(506, 487);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
@@ -693,6 +722,7 @@
             this.classDegGrid.AutoGenerateColumns = false;
             this.classDegGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.classDegGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewCheckBoxColumn1,
             this.hebrewYearDataGridViewTextBoxColumn1,
             this.semesterTypeDataGridViewTextBoxColumn1,
             this.degreeClassIDDataGridViewTextBoxColumn,
@@ -704,15 +734,28 @@
             this.summerDataGridViewCheckBoxColumn,
             this.weeklyHoursDataGridViewTextBoxColumn});
             this.classDegGrid.DataSource = this.degreeClassBindingSource;
-            this.classDegGrid.Location = new System.Drawing.Point(10, 48);
-            this.classDegGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.classDegGrid.Location = new System.Drawing.Point(10, 62);
+            this.classDegGrid.Margin = new System.Windows.Forms.Padding(2);
             this.classDegGrid.Name = "classDegGrid";
             this.classDegGrid.ReadOnly = true;
             this.classDegGrid.RowHeadersWidth = 51;
             this.classDegGrid.RowTemplate.Height = 24;
-            this.classDegGrid.Size = new System.Drawing.Size(496, 429);
+            this.classDegGrid.ShowCellErrors = false;
+            this.classDegGrid.ShowCellToolTips = false;
+            this.classDegGrid.ShowEditingIcon = false;
+            this.classDegGrid.ShowRowErrors = false;
+            this.classDegGrid.Size = new System.Drawing.Size(496, 415);
             this.classDegGrid.TabIndex = 2;
             this.classDegGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.classDegGrid_RowEnter);
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "IsActive";
+            this.dataGridViewCheckBoxColumn1.FalseValue = "";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "פעיל";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.TrueValue = "";
             // 
             // hebrewYearDataGridViewTextBoxColumn1
             // 
@@ -817,7 +860,7 @@
             this.classDegCB.DisplayMember = "DegreeName";
             this.classDegCB.FormattingEnabled = true;
             this.classDegCB.Location = new System.Drawing.Point(10, 20);
-            this.classDegCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.classDegCB.Margin = new System.Windows.Forms.Padding(2);
             this.classDegCB.Name = "classDegCB";
             this.classDegCB.Size = new System.Drawing.Size(186, 28);
             this.classDegCB.TabIndex = 1;
@@ -834,7 +877,7 @@
             this.classFacCB.DisplayMember = "FacultyName";
             this.classFacCB.FormattingEnabled = true;
             this.classFacCB.Location = new System.Drawing.Point(251, 20);
-            this.classFacCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.classFacCB.Margin = new System.Windows.Forms.Padding(2);
             this.classFacCB.Name = "classFacCB";
             this.classFacCB.Size = new System.Drawing.Size(186, 28);
             this.classFacCB.TabIndex = 1;
@@ -883,7 +926,7 @@
             this.FacultyPage.Controls.Add(this.facultyGrid);
             this.FacultyPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.FacultyPage.Location = new System.Drawing.Point(4, 29);
-            this.FacultyPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FacultyPage.Margin = new System.Windows.Forms.Padding(2);
             this.FacultyPage.Name = "FacultyPage";
             this.FacultyPage.Size = new System.Drawing.Size(912, 493);
             this.FacultyPage.TabIndex = 5;
@@ -893,7 +936,7 @@
             // delDegBT
             // 
             this.delDegBT.Location = new System.Drawing.Point(32, 439);
-            this.delDegBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.delDegBT.Margin = new System.Windows.Forms.Padding(2);
             this.delDegBT.Name = "delDegBT";
             this.delDegBT.Size = new System.Drawing.Size(56, 24);
             this.delDegBT.TabIndex = 11;
@@ -904,7 +947,7 @@
             // newDegBT
             // 
             this.newDegBT.Location = new System.Drawing.Point(32, 415);
-            this.newDegBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newDegBT.Margin = new System.Windows.Forms.Padding(2);
             this.newDegBT.Name = "newDegBT";
             this.newDegBT.Size = new System.Drawing.Size(56, 24);
             this.newDegBT.TabIndex = 10;
@@ -915,7 +958,7 @@
             // saveDegBT
             // 
             this.saveDegBT.Location = new System.Drawing.Point(101, 439);
-            this.saveDegBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveDegBT.Margin = new System.Windows.Forms.Padding(2);
             this.saveDegBT.Name = "saveDegBT";
             this.saveDegBT.Size = new System.Drawing.Size(56, 24);
             this.saveDegBT.TabIndex = 9;
@@ -926,7 +969,7 @@
             // editDegBT
             // 
             this.editDegBT.Location = new System.Drawing.Point(101, 415);
-            this.editDegBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.editDegBT.Margin = new System.Windows.Forms.Padding(2);
             this.editDegBT.Name = "editDegBT";
             this.editDegBT.Size = new System.Drawing.Size(56, 24);
             this.editDegBT.TabIndex = 8;
@@ -971,7 +1014,7 @@
             this.degFacCB.Enabled = false;
             this.degFacCB.FormattingEnabled = true;
             this.degFacCB.Location = new System.Drawing.Point(170, 441);
-            this.degFacCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.degFacCB.Margin = new System.Windows.Forms.Padding(2);
             this.degFacCB.Name = "degFacCB";
             this.degFacCB.Size = new System.Drawing.Size(104, 28);
             this.degFacCB.TabIndex = 6;
@@ -981,7 +1024,7 @@
             this.degNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeBindingSource, "DegreeName", true));
             this.degNameTB.Enabled = false;
             this.degNameTB.Location = new System.Drawing.Point(278, 441);
-            this.degNameTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.degNameTB.Margin = new System.Windows.Forms.Padding(2);
             this.degNameTB.Name = "degNameTB";
             this.degNameTB.Size = new System.Drawing.Size(128, 26);
             this.degNameTB.TabIndex = 4;
@@ -991,7 +1034,7 @@
             this.degIDTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeBindingSource, "DegreeID", true));
             this.degIDTB.Enabled = false;
             this.degIDTB.Location = new System.Drawing.Point(409, 441);
-            this.degIDTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.degIDTB.Margin = new System.Windows.Forms.Padding(2);
             this.degIDTB.Name = "degIDTB";
             this.degIDTB.Size = new System.Drawing.Size(76, 26);
             this.degIDTB.TabIndex = 3;
@@ -999,7 +1042,7 @@
             // deleteFacultyBT
             // 
             this.deleteFacultyBT.Location = new System.Drawing.Point(747, 405);
-            this.deleteFacultyBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteFacultyBT.Margin = new System.Windows.Forms.Padding(2);
             this.deleteFacultyBT.Name = "deleteFacultyBT";
             this.deleteFacultyBT.Size = new System.Drawing.Size(56, 46);
             this.deleteFacultyBT.TabIndex = 2;
@@ -1010,7 +1053,7 @@
             // addFacultyBT
             // 
             this.addFacultyBT.Location = new System.Drawing.Point(847, 405);
-            this.addFacultyBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addFacultyBT.Margin = new System.Windows.Forms.Padding(2);
             this.addFacultyBT.Name = "addFacultyBT";
             this.addFacultyBT.Size = new System.Drawing.Size(56, 46);
             this.addFacultyBT.TabIndex = 2;
@@ -1031,7 +1074,7 @@
             this.dataGridViewTextBoxColumn1});
             this.degreeGrid.DataSource = this.degreeBindingSource;
             this.degreeGrid.Location = new System.Drawing.Point(20, 11);
-            this.degreeGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.degreeGrid.Margin = new System.Windows.Forms.Padding(2);
             this.degreeGrid.Name = "degreeGrid";
             this.degreeGrid.RowHeadersWidth = 51;
             this.degreeGrid.RowTemplate.Height = 24;
@@ -1083,7 +1126,7 @@
             this.FacultyName});
             this.facultyGrid.DataSource = this.facultyBindingSource;
             this.facultyGrid.Location = new System.Drawing.Point(566, 11);
-            this.facultyGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.facultyGrid.Margin = new System.Windows.Forms.Padding(2);
             this.facultyGrid.Name = "facultyGrid";
             this.facultyGrid.RowHeadersWidth = 51;
             this.facultyGrid.RowTemplate.Height = 24;
@@ -1126,7 +1169,7 @@
             this.SemestersPage.Controls.Add(this.SemesterDataGridView);
             this.SemestersPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.SemestersPage.Location = new System.Drawing.Point(4, 29);
-            this.SemestersPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SemestersPage.Margin = new System.Windows.Forms.Padding(2);
             this.SemestersPage.Name = "SemestersPage";
             this.SemestersPage.Size = new System.Drawing.Size(912, 493);
             this.SemestersPage.TabIndex = 4;
@@ -1317,7 +1360,7 @@
             this.FeaturesPage.Controls.Add(this.features_gridView);
             this.FeaturesPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.FeaturesPage.Location = new System.Drawing.Point(4, 29);
-            this.FeaturesPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FeaturesPage.Margin = new System.Windows.Forms.Padding(2);
             this.FeaturesPage.Name = "FeaturesPage";
             this.FeaturesPage.Size = new System.Drawing.Size(912, 493);
             this.FeaturesPage.TabIndex = 3;
@@ -1327,7 +1370,7 @@
             // removeFeatBT
             // 
             this.removeFeatBT.Location = new System.Drawing.Point(35, 195);
-            this.removeFeatBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.removeFeatBT.Margin = new System.Windows.Forms.Padding(2);
             this.removeFeatBT.Name = "removeFeatBT";
             this.removeFeatBT.Size = new System.Drawing.Size(75, 62);
             this.removeFeatBT.TabIndex = 3;
@@ -1366,7 +1409,7 @@
             this.qualifierReqDataGridViewCheckBoxColumn});
             this.features_gridView.DataSource = this.featuresBindingSource;
             this.features_gridView.Location = new System.Drawing.Point(149, 25);
-            this.features_gridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.features_gridView.Margin = new System.Windows.Forms.Padding(2);
             this.features_gridView.Name = "features_gridView";
             this.features_gridView.RowHeadersWidth = 51;
             this.features_gridView.RowTemplate.Height = 24;
@@ -1411,7 +1454,7 @@
             this.RoomsPage.Controls.Add(this.roomsCampusCB);
             this.RoomsPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.RoomsPage.Location = new System.Drawing.Point(4, 29);
-            this.RoomsPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RoomsPage.Margin = new System.Windows.Forms.Padding(2);
             this.RoomsPage.Name = "RoomsPage";
             this.RoomsPage.Size = new System.Drawing.Size(912, 493);
             this.RoomsPage.TabIndex = 2;
@@ -1427,9 +1470,9 @@
             this.groupBox2.Controls.Add(this.featuresMenuGrid);
             this.groupBox2.Controls.Add(this.roomFeaturesGridView);
             this.groupBox2.Location = new System.Drawing.Point(2, 188);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(593, 292);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
@@ -1458,7 +1501,7 @@
             // removeFeatureFromRoomBT
             // 
             this.removeFeatureFromRoomBT.Location = new System.Drawing.Point(290, 140);
-            this.removeFeatureFromRoomBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.removeFeatureFromRoomBT.Margin = new System.Windows.Forms.Padding(2);
             this.removeFeatureFromRoomBT.Name = "removeFeatureFromRoomBT";
             this.removeFeatureFromRoomBT.Size = new System.Drawing.Size(44, 32);
             this.removeFeatureFromRoomBT.TabIndex = 2;
@@ -1470,7 +1513,7 @@
             // 
             this.addFeatureToRoomBT.AllowDrop = true;
             this.addFeatureToRoomBT.Location = new System.Drawing.Point(290, 94);
-            this.addFeatureToRoomBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addFeatureToRoomBT.Margin = new System.Windows.Forms.Padding(2);
             this.addFeatureToRoomBT.Name = "addFeatureToRoomBT";
             this.addFeatureToRoomBT.Size = new System.Drawing.Size(44, 32);
             this.addFeatureToRoomBT.TabIndex = 2;
@@ -1506,7 +1549,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.featuresMenuGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.featuresMenuGrid.Location = new System.Drawing.Point(4, 46);
-            this.featuresMenuGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.featuresMenuGrid.Margin = new System.Windows.Forms.Padding(2);
             this.featuresMenuGrid.MultiSelect = false;
             this.featuresMenuGrid.Name = "featuresMenuGrid";
             this.featuresMenuGrid.ReadOnly = true;
@@ -1588,7 +1631,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.roomFeaturesGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.roomFeaturesGridView.Location = new System.Drawing.Point(338, 46);
-            this.roomFeaturesGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomFeaturesGridView.Margin = new System.Windows.Forms.Padding(2);
             this.roomFeaturesGridView.Name = "roomFeaturesGridView";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
@@ -1673,9 +1716,9 @@
             this.groupBox1.Controls.Add(this.roomNameTB);
             this.groupBox1.Controls.Add(this.roomIDTB);
             this.groupBox1.Location = new System.Drawing.Point(2, 14);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(593, 169);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
@@ -1684,7 +1727,7 @@
             // roomDeleteBT
             // 
             this.roomDeleteBT.Location = new System.Drawing.Point(190, 105);
-            this.roomDeleteBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomDeleteBT.Margin = new System.Windows.Forms.Padding(2);
             this.roomDeleteBT.Name = "roomDeleteBT";
             this.roomDeleteBT.Size = new System.Drawing.Size(56, 28);
             this.roomDeleteBT.TabIndex = 6;
@@ -1695,7 +1738,7 @@
             // roomNewBT
             // 
             this.roomNewBT.Location = new System.Drawing.Point(190, 76);
-            this.roomNewBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomNewBT.Margin = new System.Windows.Forms.Padding(2);
             this.roomNewBT.Name = "roomNewBT";
             this.roomNewBT.Size = new System.Drawing.Size(56, 28);
             this.roomNewBT.TabIndex = 6;
@@ -1706,7 +1749,7 @@
             // roomSaveBT
             // 
             this.roomSaveBT.Location = new System.Drawing.Point(190, 48);
-            this.roomSaveBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomSaveBT.Margin = new System.Windows.Forms.Padding(2);
             this.roomSaveBT.Name = "roomSaveBT";
             this.roomSaveBT.Size = new System.Drawing.Size(56, 28);
             this.roomSaveBT.TabIndex = 6;
@@ -1717,7 +1760,7 @@
             // roomEditBT
             // 
             this.roomEditBT.Location = new System.Drawing.Point(190, 20);
-            this.roomEditBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomEditBT.Margin = new System.Windows.Forms.Padding(2);
             this.roomEditBT.Name = "roomEditBT";
             this.roomEditBT.Size = new System.Drawing.Size(56, 28);
             this.roomEditBT.TabIndex = 6;
@@ -1780,7 +1823,7 @@
             this.roomCampusTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "campusName", true));
             this.roomCampusTB.Enabled = false;
             this.roomCampusTB.Location = new System.Drawing.Point(262, 136);
-            this.roomCampusTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomCampusTB.Margin = new System.Windows.Forms.Padding(2);
             this.roomCampusTB.Name = "roomCampusTB";
             this.roomCampusTB.ReadOnly = true;
             this.roomCampusTB.Size = new System.Drawing.Size(146, 26);
@@ -1794,7 +1837,7 @@
             this.roomBuildingCB.Enabled = false;
             this.roomBuildingCB.FormattingEnabled = true;
             this.roomBuildingCB.Location = new System.Drawing.Point(262, 106);
-            this.roomBuildingCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomBuildingCB.Margin = new System.Windows.Forms.Padding(2);
             this.roomBuildingCB.Name = "roomBuildingCB";
             this.roomBuildingCB.Size = new System.Drawing.Size(146, 28);
             this.roomBuildingCB.TabIndex = 3;
@@ -1804,7 +1847,7 @@
             this.roomFloorTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "Floor", true));
             this.roomFloorTB.Enabled = false;
             this.roomFloorTB.Location = new System.Drawing.Point(262, 77);
-            this.roomFloorTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomFloorTB.Margin = new System.Windows.Forms.Padding(2);
             this.roomFloorTB.Name = "roomFloorTB";
             this.roomFloorTB.Size = new System.Drawing.Size(146, 26);
             this.roomFloorTB.TabIndex = 2;
@@ -1814,7 +1857,7 @@
             this.roomNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "RoomName", true));
             this.roomNameTB.Enabled = false;
             this.roomNameTB.Location = new System.Drawing.Point(262, 49);
-            this.roomNameTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomNameTB.Margin = new System.Windows.Forms.Padding(2);
             this.roomNameTB.Name = "roomNameTB";
             this.roomNameTB.Size = new System.Drawing.Size(146, 26);
             this.roomNameTB.TabIndex = 1;
@@ -1824,7 +1867,7 @@
             this.roomIDTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "RoomID", true));
             this.roomIDTB.Enabled = false;
             this.roomIDTB.Location = new System.Drawing.Point(262, 20);
-            this.roomIDTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomIDTB.Margin = new System.Windows.Forms.Padding(2);
             this.roomIDTB.Name = "roomIDTB";
             this.roomIDTB.ReadOnly = true;
             this.roomIDTB.Size = new System.Drawing.Size(146, 26);
@@ -1952,9 +1995,9 @@
             this.CampusPage.Controls.Add(this.tableLayoutPanel2);
             this.CampusPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.CampusPage.Location = new System.Drawing.Point(4, 29);
-            this.CampusPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CampusPage.Margin = new System.Windows.Forms.Padding(2);
             this.CampusPage.Name = "CampusPage";
-            this.CampusPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CampusPage.Padding = new System.Windows.Forms.Padding(2);
             this.CampusPage.Size = new System.Drawing.Size(912, 493);
             this.CampusPage.TabIndex = 0;
             this.CampusPage.Text = "קמפוסים ובניינים";
@@ -1969,7 +2012,7 @@
             this.tableLayoutPanel2.Controls.Add(this.dataGridBuilding, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.dataGridCampus, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(42, 21);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -2015,7 +2058,7 @@
             this.dataGridBuilding.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridBuilding.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridBuilding.Location = new System.Drawing.Point(168, 228);
-            this.dataGridBuilding.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridBuilding.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridBuilding.Name = "dataGridBuilding";
             this.dataGridBuilding.RowHeadersWidth = 51;
             this.dataGridBuilding.RowTemplate.Height = 24;
@@ -2076,7 +2119,7 @@
             this.dataGridCampus.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridCampus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridCampus.Location = new System.Drawing.Point(168, 2);
-            this.dataGridCampus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridCampus.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridCampus.MultiSelect = false;
             this.dataGridCampus.Name = "dataGridCampus";
             this.dataGridCampus.RowHeadersWidth = 51;
@@ -2114,7 +2157,7 @@
             this.tabControl1.Controls.Add(this.DegreeClassPage);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.tabControl1.Location = new System.Drawing.Point(9, 41);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabControl1.RightToLeftLayout = true;
@@ -2162,7 +2205,7 @@
             this.Controls.Add(this.BackToMenuBT);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DBMaintain";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -2354,16 +2397,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn featureNameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn qualifierDataGridViewTextBoxColumn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hebrewYearDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn semesterTypeDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn degreeClassIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn degreeClassNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn degreeIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfStudentsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startingSemesterDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn durationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn summerDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weeklyHoursDataGridViewTextBoxColumn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn buildingIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn buildingNameDataGridViewTextBoxColumn;
@@ -2384,5 +2417,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn featuresIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn featureNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn qualifierReqDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.CheckBox isActive;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hebrewYearDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn semesterTypeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn degreeClassIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn degreeClassNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn degreeIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfStudentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startingSemesterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn durationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn summerDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weeklyHoursDataGridViewTextBoxColumn;
     }
 }
