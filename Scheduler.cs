@@ -87,7 +87,7 @@ namespace Final_Project
         {
             try
             {
-                List<ScheduleBlock> sb = ScheduleBlock.getListbyRoom(selectedRoomID);
+                List<ScheduleBlock> sb = ScheduleBlock.getListbyRoom(selectedRoomID,selectedSemesterID);
                 luz.Series.Clear();
                 dataPoints.Clear();
                 formatChart(selectedRoomName);

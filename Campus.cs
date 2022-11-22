@@ -6,7 +6,7 @@ using System.Windows.Forms;
 namespace Final_Project
 {
     [Serializable]
-    class Campus
+    public class Campus
     {
         public int Id { get; private set; }
         public string Name { get; private set; }

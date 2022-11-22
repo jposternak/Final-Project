@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Final_Project
 {
     [Serializable]
-    class Building
+    public class Building
     {
         public int Id { get; private set; }
         public string Name { get; private set; }

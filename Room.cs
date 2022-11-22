@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace Final_Project
 {
     [Serializable]
-    class Room
+    public class Room
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -108,6 +108,11 @@ namespace Final_Project
         {
             RoomFeatures.Add(feature,qualifier);
             f_adapter.InsertQuery(Id,feature.Id, qualifier);
+        }
+
+        public override string ToString()
+        {
+            return $"{building.Campus.Name}\t{building.Name}\n{Name}";
         }
 
 

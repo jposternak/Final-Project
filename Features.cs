@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace Final_Project
 {
     [Serializable]
-    class Features
+    public class Features
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -48,6 +48,14 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.semesterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.blockItraTable = new System.Windows.Forms.DataGridView();
+            this.degreeClassIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.degreeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mahzorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isActiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.semesterIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tihnunDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bitzuaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.degreeClassPlanExecBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.semesterTableAdapter = new Final_Project.grilDataSetTableAdapters.SemesterTableAdapter();
             this.degreeClassPlanExecTableAdapter = new Final_Project.grilDataViewsSetTableAdapters.DegreeClassPlanExecTableAdapter();
@@ -66,14 +74,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.degreeClassIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.degreeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mahzorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isActiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.semesterIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tihnunDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bitzuaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grilDataViewsSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBlockDetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
@@ -167,7 +167,7 @@
             this.treeRooms.Name = "treeRooms";
             this.treeRooms.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.treeRooms.RightToLeftLayout = true;
-            this.treeRooms.Size = new System.Drawing.Size(274, 643);
+            this.treeRooms.Size = new System.Drawing.Size(298, 643);
             this.treeRooms.TabIndex = 4;
             this.treeRooms.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeRooms_NodeMouseDoubleClick);
             // 
@@ -176,7 +176,7 @@
             this.campusCB.DataSource = this.campusBindingSource;
             this.campusCB.DisplayMember = "campusName";
             this.campusCB.FormattingEnabled = true;
-            this.campusCB.Location = new System.Drawing.Point(9, 30);
+            this.campusCB.Location = new System.Drawing.Point(33, 30);
             this.campusCB.Name = "campusCB";
             this.campusCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.campusCB.Size = new System.Drawing.Size(181, 21);
@@ -231,6 +231,86 @@
             this.blockItraTable.TabIndex = 7;
             this.blockItraTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.blockItraTable_CellDoubleClick);
             // 
+            // degreeClassIDDataGridViewTextBoxColumn
+            // 
+            this.degreeClassIDDataGridViewTextBoxColumn.DataPropertyName = "DegreeClassID";
+            this.degreeClassIDDataGridViewTextBoxColumn.HeaderText = "DegreeClassID";
+            this.degreeClassIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.degreeClassIDDataGridViewTextBoxColumn.Name = "degreeClassIDDataGridViewTextBoxColumn";
+            this.degreeClassIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.degreeClassIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // degreeNameDataGridViewTextBoxColumn
+            // 
+            this.degreeNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.degreeNameDataGridViewTextBoxColumn.DataPropertyName = "DegreeName";
+            this.degreeNameDataGridViewTextBoxColumn.FillWeight = 6F;
+            this.degreeNameDataGridViewTextBoxColumn.HeaderText = "מגמה";
+            this.degreeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.degreeNameDataGridViewTextBoxColumn.Name = "degreeNameDataGridViewTextBoxColumn";
+            this.degreeNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mahzorDataGridViewTextBoxColumn
+            // 
+            this.mahzorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mahzorDataGridViewTextBoxColumn.DataPropertyName = "mahzor";
+            this.mahzorDataGridViewTextBoxColumn.FillWeight = 6F;
+            this.mahzorDataGridViewTextBoxColumn.HeaderText = "מחזור";
+            this.mahzorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mahzorDataGridViewTextBoxColumn.Name = "mahzorDataGridViewTextBoxColumn";
+            this.mahzorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // isActiveDataGridViewCheckBoxColumn
+            // 
+            this.isActiveDataGridViewCheckBoxColumn.DataPropertyName = "IsActive";
+            this.isActiveDataGridViewCheckBoxColumn.HeaderText = "IsActive";
+            this.isActiveDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.isActiveDataGridViewCheckBoxColumn.Name = "isActiveDataGridViewCheckBoxColumn";
+            this.isActiveDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.isActiveDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // semesterIDDataGridViewTextBoxColumn
+            // 
+            this.semesterIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.semesterIDDataGridViewTextBoxColumn.DataPropertyName = "semesterID";
+            this.semesterIDDataGridViewTextBoxColumn.FillWeight = 109.4708F;
+            this.semesterIDDataGridViewTextBoxColumn.HeaderText = "מזהה סמסטר";
+            this.semesterIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.semesterIDDataGridViewTextBoxColumn.Name = "semesterIDDataGridViewTextBoxColumn";
+            this.semesterIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.semesterIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tihnunDataGridViewTextBoxColumn
+            // 
+            this.tihnunDataGridViewTextBoxColumn.DataPropertyName = "tihnun";
+            this.tihnunDataGridViewTextBoxColumn.HeaderText = "tihnun";
+            this.tihnunDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tihnunDataGridViewTextBoxColumn.Name = "tihnunDataGridViewTextBoxColumn";
+            this.tihnunDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tihnunDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bitzuaDataGridViewTextBoxColumn
+            // 
+            this.bitzuaDataGridViewTextBoxColumn.DataPropertyName = "bitzua";
+            this.bitzuaDataGridViewTextBoxColumn.HeaderText = "bitzua";
+            this.bitzuaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bitzuaDataGridViewTextBoxColumn.Name = "bitzuaDataGridViewTextBoxColumn";
+            this.bitzuaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bitzuaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // itraDataGridViewTextBoxColumn
+            // 
+            this.itraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itraDataGridViewTextBoxColumn.DataPropertyName = "itra";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itraDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.itraDataGridViewTextBoxColumn.FillWeight = 6F;
+            this.itraDataGridViewTextBoxColumn.HeaderText = "יתרה";
+            this.itraDataGridViewTextBoxColumn.MinimumWidth = 20;
+            this.itraDataGridViewTextBoxColumn.Name = "itraDataGridViewTextBoxColumn";
+            this.itraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // degreeClassPlanExecBindingSource
             // 
             this.degreeClassPlanExecBindingSource.DataMember = "DegreeClassPlanExec";
@@ -266,7 +346,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(284, 712);
+            this.tabPage1.Size = new System.Drawing.Size(308, 712);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "בחירת חדר";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -284,7 +364,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(280, 708);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(304, 708);
             this.tableLayoutPanel4.TabIndex = 9;
             // 
             // tableLayoutPanel3
@@ -303,7 +383,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(276, 55);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(300, 55);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
             // semesterCB
@@ -311,7 +391,7 @@
             this.semesterCB.DataSource = this.semesterBindingSource;
             this.semesterCB.DisplayMember = "SemesterFullName";
             this.semesterCB.FormattingEnabled = true;
-            this.semesterCB.Location = new System.Drawing.Point(9, 3);
+            this.semesterCB.Location = new System.Drawing.Point(33, 3);
             this.semesterCB.Name = "semesterCB";
             this.semesterCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.semesterCB.Size = new System.Drawing.Size(181, 21);
@@ -322,7 +402,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(195, 27);
+            this.label1.Location = new System.Drawing.Point(219, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -335,7 +415,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(195, 0);
+            this.label2.Location = new System.Drawing.Point(219, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -463,87 +543,6 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1204, 828);
             this.tableLayoutPanel7.TabIndex = 11;
-            // 
-            // degreeClassIDDataGridViewTextBoxColumn
-            // 
-            this.degreeClassIDDataGridViewTextBoxColumn.DataPropertyName = "DegreeClassID";
-            this.degreeClassIDDataGridViewTextBoxColumn.HeaderText = "DegreeClassID";
-            this.degreeClassIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.degreeClassIDDataGridViewTextBoxColumn.Name = "degreeClassIDDataGridViewTextBoxColumn";
-            this.degreeClassIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.degreeClassIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // degreeNameDataGridViewTextBoxColumn
-            // 
-            this.degreeNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.degreeNameDataGridViewTextBoxColumn.DataPropertyName = "DegreeName";
-            this.degreeNameDataGridViewTextBoxColumn.FillWeight = 6F;
-            this.degreeNameDataGridViewTextBoxColumn.HeaderText = "מגמה";
-            this.degreeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.degreeNameDataGridViewTextBoxColumn.Name = "degreeNameDataGridViewTextBoxColumn";
-            this.degreeNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mahzorDataGridViewTextBoxColumn
-            // 
-            this.mahzorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mahzorDataGridViewTextBoxColumn.DataPropertyName = "mahzor";
-            this.mahzorDataGridViewTextBoxColumn.FillWeight = 6F;
-            this.mahzorDataGridViewTextBoxColumn.HeaderText = "מחזור";
-            this.mahzorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mahzorDataGridViewTextBoxColumn.Name = "mahzorDataGridViewTextBoxColumn";
-            this.mahzorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // isActiveDataGridViewCheckBoxColumn
-            // 
-            this.isActiveDataGridViewCheckBoxColumn.DataPropertyName = "IsActive";
-            this.isActiveDataGridViewCheckBoxColumn.HeaderText = "IsActive";
-            this.isActiveDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.isActiveDataGridViewCheckBoxColumn.Name = "isActiveDataGridViewCheckBoxColumn";
-            this.isActiveDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.isActiveDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // semesterIDDataGridViewTextBoxColumn
-            // 
-            this.semesterIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.semesterIDDataGridViewTextBoxColumn.DataPropertyName = "semesterID";
-            this.semesterIDDataGridViewTextBoxColumn.FillWeight = 109.4708F;
-            this.semesterIDDataGridViewTextBoxColumn.HeaderText = "מזהה סמסטר";
-            this.semesterIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.semesterIDDataGridViewTextBoxColumn.Name = "semesterIDDataGridViewTextBoxColumn";
-            this.semesterIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterIDDataGridViewTextBoxColumn.Visible = false;
-            this.semesterIDDataGridViewTextBoxColumn.Width = 95;
-            // 
-            // tihnunDataGridViewTextBoxColumn
-            // 
-            this.tihnunDataGridViewTextBoxColumn.DataPropertyName = "tihnun";
-            this.tihnunDataGridViewTextBoxColumn.HeaderText = "tihnun";
-            this.tihnunDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tihnunDataGridViewTextBoxColumn.Name = "tihnunDataGridViewTextBoxColumn";
-            this.tihnunDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tihnunDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // bitzuaDataGridViewTextBoxColumn
-            // 
-            this.bitzuaDataGridViewTextBoxColumn.DataPropertyName = "bitzua";
-            this.bitzuaDataGridViewTextBoxColumn.HeaderText = "bitzua";
-            this.bitzuaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bitzuaDataGridViewTextBoxColumn.Name = "bitzuaDataGridViewTextBoxColumn";
-            this.bitzuaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bitzuaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // itraDataGridViewTextBoxColumn
-            // 
-            this.itraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.itraDataGridViewTextBoxColumn.DataPropertyName = "itra";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itraDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.itraDataGridViewTextBoxColumn.FillWeight = 6F;
-            this.itraDataGridViewTextBoxColumn.HeaderText = "יתרה";
-            this.itraDataGridViewTextBoxColumn.MinimumWidth = 20;
-            this.itraDataGridViewTextBoxColumn.Name = "itraDataGridViewTextBoxColumn";
-            this.itraDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Scheduler
             // 
