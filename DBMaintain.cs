@@ -625,7 +625,23 @@ namespace Final_Project
             }
             else
             {
-                this.degreeClassTableAdapter.UpdateQuery(className, degId, numOfStd, semesterId, semesterLen, isSummer, weeklyHours, is_Active,classID);
+                DegreeClass dc = DegreeClass.getFromDatabase(classID);
+                
+                Semester s  = Semester.getFromDatabase(semesterId);
+                Degree d = Degree.getFromDatabase(degId);
+
+                dc.Name = className;
+                dc.Degree = d;
+                dc.NumberOfStudents = numOfStd;
+                dc.StartingSemester = s;
+                dc.Duration = semesterLen;
+                dc.Summer = isSummer;
+                dc.WeeklyHours = weeklyHours;
+                dc.isActive = is_Active;
+
+                dc.uploadChanges();
+
+                //this.degreeClassTableAdapter.UpdateQuery(className, degId, numOfStd, semesterId, semesterLen, isSummer, weeklyHours, is_Active,classID);
             }
 
             this.degreeClassTableAdapter.Fill(this.grilDataSet.DegreeClass);

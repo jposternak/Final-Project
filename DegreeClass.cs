@@ -12,7 +12,7 @@ namespace Final_Project
     [Serializable]
     public class DegreeClass
     {
-        public int Id { get; set; }
+        public int Id { get; private set; }
         public string Name { get; set; }
         public Degree Degree { get; set; }
         public int NumberOfStudents { get; set; }
@@ -56,6 +56,11 @@ namespace Final_Project
         }
 
         //IMPLEMENT EDIT
+        public void uploadChanges()
+        {
+            adapter.UpdateQuery(this.Name, this.Degree.Id, this.NumberOfStudents, this.StartingSemester.Id,this.Duration, this.Summer,this.WeeklyHours, this.isActive, this.Id);
+        }
+
 
         //IMPLEMENT REMOVE
 
