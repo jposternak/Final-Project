@@ -55,7 +55,6 @@ namespace Final_Project
             return dc;
         }
 
-        //IMPLEMENT EDIT
         public void uploadChanges()
         {
             adapter.UpdateQuery(this.Name, this.Degree.Id, this.NumberOfStudents, this.StartingSemester.Id,this.Duration, this.Summer,this.WeeklyHours, this.isActive, this.Id);
