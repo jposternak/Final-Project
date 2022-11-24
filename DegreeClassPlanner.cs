@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Windows.Documents;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -46,12 +47,20 @@ namespace Final_Project
                 dataPoints.Clear();
                 formatChart(dc.Name);
 
+                String mahzor = dc.Name;
+                createSerie(mahzor);
+
+                for (int i = 1; i<7; i++)
+                {
+                    int p = luz.Series[mahzor].Points.AddXY(i, 7.59, 7.591);
+                    dataPoints.Add(p,null);
+                    luz.Series[mahzor].Points[p].Color = Color.Transparent;
+                    luz.Series[mahzor].Points[p].BorderColor = Color.Transparent;
+                    luz.Series[mahzor].Points[p].BorderWidth = 3;
+                }
+
                 foreach (ScheduleBlock block in sb)
                 {
-                    String mahzor = dc.Name;
-
-                    createSerie(mahzor);
-
                     int p = luz.Series[mahzor].Points.AddXY(block.DayOfWeek, block.StartTime, block.EndTime);
                     dataPoints.Add(p, block);
                     luz.Series[mahzor].Points[p].BorderColor = Color.Black;

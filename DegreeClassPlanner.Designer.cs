@@ -73,14 +73,14 @@
             this.treeRooms = new System.Windows.Forms.TreeView();
             this.add = new System.Windows.Forms.Button();
             this.luz = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.grilDataSet = new Final_Project.grilDataSet();
-            this.roomTableAdapter = new Final_Project.grilDataSetTableAdapters.RoomTableAdapter();
-            this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
-            this.degreeClassPlanExec3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
+            this.degreeClassPlanExec3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grilDataSet = new Final_Project.grilDataSet();
+            this.roomTableAdapter = new Final_Project.grilDataSetTableAdapters.RoomTableAdapter();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -93,12 +93,12 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.luz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grilDataViewsSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.degreeClassPlanExec3BindingSource)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grilDataViewsSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.degreeClassPlanExec3BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -695,30 +695,6 @@
             this.luz.Text = "chart1";
             this.luz.MouseClick += new System.Windows.Forms.MouseEventHandler(this.luz_MouseClick);
             // 
-            // roomBindingSource
-            // 
-            this.roomBindingSource.DataMember = "Room";
-            this.roomBindingSource.DataSource = this.grilDataSet;
-            // 
-            // grilDataSet
-            // 
-            this.grilDataSet.DataSetName = "grilDataSet";
-            this.grilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // roomTableAdapter
-            // 
-            this.roomTableAdapter.ClearBeforeFill = true;
-            // 
-            // grilDataViewsSet
-            // 
-            this.grilDataViewsSet.DataSetName = "grilDataViewsSet";
-            this.grilDataViewsSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // degreeClassPlanExec3BindingSource
-            // 
-            this.degreeClassPlanExec3BindingSource.DataMember = "DegreeClassPlanExec3";
-            this.degreeClassPlanExec3BindingSource.DataSource = this.grilDataViewsSet;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
@@ -764,6 +740,30 @@
             this.label19.Text = "מסך תכנון הקצאות למחזור לימודים";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // grilDataViewsSet
+            // 
+            this.grilDataViewsSet.DataSetName = "grilDataViewsSet";
+            this.grilDataViewsSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // degreeClassPlanExec3BindingSource
+            // 
+            this.degreeClassPlanExec3BindingSource.DataMember = "DegreeClassPlanExec3";
+            this.degreeClassPlanExec3BindingSource.DataSource = this.grilDataViewsSet;
+            // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.grilDataSet;
+            // 
+            // grilDataSet
+            // 
+            this.grilDataSet.DataSetName = "grilDataSet";
+            this.grilDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roomTableAdapter
+            // 
+            this.roomTableAdapter.ClearBeforeFill = true;
+            // 
             // DegreeClassPlanner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -796,13 +796,13 @@
             this.tableLayoutPanel5.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.luz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grilDataViewsSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.degreeClassPlanExec3BindingSource)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grilDataViewsSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.degreeClassPlanExec3BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
