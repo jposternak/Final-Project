@@ -581,6 +581,7 @@ namespace Final_Project
             durationNumericUpDown.Value = 0;
             summerCheckBox.CheckState = CheckState.Unchecked;
             weeklyHoursNumericUpDown.Value = 0;
+            isActive.CheckState = CheckState.Checked;
 
         }
 
@@ -593,6 +594,7 @@ namespace Final_Project
             durationNumericUpDown.Enabled = true;
             summerCheckBox.Enabled = true;
             weeklyHoursNumericUpDown.Enabled = true;
+            isActive.Enabled = true;
         }
 
         private void saveClassBT_Click(object sender, EventArgs e)
@@ -635,6 +637,7 @@ namespace Final_Project
             durationNumericUpDown.Enabled = false;
             summerCheckBox.Enabled = false;
             weeklyHoursNumericUpDown.Enabled = false;
+            isActive.Enabled = false;
 
         }
 
