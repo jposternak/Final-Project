@@ -39,7 +39,7 @@ namespace Final_Project
                 // TODO: This line of code loads data into the 'grilDataSet.DegreeClass' table. You can move, or remove it, as needed.
                 //this.degreeClassTableAdapter.Fill(this.grilDataSet.DegreeClass);
                 // TODO: This line of code loads data into the 'grilDataSet.Degree' table. You can move, or remove it, as needed.
-                this.degreeTableAdapter.Fill(this.grilDataSet.Degree);
+                //this.degreeTableAdapter.Fill(this.grilDataSet.Degree);
                 // TODO: This line of code loads data into the 'grilDataSet.Faculty' table. You can move, or remove it, as needed.
                 this.facultyTableAdapter.Fill(this.grilDataSet.Faculty);
             }
@@ -531,6 +531,7 @@ namespace Final_Project
             }
             catch (Exception ex)
             {
+               
 
             }
         }
@@ -555,7 +556,50 @@ namespace Final_Project
 
         private void classDegGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewCellCollection currentCell = classDegGrid.Rows[e.RowIndex].Cells;
+            //currentCell
+            //int fid = (int)currentCell[0].Value;
+            if(currentCell != null)
+            {
+                int classID = (int)currentCell[3].Value;
 
+                DegreeClass dc = DegreeClass.getFromDatabase(classID);
+
+
+
+                /*
+                DegreeClass dc = DegreeClass.getFromDatabase(classID);
+                
+                Semester s  = Semester.getFromDatabase(semesterId);
+                Degree d = Degree.getFromDatabase(degId);
+
+                dc.Name = className;
+                dc.Degree = d;
+                dc.NumberOfStudents = numOfStd;
+                dc.StartingSemester = s;
+                dc.Duration = semesterLen;
+                dc.Summer = isSummer;
+                dc.WeeklyHours = weeklyHours;
+                dc.isActive = is_Active; 
+                 
+                 */
+
+                degreeClassIDTextBox.Text = dc.Id.ToString();
+                degreeClassNameTextBox.Text=dc.Name;
+                classMegamaCB.SelectedItem = classMegamaCB.Items.IndexOf(dc.Degree); //????????
+
+                //DataRowView rowMegama = (DataRowView)classMegamaCB.SelectedItem;
+
+                numberOfStudentsNumericUpDown.Value = dc.NumberOfStudents;
+                startingSemesterComboBox.SelectedItem = dc.StartingSemester;
+
+                durationNumericUpDown.Value = dc.Duration;
+
+                summerCheckBox.Checked = dc.Summer;
+                weeklyHoursNumericUpDown.Value = dc.WeeklyHours;
+                isActive.Checked = dc.isActive;
+
+            }
 
         }
 
@@ -644,7 +688,7 @@ namespace Final_Project
                 //this.degreeClassTableAdapter.UpdateQuery(className, degId, numOfStd, semesterId, semesterLen, isSummer, weeklyHours, is_Active,classID);
             }
 
-            this.degreeClassTableAdapter.Fill(this.grilDataSet.DegreeClass);
+            this.degreeClassTableAdapter.FillByDegreeID(this.grilDataSet.DegreeClass,degId);
 
             degreeClassNameTextBox.Enabled = false;
             classMegamaCB.Enabled = false;

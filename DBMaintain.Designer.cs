@@ -565,7 +565,6 @@
             // 
             // degreeClassIDTextBox
             // 
-            this.degreeClassIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeClassBindingSource, "DegreeClassID", true));
             this.degreeClassIDTextBox.Enabled = false;
             this.degreeClassIDTextBox.Location = new System.Drawing.Point(3, 2);
             this.degreeClassIDTextBox.Margin = new System.Windows.Forms.Padding(2);
@@ -580,7 +579,6 @@
             // 
             // degreeClassNameTextBox
             // 
-            this.degreeClassNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeClassBindingSource, "DegreeClassName", true));
             this.degreeClassNameTextBox.Enabled = false;
             this.degreeClassNameTextBox.Location = new System.Drawing.Point(3, 36);
             this.degreeClassNameTextBox.Margin = new System.Windows.Forms.Padding(2);
@@ -590,7 +588,6 @@
             // 
             // weeklyHoursNumericUpDown
             // 
-            this.weeklyHoursNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "WeeklyHours", true));
             this.weeklyHoursNumericUpDown.Enabled = false;
             this.weeklyHoursNumericUpDown.Location = new System.Drawing.Point(4, 240);
             this.weeklyHoursNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
@@ -600,7 +597,6 @@
             // 
             // summerCheckBox
             // 
-            this.summerCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.degreeClassBindingSource, "Summer", true));
             this.summerCheckBox.Enabled = false;
             this.summerCheckBox.Location = new System.Drawing.Point(125, 206);
             this.summerCheckBox.Margin = new System.Windows.Forms.Padding(2);
@@ -613,7 +609,6 @@
             // 
             // durationNumericUpDown
             // 
-            this.durationNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "Duration", true));
             this.durationNumericUpDown.Enabled = false;
             this.durationNumericUpDown.Location = new System.Drawing.Point(4, 172);
             this.durationNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
@@ -635,7 +630,6 @@
             // 
             // numberOfStudentsNumericUpDown
             // 
-            this.numberOfStudentsNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.degreeClassBindingSource, "NumberOfStudents", true));
             this.numberOfStudentsNumericUpDown.Enabled = false;
             this.numberOfStudentsNumericUpDown.Location = new System.Drawing.Point(4, 104);
             this.numberOfStudentsNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
