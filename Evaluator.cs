@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Windows.Interop;
 
 namespace Final_Project
 {
@@ -10,7 +12,7 @@ namespace Final_Project
         private static List<ScheduleBlock> blocksOfMahzor = new List<ScheduleBlock>();
 
         private static ScheduleBlock sb { get; set; }
-        private static Dictionary<Features, int> RoomFeatures { get; set; }
+        private static Dictionary<int, int> RoomFeatures = new Dictionary<int, int>();
 
         public static List<Constraint> evaluate(ScheduleBlock scheduleBlock)
         {
@@ -18,9 +20,10 @@ namespace Final_Project
             sb = scheduleBlock;
 
             //shlifa
-
+            getFromDB();
 
             //eval
+            evaluation();
 
             return constraints;
         }
@@ -29,7 +32,15 @@ namespace Final_Project
         private static void getFromDB()
         {
 
-            RoomFeatures = sb.room.getRoomFeatures();
+            //RoomFeatures = sb.room.getRoomFeatures();
+
+            foreach (KeyValuePair<Features, int> entry in sb.room.getRoomFeatures())
+            {
+                // do something with entry.Value or entry.Key
+                int fID = entry.Key.Id;
+                int qual = entry.Value;
+                RoomFeatures.Add(fID, qual);
+            }
             blocksOfMahzor = ScheduleBlock.getListbyMahzorSemester(sb.degreeClass.Id, sb.semester.Id);
             //עיתוי
 
@@ -43,6 +54,9 @@ namespace Final_Project
         {
 
             //avg or sum all constraints
+            timing();
+            location();
+            history();
 
         }
 
@@ -72,8 +86,29 @@ namespace Final_Project
         private static void location()
         {
 
-            //room features
+            //room features -> capacity
+            
 
+            Features capacityFeature = Features.GetFeatures(2);
+            int capacity = RoomFeatures[2];
+            //RoomFeatures.TryGetValue(capacityFeature, out capacity);
+            double penalty = (1.0 * sb.degreeClass.NumberOfStudents) / capacity;
+
+            if (penalty > 1) 
+            {
+                Constraint c = new Constraint("Exceeded Capacity", sb, capacityFeature, Constraint.Type.Error, penalty * 100);
+                constraints.Add(c);
+            }
+            else if(penalty > 0.80)
+            {
+                Constraint c = new Constraint("Almost Full Capacity", sb, capacityFeature, Constraint.Type.Warning, penalty * 100);
+                constraints.Add(c);
+            }
+            else
+            {
+                Constraint c = new Constraint("Almost Full Capacity", sb, capacityFeature, Constraint.Type.OK, 100-penalty*100);
+                constraints.Add(c);
+            }
 
             //movement around campus & buildings & rooms
             foreach (ScheduleBlock mSB in blocksOfMahzor)
