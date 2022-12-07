@@ -53,6 +53,11 @@ namespace Final_Project
 
         }
 
+        public Dictionary<Features, int> getRoomFeatures()
+        {
+            return RoomFeatures;
+        }
+
         public void changeName(int roomID, String newName, int newFloor, int newBuildingID)
         {
             Room r = Room.GetRoom(roomID);
