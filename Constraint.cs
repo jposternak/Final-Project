@@ -14,15 +14,21 @@ namespace Final_Project
         //constrainted feature
         Features feature { get; set; }
         // O = OK, W = WARNING, E = ERROR
-        char typeOfConstraint { get; set; }
-        double compatibilityScore { get; set; }
+        public enum Type
+        {
+            OK,
+            Warning,
+            Error
+        }
+        Type typeOfConstraint { get; set; }
+        double penalty { get; set; }
 
-        public Constraint(String ConstraintName,ScheduleBlock scheduleBlock, Features feature, char typeOfConstraint, double compatibilityScore)
+        public Constraint(String ConstraintName,ScheduleBlock scheduleBlock, Features feature, Type typeOfConstraint, double penalty)
         {
             this.sb = scheduleBlock;
             this.feature = feature;
             this.typeOfConstraint = typeOfConstraint;  
-            this.compatibilityScore = compatibilityScore;
+            this.penalty = penalty;
             this.ConstraintName = ConstraintName;
         }
 
