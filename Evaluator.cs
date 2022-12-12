@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Windows.Interop;
+﻿using System.Collections.Generic;
 
 namespace Final_Project
 {
@@ -89,38 +87,66 @@ namespace Final_Project
         private static void location()
         {
 
-            //room features -> capacity
-            
+            Dictionary<Features, int> dcFeatures = sb.degreeClass.DCFeatures;
+            Dictionary<Features, int> roomFeatures = sb.room.getRoomFeatures();
 
-            Features capacityFeature = Features.GetFeatures(2);
-            if (RoomFeatures.ContainsKey(2))
+            foreach (KeyValuePair<Features, int> entry in dcFeatures)
             {
-                int capacity = RoomFeatures[2];
-                //RoomFeatures.TryGetValue(capacityFeature, out capacity);
-                double penalty = (1.0 * sb.degreeClass.NumberOfStudents) / capacity;
+                // do something with entry.Value or entry.Key
+                Features feature = entry.Key;
+                int dcQual = entry.Value;
+                int roomQual;
+                roomFeatures.TryGetValue(feature, out roomQual);
 
-                if (penalty > 1)
+                //קיבולת
+                if (feature.Id == 2)
                 {
-                    Constraint c = new Constraint("Exceeded Capacity", sb, capacityFeature, Constraint.Type.Error, penalty * 100);
-                    constraints.Add(c);
+                    checkCapacity(roomQual, dcQual, feature);
                 }
-                else if (penalty > 0.80)
-                {
-                    Constraint c = new Constraint("Almost Full Capacity", sb, capacityFeature, Constraint.Type.Warning, penalty * 100);
-                    constraints.Add(c);
-                }
-                else if (penalty < 0.40)
-                {
-                    Constraint c = new Constraint("Almost Empty", sb, capacityFeature, Constraint.Type.Warning, 100 - penalty * 100);
-                    constraints.Add(c);
-                }
-                else
-                {
-                    Constraint c = new Constraint("Good", sb, capacityFeature, Constraint.Type.OK, 100 - penalty * 100);
-                    constraints.Add(c);
-                }
+
+                
+
+
             }
+
             //movement around campus & buildings & rooms
+            checkMovement();
+
+
+
+        }
+
+
+
+
+        private static void checkCapacity(int roomCapacity, int numberOfStudents, Features f)
+        {
+
+            double penalty = (1.0 * numberOfStudents) / roomCapacity;
+            if (penalty > 1)
+            {
+                Constraint c = new Constraint("Exceeded Capacity", sb, f, Constraint.Type.Error, penalty * 100);
+                constraints.Add(c);
+            }
+            else if (penalty > 0.80)
+            {
+                Constraint c = new Constraint("Almost Full Capacity", sb, f, Constraint.Type.Warning, penalty * 100);
+                constraints.Add(c);
+            }
+            else if (penalty < 0.40)
+            {
+                Constraint c = new Constraint("Almost Empty", sb, f, Constraint.Type.Warning, 100 - penalty * 100);
+                constraints.Add(c);
+            }
+            else
+            {
+                Constraint c = new Constraint("Good", sb, f, Constraint.Type.OK, 100 - penalty * 100);
+                constraints.Add(c);
+            }
+        }
+
+        private static void checkMovement()
+        {
             foreach (ScheduleBlock mSB in blocksOfMahzor)
             {
 
@@ -131,8 +157,9 @@ namespace Final_Project
                     Constraint c = new Constraint("Campus Movement", sb, null, Constraint.Type.Error, 90);
                     constraints.Add(c);
                 }
-                else {
-                    
+                else
+                {
+
                     //Building
                     if (sb.room.building.Name != mSB.buildingName && sb.DayOfWeek == mSB.DayOfWeek)
                     {
@@ -154,14 +181,11 @@ namespace Final_Project
 
                     }
 
-
                 }
 
-
-
             }
-        }
 
+        }
         private static void history()
         {
 

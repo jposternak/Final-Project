@@ -11,19 +11,22 @@ namespace Final_Project
         [STAThread]
         static void Main()
         {
-            
-            
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuForm());
+
+    
+               Application.EnableVisualStyles();
+               Application.SetCompatibleTextRenderingDefault(false);
+               Application.Run(new MenuForm());
+ 
 
             
-
             /*
+            
 
-            ScheduleBlock sb = ScheduleBlock.getFromDB(95);
+            ScheduleBlock sb = ScheduleBlock.getFromDB(101);
             Evaluator.evaluate(sb);
+
             */
+            
         }
     }
 }

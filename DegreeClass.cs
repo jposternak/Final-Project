@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using static Final_Project.grilDataSet;
@@ -22,7 +23,10 @@ namespace Final_Project
         public int WeeklyHours { get; set; }
         public bool isActive { get; set; }
 
+        public Dictionary<Features, int> DCFeatures { get; set; }
+
         private static DegreeClassTableAdapter adapter = new DegreeClassTableAdapter();
+        private static DegreeClassFeaturesTableAdapter f_adapter = new DegreeClassFeaturesTableAdapter();
 
 
         public static void create(string name, Degree degree, int numberOfStudents,
@@ -48,6 +52,7 @@ namespace Final_Project
                 dc.Summer = (Boolean)rows[0][6];
                 dc.WeeklyHours = (int)rows[0][7];
                 dc.isActive = (Boolean)rows[0][10];
+                dc.DCFeatures = getDCFeaturesFromDB(id);
             }
 
 
@@ -60,6 +65,24 @@ namespace Final_Project
             adapter.UpdateQuery(this.Name, this.Degree.Id, this.NumberOfStudents, this.StartingSemester.Id,this.Duration, this.Summer,this.WeeklyHours, this.isActive, this.Id);
         }
 
+
+        private static Dictionary<Features, int> getDCFeaturesFromDB(int dcID)
+        {
+
+            Dictionary<Features, int> features = new Dictionary<Features, int>();
+            DataRowCollection rows = f_adapter.GetData(dcID).Rows;
+
+            for (int i = 0; i < rows.Count; i++)
+            {
+                int f_id = (int)rows[i][1];
+                Features f = Features.GetFeatures(f_id);
+                int qual = (int)rows[i][2];
+                features.Add(f, qual);
+            }
+
+            return features;
+
+        }
 
         //IMPLEMENT REMOVE
 

@@ -72,6 +72,22 @@ namespace Final_Project
 
 
 
+        public override int GetHashCode()
+        {
+            return this.Id;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.Equals(obj as Features);
+        }
+
+        public bool Equals(Features obj)
+        {
+            return obj != null && obj.Id == this.Id;
+        }
+
+
 
 
 

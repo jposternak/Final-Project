@@ -34,11 +34,16 @@ namespace Final_Project
 
         public override string ToString()
         {
-            String s = $"Constraint: {ConstraintName}\t Feature: {feature.Name}\t Type: {typeOfConstraint}\t Penalty:{penalty}";
 
+            if (feature != null)
+            {
+                return $"Constraint: {ConstraintName}\t Feature: {feature.Name}\t Type: {typeOfConstraint}\t Penalty:{penalty}";
+            }
+            else
+            {
+                return $"Constraint: {ConstraintName}\t Type: {typeOfConstraint}\t Penalty:{penalty}";
+            }
 
-
-            return s;
         }
     }
 }
