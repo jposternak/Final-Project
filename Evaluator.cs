@@ -18,6 +18,9 @@ namespace Final_Project
         {
 
             sb = scheduleBlock;
+            constraints.Clear();
+            blocksOfMahzor.Clear();
+            RoomFeatures.Clear();
 
             //shlifa
             getFromDB();
@@ -90,26 +93,33 @@ namespace Final_Project
             
 
             Features capacityFeature = Features.GetFeatures(2);
-            int capacity = RoomFeatures[2];
-            //RoomFeatures.TryGetValue(capacityFeature, out capacity);
-            double penalty = (1.0 * sb.degreeClass.NumberOfStudents) / capacity;
+            if (RoomFeatures.ContainsKey(2))
+            {
+                int capacity = RoomFeatures[2];
+                //RoomFeatures.TryGetValue(capacityFeature, out capacity);
+                double penalty = (1.0 * sb.degreeClass.NumberOfStudents) / capacity;
 
-            if (penalty > 1) 
-            {
-                Constraint c = new Constraint("Exceeded Capacity", sb, capacityFeature, Constraint.Type.Error, penalty * 100);
-                constraints.Add(c);
+                if (penalty > 1)
+                {
+                    Constraint c = new Constraint("Exceeded Capacity", sb, capacityFeature, Constraint.Type.Error, penalty * 100);
+                    constraints.Add(c);
+                }
+                else if (penalty > 0.80)
+                {
+                    Constraint c = new Constraint("Almost Full Capacity", sb, capacityFeature, Constraint.Type.Warning, penalty * 100);
+                    constraints.Add(c);
+                }
+                else if (penalty < 0.40)
+                {
+                    Constraint c = new Constraint("Almost Empty", sb, capacityFeature, Constraint.Type.Warning, 100 - penalty * 100);
+                    constraints.Add(c);
+                }
+                else
+                {
+                    Constraint c = new Constraint("Good", sb, capacityFeature, Constraint.Type.OK, 100 - penalty * 100);
+                    constraints.Add(c);
+                }
             }
-            else if(penalty > 0.80)
-            {
-                Constraint c = new Constraint("Almost Full Capacity", sb, capacityFeature, Constraint.Type.Warning, penalty * 100);
-                constraints.Add(c);
-            }
-            else
-            {
-                Constraint c = new Constraint("Almost Full Capacity", sb, capacityFeature, Constraint.Type.OK, 100-penalty*100);
-                constraints.Add(c);
-            }
-
             //movement around campus & buildings & rooms
             foreach (ScheduleBlock mSB in blocksOfMahzor)
             {

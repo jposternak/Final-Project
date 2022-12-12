@@ -32,6 +32,13 @@ namespace Final_Project
             this.ConstraintName = ConstraintName;
         }
 
+        public override string ToString()
+        {
+            String s = $"Constraint: {ConstraintName}\t Feature: {feature.Name}\t Type: {typeOfConstraint}\t Penalty:{penalty}";
 
+
+
+            return s;
+        }
     }
 }

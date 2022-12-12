@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControlzEx.Standard;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -599,6 +600,11 @@ namespace Final_Project
                 weeklyHoursNumericUpDown.Value = dc.WeeklyHours;
                 isActive.Checked = dc.isActive;
 
+
+                this.dCFeaturesTableAdapter.Fill(this.grilDataViewsSet.DCFeatures, dc.Id);
+
+
+
             }
 
         }
@@ -717,7 +723,66 @@ namespace Final_Project
             }
         }
 
+
         #endregion
+
+
+        int featureIDfromMenuDC;
+        int featureIDDC;
+        private void FeaturesMenu_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+
+            featureIDfromMenuDC = (int)FeaturesMenu.Rows[e.RowIndex].Cells[0].Value;
+        }
+
+        private void DCFeatures_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            featureIDDC = (int)FeaturesMenu.Rows[e.RowIndex].Cells[0].Value;
+        }
+
+        private void DCFadd_Click(object sender, EventArgs e)
+        {
+            int dcID = int.Parse(degreeClassIDTextBox.Text);
+            int featureID = featureIDfromMenuDC;
+
+            this.dCFeaturesTableAdapter.InsertQuery(dcID, featureID, 1);
+            MessageBox.Show("הנתונים עודכנו בהצלחה", "הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.dCFeaturesTableAdapter.Fill(this.grilDataViewsSet.DCFeatures, dcID);
+
+        }
+
+        private void DCFremove_Click(object sender, EventArgs e)
+        {
+
+            int dcID = int.Parse(degreeClassIDTextBox.Text);
+
+            String msg = $"האם בטוח שרוצה למחוק את המאפיין?\n{dcID} - {featureIDDC}";
+            DialogResult yesno = MessageBox.Show(msg, "האם בטוח", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (yesno == DialogResult.Yes)
+            {
+
+                this.dCFeaturesTableAdapter.DeleteQuery(dcID, featureIDDC);
+                MessageBox.Show("המאפיין נמחק בהצלחה", "הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.dCFeaturesTableAdapter.Fill(this.grilDataViewsSet.DCFeatures, dcID);
+
+            }
+
+        }
+
+        private void DCFeatures_CellValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            int dcID = int.Parse(degreeClassIDTextBox.Text);
+            int featureID = (int)DCFeatures.Rows[e.RowIndex].Cells[0].Value;
+            int qualifier = (int)DCFeatures.Rows[e.RowIndex].Cells[2].Value;
+
+            if (dcID > 0 && featureID > 0 && qualifier > 0)
+            {
+                this.dCFeaturesTableAdapter.UpdateQuery(qualifier,dcID,featureID);
+                this.dCFeaturesTableAdapter.Fill(this.grilDataViewsSet.DCFeatures, dcID);
+
+            }
+
+        }
 
 
     }

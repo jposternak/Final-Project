@@ -99,7 +99,14 @@ namespace Final_Project
 
         private void checkConstraints()
         {
-            listBox.DataSource = myItems;
+
+            List<Constraint> constraints = Evaluator.evaluate(this.block);
+            foreach (Constraint c in constraints)
+            {
+                listBox.Items.Add(c.ToString());
+            }
+            
+            //listBox.DataSource = myItems;
         }
 
         private void BlockEdit_Load(object sender, System.EventArgs e)

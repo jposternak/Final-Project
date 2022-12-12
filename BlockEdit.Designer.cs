@@ -806,12 +806,11 @@
             // listBox
             // 
             this.listBox.FormattingEnabled = true;
-            this.listBox.Items.AddRange(new object[] {
-            "\"בקרוב...\""});
             this.listBox.Location = new System.Drawing.Point(235, 391);
             this.listBox.Margin = new System.Windows.Forms.Padding(2);
             this.listBox.Name = "listBox";
             this.listBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.listBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox.Size = new System.Drawing.Size(493, 121);
             this.listBox.TabIndex = 1;
             // 
