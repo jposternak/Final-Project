@@ -33,7 +33,7 @@ namespace Final_Project
         //funkziat shlifa
         private static void getFromDB()
         {
-
+            //Room Features
             foreach (KeyValuePair<Features, int> entry in sb.room.getRoomFeatures())
             {
                 // do something with entry.Value or entry.Key
@@ -41,13 +41,15 @@ namespace Final_Project
                 int qual = entry.Value;
                 RoomFeatures.Add(fID, qual);
             }
+
+            //All Blocks of Mahzor
             blocksOfMahzor = ScheduleBlock.getListbyMahzorSemester(sb.degreeClass.Id, sb.semester.Id);
 
         }
 
+
         private static void evaluation()
         {
-
             //avg or sum all constraints
             timing();
             location();
@@ -74,8 +76,52 @@ namespace Final_Project
             //clash with other blocks
             checkHafifa();
 
-            //multiple places at the same time
 
+            //multiple places at the same time
+            checkMultiplace();
+
+        }
+
+        private static void checkMultiplace()
+        {
+            //ind. pitzul?
+
+            //look for same times, in different place
+            foreach (ScheduleBlock SB_1 in blocksOfMahzor)
+            {
+                foreach (ScheduleBlock SB_2 in blocksOfMahzor)
+                {
+                    if (SB_1.Id != SB_2.Id)
+                    {
+                        //Check Same day
+                        if (SB_1.DayOfWeek == SB_2.DayOfWeek)
+                        {
+
+                            //Check Time
+                            if (SB_1.StartTime > SB_2.EndTime || SB_1.EndTime < SB_2.StartTime)
+                            {
+                                //OK
+                            }
+                            else if (SB_1.StartTime > SB_2.EndTime || SB_1.EndTime < SB_2.StartTime)
+                            {
+
+
+
+                            }
+                            else if (SB_1.roomID != SB_2.roomID)
+                            {
+                                //same class, different places
+
+                                Constraint c = new Constraint("לא ניתן לשבץ מחזור בשתי מקומות שונים באותו זמן", sb, null, Constraint.Type.Error, 90);
+                                constraints.Add(c);
+
+                            }
+
+
+                        }
+                    }
+                }
+            }
 
         }
 
@@ -98,19 +144,15 @@ namespace Final_Project
                 {
                     checkCapacity(roomQual, dcQual, feature);
                 }
-
-                
-
-
             }
 
             //movement around campus & buildings & rooms
             checkMovement();
 
 
-
         }
 
+        //Hafifa in same ClassRoom
         private static void checkHafifa()
         {
 
@@ -128,15 +170,18 @@ namespace Final_Project
                     {
                         Constraint c = new Constraint("ההקצאה חופפת עם הקצאה אחרת", sb, null, Constraint.Type.Error, 90);
                         constraints.Add(c);
-                    }else if(currBlock.StartTime > sb.StartTime && currBlock.EndTime < sb.EndTime)
+                    }
+                    else if (currBlock.StartTime > sb.StartTime && currBlock.EndTime < sb.EndTime)
                     {
                         Constraint c = new Constraint("ההקצאה חופפת עם הקצאה אחרת", sb, null, Constraint.Type.Error, 90);
                         constraints.Add(c);
-                    }else if (currBlock.StartTime > sb.StartTime && currBlock.StartTime < sb.EndTime && currBlock.EndTime > sb.EndTime)
+                    }
+                    else if (currBlock.StartTime > sb.StartTime && currBlock.StartTime < sb.EndTime && currBlock.EndTime > sb.EndTime)
                     {
                         Constraint c = new Constraint("ההקצאה חופפת עם הקצאה אחרת", sb, null, Constraint.Type.Error, 90);
                         constraints.Add(c);
-                    }else if (currBlock.EndTime <= sb.StartTime || currBlock.StartTime >= sb.EndTime)
+                    }
+                    else if (currBlock.EndTime <= sb.StartTime || currBlock.StartTime >= sb.EndTime)
                     {
                         Double mervahEnd = Math.Abs(currBlock.EndTime - sb.StartTime);
                         Double mervahStart = Math.Abs(currBlock.StartTime - sb.EndTime);
@@ -151,7 +196,7 @@ namespace Final_Project
                         }
                     }
 
-                    
+
                 }
 
 
