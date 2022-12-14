@@ -212,6 +212,8 @@ namespace Final_Project
             return list;
 
         }
+
+        
        
         
         public static List<ScheduleBlock> getListbyMahzorSemester(int MahzorID, int SemesterID)

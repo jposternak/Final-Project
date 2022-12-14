@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Final_Project
 {
@@ -33,8 +34,6 @@ namespace Final_Project
         private static void getFromDB()
         {
 
-            //RoomFeatures = sb.room.getRoomFeatures();
-
             foreach (KeyValuePair<Features, int> entry in sb.room.getRoomFeatures())
             {
                 // do something with entry.Value or entry.Key
@@ -43,11 +42,6 @@ namespace Final_Project
                 RoomFeatures.Add(fID, qual);
             }
             blocksOfMahzor = ScheduleBlock.getListbyMahzorSemester(sb.degreeClass.Id, sb.semester.Id);
-            //עיתוי
-
-            //מיקום
-
-            //היסטוריה
 
         }
 
@@ -78,6 +72,7 @@ namespace Final_Project
             }
 
             //clash with other blocks
+            checkHafifa();
 
             //multiple places at the same time
 
@@ -116,8 +111,54 @@ namespace Final_Project
 
         }
 
+        private static void checkHafifa()
+        {
+
+            List<ScheduleBlock> blocksInRoom = ScheduleBlock.getListbyRoom(sb.room.Id, sb.semester.Id);
+
+            //iterate all blocks in room and find 
+            foreach (ScheduleBlock currBlock in blocksInRoom)
+            {
+
+                //only if same day & not same block
+                if (currBlock.DayOfWeek == sb.DayOfWeek && currBlock.Id != sb.Id)
+                {
+
+                    if (currBlock.StartTime < sb.StartTime && currBlock.EndTime > sb.StartTime)
+                    {
+                        Constraint c = new Constraint("ההקצאה חופפת עם הקצאה אחרת", sb, null, Constraint.Type.Error, 90);
+                        constraints.Add(c);
+                    }else if(currBlock.StartTime > sb.StartTime && currBlock.EndTime < sb.EndTime)
+                    {
+                        Constraint c = new Constraint("ההקצאה חופפת עם הקצאה אחרת", sb, null, Constraint.Type.Error, 90);
+                        constraints.Add(c);
+                    }else if (currBlock.StartTime > sb.StartTime && currBlock.StartTime < sb.EndTime && currBlock.EndTime > sb.EndTime)
+                    {
+                        Constraint c = new Constraint("ההקצאה חופפת עם הקצאה אחרת", sb, null, Constraint.Type.Error, 90);
+                        constraints.Add(c);
+                    }else if (currBlock.EndTime <= sb.StartTime || currBlock.StartTime >= sb.EndTime)
+                    {
+                        Double mervahEnd = Math.Abs(currBlock.EndTime - sb.StartTime);
+                        Double mervahStart = Math.Abs(currBlock.StartTime - sb.EndTime);
+                        Double minMerhav = Math.Min(mervahEnd, mervahStart);
+
+                        ScheduleBlock currBlockOnline = ScheduleBlock.getFromDB(currBlock.Id);
+                        //diferent mahzor
+                        if (currBlockOnline.degreeClass.Id != sb.degreeClass.Id && minMerhav <= 0.15)
+                        {
+                            Constraint c = new Constraint("אין מספיק זמן בין תארים", sb, null, Constraint.Type.Warning, 30);
+                            constraints.Add(c);
+                        }
+                    }
+
+                    
+                }
 
 
+
+            }
+
+        }
 
         private static void checkCapacity(int roomCapacity, int numberOfStudents, Features f)
         {
