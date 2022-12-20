@@ -14,22 +14,37 @@ namespace Final_Project
         //constrainted feature
         Features feature { get; set; }
         // O = OK, W = WARNING, E = ERROR
-        public enum Type
+        public enum Severity
         {
             OK,
             Warning,
             Error
         }
+        Severity constraintSeverity { get; set; }
+
+        public enum Type
+        {
+            Timing_Saturday,
+            Timing_Friday,
+            Simultaneous,
+            Overlap,
+            Capacity,
+            Movement,
+            Spacing
+
+        }
         Type typeOfConstraint { get; set; }
+
         double penalty { get; set; }
 
-        public Constraint(String ConstraintName,ScheduleBlock scheduleBlock, Features feature, Type typeOfConstraint, double penalty)
+        public Constraint(Type typeOfConstraint, ScheduleBlock scheduleBlock, Features feature, Severity constraintSeverity, double penalty)
         {
             this.sb = scheduleBlock;
             this.feature = feature;
-            this.typeOfConstraint = typeOfConstraint;  
+            this.typeOfConstraint = typeOfConstraint;
+            this.constraintSeverity = constraintSeverity;
             this.penalty = penalty;
-            this.ConstraintName = ConstraintName;
+            //this.ConstraintName = ConstraintName;
         }
 
         public override string ToString()
@@ -37,13 +52,33 @@ namespace Final_Project
 
             if (feature != null)
             {
-                return $"Constraint: {ConstraintName}\t Feature: {feature.Name}\t Type: {typeOfConstraint}\t Penalty:{penalty}";
+                return $"Constraint: {typeOfConstraint}\t Feature: {feature.Name}\t Type: {typeOfConstraint}\t Penalty:{penalty}";
             }
             else
             {
-                return $"Constraint: {ConstraintName}\t Type: {typeOfConstraint}\t Penalty:{penalty}";
+                return $"Constraint: {typeOfConstraint}\t Type: {typeOfConstraint}\t Penalty:{penalty}";
             }
 
         }
+
+
+        public override int GetHashCode()
+        {
+            int val = (int)this.typeOfConstraint;
+            val *= 10000;
+            val += (int)this.constraintSeverity;
+            return (val);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.Equals(obj as Constraint);
+        }
+
+        public bool Equals(Constraint obj)
+        {
+            return obj != null && obj.GetHashCode() == this.GetHashCode();
+        }
+
     }
 }

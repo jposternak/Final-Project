@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Final_Project
 {
@@ -27,7 +28,7 @@ namespace Final_Project
             //eval
             evaluation();
 
-            return constraints;
+            return constraints.Distinct().ToList();
         }
 
         //funkziat shlifa
@@ -62,14 +63,14 @@ namespace Final_Project
             //day of week -> -90
             if (sb.DayOfWeek == 7)
             {
-                Constraint c = new Constraint("Saturdays", sb, null, Constraint.Type.Error, 90);
+                Constraint c = new Constraint(Constraint.Type.Timing_Saturday, sb, null, Constraint.Severity.Error, 90);
                 constraints.Add(c);
             }
 
             //fridays -> -90
             if (sb.DayOfWeek == 6 && sb.EndTime > 14.3)
             {
-                Constraint c = new Constraint("Fridays - EndTime", sb, null, Constraint.Type.Error, 90);
+                Constraint c = new Constraint(Constraint.Type.Timing_Friday, sb, null, Constraint.Severity.Error, 90);
                 constraints.Add(c);
             }
 
@@ -89,7 +90,11 @@ namespace Final_Project
             //look for same times, in different place
             foreach (ScheduleBlock SB_1 in blocksOfMahzor)
             {
-                foreach (ScheduleBlock SB_2 in blocksOfMahzor)
+                List<ScheduleBlock> blocksOfMahzor_int = new List<ScheduleBlock>();
+                blocksOfMahzor_int.AddRange(blocksOfMahzor);
+                blocksOfMahzor_int.Remove(SB_1);
+
+                foreach (ScheduleBlock SB_2 in blocksOfMahzor_int)
                 {
                     if (SB_1.Id != SB_2.Id)
                     {
@@ -98,11 +103,11 @@ namespace Final_Project
                         {
 
                             //Check Time
-                            if (SB_1.StartTime > SB_2.EndTime || SB_1.EndTime < SB_2.StartTime)
+                            if (SB_1.StartTime >= SB_2.EndTime || SB_1.EndTime <= SB_2.StartTime)
                             {
                                 //OK
                             }
-                            else if (SB_1.StartTime > SB_2.EndTime || SB_1.EndTime < SB_2.StartTime)
+                            else if (SB_1.StartTime >= SB_2.EndTime || SB_1.EndTime <= SB_2.StartTime)
                             {
 
 
@@ -110,9 +115,8 @@ namespace Final_Project
                             }
                             else if (SB_1.roomID != SB_2.roomID)
                             {
-                                //same class, different places
-
-                                Constraint c = new Constraint("לא ניתן לשבץ מחזור בשתי מקומות שונים באותו זמן", sb, null, Constraint.Type.Error, 90);
+                                //same class, different places ->Simultaneous
+                                Constraint c = new Constraint(Constraint.Type.Simultaneous, sb, null, Constraint.Severity.Error, 90);
                                 constraints.Add(c);
 
                             }
@@ -152,7 +156,7 @@ namespace Final_Project
 
         }
 
-        //Hafifa in same ClassRoom
+        //Hafifa in same ClassRoom ---> Overlap
         private static void checkHafifa()
         {
 
@@ -165,7 +169,18 @@ namespace Final_Project
                 //only if same day & not same block
                 if (currBlock.DayOfWeek == sb.DayOfWeek && currBlock.Id != sb.Id)
                 {
+                    //Overlaps?
+                    if((currBlock.StartTime < sb.StartTime && currBlock.EndTime > sb.StartTime) ||
+                        (currBlock.StartTime > sb.StartTime && currBlock.EndTime < sb.EndTime) ||
+                        (currBlock.StartTime > sb.StartTime && currBlock.StartTime < sb.EndTime && currBlock.EndTime > sb.EndTime))
+                    {
 
+                        Constraint c = new Constraint(Constraint.Type.Overlap, sb, null, Constraint.Severity.Error, 90);
+                        constraints.Add(c);
+
+                    }
+
+                    /*
                     if (currBlock.StartTime < sb.StartTime && currBlock.EndTime > sb.StartTime)
                     {
                         Constraint c = new Constraint("ההקצאה חופפת עם הקצאה אחרת", sb, null, Constraint.Type.Error, 90);
@@ -181,6 +196,9 @@ namespace Final_Project
                         Constraint c = new Constraint("ההקצאה חופפת עם הקצאה אחרת", sb, null, Constraint.Type.Error, 90);
                         constraints.Add(c);
                     }
+                    */
+                    
+                    //If not, then check for Spacing between Mahzorim
                     else if (currBlock.EndTime <= sb.StartTime || currBlock.StartTime >= sb.EndTime)
                     {
                         Double mervahEnd = Math.Abs(currBlock.EndTime - sb.StartTime);
@@ -191,7 +209,8 @@ namespace Final_Project
                         //diferent mahzor
                         if (currBlockOnline.degreeClass.Id != sb.degreeClass.Id && minMerhav <= 0.15)
                         {
-                            Constraint c = new Constraint("אין מספיק זמן בין תארים", sb, null, Constraint.Type.Warning, 30);
+                            // ====> Spacing
+                            Constraint c = new Constraint(Constraint.Type.Spacing, sb, null, Constraint.Severity.Warning, 30);
                             constraints.Add(c);
                         }
                     }
@@ -211,22 +230,26 @@ namespace Final_Project
             double penalty = (1.0 * numberOfStudents) / roomCapacity;
             if (penalty > 1)
             {
-                Constraint c = new Constraint("Exceeded Capacity", sb, f, Constraint.Type.Error, penalty * 100);
+                //Constraint c = new Constraint("Exceeded Capacity", sb, f, Constraint.Severity.Error, penalty * 100);
+                Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.Error, penalty * 100);
                 constraints.Add(c);
             }
             else if (penalty > 0.80)
             {
-                Constraint c = new Constraint("Almost Full Capacity", sb, f, Constraint.Type.Warning, penalty * 100);
+                //Constraint c = new Constraint("Almost Full Capacity", sb, f, Constraint.Severity.Warning, penalty * 100);
+                Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.Warning, penalty * 100);
                 constraints.Add(c);
             }
             else if (penalty < 0.40)
             {
-                Constraint c = new Constraint("Almost Empty", sb, f, Constraint.Type.Warning, 100 - penalty * 100);
+                //Constraint c = new Constraint("Almost Empty", sb, f, Constraint.Severity.Warning, 100 - penalty * 100);
+                Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.Warning, 100 - penalty * 100);
                 constraints.Add(c);
             }
             else
             {
-                Constraint c = new Constraint("Good", sb, f, Constraint.Type.OK, 100 - penalty * 100);
+                //Constraint c = new Constraint("Good", sb, f, Constraint.Severity.OK, 100 - penalty * 100);
+                Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.OK, 100 - penalty * 100);
                 constraints.Add(c);
             }
         }
@@ -240,7 +263,8 @@ namespace Final_Project
                 //Campus -> -90
                 if (sb.room.building.Campus.Name != mSB.campusName)
                 {
-                    Constraint c = new Constraint("Campus Movement", sb, null, Constraint.Type.Error, 90);
+                    //"Campus Movement"
+                    Constraint c = new Constraint(Constraint.Type.Movement, sb, null, Constraint.Severity.Error, 90);
                     constraints.Add(c);
                 }
                 else
@@ -251,7 +275,8 @@ namespace Final_Project
                     {
 
                         //maybe check also time???
-                        Constraint c = new Constraint("Same day - Different Buildings", sb, null, Constraint.Type.Warning, 60);
+                        //"Same day - Different Buildings"
+                        Constraint c = new Constraint(Constraint.Type.Movement, sb, null, Constraint.Severity.Warning, 60);
                         constraints.Add(c);
                     }
                     else
@@ -261,7 +286,8 @@ namespace Final_Project
                         {
 
                             //maybe check also time???
-                            Constraint c = new Constraint("Same day & Building - Different Rooms", sb, null, Constraint.Type.Warning, 30);
+                            //"Same day & Building - Different Rooms"
+                            Constraint c = new Constraint(Constraint.Type.Movement, sb, null, Constraint.Severity.Warning, 30);
                             constraints.Add(c);
                         }
 
