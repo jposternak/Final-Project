@@ -16,11 +16,11 @@ namespace Final_Project
         // O = OK, W = WARNING, E = ERROR
         public enum Severity
         {
-            OK,
-            Warning,
-            Error
+            OK = 0,
+            Warning = 1,
+            Error = 2
         }
-        Severity constraintSeverity { get; set; }
+        public Severity constraintSeverity { get; private set; }
 
         public enum Type
         {
@@ -33,7 +33,7 @@ namespace Final_Project
             Spacing
 
         }
-        Type typeOfConstraint { get; set; }
+        public Type typeOfConstraint { get; private set; }
 
         double penalty { get; set; }
 

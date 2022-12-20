@@ -20,6 +20,7 @@ namespace Final_Project
         public Room room { get; set; }
         public Semester semester { get; set; }
         public DegreeClass degreeClass { get; set; }
+        public String comments { get; private set; }
 
         public bool isOffline { get; private set; }
 
@@ -82,10 +83,19 @@ namespace Final_Project
             }
         }
 
+        public void updateComments(String comments)
+        {
+            if (!this.isOffline)
+            {
+                this.comments = comments;
+                this.uploadChanges();
+            }
+        }
+
         private void uploadChanges()
         {
             String time = $"{this.StartTimeT.Hours:00}:{this.StartTimeT.Minutes:00}:{this.StartTimeT.Seconds:00}";
-            adapter.UpdateQuery(this.DayOfWeek, time, this.room.Id, this.degreeClass.Id, this.semester.Id, this.Id);
+            adapter.UpdateQuery(this.DayOfWeek, time, this.room.Id, this.degreeClass.Id, this.semester.Id,this.comments, this.Id);
         }
 
         //done
@@ -119,6 +129,12 @@ namespace Final_Project
                 DegreeClass dc = DegreeClass.getFromDatabase(dcID);
                 int semID = (int)rows[0][5];
                 Semester sem = Semester.getFromDatabase(semID);
+                //var comm_db = rows[0][6];
+                String comm = "";
+                if (rows[0][6].GetType() != typeof(System.DBNull))
+                {
+                    comm = (String)rows[0][6];
+                }
 
                 sb.Id = scheduleBlockID;
                 sb.DayOfWeek = dayOfWeek;
@@ -126,6 +142,7 @@ namespace Final_Project
                 sb.room = r;
                 sb.degreeClass = dc;
                 sb.semester = sem;
+                sb.comments = comm;
 
                 sb.isOffline = false;
 

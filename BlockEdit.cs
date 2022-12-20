@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace Final_Project
@@ -13,14 +12,14 @@ namespace Final_Project
     {
 
         ScheduleBlock block;
-        List<string> myItems = new List<string> ();
+        List<string> myItems = new List<string>();
 
 
         /*
          * this.allRoomsTableAdapter.FillByRoomID(this.grilDataViewsSet.AllRooms, roomID);
          */
 
-        private string[] days = { "ראשון","שני","שלישי","רביעי","חמישי","שישי","שבת" };
+        private string[] days = { "ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת" };
 
 
         public BlockEdit(ScheduleBlock block)
@@ -31,9 +30,10 @@ namespace Final_Project
             this.block = ScheduleBlock.getFromDB(block.Id);
 
             populateRoomProperties();
+            populateDCProperties();
             populateBlockProperties();
             checkConstraints();
-            
+
         }
 
         private void populateRoomProperties()
@@ -45,7 +45,7 @@ namespace Final_Project
                 this.roomFloorTB.Text = block.room.Floor.ToString();
                 this.buildingTB.Text = block.room.building.Name;
                 this.campusTB.Text = block.room.building.Campus.Name;
-                
+
                 this.allRoomsTableAdapter.ClearBeforeFill = true;
                 this.allRoomsTableAdapter.FillByRoomID(this.grilDataViewsSet.AllRooms, block.room.Id);
             }
@@ -54,25 +54,45 @@ namespace Final_Project
 
         }
 
+        private void populateDCProperties()
+        {
+            try
+            {
+                this.roomIDTB.Text = block.room.Id.ToString();
+                this.roomNameTB.Text = block.room.Name;
+                this.roomFloorTB.Text = block.room.Floor.ToString();
+                this.buildingTB.Text = block.room.building.Name;
+                this.campusTB.Text = block.room.building.Campus.Name;
+
+                this.dCFeaturesTableAdapter.ClearBeforeFill = true;
+                this.dCFeaturesTableAdapter.Fill(this.grilDataViewsSet.DCFeatures, block.degreeClass.Id);
+            }
+            catch (System.Exception ex1) { }
+
+
+        }
+
         private void populateBlockProperties()
         {
-            dayOfWeek.Text = days[block.DayOfWeek - 1] ;
+            dayOfWeek.Text = days[block.DayOfWeek - 1];
 
             time.Text = block.TimeToString();
             semester.Text = block.semester.ToString();
 
             CoursePlacementTableAdapter cpta = new CoursePlacementTableAdapter();
             DataRowCollection rows = cpta.GetDataBySBID(block.Id).Rows;
-            
+
             inUse.Text = (rows.Count != 0) ? "כן" : "לא";
 
             facultyTB.Text = block.degreeClass.Degree.Faculty.Name;
-            
+
             megamaTB.Text = block.degreeClass.Degree.Name;
             mahzorTB.Text = block.degreeClass.Name;
 
+            commentsBox.Text = block.comments;
+
             DegreeClassPlanExecTableAdapter planExe = new DegreeClassPlanExecTableAdapter();
-            DataRowCollection rows1 = planExe.GetDataDCSem(block.degreeClass.Id,block.semester.Id).Rows;
+            DataRowCollection rows1 = planExe.GetDataDCSem(block.degreeClass.Id, block.semester.Id).Rows;
 
             if (rows1.Count != 0)
             {
@@ -83,7 +103,7 @@ namespace Final_Project
                 {
                     itraTB.ForeColor = Color.Red;
                 }
-                else if((int)rows1[0][7] == 0)
+                else if ((int)rows1[0][7] == 0)
                 {
                     itraTB.ForeColor = Color.Green;
                 }
@@ -100,13 +120,78 @@ namespace Final_Project
         private void checkConstraints()
         {
 
+            Image[] img_arr = new Image[3];
+            img_arr[0] = global::Final_Project.Properties.Resources.icons8_approval_25;
+            img_arr[1] = global::Final_Project.Properties.Resources.icons8_error_25;
+            img_arr[2] = global::Final_Project.Properties.Resources.icons8_high_priority_25;
+
+            //start icons:
+            shabat_st_ico.Image = img_arr[0];
+            friday_stat_ico.Image = img_arr[0];
+            simul_stat_ico.Image = img_arr[0];
+            overlap_stat_ico.Image = img_arr[0];
+            cap_stat_ico.Image = img_arr[0];
+            movem_stat_ico.Image = img_arr[0];
+            spacing_stat_ico.Image = img_arr[0];
+
+
             List<Constraint> constraints = Evaluator.evaluate(this.block);
             foreach (Constraint c in constraints)
             {
-                listBox.Items.Add(c.ToString());
+                
+
+                if(c.typeOfConstraint == Constraint.Type.Timing_Saturday)
+                {
+                    //Stat-icon
+                    shabat_st_ico.Image = img_arr[(int)c.constraintSeverity];
+                    //Stat-text
+                    shabat_txt.Text = "לא ניתן להקצות בשבת";
+                }
+                if (c.typeOfConstraint == Constraint.Type.Timing_Friday)
+                {
+                    //Stat-icon
+                    friday_stat_ico.Image = img_arr[(int)c.constraintSeverity];
+                    //Stat-text
+                    friday_txt.Text = "לא ניתן להקצות בשישי בשעה מאוחרת";
+                }
+                if (c.typeOfConstraint == Constraint.Type.Simultaneous)
+                {
+                    //Stat-icon
+                    simul_stat_ico.Image = img_arr[(int)c.constraintSeverity];
+                    //Stat-text
+                    simul_txt.Text = "קיים שיבוץ בו זמנית במקום אחר";
+                }
+                if (c.typeOfConstraint == Constraint.Type.Overlap)
+                {
+                    //Stat-icon
+                    overlap_stat_ico.Image = img_arr[(int)c.constraintSeverity];
+                    //Stat-text
+                    overlap_txt.Text = "קיימת חפיפה בין הקצאות";
+                }
+                if (c.typeOfConstraint == Constraint.Type.Capacity)
+                {
+                    //Stat-icon
+                    cap_stat_ico.Image = img_arr[(int)c.constraintSeverity];
+                    //Stat-text
+                    cap_txt.Text = "שים לב לקיבולת החדר";
+                }
+                if (c.typeOfConstraint == Constraint.Type.Movement)
+                {
+                    //Stat-icon
+                    movem_stat_ico.Image = img_arr[(int)c.constraintSeverity];
+                    //Stat-text
+                    movem_txt.Text = "הקצאה זו גורמת לתזוזה בקמפוס";
+                }
+                if (c.typeOfConstraint == Constraint.Type.Spacing)
+                {
+                    //Stat-icon
+                    spacing_stat_ico.Image = img_arr[(int)c.constraintSeverity];
+                    //Stat-text
+                    spacing_txt.Text = "אין מספיק מרווח בין מחזורים שונים";
+                }
             }
+
             
-            //listBox.DataSource = myItems;
         }
 
         private void BlockEdit_Load(object sender, System.EventArgs e)
@@ -133,6 +218,11 @@ namespace Final_Project
                     this.Close();
                 }
             }
+        }
+
+        private void commentsBox_Validated(object sender, EventArgs e)
+        {
+            block.updateComments(commentsBox.Text);
         }
     }
 }
