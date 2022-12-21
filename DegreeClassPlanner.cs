@@ -21,7 +21,7 @@ namespace Final_Project
             InitializeComponent();
             fillUpperTable();
             plotGraph();
-            fillNumbers();
+            //fillNumbers();
 
         }
 
@@ -140,7 +140,7 @@ namespace Final_Project
         private void populateTree()
         {
             treeRooms.Nodes.Clear();
-            TreeNode root = treeRooms.Nodes.Add("ONO");
+            TreeNode root = treeRooms.Nodes.Add("מכללת קרית אונו");
 
             campusTableAdapter adapter = new campusTableAdapter();
             DataRowCollection CRows = adapter.GetData().Rows;
