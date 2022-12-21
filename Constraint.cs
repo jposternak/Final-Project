@@ -8,7 +8,7 @@ namespace Final_Project
 {
     class Constraint
     {
-        String ConstraintName { get; set; }
+        public String Comment { get; set; }
         ScheduleBlock sb { get; set; }
         
         //constrainted feature

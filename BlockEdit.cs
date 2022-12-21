@@ -2,8 +2,10 @@
 using Final_Project.grilDataViewsSetTableAdapters;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace Final_Project
@@ -13,7 +15,7 @@ namespace Final_Project
 
         ScheduleBlock block;
         List<string> myItems = new List<string>();
-
+        List<Constraint> constraints = new List<Constraint>();
 
         /*
          * this.allRoomsTableAdapter.FillByRoomID(this.grilDataViewsSet.AllRooms, roomID);
@@ -26,15 +28,37 @@ namespace Final_Project
         {
 
             InitializeComponent();
-
             this.block = ScheduleBlock.getFromDB(block.Id);
 
+            
             populateRoomProperties();
             populateDCProperties();
             populateBlockProperties();
+            /*
             checkConstraints();
+            */
+
 
         }
+
+        private void BlockEdit_Load(object sender, System.EventArgs e)
+        {
+            checkConstraints();
+        }
+
+        private void ChangePB(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar.Value = e.ProgressPercentage;
+        }
+
+        private void Eval(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker bw = sender as BackgroundWorker;
+            bw.ReportProgress(50);
+            constraints = Evaluator.evaluate(this.block);
+            bw.ReportProgress(100);
+        }
+
 
         private void populateRoomProperties()
         {
@@ -121,6 +145,37 @@ namespace Final_Project
         {
 
             Image[] img_arr = new Image[3];
+            //Image loading_img = Image.FromFile(global::Final_Project.Properties.Resources.)
+            img_arr[0] = global::Final_Project.Properties.Resources.icons8_intersect_25;
+            //img_arr[1] = global::Final_Project.Properties.Resources.icons8_error_25;
+            //img_arr[2] = global::Final_Project.Properties.Resources.icons8_high_priority_25;
+
+            //start icons:
+            /*
+            shabat_st_ico.Image = img_arr[0];
+            friday_stat_ico.Image = img_arr[0];
+            simul_stat_ico.Image = img_arr[0];
+            overlap_stat_ico.Image = img_arr[0];
+            cap_stat_ico.Image = img_arr[0];
+            movem_stat_ico.Image = img_arr[0];
+            spacing_stat_ico.Image = img_arr[0];
+            */
+
+            //BW HERE
+            BackgroundWorker bw = new BackgroundWorker();
+            bw.WorkerReportsProgress = true;
+            bw.DoWork += Eval;
+            bw.ProgressChanged += ChangePB;
+            bw.RunWorkerCompleted += UpdateTable;
+            bw.RunWorkerAsync();
+            
+
+        }
+
+        private void UpdateTable(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+            Image[] img_arr = new Image[3];
             img_arr[0] = global::Final_Project.Properties.Resources.icons8_approval_25;
             img_arr[1] = global::Final_Project.Properties.Resources.icons8_error_25;
             img_arr[2] = global::Final_Project.Properties.Resources.icons8_high_priority_25;
@@ -134,70 +189,67 @@ namespace Final_Project
             movem_stat_ico.Image = img_arr[0];
             spacing_stat_ico.Image = img_arr[0];
 
-
-            List<Constraint> constraints = Evaluator.evaluate(this.block);
             foreach (Constraint c in constraints)
             {
-                
 
-                if(c.typeOfConstraint == Constraint.Type.Timing_Saturday)
+
+                if (c.typeOfConstraint == Constraint.Type.Timing_Saturday)
                 {
                     //Stat-icon
                     shabat_st_ico.Image = img_arr[(int)c.constraintSeverity];
                     //Stat-text
-                    shabat_txt.Text = "לא ניתן להקצות בשבת";
+                    //shabat_txt.Text = "לא ניתן להקצות בשבת";
+                    shabat_txt.Text = c.Comment;
                 }
                 if (c.typeOfConstraint == Constraint.Type.Timing_Friday)
                 {
                     //Stat-icon
                     friday_stat_ico.Image = img_arr[(int)c.constraintSeverity];
                     //Stat-text
-                    friday_txt.Text = "לא ניתן להקצות בשישי בשעה מאוחרת";
+                    //friday_txt.Text = "לא ניתן להקצות בשישי בשעה מאוחרת";
+                    friday_txt.Text = c.Comment;
                 }
                 if (c.typeOfConstraint == Constraint.Type.Simultaneous)
                 {
                     //Stat-icon
                     simul_stat_ico.Image = img_arr[(int)c.constraintSeverity];
                     //Stat-text
-                    simul_txt.Text = "קיים שיבוץ בו זמנית במקום אחר";
+                    //simul_txt.Text = "קיים שיבוץ בו זמנית במקום אחר";
+                    simul_txt.Text = c.Comment;
                 }
                 if (c.typeOfConstraint == Constraint.Type.Overlap)
                 {
                     //Stat-icon
                     overlap_stat_ico.Image = img_arr[(int)c.constraintSeverity];
                     //Stat-text
-                    overlap_txt.Text = "קיימת חפיפה בין הקצאות";
+                    //overlap_txt.Text = "קיימת חפיפה בין הקצאות";
+                    overlap_txt.Text = c.Comment;
                 }
                 if (c.typeOfConstraint == Constraint.Type.Capacity)
                 {
                     //Stat-icon
                     cap_stat_ico.Image = img_arr[(int)c.constraintSeverity];
                     //Stat-text
-                    cap_txt.Text = "שים לב לקיבולת החדר";
+                    //cap_txt.Text = "שים לב לקיבולת החדר";
+                    cap_txt.Text = c.Comment;
                 }
                 if (c.typeOfConstraint == Constraint.Type.Movement)
                 {
                     //Stat-icon
                     movem_stat_ico.Image = img_arr[(int)c.constraintSeverity];
                     //Stat-text
-                    movem_txt.Text = "הקצאה זו גורמת לתזוזה בקמפוס";
+                    //movem_txt.Text = "הקצאה זו גורמת לתזוזה בקמפוס";
+                    movem_txt.Text = c.Comment;
                 }
                 if (c.typeOfConstraint == Constraint.Type.Spacing)
                 {
                     //Stat-icon
                     spacing_stat_ico.Image = img_arr[(int)c.constraintSeverity];
                     //Stat-text
-                    spacing_txt.Text = "אין מספיק מרווח בין מחזורים שונים";
+                    //spacing_txt.Text = "אין מספיק מרווח בין מחזורים שונים";
+                    spacing_txt.Text = c.Comment;
                 }
             }
-
-            
-        }
-
-        private void BlockEdit_Load(object sender, System.EventArgs e)
-        {
-            //this.previousWindow = sender;
-
         }
 
         private void editBT_Click(object sender, System.EventArgs e)

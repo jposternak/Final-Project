@@ -132,6 +132,7 @@
             this.commentsBox = new System.Windows.Forms.RichTextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBlockDetailsBindingSource)).BeginInit();
@@ -505,7 +506,7 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(629, 78);
+            this.groupBox3.Size = new System.Drawing.Size(796, 78);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "פרטי הבלוק";
@@ -532,7 +533,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(615, 50);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(782, 50);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label8
@@ -540,7 +541,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label8.Location = new System.Drawing.Point(519, 0);
+            this.label8.Location = new System.Drawing.Point(670, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(71, 13);
@@ -553,7 +554,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label9.Location = new System.Drawing.Point(385, 0);
+            this.label9.Location = new System.Drawing.Point(494, 0);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(33, 13);
@@ -566,7 +567,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label10.Location = new System.Drawing.Point(209, 0);
+            this.label10.Location = new System.Drawing.Point(273, 0);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 13);
@@ -579,7 +580,7 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label11.Location = new System.Drawing.Point(4, 0);
+            this.label11.Location = new System.Drawing.Point(25, 0);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(148, 13);
@@ -591,7 +592,7 @@
             // 
             this.dayOfWeek.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dayOfWeek.AutoSize = true;
-            this.dayOfWeek.Location = new System.Drawing.Point(522, 25);
+            this.dayOfWeek.Location = new System.Drawing.Point(673, 25);
             this.dayOfWeek.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dayOfWeek.Name = "dayOfWeek";
             this.dayOfWeek.Size = new System.Drawing.Size(65, 17);
@@ -603,7 +604,7 @@
             // 
             this.time.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.time.AutoSize = true;
-            this.time.Location = new System.Drawing.Point(369, 25);
+            this.time.Location = new System.Drawing.Point(478, 25);
             this.time.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(65, 17);
@@ -615,7 +616,7 @@
             // 
             this.semester.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.semester.AutoSize = true;
-            this.semester.Location = new System.Drawing.Point(200, 25);
+            this.semester.Location = new System.Drawing.Point(263, 25);
             this.semester.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.semester.Name = "semester";
             this.semester.Size = new System.Drawing.Size(65, 17);
@@ -627,7 +628,7 @@
             // 
             this.inUse.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.inUse.AutoSize = true;
-            this.inUse.Location = new System.Drawing.Point(45, 25);
+            this.inUse.Location = new System.Drawing.Point(67, 25);
             this.inUse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.inUse.Name = "inUse";
             this.inUse.Size = new System.Drawing.Size(65, 17);
@@ -1013,14 +1014,14 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(847, 78);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1007, 78);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
             this.pictureBox1.Image = global::Final_Project.Properties.Resources.ilutzon;
-            this.pictureBox1.Location = new System.Drawing.Point(651, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(811, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(194, 74);
@@ -1038,7 +1039,7 @@
             this.label19.Location = new System.Drawing.Point(2, 0);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(611, 78);
+            this.label19.Size = new System.Drawing.Size(727, 78);
             this.label19.TabIndex = 1;
             this.label19.Text = "עריכת בלוק";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1052,8 +1053,8 @@
             this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.05042F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.94958F));
             this.tableLayoutPanel5.Controls.Add(this.shabat_txt, 2, 1);
             this.tableLayoutPanel5.Controls.Add(this.friday_txt, 2, 2);
             this.tableLayoutPanel5.Controls.Add(this.simul_txt, 2, 3);
@@ -1089,13 +1090,13 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(342, 273);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(510, 273);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // shabat_txt
             // 
             this.shabat_txt.AutoSize = true;
-            this.shabat_txt.Location = new System.Drawing.Point(151, 35);
+            this.shabat_txt.Location = new System.Drawing.Point(349, 35);
             this.shabat_txt.Name = "shabat_txt";
             this.shabat_txt.Size = new System.Drawing.Size(0, 13);
             this.shabat_txt.TabIndex = 0;
@@ -1103,7 +1104,7 @@
             // friday_txt
             // 
             this.friday_txt.AutoSize = true;
-            this.friday_txt.Location = new System.Drawing.Point(151, 69);
+            this.friday_txt.Location = new System.Drawing.Point(349, 69);
             this.friday_txt.Name = "friday_txt";
             this.friday_txt.Size = new System.Drawing.Size(0, 13);
             this.friday_txt.TabIndex = 0;
@@ -1111,7 +1112,7 @@
             // simul_txt
             // 
             this.simul_txt.AutoSize = true;
-            this.simul_txt.Location = new System.Drawing.Point(151, 103);
+            this.simul_txt.Location = new System.Drawing.Point(349, 103);
             this.simul_txt.Name = "simul_txt";
             this.simul_txt.Size = new System.Drawing.Size(0, 13);
             this.simul_txt.TabIndex = 0;
@@ -1119,7 +1120,7 @@
             // overlap_txt
             // 
             this.overlap_txt.AutoSize = true;
-            this.overlap_txt.Location = new System.Drawing.Point(151, 137);
+            this.overlap_txt.Location = new System.Drawing.Point(349, 137);
             this.overlap_txt.Name = "overlap_txt";
             this.overlap_txt.Size = new System.Drawing.Size(0, 13);
             this.overlap_txt.TabIndex = 0;
@@ -1127,7 +1128,7 @@
             // cap_txt
             // 
             this.cap_txt.AutoSize = true;
-            this.cap_txt.Location = new System.Drawing.Point(151, 171);
+            this.cap_txt.Location = new System.Drawing.Point(349, 171);
             this.cap_txt.Name = "cap_txt";
             this.cap_txt.Size = new System.Drawing.Size(0, 13);
             this.cap_txt.TabIndex = 0;
@@ -1135,7 +1136,7 @@
             // movem_txt
             // 
             this.movem_txt.AutoSize = true;
-            this.movem_txt.Location = new System.Drawing.Point(151, 205);
+            this.movem_txt.Location = new System.Drawing.Point(349, 205);
             this.movem_txt.Name = "movem_txt";
             this.movem_txt.Size = new System.Drawing.Size(0, 13);
             this.movem_txt.TabIndex = 0;
@@ -1143,7 +1144,7 @@
             // spacing_txt
             // 
             this.spacing_txt.AutoSize = true;
-            this.spacing_txt.Location = new System.Drawing.Point(151, 239);
+            this.spacing_txt.Location = new System.Drawing.Point(349, 239);
             this.spacing_txt.Name = "spacing_txt";
             this.spacing_txt.Size = new System.Drawing.Size(0, 13);
             this.spacing_txt.TabIndex = 0;
@@ -1151,70 +1152,77 @@
             // shabat_st_ico
             // 
             this.shabat_st_ico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.shabat_st_ico.Location = new System.Drawing.Point(312, 38);
+            this.shabat_st_ico.Image = ((System.Drawing.Image)(resources.GetObject("shabat_st_ico.Image")));
+            this.shabat_st_ico.Location = new System.Drawing.Point(480, 38);
             this.shabat_st_ico.Name = "shabat_st_ico";
             this.shabat_st_ico.Size = new System.Drawing.Size(26, 27);
-            this.shabat_st_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.shabat_st_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.shabat_st_ico.TabIndex = 1;
             this.shabat_st_ico.TabStop = false;
             // 
             // friday_stat_ico
             // 
             this.friday_stat_ico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.friday_stat_ico.Location = new System.Drawing.Point(312, 72);
+            this.friday_stat_ico.Image = ((System.Drawing.Image)(resources.GetObject("friday_stat_ico.Image")));
+            this.friday_stat_ico.Location = new System.Drawing.Point(480, 72);
             this.friday_stat_ico.Name = "friday_stat_ico";
             this.friday_stat_ico.Size = new System.Drawing.Size(26, 27);
-            this.friday_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.friday_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.friday_stat_ico.TabIndex = 1;
             this.friday_stat_ico.TabStop = false;
             // 
             // simul_stat_ico
             // 
             this.simul_stat_ico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simul_stat_ico.Location = new System.Drawing.Point(312, 106);
+            this.simul_stat_ico.Image = ((System.Drawing.Image)(resources.GetObject("simul_stat_ico.Image")));
+            this.simul_stat_ico.Location = new System.Drawing.Point(480, 106);
             this.simul_stat_ico.Name = "simul_stat_ico";
             this.simul_stat_ico.Size = new System.Drawing.Size(26, 27);
-            this.simul_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.simul_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.simul_stat_ico.TabIndex = 1;
             this.simul_stat_ico.TabStop = false;
             // 
             // overlap_stat_ico
             // 
             this.overlap_stat_ico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.overlap_stat_ico.Location = new System.Drawing.Point(312, 140);
+            this.overlap_stat_ico.Image = ((System.Drawing.Image)(resources.GetObject("overlap_stat_ico.Image")));
+            this.overlap_stat_ico.Location = new System.Drawing.Point(480, 140);
             this.overlap_stat_ico.Name = "overlap_stat_ico";
             this.overlap_stat_ico.Size = new System.Drawing.Size(26, 27);
-            this.overlap_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.overlap_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.overlap_stat_ico.TabIndex = 1;
             this.overlap_stat_ico.TabStop = false;
             // 
             // cap_stat_ico
             // 
             this.cap_stat_ico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cap_stat_ico.Location = new System.Drawing.Point(312, 174);
+            this.cap_stat_ico.Image = ((System.Drawing.Image)(resources.GetObject("cap_stat_ico.Image")));
+            this.cap_stat_ico.Location = new System.Drawing.Point(480, 174);
             this.cap_stat_ico.Name = "cap_stat_ico";
             this.cap_stat_ico.Size = new System.Drawing.Size(26, 27);
-            this.cap_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cap_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cap_stat_ico.TabIndex = 1;
             this.cap_stat_ico.TabStop = false;
             // 
             // movem_stat_ico
             // 
             this.movem_stat_ico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.movem_stat_ico.Location = new System.Drawing.Point(312, 208);
+            this.movem_stat_ico.Image = ((System.Drawing.Image)(resources.GetObject("movem_stat_ico.Image")));
+            this.movem_stat_ico.Location = new System.Drawing.Point(480, 208);
             this.movem_stat_ico.Name = "movem_stat_ico";
             this.movem_stat_ico.Size = new System.Drawing.Size(26, 27);
-            this.movem_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.movem_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.movem_stat_ico.TabIndex = 1;
             this.movem_stat_ico.TabStop = false;
             // 
             // spacing_stat_ico
             // 
             this.spacing_stat_ico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spacing_stat_ico.Location = new System.Drawing.Point(312, 242);
+            this.spacing_stat_ico.Image = ((System.Drawing.Image)(resources.GetObject("spacing_stat_ico.Image")));
+            this.spacing_stat_ico.Location = new System.Drawing.Point(480, 242);
             this.spacing_stat_ico.Name = "spacing_stat_ico";
             this.spacing_stat_ico.Size = new System.Drawing.Size(26, 27);
-            this.spacing_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.spacing_stat_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.spacing_stat_ico.TabIndex = 1;
             this.spacing_stat_ico.TabStop = false;
             // 
@@ -1222,9 +1230,9 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(158, 35);
+            this.label20.Location = new System.Drawing.Point(356, 35);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(147, 33);
+            this.label20.Size = new System.Drawing.Size(117, 33);
             this.label20.TabIndex = 0;
             this.label20.Text = "בדיקה - שבת";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1233,9 +1241,9 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Location = new System.Drawing.Point(158, 69);
+            this.label28.Location = new System.Drawing.Point(356, 69);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(147, 33);
+            this.label28.Size = new System.Drawing.Size(117, 33);
             this.label28.TabIndex = 0;
             this.label28.Text = "בדיקה - שישי בשעה מאוחרת";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1244,31 +1252,31 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Location = new System.Drawing.Point(158, 103);
+            this.label29.Location = new System.Drawing.Point(356, 103);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(147, 33);
+            this.label29.Size = new System.Drawing.Size(117, 33);
             this.label29.TabIndex = 0;
-            this.label29.Text = "הקצאה בו זמנית בשתי מקומות";
+            this.label29.Text = "הקצאה למחזור בו זמנית בשתי מקומות";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label30.Location = new System.Drawing.Point(158, 137);
+            this.label30.Location = new System.Drawing.Point(356, 137);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(147, 33);
+            this.label30.Size = new System.Drawing.Size(117, 33);
             this.label30.TabIndex = 0;
-            this.label30.Text = "הקצאה חופפת";
+            this.label30.Text = "הקצאה חופפת בחדר";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Location = new System.Drawing.Point(158, 171);
+            this.label31.Location = new System.Drawing.Point(356, 171);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(147, 33);
+            this.label31.Size = new System.Drawing.Size(117, 33);
             this.label31.TabIndex = 0;
             this.label31.Text = "בדיקת קיבולת";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1277,9 +1285,9 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label32.Location = new System.Drawing.Point(158, 205);
+            this.label32.Location = new System.Drawing.Point(356, 205);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(147, 33);
+            this.label32.Size = new System.Drawing.Size(117, 33);
             this.label32.TabIndex = 0;
             this.label32.Text = "תזוזה בקמפוס";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1288,9 +1296,9 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label33.Location = new System.Drawing.Point(158, 239);
+            this.label33.Location = new System.Drawing.Point(356, 239);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(147, 33);
+            this.label33.Size = new System.Drawing.Size(117, 33);
             this.label33.TabIndex = 0;
             this.label33.Text = "מרווח בין מחזורים";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1299,9 +1307,9 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Location = new System.Drawing.Point(158, 1);
+            this.label21.Location = new System.Drawing.Point(356, 1);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(147, 33);
+            this.label21.Size = new System.Drawing.Size(117, 33);
             this.label21.TabIndex = 0;
             this.label21.Text = "שם בדיקה";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1312,7 +1320,7 @@
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label22.Location = new System.Drawing.Point(4, 1);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(147, 33);
+            this.label22.Size = new System.Drawing.Size(345, 33);
             this.label22.TabIndex = 0;
             this.label22.Text = "הערות";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1322,7 +1330,7 @@
             this.commentsBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.commentsBox.Location = new System.Drawing.Point(3, 16);
             this.commentsBox.Name = "commentsBox";
-            this.commentsBox.Size = new System.Drawing.Size(345, 81);
+            this.commentsBox.Size = new System.Drawing.Size(510, 81);
             this.commentsBox.TabIndex = 4;
             this.commentsBox.Text = "";
             this.commentsBox.Validated += new System.EventHandler(this.commentsBox_Validated);
@@ -1332,7 +1340,7 @@
             this.groupBox6.Controls.Add(this.commentsBox);
             this.groupBox6.Location = new System.Drawing.Point(500, 469);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(351, 100);
+            this.groupBox6.Size = new System.Drawing.Size(516, 100);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "הערות";
@@ -1342,17 +1350,25 @@
             this.groupBox7.Controls.Add(this.tableLayoutPanel5);
             this.groupBox7.Location = new System.Drawing.Point(500, 176);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(348, 292);
+            this.groupBox7.Size = new System.Drawing.Size(516, 292);
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "בדיקת אילוצים";
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(16, 541);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(243, 23);
+            this.progressBar.TabIndex = 7;
             // 
             // BlockEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
-            this.ClientSize = new System.Drawing.Size(857, 576);
+            this.ClientSize = new System.Drawing.Size(1022, 576);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.editBT);
@@ -1510,5 +1526,6 @@
         private System.Windows.Forms.RichTextBox commentsBox;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }

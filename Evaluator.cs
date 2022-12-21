@@ -7,11 +7,10 @@ namespace Final_Project
     static class Evaluator
     {
 
-        private static List<Constraint> constraints = new List<Constraint>();
-
-        private static List<ScheduleBlock> blocksOfMahzor = new List<ScheduleBlock>();
-
         private static ScheduleBlock sb { get; set; }
+
+        private static List<Constraint> constraints = new List<Constraint>();
+        private static List<ScheduleBlock> blocksOfMahzor = new List<ScheduleBlock>();
         private static Dictionary<int, int> RoomFeatures = new Dictionary<int, int>();
 
         public static List<Constraint> evaluate(ScheduleBlock scheduleBlock)
@@ -64,6 +63,7 @@ namespace Final_Project
             if (sb.DayOfWeek == 7)
             {
                 Constraint c = new Constraint(Constraint.Type.Timing_Saturday, sb, null, Constraint.Severity.Error, 90);
+                c.Comment = "לא ניתן לשבץ ביום שבת";
                 constraints.Add(c);
             }
 
@@ -71,6 +71,7 @@ namespace Final_Project
             if (sb.DayOfWeek == 6 && sb.EndTime > 14.3)
             {
                 Constraint c = new Constraint(Constraint.Type.Timing_Friday, sb, null, Constraint.Severity.Error, 90);
+                c.Comment = "לא ניתן לשבץ ביום שישי אחרי השעה 14:30";
                 constraints.Add(c);
             }
 
@@ -102,6 +103,7 @@ namespace Final_Project
                         if (SB_1.DayOfWeek == SB_2.DayOfWeek)
                         {
 
+
                             //Check Time
                             if (SB_1.StartTime >= SB_2.EndTime || SB_1.EndTime <= SB_2.StartTime)
                             {
@@ -117,6 +119,7 @@ namespace Final_Project
                             {
                                 //same class, different places ->Simultaneous
                                 Constraint c = new Constraint(Constraint.Type.Simultaneous, sb, null, Constraint.Severity.Error, 90);
+                                c.Comment = $"מחזור זה משובץ בשני מקומות בו זמנית\n{SB_1.ToText()} & {SB_2.ToText()}";
                                 constraints.Add(c);
 
                             }
@@ -127,6 +130,23 @@ namespace Final_Project
                 }
             }
 
+        }
+
+        private static Boolean isOverlap(ScheduleBlock SB_1, ScheduleBlock SB_2)
+        {
+            Boolean hafifa = false;
+            if (SB_1.Id != SB_2.Id && SB_1.DayOfWeek == SB_2.DayOfWeek)
+            {
+                Boolean before = (SB_2.EndTime < SB_1.StartTime && SB_2.StartTime < SB_1.StartTime);
+                Boolean partialStart = (SB_2.StartTime < SB_1.StartTime && SB_2.EndTime < SB_1.StartTime);
+                Boolean completeHafifa = (SB_2.StartTime >= SB_1.StartTime && SB_2.EndTime <= SB_1.EndTime);
+                Boolean partialEnd = (SB_2.StartTime < SB_1.EndTime && SB_2.EndTime > SB_1.EndTime);
+                Boolean after = (SB_2.StartTime > SB_1.EndTime && SB_2.EndTime > SB_1.EndTime);
+                Boolean across = (SB_2.StartTime < SB_1.StartTime && SB_2.EndTime > SB_1.EndTime);
+
+                hafifa = partialStart || completeHafifa || partialEnd || across;
+            }
+            return hafifa;
         }
 
         private static void location()
@@ -167,62 +187,40 @@ namespace Final_Project
             {
 
                 //only if same day & not same block
-                if (currBlock.DayOfWeek == sb.DayOfWeek && currBlock.Id != sb.Id)
+                if (isOverlap(currBlock, sb))
                 {
-                    //Overlaps?
-                    if((currBlock.StartTime < sb.StartTime && currBlock.EndTime > sb.StartTime) ||
-                        (currBlock.StartTime > sb.StartTime && currBlock.EndTime < sb.EndTime) ||
-                        (currBlock.StartTime > sb.StartTime && currBlock.StartTime < sb.EndTime && currBlock.EndTime > sb.EndTime))
-                    {
-
-                        Constraint c = new Constraint(Constraint.Type.Overlap, sb, null, Constraint.Severity.Error, 90);
-                        constraints.Add(c);
-
-                    }
-
-                    /*
-                    if (currBlock.StartTime < sb.StartTime && currBlock.EndTime > sb.StartTime)
-                    {
-                        Constraint c = new Constraint("ההקצאה חופפת עם הקצאה אחרת", sb, null, Constraint.Type.Error, 90);
-                        constraints.Add(c);
-                    }
-                    else if (currBlock.StartTime > sb.StartTime && currBlock.EndTime < sb.EndTime)
-                    {
-                        Constraint c = new Constraint("ההקצאה חופפת עם הקצאה אחרת", sb, null, Constraint.Type.Error, 90);
-                        constraints.Add(c);
-                    }
-                    else if (currBlock.StartTime > sb.StartTime && currBlock.StartTime < sb.EndTime && currBlock.EndTime > sb.EndTime)
-                    {
-                        Constraint c = new Constraint("ההקצאה חופפת עם הקצאה אחרת", sb, null, Constraint.Type.Error, 90);
-                        constraints.Add(c);
-                    }
-                    */
-                    
-                    //If not, then check for Spacing between Mahzorim
-                    else if (currBlock.EndTime <= sb.StartTime || currBlock.StartTime >= sb.EndTime)
-                    {
-                        Double mervahEnd = Math.Abs(currBlock.EndTime - sb.StartTime);
-                        Double mervahStart = Math.Abs(currBlock.StartTime - sb.EndTime);
-                        Double minMerhav = Math.Min(mervahEnd, mervahStart);
-
-                        ScheduleBlock currBlockOnline = ScheduleBlock.getFromDB(currBlock.Id);
-                        //diferent mahzor
-                        if (currBlockOnline.degreeClass.Id != sb.degreeClass.Id && minMerhav <= 0.15)
-                        {
-                            // ====> Spacing
-                            Constraint c = new Constraint(Constraint.Type.Spacing, sb, null, Constraint.Severity.Warning, 30);
-                            constraints.Add(c);
-                        }
-                    }
-
+                    Constraint c = new Constraint(Constraint.Type.Overlap, sb, null, Constraint.Severity.Error, 90);
+                    c.Comment = $"בחדר זה יש חפיפה בין הקצאות\n{currBlock.ToText()} & {sb.ToText()}";
+                    constraints.Add(c);
 
                 }
 
+                //If not, then check for Spacing between Mahzorim
+                else if (currBlock.EndTime <= sb.StartTime || currBlock.StartTime >= sb.EndTime)
+                {
+                    Double mervahEnd = Math.Abs(currBlock.EndTime - sb.StartTime);
+                    Double mervahStart = Math.Abs(currBlock.StartTime - sb.EndTime);
+                    Double minMerhav = Math.Min(mervahEnd, mervahStart);
+
+                    ScheduleBlock currBlockOnline = ScheduleBlock.getFromDB(currBlock.Id);
+                    //diferent mahzor
+                    if (currBlockOnline.degreeClass.Id != sb.degreeClass.Id && minMerhav <= 0.15)
+                    {
+                        // ====> Spacing
+                        Constraint c = new Constraint(Constraint.Type.Spacing, sb, null, Constraint.Severity.Warning, 30);
+                        c.Comment = $"מרווח הזמן בין מחזורים קטן מ-15 דקות\n{currBlock.ToText()} & {sb.ToText()}";
+                        constraints.Add(c);
+                    }
+                }
 
 
             }
 
+
+
         }
+
+
 
         private static void checkCapacity(int roomCapacity, int numberOfStudents, Features f)
         {
@@ -232,24 +230,28 @@ namespace Final_Project
             {
                 //Constraint c = new Constraint("Exceeded Capacity", sb, f, Constraint.Severity.Error, penalty * 100);
                 Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.Error, penalty * 100);
+                c.Comment = $"קיבולת החדר לא מספיקה";
                 constraints.Add(c);
             }
             else if (penalty > 0.80)
             {
                 //Constraint c = new Constraint("Almost Full Capacity", sb, f, Constraint.Severity.Warning, penalty * 100);
                 Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.Warning, penalty * 100);
+                c.Comment = $"חדר כמעט מלא - {penalty*100}%";
                 constraints.Add(c);
             }
             else if (penalty < 0.40)
             {
                 //Constraint c = new Constraint("Almost Empty", sb, f, Constraint.Severity.Warning, 100 - penalty * 100);
                 Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.Warning, 100 - penalty * 100);
+                c.Comment = $"חדר כמעט ריק - {100 - penalty * 100}%";
                 constraints.Add(c);
             }
             else
             {
                 //Constraint c = new Constraint("Good", sb, f, Constraint.Severity.OK, 100 - penalty * 100);
                 Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.OK, 100 - penalty * 100);
+                c.Comment = $"ניצול מיטבי - {100 - penalty * 100}%";
                 constraints.Add(c);
             }
         }
@@ -265,6 +267,7 @@ namespace Final_Project
                 {
                     //"Campus Movement"
                     Constraint c = new Constraint(Constraint.Type.Movement, sb, null, Constraint.Severity.Error, 90);
+                    c.Comment = $"הקצאה זו גורמת לתזוזה בין קמפוסים שונים";
                     constraints.Add(c);
                 }
                 else
@@ -277,6 +280,7 @@ namespace Final_Project
                         //maybe check also time???
                         //"Same day - Different Buildings"
                         Constraint c = new Constraint(Constraint.Type.Movement, sb, null, Constraint.Severity.Warning, 60);
+                        c.Comment = $"הקצאה זו גורמת לתזוזה בין בניינים שונים";
                         constraints.Add(c);
                     }
                     else
@@ -288,6 +292,7 @@ namespace Final_Project
                             //maybe check also time???
                             //"Same day & Building - Different Rooms"
                             Constraint c = new Constraint(Constraint.Type.Movement, sb, null, Constraint.Severity.Warning, 30);
+                            c.Comment = $"הקצאה זו גורמת לתזוזה בין חדרים שונים";
                             constraints.Add(c);
                         }
 
