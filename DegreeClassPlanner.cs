@@ -116,6 +116,7 @@ namespace Final_Project
             populateTree();
             populateBuildingsTree();
             fillNumbers();
+            minuteCB_SelectedIndexChanged(sender, e);
 
         }
 
