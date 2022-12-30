@@ -242,5 +242,10 @@ namespace Final_Project
             }
 
         }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

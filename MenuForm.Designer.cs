@@ -71,7 +71,7 @@
             this.SchedulerBT.Name = "SchedulerBT";
             this.SchedulerBT.Size = new System.Drawing.Size(704, 103);
             this.SchedulerBT.TabIndex = 1;
-            this.SchedulerBT.Text = "פתח תכנון שבועי";
+            this.SchedulerBT.Text = "מערכת תכנון שבועי";
             this.SchedulerBT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SchedulerBT.UseVisualStyleBackColor = true;
             this.SchedulerBT.Click += new System.EventHandler(this.SchedulerBT_Click);

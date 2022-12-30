@@ -478,6 +478,8 @@
     <None Include="Resources\icons8-waypoint-map-50.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\אנשים מתכננים.jpeg" />
+    <None Include="Resources\תכנון בלוקים.png" />
     <None Include="Resources\background.jpeg" />
     <None Include="Resources\background1.jpeg" />
     <None Include="Resources\black.jpeg" />
