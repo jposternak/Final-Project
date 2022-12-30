@@ -276,5 +276,10 @@ namespace Final_Project
         {
             block.updateComments(commentsBox.Text);
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
