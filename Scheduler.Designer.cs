@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
             this.scheduleBlockDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.scheduleBlockDetailsTableAdapter = new Final_Project.grilDataViewsSetTableAdapters.ScheduleBlockDetailsTableAdapter();
@@ -145,17 +145,17 @@
             // 
             // luz
             // 
-            chartArea2.Name = "ChartArea1";
-            this.luz.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.luz.ChartAreas.Add(chartArea1);
             this.luz.Location = new System.Drawing.Point(-29, 4);
-            this.luz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.luz.Margin = new System.Windows.Forms.Padding(4);
             this.luz.Name = "luz";
             this.luz.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
-            series2.Name = "Series1";
-            series2.YValuesPerPoint = 2;
-            this.luz.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 2;
+            this.luz.Series.Add(series1);
             this.luz.Size = new System.Drawing.Size(1197, 906);
             this.luz.TabIndex = 0;
             this.luz.Text = "chart1";
@@ -165,7 +165,7 @@
             // 
             this.treeRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeRooms.Location = new System.Drawing.Point(4, 76);
-            this.treeRooms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.treeRooms.Margin = new System.Windows.Forms.Padding(4);
             this.treeRooms.Name = "treeRooms";
             this.treeRooms.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.treeRooms.RightToLeftLayout = true;
@@ -178,8 +178,8 @@
             this.campusCB.DataSource = this.campusBindingSource;
             this.campusCB.DisplayMember = "campusName";
             this.campusCB.FormattingEnabled = true;
-            this.campusCB.Location = new System.Drawing.Point(40, 36);
-            this.campusCB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campusCB.Location = new System.Drawing.Point(40, 41);
+            this.campusCB.Margin = new System.Windows.Forms.Padding(4);
             this.campusCB.Name = "campusCB";
             this.campusCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.campusCB.Size = new System.Drawing.Size(240, 29);
@@ -192,7 +192,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1624, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 818);
             this.flowLayoutPanel1.TabIndex = 7;
@@ -209,14 +209,14 @@
             this.blockItraTable.AutoGenerateColumns = false;
             this.blockItraTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.blockItraTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rubik SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.blockItraTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rubik SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.blockItraTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.blockItraTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.blockItraTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.degreeClassIDDataGridViewTextBoxColumn,
@@ -230,7 +230,7 @@
             this.blockItraTable.DataSource = this.degreeClassPlanExecBindingSource;
             this.blockItraTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.blockItraTable.Location = new System.Drawing.Point(4, 67);
-            this.blockItraTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.blockItraTable.Margin = new System.Windows.Forms.Padding(4);
             this.blockItraTable.MultiSelect = false;
             this.blockItraTable.Name = "blockItraTable";
             this.blockItraTable.ReadOnly = true;
@@ -316,9 +316,9 @@
             // 
             this.itraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.itraDataGridViewTextBoxColumn.DataPropertyName = "itra";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itraDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itraDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.itraDataGridViewTextBoxColumn.FillWeight = 6F;
             this.itraDataGridViewTextBoxColumn.HeaderText = "יתרה";
             this.itraDataGridViewTextBoxColumn.MinimumWidth = 20;
@@ -407,7 +407,7 @@
             this.semesterCB.DisplayMember = "SemesterFullName";
             this.semesterCB.FormattingEnabled = true;
             this.semesterCB.Location = new System.Drawing.Point(40, 4);
-            this.semesterCB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.semesterCB.Margin = new System.Windows.Forms.Padding(4);
             this.semesterCB.Name = "semesterCB";
             this.semesterCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.semesterCB.Size = new System.Drawing.Size(240, 29);
@@ -418,10 +418,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(287, 32);
+            this.label1.Location = new System.Drawing.Point(287, 37);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(111, 36);
+            this.label1.Size = new System.Drawing.Size(111, 37);
             this.label1.TabIndex = 6;
             this.label1.Text = "בחירת קמפוס";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -433,7 +433,7 @@
             this.label2.Location = new System.Drawing.Point(287, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(111, 32);
+            this.label2.Size = new System.Drawing.Size(111, 37);
             this.label2.TabIndex = 7;
             this.label2.Text = "בחירת סמסטר";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -475,7 +475,7 @@
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(4, 4);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBox1.Size = new System.Drawing.Size(379, 29);
@@ -484,7 +484,7 @@
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
+            this.tableLayoutPanel5.BackgroundImage = global::Final_Project.Properties.Resources.background;
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.45098F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.54902F));
@@ -496,7 +496,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 97F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1599, 97);
             this.tableLayoutPanel5.TabIndex = 9;
             // 
@@ -568,7 +568,7 @@
             this.ClientSize = new System.Drawing.Size(1624, 818);
             this.Controls.Add(this.tableLayoutPanel7);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Scheduler";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
