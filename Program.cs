@@ -12,11 +12,20 @@ namespace Final_Project
         static void Main()
         {
 
-    
-               Application.EnableVisualStyles();
-               Application.SetCompatibleTextRenderingDefault(false);
-               Application.Run(new MenuForm());
- 
+
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new MenuForm());
+
+            }
+            catch (Exception)
+            {
+
+                
+            }
+
 
             
             /*

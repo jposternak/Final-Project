@@ -40,7 +40,7 @@ namespace Final_Project
 
         }
 
-        private ScheduleBlock(int Id, int DayOfWeek, TimeSpan StartTime)
+        public ScheduleBlock(int Id, int DayOfWeek, TimeSpan StartTime)
         {
             this.Id = Id;
             this.DayOfWeek = DayOfWeek;
@@ -56,6 +56,14 @@ namespace Final_Project
             this.EndTime = EndTimeT.Hours + EndTimeT.Minutes / 100.0;
         }
 
+        public void setStartTime(TimeSpan StartTime, int numberOfBlocks)
+        {
+            this.StartTimeT = StartTime;
+            this.StartTime = StartTimeT.Hours + StartTimeT.Minutes / 100.0;
+            this.EndTimeT = StartTimeT.Add(TimeSpan.FromMinutes(45* numberOfBlocks));
+            this.EndTime = EndTimeT.Hours + EndTimeT.Minutes / 100.0;
+        }
+
         //done
         public static void insertNew(int day, DateTime startTime, int roomID, int DegreeClassID, int semesterID)
         {
@@ -66,21 +74,24 @@ namespace Final_Project
         //done
         public void changeProperties(int dayOfWeek, DateTime startTime, int roomID, int dcID, int semesterID)
         {
+
+            this.DayOfWeek = dayOfWeek;
+
+            TimeSpan ts = new TimeSpan();
+            ts += TimeSpan.FromMinutes(startTime.Minute);
+            ts += TimeSpan.FromHours(startTime.Hour);
+            this.setStartTime(ts);
+
+            this.room = Room.GetRoom(roomID);
+            this.degreeClass = DegreeClass.getFromDatabase(dcID);
+            this.semester = Semester.getFromDatabase(semesterID);
+
             if (!this.isOffline)
             {
-                this.DayOfWeek = dayOfWeek;
-
-                TimeSpan ts = new TimeSpan();
-                ts += TimeSpan.FromMinutes(startTime.Minute);
-                ts += TimeSpan.FromHours(startTime.Hour);
-                this.setStartTime(ts);
-
-                this.room = Room.GetRoom(roomID);
-                this.degreeClass = DegreeClass.getFromDatabase(dcID);
-                this.semester = Semester.getFromDatabase(semesterID);
 
                 this.uploadChanges();
             }
+
         }
 
         public void updateComments(String comments)

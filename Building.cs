@@ -18,12 +18,30 @@ namespace Final_Project
         public Campus Campus { get; private set; }
 
         private static BuildingTableAdapter adapter = new BuildingTableAdapter();
+        private static RoomTableAdapter roomAdapter = new RoomTableAdapter();
 
         private Building(int id, string name, Campus campus)
         {
             this.Id = id;
             this.Name = name;
             this.Campus = campus;
+        }
+
+        public static List<Room> getBuildingRooms(int buildingID)
+        {
+            List<Room> rooms = new List<Room>();
+            DataRowCollection rows = roomAdapter.GetDataByBuilding(buildingID).Rows;
+            if (rows.Count != 0)
+            {
+                for (int i = 0; i < rows.Count; i++)
+                {
+                    int roomId = (int)rows[i][0];
+                    Room r = Room.GetRoom(roomId);
+                    rooms.Add(r);
+                }
+            }
+
+            return rooms;
         }
 
 

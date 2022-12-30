@@ -124,11 +124,13 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.searchBT = new System.Windows.Forms.Button();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grilDataSet = new Final_Project.grilDataSet();
             this.roomTableAdapter = new Final_Project.grilDataSetTableAdapters.RoomTableAdapter();
             this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
             this.degreeClassPlanExec3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.saveDraft = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -777,6 +779,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.saveDraft);
+            this.tabPage2.Controls.Add(this.searchBT);
             this.tabPage2.Controls.Add(this.selected_building);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.treeBuildings);
@@ -1456,6 +1460,16 @@
             this.label19.Text = "תכנון הקצאות למחזור לימודים";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // searchBT
+            // 
+            this.searchBT.Location = new System.Drawing.Point(17, 488);
+            this.searchBT.Name = "searchBT";
+            this.searchBT.Size = new System.Drawing.Size(85, 23);
+            this.searchBT.TabIndex = 8;
+            this.searchBT.Text = "חפש מיקום";
+            this.searchBT.UseVisualStyleBackColor = true;
+            this.searchBT.Click += new System.EventHandler(this.searchBT_Click);
+            // 
             // roomBindingSource
             // 
             this.roomBindingSource.DataMember = "Room";
@@ -1479,6 +1493,16 @@
             // 
             this.degreeClassPlanExec3BindingSource.DataMember = "DegreeClassPlanExec3";
             this.degreeClassPlanExec3BindingSource.DataSource = this.grilDataViewsSet;
+            // 
+            // saveDraft
+            // 
+            this.saveDraft.Location = new System.Drawing.Point(109, 529);
+            this.saveDraft.Name = "saveDraft";
+            this.saveDraft.Size = new System.Drawing.Size(75, 46);
+            this.saveDraft.TabIndex = 9;
+            this.saveDraft.Text = "שמור טיוטה";
+            this.saveDraft.UseVisualStyleBackColor = true;
+            this.saveDraft.Click += new System.EventHandler(this.saveDraft_Click);
             // 
             // DegreeClassPlanner
             // 
@@ -1644,5 +1668,7 @@
         private System.Windows.Forms.Label selected_building;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TreeView treeBuildings;
+        private System.Windows.Forms.Button searchBT;
+        private System.Windows.Forms.Button saveDraft;
     }
 }
