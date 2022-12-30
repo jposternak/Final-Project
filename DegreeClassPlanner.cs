@@ -79,7 +79,6 @@ namespace Final_Project
             if (luz.Series.FindByName(seriesName) == null)
             {
                 luz.Series.Add(seriesName);
-
                 luz.Series[seriesName].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
                 luz.Series[seriesName].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
                 luz.Series[seriesName].YValuesPerPoint = 2;
@@ -183,8 +182,6 @@ namespace Final_Project
 
         }
 
-
-
         private void add_Click(object sender, EventArgs e)
         {
             int weekday = int.Parse(dayCB.Text);
@@ -280,11 +277,8 @@ namespace Final_Project
 
         }
 
-        private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
+        #region automatic planner
         private void matrix_ValueChanged(object sender, EventArgs e)
         {
             updatePlannerMatrix();
@@ -376,5 +370,45 @@ namespace Final_Project
             }
 
         }
+
+
+        /*
+        private void plotGraph()
+        {
+            try
+            {
+                List<ScheduleBlock> sb = ScheduleBlock.getListbyMahzorSemester(this.dc.Id, this.semester.Id);
+                luz.Series.Clear();
+                dataPoints.Clear();
+                formatChart(dc.Name);
+
+                String mahzor = dc.Name;
+                createSerie(mahzor);
+
+                for (int i = 1; i < 7; i++)
+                {
+                    int p = luz.Series[mahzor].Points.AddXY(i, 7.59, 7.591);
+                    dataPoints.Add(p, null);
+                    luz.Series[mahzor].Points[p].Color = Color.Transparent;
+                    luz.Series[mahzor].Points[p].BorderColor = Color.Transparent;
+                    luz.Series[mahzor].Points[p].BorderWidth = 3;
+                }
+
+                foreach (ScheduleBlock block in sb)
+                {
+                    int p = luz.Series[mahzor].Points.AddXY(block.DayOfWeek, block.StartTime, block.EndTime);
+                    dataPoints.Add(p, block);
+                    luz.Series[mahzor].Points[p].BorderColor = Color.Black;
+                    luz.Series[mahzor].Points[p].BorderWidth = 3;
+                    luz.Series[mahzor].Points[p].Label = block.RoomAndTime();
+
+                }
+            }
+            catch (Exception ex1) { }
+        }
+        */
+
+        #endregion
     }
+
 }
