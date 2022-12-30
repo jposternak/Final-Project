@@ -76,22 +76,38 @@
             this.roomLB = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.sun_evening = new System.Windows.Forms.NumericUpDown();
+            this.sun_morning = new System.Windows.Forms.NumericUpDown();
+            this.sun = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.mon = new System.Windows.Forms.Label();
+            this.tue = new System.Windows.Forms.Label();
+            this.wed = new System.Windows.Forms.Label();
+            this.thu = new System.Windows.Forms.Label();
+            this.fri = new System.Windows.Forms.Label();
+            this.sat = new System.Windows.Forms.Label();
+            this.mon_morning = new System.Windows.Forms.NumericUpDown();
+            this.tue_morning = new System.Windows.Forms.NumericUpDown();
+            this.wed_morning = new System.Windows.Forms.NumericUpDown();
+            this.thu_morning = new System.Windows.Forms.NumericUpDown();
+            this.fri_morning = new System.Windows.Forms.NumericUpDown();
+            this.sat_morning = new System.Windows.Forms.NumericUpDown();
+            this.mon_evening = new System.Windows.Forms.NumericUpDown();
+            this.tue_evening = new System.Windows.Forms.NumericUpDown();
+            this.wed_evening = new System.Windows.Forms.NumericUpDown();
+            this.thu_evening = new System.Windows.Forms.NumericUpDown();
+            this.fri_evening = new System.Windows.Forms.NumericUpDown();
+            this.sat_evening = new System.Windows.Forms.NumericUpDown();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.luz = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -116,8 +132,20 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sun_evening)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sun_morning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mon_morning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tue_morning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wed_morning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thu_morning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fri_morning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sat_morning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mon_evening)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tue_evening)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wed_evening)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thu_evening)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fri_evening)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sat_evening)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.luz)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -311,7 +339,7 @@
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.splitContainer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.splitContainer1.Size = new System.Drawing.Size(1118, 638);
-            this.splitContainer1.SplitterDistance = 372;
+            this.splitContainer1.SplitterDistance = 385;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -324,7 +352,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeftLayout = true;
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(372, 638);
+            this.tabControl1.Size = new System.Drawing.Size(385, 638);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -336,7 +364,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(364, 612);
+            this.tabPage1.Size = new System.Drawing.Size(377, 612);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "הקצאה ידנית";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -740,281 +768,472 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(364, 612);
+            this.tabPage2.Size = new System.Drawing.Size(377, 612);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "הקצאה חכמה";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.4F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.6F));
-            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 1, 5);
-            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel9, 1, 3);
-            this.tableLayoutPanel7.Controls.Add(this.label17, 0, 5);
-            this.tableLayoutPanel7.Controls.Add(this.comboBox5, 1, 4);
-            this.tableLayoutPanel7.Controls.Add(this.label18, 0, 4);
-            this.tableLayoutPanel7.Controls.Add(this.label20, 0, 3);
-            this.tableLayoutPanel7.Controls.Add(this.label21, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.comboBox6, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.label22, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label23, 1, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel7.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel7.ColumnCount = 4;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.48688F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.53061F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.44898F));
+            this.tableLayoutPanel7.Controls.Add(this.sun_evening, 2, 1);
+            this.tableLayoutPanel7.Controls.Add(this.sun_morning, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.sun, 3, 1);
+            this.tableLayoutPanel7.Controls.Add(this.label16, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.label17, 0, 2);
+            this.tableLayoutPanel7.Controls.Add(this.label18, 0, 3);
+            this.tableLayoutPanel7.Controls.Add(this.label20, 0, 4);
+            this.tableLayoutPanel7.Controls.Add(this.label21, 0, 5);
+            this.tableLayoutPanel7.Controls.Add(this.label22, 0, 6);
+            this.tableLayoutPanel7.Controls.Add(this.label23, 0, 7);
+            this.tableLayoutPanel7.Controls.Add(this.label24, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.mon, 3, 2);
+            this.tableLayoutPanel7.Controls.Add(this.tue, 3, 3);
+            this.tableLayoutPanel7.Controls.Add(this.wed, 3, 4);
+            this.tableLayoutPanel7.Controls.Add(this.thu, 3, 5);
+            this.tableLayoutPanel7.Controls.Add(this.fri, 3, 6);
+            this.tableLayoutPanel7.Controls.Add(this.sat, 3, 7);
+            this.tableLayoutPanel7.Controls.Add(this.mon_morning, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.tue_morning, 1, 3);
+            this.tableLayoutPanel7.Controls.Add(this.wed_morning, 1, 4);
+            this.tableLayoutPanel7.Controls.Add(this.thu_morning, 1, 5);
+            this.tableLayoutPanel7.Controls.Add(this.fri_morning, 1, 6);
+            this.tableLayoutPanel7.Controls.Add(this.sat_morning, 1, 7);
+            this.tableLayoutPanel7.Controls.Add(this.mon_evening, 2, 2);
+            this.tableLayoutPanel7.Controls.Add(this.tue_evening, 2, 3);
+            this.tableLayoutPanel7.Controls.Add(this.wed_evening, 2, 4);
+            this.tableLayoutPanel7.Controls.Add(this.thu_evening, 2, 5);
+            this.tableLayoutPanel7.Controls.Add(this.fri_evening, 2, 6);
+            this.tableLayoutPanel7.Controls.Add(this.sat_evening, 2, 7);
+            this.tableLayoutPanel7.Controls.Add(this.label31, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label32, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label33, 3, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(18, 20);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 6;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(352, 188);
-            this.tableLayoutPanel7.TabIndex = 6;
+            this.tableLayoutPanel7.RowCount = 8;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(343, 225);
+            this.tableLayoutPanel7.TabIndex = 1;
             // 
-            // tableLayoutPanel8
+            // sun_evening
             // 
-            this.tableLayoutPanel8.ColumnCount = 3;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel8.Controls.Add(this.comboBox1, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.comboBox2, 2, 0);
-            this.tableLayoutPanel8.Controls.Add(this.label6, 1, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 158);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(232, 27);
-            this.tableLayoutPanel8.TabIndex = 10;
+            this.sun_evening.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sun_evening.Location = new System.Drawing.Point(82, 32);
+            this.sun_evening.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.sun_evening.Name = "sun_evening";
+            this.sun_evening.Size = new System.Drawing.Size(83, 20);
+            this.sun_evening.TabIndex = 0;
+            this.sun_evening.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sun_evening.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
             // 
-            // comboBox1
+            // sun_morning
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "00",
-            "15",
-            "30",
-            "45"});
-            this.comboBox1.Location = new System.Drawing.Point(131, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(98, 21);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.Text = "45";
+            this.sun_morning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sun_morning.Location = new System.Drawing.Point(172, 32);
+            this.sun_morning.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.sun_morning.Name = "sun_morning";
+            this.sun_morning.Size = new System.Drawing.Size(99, 20);
+            this.sun_morning.TabIndex = 0;
+            this.sun_morning.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sun_morning.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
             // 
-            // comboBox2
+            // sun
             // 
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23"});
-            this.comboBox2.Location = new System.Drawing.Point(3, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(99, 21);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.Text = "08";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label6.Location = new System.Drawing.Point(108, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 27);
-            this.label6.TabIndex = 8;
-            this.label6.Text = ":";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 3;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel9.Controls.Add(this.comboBox3, 2, 0);
-            this.tableLayoutPanel9.Controls.Add(this.label16, 1, 0);
-            this.tableLayoutPanel9.Controls.Add(this.comboBox4, 0, 0);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 96);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 1;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(232, 25);
-            this.tableLayoutPanel9.TabIndex = 9;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22"});
-            this.comboBox3.Location = new System.Drawing.Point(3, 3);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(99, 21);
-            this.comboBox3.TabIndex = 7;
-            this.comboBox3.Text = "08";
+            this.sun.AutoSize = true;
+            this.sun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sun.Location = new System.Drawing.Point(4, 29);
+            this.sun.Name = "sun";
+            this.sun.Size = new System.Drawing.Size(71, 27);
+            this.sun.TabIndex = 1;
+            this.sun.Text = "0";
+            this.sun.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label16.Location = new System.Drawing.Point(108, 0);
+            this.label16.Location = new System.Drawing.Point(278, 29);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(17, 25);
-            this.label16.TabIndex = 8;
-            this.label16.Text = ":";
+            this.label16.Size = new System.Drawing.Size(61, 27);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "ראשון";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "00",
-            "15",
-            "30",
-            "45"});
-            this.comboBox4.Location = new System.Drawing.Point(131, 3);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(98, 21);
-            this.comboBox4.TabIndex = 7;
-            this.comboBox4.Text = "00";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(241, 155);
+            this.label17.Location = new System.Drawing.Point(278, 57);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(108, 33);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "שעת סיום";
+            this.label17.Size = new System.Drawing.Size(61, 27);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "שני";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.comboBox5.Location = new System.Drawing.Point(3, 127);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(232, 21);
-            this.comboBox5.TabIndex = 7;
-            this.comboBox5.Text = "1";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Location = new System.Drawing.Point(241, 124);
+            this.label18.Location = new System.Drawing.Point(278, 85);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(108, 31);
-            this.label18.TabIndex = 6;
-            this.label18.Text = "כמות בלוקים";
+            this.label18.Size = new System.Drawing.Size(61, 27);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "שלישי";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(241, 93);
+            this.label20.Location = new System.Drawing.Point(278, 113);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(108, 31);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "שעת תחילה";
+            this.label20.Size = new System.Drawing.Size(61, 27);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "רביעי";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Location = new System.Drawing.Point(241, 31);
+            this.label21.Location = new System.Drawing.Point(278, 141);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(108, 31);
-            this.label21.TabIndex = 6;
-            this.label21.Text = "יום בשבוע";
+            this.label21.Size = new System.Drawing.Size(61, 27);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "חמישי";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.comboBox6.Location = new System.Drawing.Point(2, 33);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(234, 21);
-            this.comboBox6.TabIndex = 1;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(322, 0);
+            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label22.Location = new System.Drawing.Point(278, 169);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(27, 13);
-            this.label22.TabIndex = 6;
-            this.label22.Text = "חדר";
+            this.label22.Size = new System.Drawing.Size(61, 27);
+            this.label22.TabIndex = 1;
+            this.label22.Text = "שישי";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(208, 0);
+            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label23.Location = new System.Drawing.Point(278, 197);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(27, 13);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "חדר";
+            this.label23.Size = new System.Drawing.Size(61, 27);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "שבת";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label24.Location = new System.Drawing.Point(278, 1);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(61, 27);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "יום בשבוע";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // mon
+            // 
+            this.mon.AutoSize = true;
+            this.mon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mon.Location = new System.Drawing.Point(4, 57);
+            this.mon.Name = "mon";
+            this.mon.Size = new System.Drawing.Size(71, 27);
+            this.mon.TabIndex = 1;
+            this.mon.Text = "0";
+            this.mon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tue
+            // 
+            this.tue.AutoSize = true;
+            this.tue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tue.Location = new System.Drawing.Point(4, 85);
+            this.tue.Name = "tue";
+            this.tue.Size = new System.Drawing.Size(71, 27);
+            this.tue.TabIndex = 1;
+            this.tue.Text = "0";
+            this.tue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // wed
+            // 
+            this.wed.AutoSize = true;
+            this.wed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wed.Location = new System.Drawing.Point(4, 113);
+            this.wed.Name = "wed";
+            this.wed.Size = new System.Drawing.Size(71, 27);
+            this.wed.TabIndex = 1;
+            this.wed.Text = "0";
+            this.wed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // thu
+            // 
+            this.thu.AutoSize = true;
+            this.thu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thu.Location = new System.Drawing.Point(4, 141);
+            this.thu.Name = "thu";
+            this.thu.Size = new System.Drawing.Size(71, 27);
+            this.thu.TabIndex = 1;
+            this.thu.Text = "0";
+            this.thu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // fri
+            // 
+            this.fri.AutoSize = true;
+            this.fri.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fri.Location = new System.Drawing.Point(4, 169);
+            this.fri.Name = "fri";
+            this.fri.Size = new System.Drawing.Size(71, 27);
+            this.fri.TabIndex = 1;
+            this.fri.Text = "0";
+            this.fri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sat
+            // 
+            this.sat.AutoSize = true;
+            this.sat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sat.Location = new System.Drawing.Point(4, 197);
+            this.sat.Name = "sat";
+            this.sat.Size = new System.Drawing.Size(71, 27);
+            this.sat.TabIndex = 1;
+            this.sat.Text = "0";
+            this.sat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // mon_morning
+            // 
+            this.mon_morning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mon_morning.Location = new System.Drawing.Point(172, 60);
+            this.mon_morning.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.mon_morning.Name = "mon_morning";
+            this.mon_morning.Size = new System.Drawing.Size(99, 20);
+            this.mon_morning.TabIndex = 0;
+            this.mon_morning.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mon_morning.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // tue_morning
+            // 
+            this.tue_morning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tue_morning.Location = new System.Drawing.Point(172, 88);
+            this.tue_morning.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.tue_morning.Name = "tue_morning";
+            this.tue_morning.Size = new System.Drawing.Size(99, 20);
+            this.tue_morning.TabIndex = 0;
+            this.tue_morning.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tue_morning.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // wed_morning
+            // 
+            this.wed_morning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wed_morning.Location = new System.Drawing.Point(172, 116);
+            this.wed_morning.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.wed_morning.Name = "wed_morning";
+            this.wed_morning.Size = new System.Drawing.Size(99, 20);
+            this.wed_morning.TabIndex = 0;
+            this.wed_morning.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.wed_morning.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // thu_morning
+            // 
+            this.thu_morning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thu_morning.Location = new System.Drawing.Point(172, 144);
+            this.thu_morning.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.thu_morning.Name = "thu_morning";
+            this.thu_morning.Size = new System.Drawing.Size(99, 20);
+            this.thu_morning.TabIndex = 0;
+            this.thu_morning.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.thu_morning.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // fri_morning
+            // 
+            this.fri_morning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fri_morning.Location = new System.Drawing.Point(172, 172);
+            this.fri_morning.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.fri_morning.Name = "fri_morning";
+            this.fri_morning.Size = new System.Drawing.Size(99, 20);
+            this.fri_morning.TabIndex = 0;
+            this.fri_morning.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.fri_morning.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // sat_morning
+            // 
+            this.sat_morning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sat_morning.Location = new System.Drawing.Point(172, 200);
+            this.sat_morning.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.sat_morning.Name = "sat_morning";
+            this.sat_morning.Size = new System.Drawing.Size(99, 20);
+            this.sat_morning.TabIndex = 0;
+            this.sat_morning.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sat_morning.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // mon_evening
+            // 
+            this.mon_evening.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mon_evening.Location = new System.Drawing.Point(82, 60);
+            this.mon_evening.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.mon_evening.Name = "mon_evening";
+            this.mon_evening.Size = new System.Drawing.Size(83, 20);
+            this.mon_evening.TabIndex = 0;
+            this.mon_evening.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mon_evening.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // tue_evening
+            // 
+            this.tue_evening.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tue_evening.Location = new System.Drawing.Point(82, 88);
+            this.tue_evening.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.tue_evening.Name = "tue_evening";
+            this.tue_evening.Size = new System.Drawing.Size(83, 20);
+            this.tue_evening.TabIndex = 0;
+            this.tue_evening.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tue_evening.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // wed_evening
+            // 
+            this.wed_evening.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wed_evening.Location = new System.Drawing.Point(82, 116);
+            this.wed_evening.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.wed_evening.Name = "wed_evening";
+            this.wed_evening.Size = new System.Drawing.Size(83, 20);
+            this.wed_evening.TabIndex = 0;
+            this.wed_evening.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.wed_evening.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // thu_evening
+            // 
+            this.thu_evening.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thu_evening.Location = new System.Drawing.Point(82, 144);
+            this.thu_evening.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.thu_evening.Name = "thu_evening";
+            this.thu_evening.Size = new System.Drawing.Size(83, 20);
+            this.thu_evening.TabIndex = 0;
+            this.thu_evening.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.thu_evening.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // fri_evening
+            // 
+            this.fri_evening.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fri_evening.Location = new System.Drawing.Point(82, 172);
+            this.fri_evening.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.fri_evening.Name = "fri_evening";
+            this.fri_evening.Size = new System.Drawing.Size(83, 20);
+            this.fri_evening.TabIndex = 0;
+            this.fri_evening.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.fri_evening.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // sat_evening
+            // 
+            this.sat_evening.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sat_evening.Location = new System.Drawing.Point(82, 200);
+            this.sat_evening.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.sat_evening.Name = "sat_evening";
+            this.sat_evening.Size = new System.Drawing.Size(83, 20);
+            this.sat_evening.TabIndex = 0;
+            this.sat_evening.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sat_evening.ValueChanged += new System.EventHandler(this.matrix_ValueChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label31.Location = new System.Drawing.Point(172, 1);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(99, 27);
+            this.label31.TabIndex = 1;
+            this.label31.Text = "סך שעות בוקר (08:00-15:30)";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label32.Location = new System.Drawing.Point(82, 1);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(83, 27);
+            this.label32.TabIndex = 1;
+            this.label32.Text = "סך שעות ערב (16:00-23:30)";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label33.Location = new System.Drawing.Point(4, 1);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(71, 27);
+            this.label33.TabIndex = 1;
+            this.label33.Text = "סך שעות ביום";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // luz
             // 
@@ -1136,10 +1355,20 @@
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sun_evening)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sun_morning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mon_morning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tue_morning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wed_morning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thu_morning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fri_morning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sat_morning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mon_evening)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tue_evening)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wed_evening)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thu_evening)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fri_evening)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sat_evening)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.luz)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -1207,21 +1436,37 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.NumericUpDown sun_evening;
+        private System.Windows.Forms.NumericUpDown sun_morning;
+        private System.Windows.Forms.Label sun;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label mon;
+        private System.Windows.Forms.Label tue;
+        private System.Windows.Forms.Label wed;
+        private System.Windows.Forms.Label thu;
+        private System.Windows.Forms.Label fri;
+        private System.Windows.Forms.Label sat;
+        private System.Windows.Forms.NumericUpDown mon_morning;
+        private System.Windows.Forms.NumericUpDown tue_morning;
+        private System.Windows.Forms.NumericUpDown wed_morning;
+        private System.Windows.Forms.NumericUpDown thu_morning;
+        private System.Windows.Forms.NumericUpDown fri_morning;
+        private System.Windows.Forms.NumericUpDown sat_morning;
+        private System.Windows.Forms.NumericUpDown mon_evening;
+        private System.Windows.Forms.NumericUpDown tue_evening;
+        private System.Windows.Forms.NumericUpDown wed_evening;
+        private System.Windows.Forms.NumericUpDown thu_evening;
+        private System.Windows.Forms.NumericUpDown fri_evening;
+        private System.Windows.Forms.NumericUpDown sat_evening;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
     }
 }

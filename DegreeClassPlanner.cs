@@ -275,5 +275,40 @@ namespace Final_Project
             
 
         }
+
+        private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void matrix_ValueChanged(object sender, EventArgs e)
+        {
+            updatePlannerMatrix();
+        }
+
+        private void updatePlannerMatrix()
+        {
+            //sun
+            sun.Text = (sun_morning.Value + sun_evening.Value).ToString();
+
+
+            //mon
+            mon.Text = (mon_morning.Value + mon_evening.Value).ToString();
+
+            //tue
+            tue.Text = (tue_morning.Value + tue_evening.Value).ToString();
+
+            //wed
+            wed.Text = (wed_morning.Value + wed_evening.Value).ToString();
+
+            //thu
+            thu.Text = (thu_morning.Value + thu_evening.Value).ToString();
+
+            //fri
+            fri.Text = (fri_morning.Value + fri_evening.Value).ToString();
+
+            //sat
+            sat.Text = (sat_morning.Value + sat_evening.Value).ToString();
+        }
     }
 }
