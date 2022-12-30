@@ -57,6 +57,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DBMaintain));
             this.buildingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grilDataSet = new Final_Project.grilDataSet();
@@ -221,7 +230,6 @@
             this.roomsCampusCB = new System.Windows.Forms.ComboBox();
             this.CampusPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.newCampusBT = new System.Windows.Forms.Button();
             this.dataGridBuilding = new System.Windows.Forms.DataGridView();
             this.buildingIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buildingNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -229,6 +237,7 @@
             this.dataGridCampus = new System.Windows.Forms.DataGridView();
             this.campusIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.campusNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.newCampusBT = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.facultyTableAdapter = new Final_Project.grilDataSetTableAdapters.FacultyTableAdapter();
             this.degreeTableAdapter = new Final_Project.grilDataSetTableAdapters.DegreeTableAdapter();
@@ -299,92 +308,92 @@
             // degreeClassIDLabel
             // 
             degreeClassIDLabel.AutoSize = true;
-            degreeClassIDLabel.Location = new System.Drawing.Point(204, 0);
-            degreeClassIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            degreeClassIDLabel.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            degreeClassIDLabel.Location = new System.Drawing.Point(284, 0);
             degreeClassIDLabel.Name = "degreeClassIDLabel";
-            degreeClassIDLabel.Size = new System.Drawing.Size(91, 20);
+            degreeClassIDLabel.Size = new System.Drawing.Size(109, 25);
             degreeClassIDLabel.TabIndex = 0;
-            degreeClassIDLabel.Text = "מזהה מחזור:";
+            degreeClassIDLabel.Text = "מזהה מחזור";
             // 
             // degreeClassNameLabel
             // 
             degreeClassNameLabel.AutoSize = true;
-            degreeClassNameLabel.Location = new System.Drawing.Point(218, 34);
-            degreeClassNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            degreeClassNameLabel.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            degreeClassNameLabel.Location = new System.Drawing.Point(302, 42);
             degreeClassNameLabel.Name = "degreeClassNameLabel";
-            degreeClassNameLabel.Size = new System.Drawing.Size(77, 20);
+            degreeClassNameLabel.Size = new System.Drawing.Size(91, 25);
             degreeClassNameLabel.TabIndex = 2;
-            degreeClassNameLabel.Text = "שם מחזור:";
+            degreeClassNameLabel.Text = "שם מחזור";
             // 
             // degreeIDLabel
             // 
             degreeIDLabel.AutoSize = true;
-            degreeIDLabel.Location = new System.Drawing.Point(246, 68);
-            degreeIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            degreeIDLabel.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            degreeIDLabel.Location = new System.Drawing.Point(336, 84);
             degreeIDLabel.Name = "degreeIDLabel";
-            degreeIDLabel.Size = new System.Drawing.Size(49, 20);
+            degreeIDLabel.Size = new System.Drawing.Size(57, 25);
             degreeIDLabel.TabIndex = 4;
-            degreeIDLabel.Text = "מגמה:";
+            degreeIDLabel.Text = "מגמה";
             // 
             // numberOfStudentsLabel
             // 
             numberOfStudentsLabel.AutoSize = true;
-            numberOfStudentsLabel.Location = new System.Drawing.Point(179, 102);
-            numberOfStudentsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            numberOfStudentsLabel.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            numberOfStudentsLabel.Location = new System.Drawing.Point(249, 126);
             numberOfStudentsLabel.Name = "numberOfStudentsLabel";
-            numberOfStudentsLabel.Size = new System.Drawing.Size(116, 20);
+            numberOfStudentsLabel.Size = new System.Drawing.Size(144, 25);
             numberOfStudentsLabel.TabIndex = 6;
-            numberOfStudentsLabel.Text = "מספר סטודנטים:";
+            numberOfStudentsLabel.Text = "מספר סטודנטים";
             // 
             // startingSemesterLabel
             // 
             startingSemesterLabel.AutoSize = true;
-            startingSemesterLabel.Location = new System.Drawing.Point(184, 136);
-            startingSemesterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            startingSemesterLabel.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            startingSemesterLabel.Location = new System.Drawing.Point(255, 168);
             startingSemesterLabel.Name = "startingSemesterLabel";
-            startingSemesterLabel.Size = new System.Drawing.Size(111, 20);
+            startingSemesterLabel.Size = new System.Drawing.Size(138, 25);
             startingSemesterLabel.TabIndex = 8;
-            startingSemesterLabel.Text = "סמסטר התחלה:";
+            startingSemesterLabel.Text = "סמסטר התחלה";
             // 
             // durationLabel
             // 
             durationLabel.AutoSize = true;
-            durationLabel.Location = new System.Drawing.Point(212, 170);
-            durationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            durationLabel.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            durationLabel.Location = new System.Drawing.Point(256, 210);
             durationLabel.Name = "durationLabel";
-            durationLabel.Size = new System.Drawing.Size(83, 34);
+            durationLabel.Size = new System.Drawing.Size(137, 25);
             durationLabel.TabIndex = 10;
-            durationLabel.Text = "אורך בסמסטרים:";
+            durationLabel.Text = "כמות סמסטרים";
             // 
             // summerLabel
             // 
             summerLabel.AutoSize = true;
-            summerLabel.Location = new System.Drawing.Point(207, 204);
-            summerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            summerLabel.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            summerLabel.Location = new System.Drawing.Point(289, 252);
             summerLabel.Name = "summerLabel";
-            summerLabel.Size = new System.Drawing.Size(88, 34);
+            summerLabel.Size = new System.Drawing.Size(104, 25);
             summerLabel.TabIndex = 12;
-            summerLabel.Text = "האם לומדים בקיץ:";
+            summerLabel.Text = "לימודי קיץ?";
             // 
             // weeklyHoursLabel
             // 
             weeklyHoursLabel.AutoSize = true;
-            weeklyHoursLabel.Location = new System.Drawing.Point(213, 238);
-            weeklyHoursLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            weeklyHoursLabel.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            weeklyHoursLabel.Location = new System.Drawing.Point(267, 294);
             weeklyHoursLabel.Name = "weeklyHoursLabel";
-            weeklyHoursLabel.Size = new System.Drawing.Size(82, 34);
+            weeklyHoursLabel.Size = new System.Drawing.Size(126, 25);
             weeklyHoursLabel.TabIndex = 14;
-            weeklyHoursLabel.Text = "כמות שעות שבועיות";
+            weeklyHoursLabel.Text = "שעות שבועיות";
             // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new System.Drawing.Point(205, 272);
-            label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label19.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label19.Location = new System.Drawing.Point(332, 336);
             label19.Name = "label19";
-            label19.Size = new System.Drawing.Size(90, 25);
+            label19.Size = new System.Drawing.Size(61, 25);
             label19.TabIndex = 14;
-            label19.Text = "האם המחזור פעיל:";
+            label19.Text = "פעיל?";
             // 
             // buildingBindingSource
             // 
@@ -438,13 +447,16 @@
             // 
             // BackToMenuBT
             // 
-            this.BackToMenuBT.Location = new System.Drawing.Point(873, 9);
-            this.BackToMenuBT.Margin = new System.Windows.Forms.Padding(2);
+            this.BackToMenuBT.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackToMenuBT.BackgroundImage = global::Final_Project.Properties.Resources.blue;
+            this.BackToMenuBT.Font = new System.Drawing.Font("Rubik Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.BackToMenuBT.Location = new System.Drawing.Point(1108, 11);
+            this.BackToMenuBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BackToMenuBT.Name = "BackToMenuBT";
-            this.BackToMenuBT.Size = new System.Drawing.Size(56, 46);
+            this.BackToMenuBT.Size = new System.Drawing.Size(131, 57);
             this.BackToMenuBT.TabIndex = 1;
             this.BackToMenuBT.Text = "חזרה לתפריט";
-            this.BackToMenuBT.UseVisualStyleBackColor = true;
+            this.BackToMenuBT.UseVisualStyleBackColor = false;
             this.BackToMenuBT.Click += new System.EventHandler(this.BackToMenuBT_Click);
             // 
             // fKCampusBindingSource
@@ -509,11 +521,11 @@
             this.DegreeClassPage.AutoScroll = true;
             this.DegreeClassPage.Controls.Add(this.groupBox4);
             this.DegreeClassPage.Controls.Add(this.groupBox3);
-            this.DegreeClassPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.DegreeClassPage.Location = new System.Drawing.Point(4, 29);
-            this.DegreeClassPage.Margin = new System.Windows.Forms.Padding(2);
+            this.DegreeClassPage.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DegreeClassPage.Location = new System.Drawing.Point(4, 34);
+            this.DegreeClassPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DegreeClassPage.Name = "DegreeClassPage";
-            this.DegreeClassPage.Size = new System.Drawing.Size(912, 493);
+            this.DegreeClassPage.Size = new System.Drawing.Size(1219, 609);
             this.DegreeClassPage.TabIndex = 7;
             this.DegreeClassPage.Text = "מחזורי לימודים";
             this.DegreeClassPage.UseVisualStyleBackColor = true;
@@ -525,11 +537,11 @@
             this.groupBox4.Controls.Add(this.saveClassBT);
             this.groupBox4.Controls.Add(this.editClassBT);
             this.groupBox4.Controls.Add(this.newClassBT);
-            this.groupBox4.Location = new System.Drawing.Point(14, 16);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Location = new System.Drawing.Point(19, 20);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(309, 419);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(412, 582);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "פרטי המחזור";
@@ -558,8 +570,8 @@
             this.tableLayoutPanel1.Controls.Add(numberOfStudentsLabel, 0, 3);
             this.tableLayoutPanel1.Controls.Add(label19, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.isActive, 1, 8);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 35);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 43);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -570,8 +582,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(297, 297);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(396, 366);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
             // classMegamaCB
@@ -579,11 +591,12 @@
             this.classMegamaCB.DataSource = this.degreeBindingSource1;
             this.classMegamaCB.DisplayMember = "DegreeName";
             this.classMegamaCB.Enabled = false;
+            this.classMegamaCB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classMegamaCB.FormattingEnabled = true;
-            this.classMegamaCB.Location = new System.Drawing.Point(2, 70);
-            this.classMegamaCB.Margin = new System.Windows.Forms.Padding(2);
+            this.classMegamaCB.Location = new System.Drawing.Point(3, 86);
+            this.classMegamaCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.classMegamaCB.Name = "classMegamaCB";
-            this.classMegamaCB.Size = new System.Drawing.Size(171, 28);
+            this.classMegamaCB.Size = new System.Drawing.Size(227, 33);
             this.classMegamaCB.TabIndex = 17;
             // 
             // degreeBindingSource1
@@ -594,37 +607,40 @@
             // degreeClassIDTextBox
             // 
             this.degreeClassIDTextBox.Enabled = false;
-            this.degreeClassIDTextBox.Location = new System.Drawing.Point(2, 2);
-            this.degreeClassIDTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.degreeClassIDTextBox.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.degreeClassIDTextBox.Location = new System.Drawing.Point(3, 2);
+            this.degreeClassIDTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.degreeClassIDTextBox.Name = "degreeClassIDTextBox";
-            this.degreeClassIDTextBox.Size = new System.Drawing.Size(171, 26);
+            this.degreeClassIDTextBox.Size = new System.Drawing.Size(227, 31);
             this.degreeClassIDTextBox.TabIndex = 1;
             // 
             // degreeClassNameTextBox
             // 
             this.degreeClassNameTextBox.Enabled = false;
-            this.degreeClassNameTextBox.Location = new System.Drawing.Point(2, 36);
-            this.degreeClassNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.degreeClassNameTextBox.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.degreeClassNameTextBox.Location = new System.Drawing.Point(3, 44);
+            this.degreeClassNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.degreeClassNameTextBox.Name = "degreeClassNameTextBox";
-            this.degreeClassNameTextBox.Size = new System.Drawing.Size(171, 26);
+            this.degreeClassNameTextBox.Size = new System.Drawing.Size(227, 31);
             this.degreeClassNameTextBox.TabIndex = 3;
             // 
             // weeklyHoursNumericUpDown
             // 
             this.weeklyHoursNumericUpDown.Enabled = false;
-            this.weeklyHoursNumericUpDown.Location = new System.Drawing.Point(2, 240);
-            this.weeklyHoursNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
+            this.weeklyHoursNumericUpDown.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weeklyHoursNumericUpDown.Location = new System.Drawing.Point(3, 296);
+            this.weeklyHoursNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.weeklyHoursNumericUpDown.Name = "weeklyHoursNumericUpDown";
-            this.weeklyHoursNumericUpDown.Size = new System.Drawing.Size(171, 26);
+            this.weeklyHoursNumericUpDown.Size = new System.Drawing.Size(227, 31);
             this.weeklyHoursNumericUpDown.TabIndex = 15;
             // 
             // summerCheckBox
             // 
             this.summerCheckBox.Enabled = false;
-            this.summerCheckBox.Location = new System.Drawing.Point(86, 206);
-            this.summerCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.summerCheckBox.Location = new System.Drawing.Point(114, 254);
+            this.summerCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.summerCheckBox.Name = "summerCheckBox";
-            this.summerCheckBox.Size = new System.Drawing.Size(87, 20);
+            this.summerCheckBox.Size = new System.Drawing.Size(116, 25);
             this.summerCheckBox.TabIndex = 13;
             this.summerCheckBox.Text = "לא";
             this.summerCheckBox.UseVisualStyleBackColor = true;
@@ -633,10 +649,11 @@
             // durationNumericUpDown
             // 
             this.durationNumericUpDown.Enabled = false;
-            this.durationNumericUpDown.Location = new System.Drawing.Point(2, 172);
-            this.durationNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
+            this.durationNumericUpDown.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.durationNumericUpDown.Location = new System.Drawing.Point(3, 212);
+            this.durationNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.durationNumericUpDown.Name = "durationNumericUpDown";
-            this.durationNumericUpDown.Size = new System.Drawing.Size(171, 26);
+            this.durationNumericUpDown.Size = new System.Drawing.Size(227, 31);
             this.durationNumericUpDown.TabIndex = 11;
             // 
             // startingSemesterComboBox
@@ -644,51 +661,56 @@
             this.startingSemesterComboBox.DataSource = this.semesterBindingSource;
             this.startingSemesterComboBox.DisplayMember = "SemesterFullName";
             this.startingSemesterComboBox.Enabled = false;
+            this.startingSemesterComboBox.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startingSemesterComboBox.FormattingEnabled = true;
-            this.startingSemesterComboBox.Location = new System.Drawing.Point(2, 138);
-            this.startingSemesterComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.startingSemesterComboBox.Location = new System.Drawing.Point(3, 170);
+            this.startingSemesterComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startingSemesterComboBox.Name = "startingSemesterComboBox";
-            this.startingSemesterComboBox.Size = new System.Drawing.Size(171, 28);
+            this.startingSemesterComboBox.Size = new System.Drawing.Size(227, 33);
             this.startingSemesterComboBox.TabIndex = 9;
             // 
             // numberOfStudentsNumericUpDown
             // 
             this.numberOfStudentsNumericUpDown.Enabled = false;
-            this.numberOfStudentsNumericUpDown.Location = new System.Drawing.Point(2, 104);
-            this.numberOfStudentsNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
+            this.numberOfStudentsNumericUpDown.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberOfStudentsNumericUpDown.Location = new System.Drawing.Point(3, 128);
+            this.numberOfStudentsNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numberOfStudentsNumericUpDown.Name = "numberOfStudentsNumericUpDown";
-            this.numberOfStudentsNumericUpDown.Size = new System.Drawing.Size(171, 26);
+            this.numberOfStudentsNumericUpDown.Size = new System.Drawing.Size(227, 31);
             this.numberOfStudentsNumericUpDown.TabIndex = 7;
             // 
             // isActive
             // 
             this.isActive.Enabled = false;
-            this.isActive.Location = new System.Drawing.Point(86, 274);
-            this.isActive.Margin = new System.Windows.Forms.Padding(2);
+            this.isActive.Location = new System.Drawing.Point(114, 338);
+            this.isActive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.isActive.Name = "isActive";
-            this.isActive.Size = new System.Drawing.Size(87, 20);
+            this.isActive.Size = new System.Drawing.Size(116, 25);
             this.isActive.TabIndex = 13;
-            this.isActive.Text = "לא";
             this.isActive.UseVisualStyleBackColor = true;
             this.isActive.CheckedChanged += new System.EventHandler(this.summerCheckBox_CheckedChanged);
             // 
             // delClassBT
             // 
-            this.delClassBT.Location = new System.Drawing.Point(12, 350);
-            this.delClassBT.Margin = new System.Windows.Forms.Padding(2);
+            this.delClassBT.BackColor = System.Drawing.Color.IndianRed;
+            this.delClassBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delClassBT.Location = new System.Drawing.Point(11, 514);
+            this.delClassBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.delClassBT.Name = "delClassBT";
-            this.delClassBT.Size = new System.Drawing.Size(65, 40);
+            this.delClassBT.Size = new System.Drawing.Size(87, 49);
             this.delClassBT.TabIndex = 16;
             this.delClassBT.Text = "מחק";
-            this.delClassBT.UseVisualStyleBackColor = true;
+            this.delClassBT.UseVisualStyleBackColor = false;
             this.delClassBT.Click += new System.EventHandler(this.delClassBT_Click);
             // 
             // saveClassBT
             // 
-            this.saveClassBT.Location = new System.Drawing.Point(81, 350);
-            this.saveClassBT.Margin = new System.Windows.Forms.Padding(2);
+            this.saveClassBT.BackgroundImage = global::Final_Project.Properties.Resources.blue;
+            this.saveClassBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveClassBT.Location = new System.Drawing.Point(11, 425);
+            this.saveClassBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveClassBT.Name = "saveClassBT";
-            this.saveClassBT.Size = new System.Drawing.Size(65, 40);
+            this.saveClassBT.Size = new System.Drawing.Size(87, 49);
             this.saveClassBT.TabIndex = 16;
             this.saveClassBT.Text = "שמור";
             this.saveClassBT.UseVisualStyleBackColor = true;
@@ -696,10 +718,11 @@
             // 
             // editClassBT
             // 
-            this.editClassBT.Location = new System.Drawing.Point(150, 350);
-            this.editClassBT.Margin = new System.Windows.Forms.Padding(2);
+            this.editClassBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editClassBT.Location = new System.Drawing.Point(104, 425);
+            this.editClassBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editClassBT.Name = "editClassBT";
-            this.editClassBT.Size = new System.Drawing.Size(65, 40);
+            this.editClassBT.Size = new System.Drawing.Size(87, 49);
             this.editClassBT.TabIndex = 16;
             this.editClassBT.Text = "ערוך";
             this.editClassBT.UseVisualStyleBackColor = true;
@@ -707,13 +730,15 @@
             // 
             // newClassBT
             // 
-            this.newClassBT.Location = new System.Drawing.Point(224, 350);
-            this.newClassBT.Margin = new System.Windows.Forms.Padding(2);
+            this.newClassBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.newClassBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newClassBT.Location = new System.Drawing.Point(104, 514);
+            this.newClassBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.newClassBT.Name = "newClassBT";
-            this.newClassBT.Size = new System.Drawing.Size(65, 40);
+            this.newClassBT.Size = new System.Drawing.Size(87, 49);
             this.newClassBT.TabIndex = 16;
             this.newClassBT.Text = "חדש";
-            this.newClassBT.UseVisualStyleBackColor = true;
+            this.newClassBT.UseVisualStyleBackColor = false;
             this.newClassBT.Click += new System.EventHandler(this.newClassBT_Click);
             // 
             // groupBox3
@@ -724,11 +749,11 @@
             this.groupBox3.Controls.Add(this.classFacCB);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Location = new System.Drawing.Point(327, 6);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(436, 7);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(565, 487);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(753, 599);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "מחזורים";
@@ -741,11 +766,11 @@
             this.groupBox5.Controls.Add(this.DCFadd);
             this.groupBox5.Controls.Add(this.FeaturesMenu);
             this.groupBox5.Controls.Add(this.DCFeatures);
-            this.groupBox5.Location = new System.Drawing.Point(10, 258);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Location = new System.Drawing.Point(13, 335);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Size = new System.Drawing.Size(555, 225);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Size = new System.Drawing.Size(740, 260);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "מאפיינים";
@@ -753,43 +778,46 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(447, 27);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(503, 40);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(108, 20);
+            this.label20.Size = new System.Drawing.Size(131, 25);
             this.label20.TabIndex = 3;
             this.label20.Text = "מאפיינים לחדר";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(87, 27);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(54, 40);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(113, 20);
+            this.label21.Size = new System.Drawing.Size(214, 25);
             this.label21.TabIndex = 3;
-            this.label21.Text = "תפריט מאפיינים";
+            this.label21.Text = "תפריט מאפיינים רלוונטים";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // DCFremove
             // 
-            this.DCFremove.Location = new System.Drawing.Point(253, 145);
-            this.DCFremove.Margin = new System.Windows.Forms.Padding(2);
+            this.DCFremove.BackgroundImage = global::Final_Project.Properties.Resources.blue;
+            this.DCFremove.Location = new System.Drawing.Point(337, 178);
+            this.DCFremove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DCFremove.Name = "DCFremove";
-            this.DCFremove.Size = new System.Drawing.Size(44, 32);
+            this.DCFremove.Size = new System.Drawing.Size(59, 39);
             this.DCFremove.TabIndex = 2;
-            this.DCFremove.Text = "-->";
+            this.DCFremove.Text = ">>>";
             this.DCFremove.UseVisualStyleBackColor = true;
             this.DCFremove.Click += new System.EventHandler(this.DCFremove_Click);
             // 
             // DCFadd
             // 
             this.DCFadd.AllowDrop = true;
-            this.DCFadd.Location = new System.Drawing.Point(253, 94);
-            this.DCFadd.Margin = new System.Windows.Forms.Padding(2);
+            this.DCFadd.BackgroundImage = global::Final_Project.Properties.Resources.blue;
+            this.DCFadd.Location = new System.Drawing.Point(337, 116);
+            this.DCFadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DCFadd.Name = "DCFadd";
-            this.DCFadd.Size = new System.Drawing.Size(44, 32);
+            this.DCFadd.Size = new System.Drawing.Size(59, 39);
             this.DCFadd.TabIndex = 2;
-            this.DCFadd.Text = "<--";
+            this.DCFadd.Text = "<<<";
             this.DCFadd.UseVisualStyleBackColor = true;
             this.DCFadd.Click += new System.EventHandler(this.DCFadd_Click);
             // 
@@ -800,7 +828,7 @@
             this.FeaturesMenu.AutoGenerateColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -814,20 +842,20 @@
             this.FeaturesMenu.DataSource = this.featuresBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.FeaturesMenu.DefaultCellStyle = dataGridViewCellStyle2;
-            this.FeaturesMenu.Location = new System.Drawing.Point(4, 46);
-            this.FeaturesMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.FeaturesMenu.Location = new System.Drawing.Point(5, 74);
+            this.FeaturesMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FeaturesMenu.MultiSelect = false;
             this.FeaturesMenu.Name = "FeaturesMenu";
             this.FeaturesMenu.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -839,7 +867,7 @@
             this.FeaturesMenu.ShowCellToolTips = false;
             this.FeaturesMenu.ShowEditingIcon = false;
             this.FeaturesMenu.ShowRowErrors = false;
-            this.FeaturesMenu.Size = new System.Drawing.Size(236, 171);
+            this.FeaturesMenu.Size = new System.Drawing.Size(315, 193);
             this.FeaturesMenu.TabIndex = 1;
             this.FeaturesMenu.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.FeaturesMenu_RowEnter);
             // 
@@ -857,21 +885,22 @@
             // 
             // dataGridViewTextBoxColumn3
             // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "FeatureName";
             this.dataGridViewTextBoxColumn3.HeaderText = "שם מאפיין";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewCheckBoxColumn2
             // 
+            this.dataGridViewCheckBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewCheckBoxColumn2.DataPropertyName = "QualifierReq";
             this.dataGridViewCheckBoxColumn2.HeaderText = "דורש ערך?";
             this.dataGridViewCheckBoxColumn2.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             this.dataGridViewCheckBoxColumn2.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn2.Width = 125;
+            this.dataGridViewCheckBoxColumn2.Width = 111;
             // 
             // DCFeatures
             // 
@@ -880,7 +909,7 @@
             this.DCFeatures.AutoGenerateColumns = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -894,18 +923,18 @@
             this.DCFeatures.DataSource = this.dCFeaturesBindingSource;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DCFeatures.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DCFeatures.Location = new System.Drawing.Point(305, 46);
-            this.DCFeatures.Margin = new System.Windows.Forms.Padding(2);
+            this.DCFeatures.Location = new System.Drawing.Point(407, 74);
+            this.DCFeatures.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DCFeatures.Name = "DCFeatures";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -917,7 +946,7 @@
             this.DCFeatures.ShowCellToolTips = false;
             this.DCFeatures.ShowEditingIcon = false;
             this.DCFeatures.ShowRowErrors = false;
-            this.DCFeatures.Size = new System.Drawing.Size(250, 171);
+            this.DCFeatures.Size = new System.Drawing.Size(333, 193);
             this.DCFeatures.TabIndex = 0;
             this.DCFeatures.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.DCFeatures_CellValidated);
             this.DCFeatures.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DCFeatures_RowEnter);
@@ -934,20 +963,21 @@
             // 
             // dataGridViewTextBoxColumn7
             // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "FeatureName";
             this.dataGridViewTextBoxColumn7.HeaderText = "שם מאפיין";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 125;
             // 
             // dataGridViewTextBoxColumn8
             // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Qualifier";
             this.dataGridViewTextBoxColumn8.HeaderText = "ערך מאפיין";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
+            this.dataGridViewTextBoxColumn8.Width = 131;
             // 
             // dCFeaturesBindingSource
             // 
@@ -973,8 +1003,8 @@
             this.summerDataGridViewCheckBoxColumn,
             this.weeklyHoursDataGridViewTextBoxColumn});
             this.classDegGrid.DataSource = this.degreeClassBindingSource;
-            this.classDegGrid.Location = new System.Drawing.Point(10, 62);
-            this.classDegGrid.Margin = new System.Windows.Forms.Padding(2);
+            this.classDegGrid.Location = new System.Drawing.Point(79, 78);
+            this.classDegGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.classDegGrid.Name = "classDegGrid";
             this.classDegGrid.ReadOnly = true;
             this.classDegGrid.RowHeadersWidth = 51;
@@ -983,36 +1013,39 @@
             this.classDegGrid.ShowCellToolTips = false;
             this.classDegGrid.ShowEditingIcon = false;
             this.classDegGrid.ShowRowErrors = false;
-            this.classDegGrid.Size = new System.Drawing.Size(496, 192);
+            this.classDegGrid.Size = new System.Drawing.Size(661, 236);
             this.classDegGrid.TabIndex = 2;
             this.classDegGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.classDegGrid_RowEnter);
             // 
             // dataGridViewCheckBoxColumn1
             // 
+            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "IsActive";
             this.dataGridViewCheckBoxColumn1.FalseValue = "";
             this.dataGridViewCheckBoxColumn1.HeaderText = "פעיל";
+            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.TrueValue = "";
+            this.dataGridViewCheckBoxColumn1.Width = 58;
             // 
             // hebrewYearDataGridViewTextBoxColumn1
             // 
+            this.hebrewYearDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.hebrewYearDataGridViewTextBoxColumn1.DataPropertyName = "HebrewYear";
             this.hebrewYearDataGridViewTextBoxColumn1.HeaderText = "שנה";
             this.hebrewYearDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.hebrewYearDataGridViewTextBoxColumn1.Name = "hebrewYearDataGridViewTextBoxColumn1";
             this.hebrewYearDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.hebrewYearDataGridViewTextBoxColumn1.Width = 125;
             // 
             // semesterTypeDataGridViewTextBoxColumn1
             // 
+            this.semesterTypeDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.semesterTypeDataGridViewTextBoxColumn1.DataPropertyName = "SemesterType";
             this.semesterTypeDataGridViewTextBoxColumn1.HeaderText = "סוג סמסטר";
             this.semesterTypeDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.semesterTypeDataGridViewTextBoxColumn1.Name = "semesterTypeDataGridViewTextBoxColumn1";
             this.semesterTypeDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.semesterTypeDataGridViewTextBoxColumn1.Width = 125;
             // 
             // degreeClassIDDataGridViewTextBoxColumn
             // 
@@ -1102,11 +1135,12 @@
             // 
             this.classDegCB.DataSource = this.degreeBindingSource;
             this.classDegCB.DisplayMember = "DegreeName";
+            this.classDegCB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classDegCB.FormattingEnabled = true;
-            this.classDegCB.Location = new System.Drawing.Point(10, 20);
-            this.classDegCB.Margin = new System.Windows.Forms.Padding(2);
+            this.classDegCB.Location = new System.Drawing.Point(79, 34);
+            this.classDegCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.classDegCB.Name = "classDegCB";
-            this.classDegCB.Size = new System.Drawing.Size(186, 28);
+            this.classDegCB.Size = new System.Drawing.Size(207, 33);
             this.classDegCB.TabIndex = 1;
             this.classDegCB.SelectedIndexChanged += new System.EventHandler(this.classDegCB_SelectedIndexChanged);
             // 
@@ -1119,11 +1153,12 @@
             // 
             this.classFacCB.DataSource = this.facultyBindingSource;
             this.classFacCB.DisplayMember = "FacultyName";
+            this.classFacCB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classFacCB.FormattingEnabled = true;
-            this.classFacCB.Location = new System.Drawing.Point(251, 20);
-            this.classFacCB.Margin = new System.Windows.Forms.Padding(2);
+            this.classFacCB.Location = new System.Drawing.Point(395, 34);
+            this.classFacCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.classFacCB.Name = "classFacCB";
-            this.classFacCB.Size = new System.Drawing.Size(186, 28);
+            this.classFacCB.Size = new System.Drawing.Size(247, 33);
             this.classFacCB.TabIndex = 1;
             this.classFacCB.SelectedIndexChanged += new System.EventHandler(this.classFacCB_SelectedIndexChanged);
             // 
@@ -1135,20 +1170,20 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(205, 24);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(292, 37);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 20);
+            this.label18.Size = new System.Drawing.Size(62, 25);
             this.label18.TabIndex = 0;
             this.label18.Text = "מגמה:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(446, 24);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(648, 37);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(63, 20);
+            this.label17.Size = new System.Drawing.Size(81, 25);
             this.label17.TabIndex = 0;
             this.label17.Text = "פקולטה:";
             // 
@@ -1168,43 +1203,49 @@
             this.FacultyPage.Controls.Add(this.addFacultyBT);
             this.FacultyPage.Controls.Add(this.degreeGrid);
             this.FacultyPage.Controls.Add(this.facultyGrid);
-            this.FacultyPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.FacultyPage.Location = new System.Drawing.Point(4, 29);
-            this.FacultyPage.Margin = new System.Windows.Forms.Padding(2);
+            this.FacultyPage.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.FacultyPage.Location = new System.Drawing.Point(4, 34);
+            this.FacultyPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FacultyPage.Name = "FacultyPage";
-            this.FacultyPage.Size = new System.Drawing.Size(912, 493);
+            this.FacultyPage.Size = new System.Drawing.Size(1219, 609);
             this.FacultyPage.TabIndex = 5;
             this.FacultyPage.Text = "פקולטות ומגמות";
             this.FacultyPage.UseVisualStyleBackColor = true;
             // 
             // delDegBT
             // 
-            this.delDegBT.Location = new System.Drawing.Point(32, 439);
-            this.delDegBT.Margin = new System.Windows.Forms.Padding(2);
+            this.delDegBT.BackColor = System.Drawing.Color.IndianRed;
+            this.delDegBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.delDegBT.Location = new System.Drawing.Point(27, 558);
+            this.delDegBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.delDegBT.Name = "delDegBT";
-            this.delDegBT.Size = new System.Drawing.Size(56, 24);
+            this.delDegBT.Size = new System.Drawing.Size(84, 38);
             this.delDegBT.TabIndex = 11;
             this.delDegBT.Text = "מחק";
-            this.delDegBT.UseVisualStyleBackColor = true;
+            this.delDegBT.UseVisualStyleBackColor = false;
             this.delDegBT.Click += new System.EventHandler(this.delDegBT_Click);
             // 
             // newDegBT
             // 
-            this.newDegBT.Location = new System.Drawing.Point(32, 415);
-            this.newDegBT.Margin = new System.Windows.Forms.Padding(2);
+            this.newDegBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.newDegBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.newDegBT.Location = new System.Drawing.Point(27, 513);
+            this.newDegBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.newDegBT.Name = "newDegBT";
-            this.newDegBT.Size = new System.Drawing.Size(56, 24);
+            this.newDegBT.Size = new System.Drawing.Size(84, 38);
             this.newDegBT.TabIndex = 10;
             this.newDegBT.Text = "חדש";
-            this.newDegBT.UseVisualStyleBackColor = true;
+            this.newDegBT.UseVisualStyleBackColor = false;
             this.newDegBT.Click += new System.EventHandler(this.newDegBT_Click);
             // 
             // saveDegBT
             // 
-            this.saveDegBT.Location = new System.Drawing.Point(101, 439);
-            this.saveDegBT.Margin = new System.Windows.Forms.Padding(2);
+            this.saveDegBT.BackgroundImage = global::Final_Project.Properties.Resources.blue;
+            this.saveDegBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.saveDegBT.Location = new System.Drawing.Point(190, 558);
+            this.saveDegBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveDegBT.Name = "saveDegBT";
-            this.saveDegBT.Size = new System.Drawing.Size(56, 24);
+            this.saveDegBT.Size = new System.Drawing.Size(84, 38);
             this.saveDegBT.TabIndex = 9;
             this.saveDegBT.Text = "שמור";
             this.saveDegBT.UseVisualStyleBackColor = true;
@@ -1212,10 +1253,11 @@
             // 
             // editDegBT
             // 
-            this.editDegBT.Location = new System.Drawing.Point(101, 415);
-            this.editDegBT.Margin = new System.Windows.Forms.Padding(2);
+            this.editDegBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.editDegBT.Location = new System.Drawing.Point(190, 513);
+            this.editDegBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editDegBT.Name = "editDegBT";
-            this.editDegBT.Size = new System.Drawing.Size(56, 24);
+            this.editDegBT.Size = new System.Drawing.Size(84, 38);
             this.editDegBT.TabIndex = 8;
             this.editDegBT.Text = "ערוך";
             this.editDegBT.UseVisualStyleBackColor = true;
@@ -1224,30 +1266,30 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(214, 415);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label16.Location = new System.Drawing.Point(367, 508);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 20);
+            this.label16.Size = new System.Drawing.Size(107, 25);
             this.label16.TabIndex = 7;
             this.label16.Text = "שם פקולטה";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(356, 415);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label15.Location = new System.Drawing.Point(589, 508);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(69, 20);
+            this.label15.Size = new System.Drawing.Size(88, 25);
             this.label15.TabIndex = 7;
             this.label15.Text = "שם מגמה";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(424, 415);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label14.Location = new System.Drawing.Point(709, 508);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(83, 20);
+            this.label14.Size = new System.Drawing.Size(106, 25);
             this.label14.TabIndex = 7;
             this.label14.Text = "מזהה מגמה";
             // 
@@ -1256,53 +1298,60 @@
             this.degFacCB.DataSource = this.facultyBindingSource;
             this.degFacCB.DisplayMember = "FacultyName";
             this.degFacCB.Enabled = false;
+            this.degFacCB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.degFacCB.FormattingEnabled = true;
-            this.degFacCB.Location = new System.Drawing.Point(170, 441);
-            this.degFacCB.Margin = new System.Windows.Forms.Padding(2);
+            this.degFacCB.Location = new System.Drawing.Point(284, 538);
+            this.degFacCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.degFacCB.Name = "degFacCB";
-            this.degFacCB.Size = new System.Drawing.Size(104, 28);
+            this.degFacCB.Size = new System.Drawing.Size(185, 33);
             this.degFacCB.TabIndex = 6;
             // 
             // degNameTB
             // 
             this.degNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeBindingSource, "DegreeName", true));
             this.degNameTB.Enabled = false;
-            this.degNameTB.Location = new System.Drawing.Point(278, 441);
-            this.degNameTB.Margin = new System.Windows.Forms.Padding(2);
+            this.degNameTB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.degNameTB.Location = new System.Drawing.Point(503, 540);
+            this.degNameTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.degNameTB.Name = "degNameTB";
-            this.degNameTB.Size = new System.Drawing.Size(128, 26);
+            this.degNameTB.Size = new System.Drawing.Size(169, 31);
             this.degNameTB.TabIndex = 4;
             // 
             // degIDTB
             // 
             this.degIDTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.degreeBindingSource, "DegreeID", true));
             this.degIDTB.Enabled = false;
-            this.degIDTB.Location = new System.Drawing.Point(409, 441);
-            this.degIDTB.Margin = new System.Windows.Forms.Padding(2);
+            this.degIDTB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.degIDTB.Location = new System.Drawing.Point(709, 539);
+            this.degIDTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.degIDTB.Name = "degIDTB";
-            this.degIDTB.Size = new System.Drawing.Size(76, 26);
+            this.degIDTB.Size = new System.Drawing.Size(100, 31);
             this.degIDTB.TabIndex = 3;
             // 
             // deleteFacultyBT
             // 
-            this.deleteFacultyBT.Location = new System.Drawing.Point(747, 405);
-            this.deleteFacultyBT.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteFacultyBT.BackColor = System.Drawing.Color.IndianRed;
+            this.deleteFacultyBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.deleteFacultyBT.Location = new System.Drawing.Point(970, 498);
+            this.deleteFacultyBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteFacultyBT.Name = "deleteFacultyBT";
-            this.deleteFacultyBT.Size = new System.Drawing.Size(56, 46);
+            this.deleteFacultyBT.Size = new System.Drawing.Size(114, 38);
             this.deleteFacultyBT.TabIndex = 2;
             this.deleteFacultyBT.Text = "מחק פקולטה";
-            this.deleteFacultyBT.UseVisualStyleBackColor = true;
+            this.deleteFacultyBT.UseVisualStyleBackColor = false;
             this.deleteFacultyBT.Click += new System.EventHandler(this.deleteFacultyBT_Click);
             // 
             // addFacultyBT
             // 
-            this.addFacultyBT.Location = new System.Drawing.Point(847, 405);
-            this.addFacultyBT.Margin = new System.Windows.Forms.Padding(2);
+            this.addFacultyBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.addFacultyBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.addFacultyBT.Location = new System.Drawing.Point(1090, 498);
+            this.addFacultyBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addFacultyBT.Name = "addFacultyBT";
-            this.addFacultyBT.Size = new System.Drawing.Size(56, 46);
+            this.addFacultyBT.Size = new System.Drawing.Size(114, 38);
             this.addFacultyBT.TabIndex = 2;
             this.addFacultyBT.Text = "הוסף פקולטה";
-            this.addFacultyBT.UseVisualStyleBackColor = true;
+            this.addFacultyBT.UseVisualStyleBackColor = false;
             this.addFacultyBT.Click += new System.EventHandler(this.addFacultyBT_Click);
             // 
             // degreeGrid
@@ -1310,6 +1359,14 @@
             this.degreeGrid.AllowUserToAddRows = false;
             this.degreeGrid.AllowUserToDeleteRows = false;
             this.degreeGrid.AutoGenerateColumns = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.degreeGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.degreeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.degreeGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.degreeIDDataGridViewTextBoxColumn,
@@ -1317,12 +1374,28 @@
             this.facultyIDDataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn1});
             this.degreeGrid.DataSource = this.degreeBindingSource;
-            this.degreeGrid.Location = new System.Drawing.Point(20, 11);
-            this.degreeGrid.Margin = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.degreeGrid.DefaultCellStyle = dataGridViewCellStyle8;
+            this.degreeGrid.Location = new System.Drawing.Point(27, 14);
+            this.degreeGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.degreeGrid.Name = "degreeGrid";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.degreeGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.degreeGrid.RowHeadersWidth = 51;
             this.degreeGrid.RowTemplate.Height = 24;
-            this.degreeGrid.Size = new System.Drawing.Size(467, 389);
+            this.degreeGrid.Size = new System.Drawing.Size(792, 479);
             this.degreeGrid.TabIndex = 1;
             // 
             // degreeIDDataGridViewTextBoxColumn
@@ -1333,6 +1406,7 @@
             this.degreeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.degreeIDDataGridViewTextBoxColumn.Name = "degreeIDDataGridViewTextBoxColumn";
             this.degreeIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.degreeIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // degreeNameDataGridViewTextBoxColumn
             // 
@@ -1349,6 +1423,7 @@
             this.facultyIDDataGridViewTextBoxColumn1.HeaderText = "מזהה פקולטה";
             this.facultyIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.facultyIDDataGridViewTextBoxColumn1.Name = "facultyIDDataGridViewTextBoxColumn1";
+            this.facultyIDDataGridViewTextBoxColumn1.Visible = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1364,17 +1439,41 @@
             this.facultyGrid.AllowUserToAddRows = false;
             this.facultyGrid.AllowUserToDeleteRows = false;
             this.facultyGrid.AutoGenerateColumns = false;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.facultyGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.facultyGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.facultyGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.facultyIDDataGridViewTextBoxColumn,
             this.FacultyName});
             this.facultyGrid.DataSource = this.facultyBindingSource;
-            this.facultyGrid.Location = new System.Drawing.Point(566, 11);
-            this.facultyGrid.Margin = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.facultyGrid.DefaultCellStyle = dataGridViewCellStyle11;
+            this.facultyGrid.Location = new System.Drawing.Point(837, 14);
+            this.facultyGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.facultyGrid.Name = "facultyGrid";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.facultyGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.facultyGrid.RowHeadersWidth = 51;
             this.facultyGrid.RowTemplate.Height = 24;
-            this.facultyGrid.Size = new System.Drawing.Size(338, 389);
+            this.facultyGrid.Size = new System.Drawing.Size(369, 479);
             this.facultyGrid.TabIndex = 0;
             this.facultyGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.facultyGrid_CellValueChanged);
             this.facultyGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.facultyGrid_RowEnter);
@@ -1388,6 +1487,7 @@
             this.facultyIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.facultyIDDataGridViewTextBoxColumn.Name = "facultyIDDataGridViewTextBoxColumn";
             this.facultyIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.facultyIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // FacultyName
             // 
@@ -1411,11 +1511,11 @@
             this.SemestersPage.Controls.Add(this.semesterTypeCB);
             this.SemestersPage.Controls.Add(this.SemesterYearCB);
             this.SemestersPage.Controls.Add(this.SemesterDataGridView);
-            this.SemestersPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.SemestersPage.Location = new System.Drawing.Point(4, 29);
-            this.SemestersPage.Margin = new System.Windows.Forms.Padding(2);
+            this.SemestersPage.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.SemestersPage.Location = new System.Drawing.Point(4, 34);
+            this.SemestersPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SemestersPage.Name = "SemestersPage";
-            this.SemestersPage.Size = new System.Drawing.Size(912, 493);
+            this.SemestersPage.Size = new System.Drawing.Size(1219, 609);
             this.SemestersPage.TabIndex = 4;
             this.SemestersPage.Text = "סמסטרים";
             this.SemestersPage.UseVisualStyleBackColor = true;
@@ -1423,64 +1523,81 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(289, 372);
+            this.label4.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label4.Location = new System.Drawing.Point(750, 531);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 20);
+            this.label4.Size = new System.Drawing.Size(70, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "ת. סיום";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(414, 372);
+            this.label3.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(733, 461);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.Size = new System.Drawing.Size(87, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "ת. תחילה";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(549, 372);
+            this.label2.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label2.Location = new System.Drawing.Point(980, 460);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 20);
+            this.label2.Size = new System.Drawing.Size(39, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "סוג";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(676, 372);
+            this.label1.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.Location = new System.Drawing.Point(1147, 461);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 20);
+            this.label1.Size = new System.Drawing.Size(46, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "שנה";
             // 
             // deleteSemesterBT
             // 
-            this.deleteSemesterBT.Location = new System.Drawing.Point(8, 394);
+            this.deleteSemesterBT.BackColor = System.Drawing.Color.IndianRed;
+            this.deleteSemesterBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.deleteSemesterBT.Location = new System.Drawing.Point(504, 554);
+            this.deleteSemesterBT.Margin = new System.Windows.Forms.Padding(4);
             this.deleteSemesterBT.Name = "deleteSemesterBT";
-            this.deleteSemesterBT.Size = new System.Drawing.Size(75, 30);
+            this.deleteSemesterBT.Size = new System.Drawing.Size(100, 37);
             this.deleteSemesterBT.TabIndex = 3;
             this.deleteSemesterBT.Text = "מחק";
-            this.deleteSemesterBT.UseVisualStyleBackColor = true;
+            this.deleteSemesterBT.UseVisualStyleBackColor = false;
             this.deleteSemesterBT.Click += new System.EventHandler(this.deleteSemesterBT_Click);
             // 
             // addNewSemesterBT
             // 
-            this.addNewSemesterBT.Location = new System.Drawing.Point(92, 394);
+            this.addNewSemesterBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.addNewSemesterBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.addNewSemesterBT.Location = new System.Drawing.Point(504, 509);
+            this.addNewSemesterBT.Margin = new System.Windows.Forms.Padding(4);
             this.addNewSemesterBT.Name = "addNewSemesterBT";
-            this.addNewSemesterBT.Size = new System.Drawing.Size(75, 30);
+            this.addNewSemesterBT.Size = new System.Drawing.Size(100, 37);
             this.addNewSemesterBT.TabIndex = 3;
             this.addNewSemesterBT.Text = "חדש";
-            this.addNewSemesterBT.UseVisualStyleBackColor = true;
+            this.addNewSemesterBT.UseVisualStyleBackColor = false;
             this.addNewSemesterBT.Click += new System.EventHandler(this.addNewSemesterBT_Click);
             // 
             // saveSemesterBT
             // 
-            this.saveSemesterBT.Location = new System.Drawing.Point(176, 394);
+            this.saveSemesterBT.BackgroundImage = global::Final_Project.Properties.Resources.blue;
+            this.saveSemesterBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.saveSemesterBT.Location = new System.Drawing.Point(504, 464);
+            this.saveSemesterBT.Margin = new System.Windows.Forms.Padding(4);
             this.saveSemesterBT.Name = "saveSemesterBT";
-            this.saveSemesterBT.Size = new System.Drawing.Size(75, 30);
+            this.saveSemesterBT.Size = new System.Drawing.Size(100, 37);
             this.saveSemesterBT.TabIndex = 3;
             this.saveSemesterBT.Text = "שמור";
             this.saveSemesterBT.UseVisualStyleBackColor = true;
@@ -1488,34 +1605,41 @@
             // 
             // enddaSemesterPicker
             // 
+            this.enddaSemesterPicker.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.enddaSemesterPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.enddaSemesterPicker.Location = new System.Drawing.Point(260, 396);
+            this.enddaSemesterPicker.Location = new System.Drawing.Point(637, 560);
+            this.enddaSemesterPicker.Margin = new System.Windows.Forms.Padding(4);
             this.enddaSemesterPicker.Name = "enddaSemesterPicker";
-            this.enddaSemesterPicker.Size = new System.Drawing.Size(118, 26);
+            this.enddaSemesterPicker.Size = new System.Drawing.Size(178, 31);
             this.enddaSemesterPicker.TabIndex = 2;
             // 
             // begdaSemesterPicker
             // 
+            this.begdaSemesterPicker.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.begdaSemesterPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.begdaSemesterPicker.Location = new System.Drawing.Point(387, 396);
+            this.begdaSemesterPicker.Location = new System.Drawing.Point(637, 491);
+            this.begdaSemesterPicker.Margin = new System.Windows.Forms.Padding(4);
             this.begdaSemesterPicker.Name = "begdaSemesterPicker";
-            this.begdaSemesterPicker.Size = new System.Drawing.Size(118, 26);
+            this.begdaSemesterPicker.Size = new System.Drawing.Size(178, 31);
             this.begdaSemesterPicker.TabIndex = 2;
             // 
             // semesterTypeCB
             // 
+            this.semesterTypeCB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.semesterTypeCB.FormattingEnabled = true;
             this.semesterTypeCB.Items.AddRange(new object[] {
             "חורף",
             "אביב",
             "קיץ"});
-            this.semesterTypeCB.Location = new System.Drawing.Point(514, 395);
+            this.semesterTypeCB.Location = new System.Drawing.Point(854, 489);
+            this.semesterTypeCB.Margin = new System.Windows.Forms.Padding(4);
             this.semesterTypeCB.Name = "semesterTypeCB";
-            this.semesterTypeCB.Size = new System.Drawing.Size(121, 28);
+            this.semesterTypeCB.Size = new System.Drawing.Size(160, 33);
             this.semesterTypeCB.TabIndex = 1;
             // 
             // SemesterYearCB
             // 
+            this.SemesterYearCB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.SemesterYearCB.FormattingEnabled = true;
             this.SemesterYearCB.Items.AddRange(new object[] {
             "תשפא",
@@ -1525,9 +1649,10 @@
             "תשפה",
             "תשפו",
             "תשפז"});
-            this.SemesterYearCB.Location = new System.Drawing.Point(644, 395);
+            this.SemesterYearCB.Location = new System.Drawing.Point(1028, 489);
+            this.SemesterYearCB.Margin = new System.Windows.Forms.Padding(4);
             this.SemesterYearCB.Name = "SemesterYearCB";
-            this.SemesterYearCB.Size = new System.Drawing.Size(121, 28);
+            this.SemesterYearCB.Size = new System.Drawing.Size(160, 33);
             this.SemesterYearCB.TabIndex = 1;
             // 
             // SemesterDataGridView
@@ -1535,6 +1660,14 @@
             this.SemesterDataGridView.AllowUserToAddRows = false;
             this.SemesterDataGridView.AllowUserToDeleteRows = false;
             this.SemesterDataGridView.AutoGenerateColumns = false;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SemesterDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.SemesterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SemesterDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.semesterIDDataGridViewTextBoxColumn,
@@ -1543,11 +1676,12 @@
             this.startDateDataGridViewTextBoxColumn,
             this.endDateDataGridViewTextBoxColumn});
             this.SemesterDataGridView.DataSource = this.semesterBindingSource;
-            this.SemesterDataGridView.Location = new System.Drawing.Point(8, 3);
+            this.SemesterDataGridView.Location = new System.Drawing.Point(11, 4);
+            this.SemesterDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.SemesterDataGridView.Name = "SemesterDataGridView";
             this.SemesterDataGridView.ReadOnly = true;
             this.SemesterDataGridView.RowHeadersWidth = 51;
-            this.SemesterDataGridView.Size = new System.Drawing.Size(883, 354);
+            this.SemesterDataGridView.Size = new System.Drawing.Size(1177, 436);
             this.SemesterDataGridView.TabIndex = 0;
             this.SemesterDataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.SemesterDataGridView_RowEnter);
             // 
@@ -1559,6 +1693,7 @@
             this.semesterIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.semesterIDDataGridViewTextBoxColumn.Name = "semesterIDDataGridViewTextBoxColumn";
             this.semesterIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.semesterIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // hebrewYearDataGridViewTextBoxColumn
             // 
@@ -1571,12 +1706,13 @@
             // 
             // semesterTypeDataGridViewTextBoxColumn
             // 
+            this.semesterTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.semesterTypeDataGridViewTextBoxColumn.DataPropertyName = "SemesterType";
             this.semesterTypeDataGridViewTextBoxColumn.HeaderText = "סוג סמסטר";
             this.semesterTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.semesterTypeDataGridViewTextBoxColumn.Name = "semesterTypeDataGridViewTextBoxColumn";
             this.semesterTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterTypeDataGridViewTextBoxColumn.Width = 125;
+            this.semesterTypeDataGridViewTextBoxColumn.Width = 136;
             // 
             // startDateDataGridViewTextBoxColumn
             // 
@@ -1602,62 +1738,74 @@
             this.FeaturesPage.Controls.Add(this.featureLabel);
             this.FeaturesPage.Controls.Add(this.addFeatureBT);
             this.FeaturesPage.Controls.Add(this.features_gridView);
-            this.FeaturesPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.FeaturesPage.Location = new System.Drawing.Point(4, 29);
-            this.FeaturesPage.Margin = new System.Windows.Forms.Padding(2);
+            this.FeaturesPage.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.FeaturesPage.Location = new System.Drawing.Point(4, 34);
+            this.FeaturesPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FeaturesPage.Name = "FeaturesPage";
-            this.FeaturesPage.Size = new System.Drawing.Size(912, 493);
+            this.FeaturesPage.Size = new System.Drawing.Size(1219, 609);
             this.FeaturesPage.TabIndex = 3;
             this.FeaturesPage.Text = "מאפיינים";
             this.FeaturesPage.UseVisualStyleBackColor = true;
             // 
             // removeFeatBT
             // 
-            this.removeFeatBT.Location = new System.Drawing.Point(35, 195);
-            this.removeFeatBT.Margin = new System.Windows.Forms.Padding(2);
+            this.removeFeatBT.BackColor = System.Drawing.Color.IndianRed;
+            this.removeFeatBT.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.removeFeatBT.Location = new System.Drawing.Point(134, 483);
+            this.removeFeatBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.removeFeatBT.Name = "removeFeatBT";
-            this.removeFeatBT.Size = new System.Drawing.Size(75, 62);
+            this.removeFeatBT.Size = new System.Drawing.Size(213, 58);
             this.removeFeatBT.TabIndex = 3;
             this.removeFeatBT.Text = "מחק";
-            this.removeFeatBT.UseVisualStyleBackColor = true;
+            this.removeFeatBT.UseVisualStyleBackColor = false;
             this.removeFeatBT.Click += new System.EventHandler(this.removeFeatBT_Click);
             // 
             // featureLabel
             // 
             this.featureLabel.AutoSize = true;
-            this.featureLabel.Location = new System.Drawing.Point(53, 307);
-            this.featureLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.featureLabel.Location = new System.Drawing.Point(247, 499);
             this.featureLabel.Name = "featureLabel";
-            this.featureLabel.Size = new System.Drawing.Size(51, 20);
+            this.featureLabel.Size = new System.Drawing.Size(70, 25);
             this.featureLabel.TabIndex = 2;
             this.featureLabel.Text = "label1";
             // 
             // addFeatureBT
             // 
-            this.addFeatureBT.Location = new System.Drawing.Point(35, 53);
+            this.addFeatureBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.addFeatureBT.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.addFeatureBT.Location = new System.Drawing.Point(134, 419);
+            this.addFeatureBT.Margin = new System.Windows.Forms.Padding(4);
             this.addFeatureBT.Name = "addFeatureBT";
-            this.addFeatureBT.Size = new System.Drawing.Size(75, 88);
+            this.addFeatureBT.Size = new System.Drawing.Size(213, 58);
             this.addFeatureBT.TabIndex = 1;
             this.addFeatureBT.Text = "הוסף מאפיין חדש";
-            this.addFeatureBT.UseVisualStyleBackColor = true;
+            this.addFeatureBT.UseVisualStyleBackColor = false;
             this.addFeatureBT.Click += new System.EventHandler(this.addFeatureBT_Click);
             // 
             // features_gridView
             // 
             this.features_gridView.AllowUserToAddRows = false;
             this.features_gridView.AutoGenerateColumns = false;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.features_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.features_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.features_gridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.featuresIDDataGridViewTextBoxColumn,
             this.featureNameDataGridViewTextBoxColumn,
             this.qualifierReqDataGridViewCheckBoxColumn});
             this.features_gridView.DataSource = this.featuresBindingSource;
-            this.features_gridView.Location = new System.Drawing.Point(149, 25);
-            this.features_gridView.Margin = new System.Windows.Forms.Padding(2);
+            this.features_gridView.Location = new System.Drawing.Point(393, 31);
+            this.features_gridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.features_gridView.Name = "features_gridView";
             this.features_gridView.RowHeadersWidth = 51;
             this.features_gridView.RowTemplate.Height = 24;
-            this.features_gridView.Size = new System.Drawing.Size(730, 357);
+            this.features_gridView.Size = new System.Drawing.Size(779, 510);
             this.features_gridView.TabIndex = 0;
             this.features_gridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.features_gridView_RowEnter);
             this.features_gridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.features_gridView_RowValidated);
@@ -1669,6 +1817,7 @@
             this.featuresIDDataGridViewTextBoxColumn.HeaderText = "מזהה מאפיין";
             this.featuresIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.featuresIDDataGridViewTextBoxColumn.Name = "featuresIDDataGridViewTextBoxColumn";
+            this.featuresIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // featureNameDataGridViewTextBoxColumn
             // 
@@ -1680,11 +1829,12 @@
             // 
             // qualifierReqDataGridViewCheckBoxColumn
             // 
-            this.qualifierReqDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.qualifierReqDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.qualifierReqDataGridViewCheckBoxColumn.DataPropertyName = "QualifierReq";
             this.qualifierReqDataGridViewCheckBoxColumn.HeaderText = "נדרש מספר?";
             this.qualifierReqDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.qualifierReqDataGridViewCheckBoxColumn.Name = "qualifierReqDataGridViewCheckBoxColumn";
+            this.qualifierReqDataGridViewCheckBoxColumn.Width = 129;
             // 
             // RoomsPage
             // 
@@ -1696,11 +1846,11 @@
             this.RoomsPage.Controls.Add(this.label5);
             this.RoomsPage.Controls.Add(this.roomsDataGrid);
             this.RoomsPage.Controls.Add(this.roomsCampusCB);
-            this.RoomsPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.RoomsPage.Location = new System.Drawing.Point(4, 29);
-            this.RoomsPage.Margin = new System.Windows.Forms.Padding(2);
+            this.RoomsPage.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.RoomsPage.Location = new System.Drawing.Point(4, 34);
+            this.RoomsPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RoomsPage.Name = "RoomsPage";
-            this.RoomsPage.Size = new System.Drawing.Size(912, 493);
+            this.RoomsPage.Size = new System.Drawing.Size(1219, 609);
             this.RoomsPage.TabIndex = 2;
             this.RoomsPage.Text = "חדרים";
             this.RoomsPage.UseVisualStyleBackColor = true;
@@ -1713,11 +1863,12 @@
             this.groupBox2.Controls.Add(this.addFeatureToRoomBT);
             this.groupBox2.Controls.Add(this.featuresMenuGrid);
             this.groupBox2.Controls.Add(this.roomFeaturesGridView);
-            this.groupBox2.Location = new System.Drawing.Point(2, 188);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.groupBox2.Location = new System.Drawing.Point(3, 231);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(593, 292);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(791, 359);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "מאפיינים";
@@ -1725,43 +1876,45 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(447, 27);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label13.Location = new System.Drawing.Point(515, 47);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(108, 20);
+            this.label13.Size = new System.Drawing.Size(205, 25);
             this.label13.TabIndex = 3;
-            this.label13.Text = "מאפיינים לחדר";
+            this.label13.Text = "מאפיינים רלוונטים לחדר";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(87, 27);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label12.Location = new System.Drawing.Point(116, 47);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 20);
+            this.label12.Size = new System.Drawing.Size(140, 25);
             this.label12.TabIndex = 3;
             this.label12.Text = "תפריט מאפיינים";
             // 
             // removeFeatureFromRoomBT
             // 
-            this.removeFeatureFromRoomBT.Location = new System.Drawing.Point(290, 140);
-            this.removeFeatureFromRoomBT.Margin = new System.Windows.Forms.Padding(2);
+            this.removeFeatureFromRoomBT.BackgroundImage = global::Final_Project.Properties.Resources.blue;
+            this.removeFeatureFromRoomBT.Location = new System.Drawing.Point(378, 240);
+            this.removeFeatureFromRoomBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.removeFeatureFromRoomBT.Name = "removeFeatureFromRoomBT";
-            this.removeFeatureFromRoomBT.Size = new System.Drawing.Size(44, 32);
+            this.removeFeatureFromRoomBT.Size = new System.Drawing.Size(59, 39);
             this.removeFeatureFromRoomBT.TabIndex = 2;
-            this.removeFeatureFromRoomBT.Text = "-->";
+            this.removeFeatureFromRoomBT.Text = ">>>";
             this.removeFeatureFromRoomBT.UseVisualStyleBackColor = true;
             this.removeFeatureFromRoomBT.Click += new System.EventHandler(this.removeFeatureFromRoomBT_Click);
             // 
             // addFeatureToRoomBT
             // 
             this.addFeatureToRoomBT.AllowDrop = true;
-            this.addFeatureToRoomBT.Location = new System.Drawing.Point(290, 94);
-            this.addFeatureToRoomBT.Margin = new System.Windows.Forms.Padding(2);
+            this.addFeatureToRoomBT.BackgroundImage = global::Final_Project.Properties.Resources.blue;
+            this.addFeatureToRoomBT.Location = new System.Drawing.Point(378, 176);
+            this.addFeatureToRoomBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addFeatureToRoomBT.Name = "addFeatureToRoomBT";
-            this.addFeatureToRoomBT.Size = new System.Drawing.Size(44, 32);
+            this.addFeatureToRoomBT.Size = new System.Drawing.Size(59, 39);
             this.addFeatureToRoomBT.TabIndex = 2;
-            this.addFeatureToRoomBT.Text = "<--";
+            this.addFeatureToRoomBT.Text = "<<<";
             this.addFeatureToRoomBT.UseVisualStyleBackColor = true;
             this.addFeatureToRoomBT.Click += new System.EventHandler(this.addFeatureToRoomBT_Click);
             // 
@@ -1770,48 +1923,48 @@
             this.featuresMenuGrid.AllowUserToAddRows = false;
             this.featuresMenuGrid.AllowUserToDeleteRows = false;
             this.featuresMenuGrid.AutoGenerateColumns = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.featuresMenuGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.featuresMenuGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.featuresMenuGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.featuresMenuGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.featureNameDataGridViewTextBoxColumn2,
             this.qualifierReqDataGridViewCheckBoxColumn1});
             this.featuresMenuGrid.DataSource = this.featuresBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.featuresMenuGrid.DefaultCellStyle = dataGridViewCellStyle8;
-            this.featuresMenuGrid.Location = new System.Drawing.Point(4, 46);
-            this.featuresMenuGrid.Margin = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.featuresMenuGrid.DefaultCellStyle = dataGridViewCellStyle16;
+            this.featuresMenuGrid.Location = new System.Drawing.Point(5, 85);
+            this.featuresMenuGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.featuresMenuGrid.MultiSelect = false;
             this.featuresMenuGrid.Name = "featuresMenuGrid";
             this.featuresMenuGrid.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.featuresMenuGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.featuresMenuGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.featuresMenuGrid.RowHeadersWidth = 51;
             this.featuresMenuGrid.RowTemplate.Height = 24;
             this.featuresMenuGrid.ShowCellErrors = false;
             this.featuresMenuGrid.ShowCellToolTips = false;
             this.featuresMenuGrid.ShowEditingIcon = false;
             this.featuresMenuGrid.ShowRowErrors = false;
-            this.featuresMenuGrid.Size = new System.Drawing.Size(268, 241);
+            this.featuresMenuGrid.Size = new System.Drawing.Size(357, 269);
             this.featuresMenuGrid.TabIndex = 1;
             this.featuresMenuGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.featuresMenuGrid_RowEnter);
             // 
@@ -1829,35 +1982,36 @@
             // 
             // featureNameDataGridViewTextBoxColumn2
             // 
+            this.featureNameDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.featureNameDataGridViewTextBoxColumn2.DataPropertyName = "FeatureName";
             this.featureNameDataGridViewTextBoxColumn2.HeaderText = "שם מאפיין";
             this.featureNameDataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.featureNameDataGridViewTextBoxColumn2.Name = "featureNameDataGridViewTextBoxColumn2";
             this.featureNameDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.featureNameDataGridViewTextBoxColumn2.Width = 125;
             // 
             // qualifierReqDataGridViewCheckBoxColumn1
             // 
+            this.qualifierReqDataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.qualifierReqDataGridViewCheckBoxColumn1.DataPropertyName = "QualifierReq";
             this.qualifierReqDataGridViewCheckBoxColumn1.HeaderText = "דורש ערך?";
             this.qualifierReqDataGridViewCheckBoxColumn1.MinimumWidth = 6;
             this.qualifierReqDataGridViewCheckBoxColumn1.Name = "qualifierReqDataGridViewCheckBoxColumn1";
             this.qualifierReqDataGridViewCheckBoxColumn1.ReadOnly = true;
-            this.qualifierReqDataGridViewCheckBoxColumn1.Width = 125;
+            this.qualifierReqDataGridViewCheckBoxColumn1.Width = 111;
             // 
             // roomFeaturesGridView
             // 
             this.roomFeaturesGridView.AllowUserToAddRows = false;
             this.roomFeaturesGridView.AllowUserToDeleteRows = false;
             this.roomFeaturesGridView.AutoGenerateColumns = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.roomFeaturesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.roomFeaturesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.roomFeaturesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.roomFeaturesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.roomIDDataGridViewTextBoxColumn1,
@@ -1866,32 +2020,32 @@
             this.featureNameDataGridViewTextBoxColumn1,
             this.qualifierDataGridViewTextBoxColumn});
             this.roomFeaturesGridView.DataSource = this.allRoomsBindingSource;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.roomFeaturesGridView.DefaultCellStyle = dataGridViewCellStyle11;
-            this.roomFeaturesGridView.Location = new System.Drawing.Point(338, 46);
-            this.roomFeaturesGridView.Margin = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.roomFeaturesGridView.DefaultCellStyle = dataGridViewCellStyle19;
+            this.roomFeaturesGridView.Location = new System.Drawing.Point(451, 85);
+            this.roomFeaturesGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomFeaturesGridView.Name = "roomFeaturesGridView";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.roomFeaturesGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.roomFeaturesGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.roomFeaturesGridView.RowHeadersWidth = 51;
             this.roomFeaturesGridView.RowTemplate.Height = 24;
             this.roomFeaturesGridView.ShowCellErrors = false;
             this.roomFeaturesGridView.ShowCellToolTips = false;
             this.roomFeaturesGridView.ShowEditingIcon = false;
             this.roomFeaturesGridView.ShowRowErrors = false;
-            this.roomFeaturesGridView.Size = new System.Drawing.Size(250, 241);
+            this.roomFeaturesGridView.Size = new System.Drawing.Size(334, 269);
             this.roomFeaturesGridView.TabIndex = 0;
             this.roomFeaturesGridView.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.roomFeaturesGridView_CellValidated);
             this.roomFeaturesGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.roomFeaturesGridView_RowEnter);
@@ -1928,20 +2082,21 @@
             // 
             // featureNameDataGridViewTextBoxColumn1
             // 
+            this.featureNameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.featureNameDataGridViewTextBoxColumn1.DataPropertyName = "FeatureName";
             this.featureNameDataGridViewTextBoxColumn1.HeaderText = "שם מאפיין";
             this.featureNameDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.featureNameDataGridViewTextBoxColumn1.Name = "featureNameDataGridViewTextBoxColumn1";
             this.featureNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.featureNameDataGridViewTextBoxColumn1.Width = 125;
             // 
             // qualifierDataGridViewTextBoxColumn
             // 
+            this.qualifierDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.qualifierDataGridViewTextBoxColumn.DataPropertyName = "Qualifier";
             this.qualifierDataGridViewTextBoxColumn.HeaderText = "ערך מאפיין";
             this.qualifierDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.qualifierDataGridViewTextBoxColumn.Name = "qualifierDataGridViewTextBoxColumn";
-            this.qualifierDataGridViewTextBoxColumn.Width = 125;
+            this.qualifierDataGridViewTextBoxColumn.Width = 131;
             // 
             // groupBox1
             // 
@@ -1959,43 +2114,50 @@
             this.groupBox1.Controls.Add(this.roomFloorTB);
             this.groupBox1.Controls.Add(this.roomNameTB);
             this.groupBox1.Controls.Add(this.roomIDTB);
-            this.groupBox1.Location = new System.Drawing.Point(2, 14);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 17);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(593, 169);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(791, 208);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "פרטי החדר";
             // 
             // roomDeleteBT
             // 
-            this.roomDeleteBT.Location = new System.Drawing.Point(190, 105);
-            this.roomDeleteBT.Margin = new System.Windows.Forms.Padding(2);
+            this.roomDeleteBT.BackColor = System.Drawing.Color.IndianRed;
+            this.roomDeleteBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.roomDeleteBT.Location = new System.Drawing.Point(253, 161);
+            this.roomDeleteBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomDeleteBT.Name = "roomDeleteBT";
-            this.roomDeleteBT.Size = new System.Drawing.Size(56, 28);
+            this.roomDeleteBT.Size = new System.Drawing.Size(75, 34);
             this.roomDeleteBT.TabIndex = 6;
             this.roomDeleteBT.Text = "מחק";
-            this.roomDeleteBT.UseVisualStyleBackColor = true;
+            this.roomDeleteBT.UseVisualStyleBackColor = false;
             this.roomDeleteBT.Click += new System.EventHandler(this.roomDeleteBT_Click);
             // 
             // roomNewBT
             // 
-            this.roomNewBT.Location = new System.Drawing.Point(190, 76);
-            this.roomNewBT.Margin = new System.Windows.Forms.Padding(2);
+            this.roomNewBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.roomNewBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.roomNewBT.Location = new System.Drawing.Point(253, 124);
+            this.roomNewBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomNewBT.Name = "roomNewBT";
-            this.roomNewBT.Size = new System.Drawing.Size(56, 28);
+            this.roomNewBT.Size = new System.Drawing.Size(75, 34);
             this.roomNewBT.TabIndex = 6;
             this.roomNewBT.Text = "צור חדש";
-            this.roomNewBT.UseVisualStyleBackColor = true;
+            this.roomNewBT.UseVisualStyleBackColor = false;
             this.roomNewBT.Click += new System.EventHandler(this.roomNewBT_Click);
             // 
             // roomSaveBT
             // 
-            this.roomSaveBT.Location = new System.Drawing.Point(190, 48);
-            this.roomSaveBT.Margin = new System.Windows.Forms.Padding(2);
+            this.roomSaveBT.BackgroundImage = global::Final_Project.Properties.Resources.blue;
+            this.roomSaveBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.roomSaveBT.Location = new System.Drawing.Point(253, 63);
+            this.roomSaveBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomSaveBT.Name = "roomSaveBT";
-            this.roomSaveBT.Size = new System.Drawing.Size(56, 28);
+            this.roomSaveBT.Size = new System.Drawing.Size(75, 34);
             this.roomSaveBT.TabIndex = 6;
             this.roomSaveBT.Text = "שמור";
             this.roomSaveBT.UseVisualStyleBackColor = true;
@@ -2003,10 +2165,11 @@
             // 
             // roomEditBT
             // 
-            this.roomEditBT.Location = new System.Drawing.Point(190, 20);
-            this.roomEditBT.Margin = new System.Windows.Forms.Padding(2);
+            this.roomEditBT.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.roomEditBT.Location = new System.Drawing.Point(253, 25);
+            this.roomEditBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomEditBT.Name = "roomEditBT";
-            this.roomEditBT.Size = new System.Drawing.Size(56, 28);
+            this.roomEditBT.Size = new System.Drawing.Size(75, 34);
             this.roomEditBT.TabIndex = 6;
             this.roomEditBT.Text = "ערוך";
             this.roomEditBT.UseVisualStyleBackColor = true;
@@ -2015,62 +2178,68 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(412, 108);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label11.Location = new System.Drawing.Point(549, 133);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 20);
+            this.label11.Size = new System.Drawing.Size(46, 25);
             this.label11.TabIndex = 5;
             this.label11.Text = "בניין";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(412, 138);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label10.Location = new System.Drawing.Point(549, 170);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 20);
+            this.label10.Size = new System.Drawing.Size(66, 25);
             this.label10.TabIndex = 5;
             this.label10.Text = "קמפוס";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(412, 80);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label9.Location = new System.Drawing.Point(549, 98);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 20);
+            this.label9.Size = new System.Drawing.Size(54, 25);
             this.label9.TabIndex = 5;
             this.label9.Text = "קומה";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(412, 51);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label8.Location = new System.Drawing.Point(549, 63);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 20);
+            this.label8.Size = new System.Drawing.Size(89, 25);
             this.label8.TabIndex = 5;
             this.label8.Text = "שם החדר";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(412, 22);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label7.Location = new System.Drawing.Point(549, 27);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 20);
+            this.label7.Size = new System.Drawing.Size(95, 25);
             this.label7.TabIndex = 5;
             this.label7.Text = "מזהה חדר";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // roomCampusTB
             // 
             this.roomCampusTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "campusName", true));
             this.roomCampusTB.Enabled = false;
-            this.roomCampusTB.Location = new System.Drawing.Point(262, 136);
-            this.roomCampusTB.Margin = new System.Windows.Forms.Padding(2);
+            this.roomCampusTB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.roomCampusTB.Location = new System.Drawing.Point(349, 167);
+            this.roomCampusTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomCampusTB.Name = "roomCampusTB";
             this.roomCampusTB.ReadOnly = true;
-            this.roomCampusTB.Size = new System.Drawing.Size(146, 26);
+            this.roomCampusTB.Size = new System.Drawing.Size(193, 31);
             this.roomCampusTB.TabIndex = 4;
             // 
             // roomBuildingCB
@@ -2079,70 +2248,80 @@
             this.roomBuildingCB.DataSource = this.buildingBindingSource;
             this.roomBuildingCB.DisplayMember = "BuildingName";
             this.roomBuildingCB.Enabled = false;
+            this.roomBuildingCB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.roomBuildingCB.FormattingEnabled = true;
-            this.roomBuildingCB.Location = new System.Drawing.Point(262, 106);
-            this.roomBuildingCB.Margin = new System.Windows.Forms.Padding(2);
+            this.roomBuildingCB.Location = new System.Drawing.Point(349, 130);
+            this.roomBuildingCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomBuildingCB.Name = "roomBuildingCB";
-            this.roomBuildingCB.Size = new System.Drawing.Size(146, 28);
+            this.roomBuildingCB.Size = new System.Drawing.Size(193, 33);
             this.roomBuildingCB.TabIndex = 3;
             // 
             // roomFloorTB
             // 
             this.roomFloorTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "Floor", true));
             this.roomFloorTB.Enabled = false;
-            this.roomFloorTB.Location = new System.Drawing.Point(262, 77);
-            this.roomFloorTB.Margin = new System.Windows.Forms.Padding(2);
+            this.roomFloorTB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.roomFloorTB.Location = new System.Drawing.Point(349, 95);
+            this.roomFloorTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomFloorTB.Name = "roomFloorTB";
-            this.roomFloorTB.Size = new System.Drawing.Size(146, 26);
+            this.roomFloorTB.Size = new System.Drawing.Size(193, 31);
             this.roomFloorTB.TabIndex = 2;
             // 
             // roomNameTB
             // 
             this.roomNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "RoomName", true));
             this.roomNameTB.Enabled = false;
-            this.roomNameTB.Location = new System.Drawing.Point(262, 49);
-            this.roomNameTB.Margin = new System.Windows.Forms.Padding(2);
+            this.roomNameTB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.roomNameTB.Location = new System.Drawing.Point(349, 60);
+            this.roomNameTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomNameTB.Name = "roomNameTB";
-            this.roomNameTB.Size = new System.Drawing.Size(146, 26);
+            this.roomNameTB.Size = new System.Drawing.Size(193, 31);
             this.roomNameTB.TabIndex = 1;
             // 
             // roomIDTB
             // 
             this.roomIDTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsByCampusBindingSource, "RoomID", true));
             this.roomIDTB.Enabled = false;
-            this.roomIDTB.Location = new System.Drawing.Point(262, 20);
-            this.roomIDTB.Margin = new System.Windows.Forms.Padding(2);
+            this.roomIDTB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.roomIDTB.Location = new System.Drawing.Point(349, 25);
+            this.roomIDTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomIDTB.Name = "roomIDTB";
             this.roomIDTB.ReadOnly = true;
-            this.roomIDTB.Size = new System.Drawing.Size(146, 26);
+            this.roomIDTB.Size = new System.Drawing.Size(193, 31);
             this.roomIDTB.TabIndex = 0;
             // 
             // campusNameComboBox
             // 
             this.campusNameComboBox.DataSource = this.buildingsByCampusBindingSource;
             this.campusNameComboBox.DisplayMember = "BuildingName";
+            this.campusNameComboBox.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.campusNameComboBox.FormattingEnabled = true;
-            this.campusNameComboBox.Location = new System.Drawing.Point(694, 51);
+            this.campusNameComboBox.Location = new System.Drawing.Point(925, 63);
+            this.campusNameComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.campusNameComboBox.Name = "campusNameComboBox";
-            this.campusNameComboBox.Size = new System.Drawing.Size(151, 28);
+            this.campusNameComboBox.Size = new System.Drawing.Size(200, 33);
             this.campusNameComboBox.TabIndex = 5;
             this.campusNameComboBox.SelectedIndexChanged += new System.EventHandler(this.campusNameComboBox_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(858, 54);
+            this.label6.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label6.Location = new System.Drawing.Point(1144, 66);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 20);
+            this.label6.Size = new System.Drawing.Size(51, 25);
             this.label6.TabIndex = 2;
             this.label6.Text = "בניין:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(850, 15);
+            this.label5.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label5.Location = new System.Drawing.Point(1133, 18);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 20);
+            this.label5.Size = new System.Drawing.Size(71, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "קמפוס:";
             // 
@@ -2151,45 +2330,46 @@
             this.roomsDataGrid.AllowUserToAddRows = false;
             this.roomsDataGrid.AllowUserToDeleteRows = false;
             this.roomsDataGrid.AutoGenerateColumns = false;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.roomsDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.roomsDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.roomsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.roomsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.roomIDDataGridViewTextBoxColumn,
             this.roomNameDataGridViewTextBoxColumn,
             this.floorDataGridViewTextBoxColumn});
             this.roomsDataGrid.DataSource = this.roomsByCampusBindingSource;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.roomsDataGrid.DefaultCellStyle = dataGridViewCellStyle14;
-            this.roomsDataGrid.Location = new System.Drawing.Point(601, 87);
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.roomsDataGrid.DefaultCellStyle = dataGridViewCellStyle22;
+            this.roomsDataGrid.Location = new System.Drawing.Point(801, 107);
+            this.roomsDataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.roomsDataGrid.Name = "roomsDataGrid";
             this.roomsDataGrid.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.roomsDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.roomsDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.roomsDataGrid.RowHeadersWidth = 51;
             this.roomsDataGrid.ShowCellErrors = false;
             this.roomsDataGrid.ShowCellToolTips = false;
             this.roomsDataGrid.ShowEditingIcon = false;
             this.roomsDataGrid.ShowRowErrors = false;
-            this.roomsDataGrid.Size = new System.Drawing.Size(290, 392);
+            this.roomsDataGrid.Size = new System.Drawing.Size(387, 482);
             this.roomsDataGrid.TabIndex = 1;
             this.roomsDataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.roomsDataGrid_RowEnter);
             // 
@@ -2201,17 +2381,17 @@
             this.roomIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.roomIDDataGridViewTextBoxColumn.Name = "roomIDDataGridViewTextBoxColumn";
             this.roomIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roomIDDataGridViewTextBoxColumn.Width = 43;
+            this.roomIDDataGridViewTextBoxColumn.Visible = false;
+            this.roomIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // roomNameDataGridViewTextBoxColumn
             // 
-            this.roomNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.roomNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.roomNameDataGridViewTextBoxColumn.DataPropertyName = "RoomName";
-            this.roomNameDataGridViewTextBoxColumn.HeaderText = "שם חדר";
+            this.roomNameDataGridViewTextBoxColumn.HeaderText = "שם החדר";
             this.roomNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.roomNameDataGridViewTextBoxColumn.Name = "roomNameDataGridViewTextBoxColumn";
             this.roomNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roomNameDataGridViewTextBoxColumn.Width = 86;
             // 
             // floorDataGridViewTextBoxColumn
             // 
@@ -2221,101 +2401,96 @@
             this.floorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.floorDataGridViewTextBoxColumn.Name = "floorDataGridViewTextBoxColumn";
             this.floorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.floorDataGridViewTextBoxColumn.Width = 67;
+            this.floorDataGridViewTextBoxColumn.Width = 86;
             // 
             // roomsCampusCB
             // 
             this.roomsCampusCB.DataSource = this.campusBindingSource1;
             this.roomsCampusCB.DisplayMember = "campusName";
+            this.roomsCampusCB.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.roomsCampusCB.FormattingEnabled = true;
-            this.roomsCampusCB.Location = new System.Drawing.Point(694, 12);
+            this.roomsCampusCB.Location = new System.Drawing.Point(925, 15);
+            this.roomsCampusCB.Margin = new System.Windows.Forms.Padding(4);
             this.roomsCampusCB.Name = "roomsCampusCB";
-            this.roomsCampusCB.Size = new System.Drawing.Size(151, 28);
+            this.roomsCampusCB.Size = new System.Drawing.Size(200, 33);
             this.roomsCampusCB.TabIndex = 0;
             this.roomsCampusCB.SelectedIndexChanged += new System.EventHandler(this.roomsCampusCB_SelectionChangeCommitted);
             // 
             // CampusPage
             // 
             this.CampusPage.Controls.Add(this.tableLayoutPanel2);
-            this.CampusPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.CampusPage.Location = new System.Drawing.Point(4, 29);
-            this.CampusPage.Margin = new System.Windows.Forms.Padding(2);
+            this.CampusPage.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.CampusPage.Location = new System.Drawing.Point(4, 34);
+            this.CampusPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CampusPage.Name = "CampusPage";
-            this.CampusPage.Padding = new System.Windows.Forms.Padding(2);
-            this.CampusPage.Size = new System.Drawing.Size(912, 493);
+            this.CampusPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CampusPage.Size = new System.Drawing.Size(1219, 609);
             this.CampusPage.TabIndex = 0;
             this.CampusPage.Text = "קמפוסים ובניינים";
             this.CampusPage.UseVisualStyleBackColor = true;
+            this.CampusPage.Click += new System.EventHandler(this.CampusPage_Click);
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.newCampusBT, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.dataGridBuilding, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.dataGridCampus, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(42, 21);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Controls.Add(this.newCampusBT, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(56, 26);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(827, 453);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1103, 558);
             this.tableLayoutPanel2.TabIndex = 3;
-            // 
-            // newCampusBT
-            // 
-            this.newCampusBT.Location = new System.Drawing.Point(84, 3);
-            this.newCampusBT.Name = "newCampusBT";
-            this.newCampusBT.Size = new System.Drawing.Size(79, 54);
-            this.newCampusBT.TabIndex = 2;
-            this.newCampusBT.Text = "קמפוס חדש";
-            this.newCampusBT.UseVisualStyleBackColor = true;
-            this.newCampusBT.Click += new System.EventHandler(this.newCampusBT_Click);
             // 
             // dataGridBuilding
             // 
             this.dataGridBuilding.AutoGenerateColumns = false;
             this.dataGridBuilding.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridBuilding.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridBuilding.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridBuilding.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridBuilding.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.buildingIDDataGridViewTextBoxColumn,
             this.buildingNameDataGridViewTextBoxColumn,
             this.campusIDDataGridViewTextBoxColumn1});
             this.dataGridBuilding.DataSource = this.buildingBindingSource;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridBuilding.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridBuilding.DefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridBuilding.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridBuilding.Location = new System.Drawing.Point(168, 228);
-            this.dataGridBuilding.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridBuilding.Location = new System.Drawing.Point(224, 281);
+            this.dataGridBuilding.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridBuilding.Name = "dataGridBuilding";
             this.dataGridBuilding.RowHeadersWidth = 51;
             this.dataGridBuilding.RowTemplate.Height = 24;
-            this.dataGridBuilding.Size = new System.Drawing.Size(657, 223);
+            this.dataGridBuilding.Size = new System.Drawing.Size(876, 275);
             this.dataGridBuilding.TabIndex = 1;
             // 
             // buildingIDDataGridViewTextBoxColumn
             // 
-            this.buildingIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.buildingIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.buildingIDDataGridViewTextBoxColumn.DataPropertyName = "BuildingID";
             this.buildingIDDataGridViewTextBoxColumn.HeaderText = "מזהה בניין";
             this.buildingIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.buildingIDDataGridViewTextBoxColumn.Name = "buildingIDDataGridViewTextBoxColumn";
+            this.buildingIDDataGridViewTextBoxColumn.Visible = false;
+            this.buildingIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // buildingNameDataGridViewTextBoxColumn
             // 
@@ -2327,12 +2502,13 @@
             // 
             // campusIDDataGridViewTextBoxColumn1
             // 
-            this.campusIDDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.campusIDDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.campusIDDataGridViewTextBoxColumn1.DataPropertyName = "CampusID";
             this.campusIDDataGridViewTextBoxColumn1.HeaderText = "מזהה קמפוס";
             this.campusIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.campusIDDataGridViewTextBoxColumn1.Name = "campusIDDataGridViewTextBoxColumn1";
             this.campusIDDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.campusIDDataGridViewTextBoxColumn1.Width = 149;
             // 
             // dataGridCampus
             // 
@@ -2340,35 +2516,35 @@
             this.dataGridCampus.AllowUserToOrderColumns = true;
             this.dataGridCampus.AutoGenerateColumns = false;
             this.dataGridCampus.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridCampus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridCampus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridCampus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCampus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.campusIDDataGridViewTextBoxColumn,
             this.campusNameDataGridViewTextBoxColumn});
             this.dataGridCampus.DataSource = this.campusBindingSource;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridCampus.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Rubik SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridCampus.DefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridCampus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridCampus.Location = new System.Drawing.Point(168, 2);
-            this.dataGridCampus.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridCampus.Location = new System.Drawing.Point(224, 2);
+            this.dataGridCampus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridCampus.MultiSelect = false;
             this.dataGridCampus.Name = "dataGridCampus";
             this.dataGridCampus.RowHeadersWidth = 51;
             this.dataGridCampus.RowTemplate.Height = 24;
-            this.dataGridCampus.Size = new System.Drawing.Size(657, 222);
+            this.dataGridCampus.Size = new System.Drawing.Size(876, 275);
             this.dataGridCampus.TabIndex = 0;
             this.dataGridCampus.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCampus_RowEnter);
             this.dataGridCampus.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCampus_RowValidated);
@@ -2376,12 +2552,15 @@
             // 
             // campusIDDataGridViewTextBoxColumn
             // 
-            this.campusIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.campusIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.campusIDDataGridViewTextBoxColumn.DataPropertyName = "campusID";
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Rubik", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.campusIDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle27;
             this.campusIDDataGridViewTextBoxColumn.HeaderText = "מזהה קמפוס";
             this.campusIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.campusIDDataGridViewTextBoxColumn.Name = "campusIDDataGridViewTextBoxColumn";
             this.campusIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.campusIDDataGridViewTextBoxColumn.Width = 149;
             // 
             // campusNameDataGridViewTextBoxColumn
             // 
@@ -2391,6 +2570,19 @@
             this.campusNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.campusNameDataGridViewTextBoxColumn.Name = "campusNameDataGridViewTextBoxColumn";
             // 
+            // newCampusBT
+            // 
+            this.newCampusBT.BackgroundImage = global::Final_Project.Properties.Resources.blue;
+            this.newCampusBT.Font = new System.Drawing.Font("Rubik Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.newCampusBT.Location = new System.Drawing.Point(4, 4);
+            this.newCampusBT.Margin = new System.Windows.Forms.Padding(4);
+            this.newCampusBT.Name = "newCampusBT";
+            this.newCampusBT.Size = new System.Drawing.Size(213, 54);
+            this.newCampusBT.TabIndex = 2;
+            this.newCampusBT.Text = "הוספת קמפוס חדש";
+            this.newCampusBT.UseVisualStyleBackColor = true;
+            this.newCampusBT.Click += new System.EventHandler(this.newCampusBT_Click);
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.CampusPage);
@@ -2399,14 +2591,14 @@
             this.tabControl1.Controls.Add(this.SemestersPage);
             this.tabControl1.Controls.Add(this.FacultyPage);
             this.tabControl1.Controls.Add(this.DegreeClassPage);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tabControl1.Location = new System.Drawing.Point(9, 41);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl1.Font = new System.Drawing.Font("Rubik Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.tabControl1.Location = new System.Drawing.Point(12, 50);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabControl1.RightToLeftLayout = true;
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(920, 526);
+            this.tabControl1.Size = new System.Drawing.Size(1227, 647);
             this.tabControl1.TabIndex = 0;
             // 
             // facultyTableAdapter
@@ -2456,18 +2648,19 @@
             // 
             // DBMaintain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
-            this.ClientSize = new System.Drawing.Size(938, 576);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackgroundImage = global::Final_Project.Properties.Resources.black;
+            this.ClientSize = new System.Drawing.Size(1251, 709);
             this.Controls.Add(this.BackToMenuBT);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DBMaintain";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "אילוצון - תחזוקת טבלאות";
+            this.Text = "ניהול המידע ותחזוק הטבלאות";
             this.Load += new System.EventHandler(this.DBMaintain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.buildingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).EndInit();
@@ -2602,9 +2795,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView roomsDataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roomIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roomNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn floorDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox roomsCampusCB;
         private System.Windows.Forms.TabPage CampusPage;
         private System.Windows.Forms.Button newCampusBT;
@@ -2652,21 +2842,23 @@
         private System.Windows.Forms.Button newClassBT;
         private System.Windows.Forms.ComboBox classMegamaCB;
         private System.Windows.Forms.BindingSource degreeBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn featureNameDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn qualifierReqDataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roomIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FeaturesID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roomNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn featureNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qualifierDataGridViewTextBoxColumn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.CheckBox isActive;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button DCFremove;
+        private System.Windows.Forms.Button DCFadd;
+        private System.Windows.Forms.DataGridView FeaturesMenu;
+        private System.Windows.Forms.DataGridView DCFeatures;
+        private System.Windows.Forms.BindingSource dCFeaturesBindingSource;
+        private grilDataViewsSetTableAdapters.DCFeaturesTableAdapter dCFeaturesTableAdapter;
+        private System.Windows.Forms.BindingSource DCFSource;
+        private grilDataSetTableAdapters.DegreeClassFeaturesTableAdapter degreeClassFeaturesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn buildingIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn buildingNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn campusIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn campusIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn campusNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn degreeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn degreeNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn facultyIDDataGridViewTextBoxColumn1;
@@ -2681,7 +2873,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn featuresIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn featureNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn qualifierReqDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.CheckBox isActive;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn featureNameDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn qualifierReqDataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FeaturesID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn featureNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qualifierDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn floorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn campusIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn campusNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn hebrewYearDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn semesterTypeDataGridViewTextBoxColumn1;
@@ -2693,22 +2903,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn durationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn summerDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn weeklyHoursDataGridViewTextBoxColumn;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button DCFremove;
-        private System.Windows.Forms.Button DCFadd;
-        private System.Windows.Forms.DataGridView FeaturesMenu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
-        private System.Windows.Forms.DataGridView DCFeatures;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.BindingSource dCFeaturesBindingSource;
-        private grilDataViewsSetTableAdapters.DCFeaturesTableAdapter dCFeaturesTableAdapter;
-        private System.Windows.Forms.BindingSource DCFSource;
-        private grilDataSetTableAdapters.DegreeClassFeaturesTableAdapter degreeClassFeaturesTableAdapter;
     }
 }

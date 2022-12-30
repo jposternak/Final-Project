@@ -229,16 +229,26 @@ namespace Final_Project
 
         private void addFeatureToRoomBT_Click(object sender, EventArgs e)
         {
-            int roomID = int.Parse(roomIDTB.Text);
 
-            //Check if Feature Exists already
+            try
+            {
+                int roomID = int.Parse(roomIDTB.Text);
 
-            //if not, then check if a qualifier is needed, if it does, ask for it
+                //Check if Feature Exists already
 
-            //add to DB and update table view
-            this.roomFeaturesTableAdapter.InsertQuery(roomID, featureIDfromMenu, 1);
-            MessageBox.Show("הנתונים עודכנו בהצלחה", "הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.allRoomsTableAdapter.FillByRoomID(this.grilDataViewsSet.AllRooms, roomID);
+                //if not, then check if a qualifier is needed, if it does, ask for it
+
+                //add to DB and update table view
+                this.roomFeaturesTableAdapter.InsertQuery(roomID, featureIDfromMenu, 1);
+                MessageBox.Show("הנתונים עודכנו בהצלחה", "הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.allRoomsTableAdapter.FillByRoomID(this.grilDataViewsSet.AllRooms, roomID);
+            }
+            catch (Exception)
+            {
+
+            }
+            
+
 
 
         }
@@ -742,31 +752,45 @@ namespace Final_Project
 
         private void DCFadd_Click(object sender, EventArgs e)
         {
-            int dcID = int.Parse(degreeClassIDTextBox.Text);
-            int featureID = featureIDfromMenuDC;
+            try
+            {
+                int dcID = int.Parse(degreeClassIDTextBox.Text);
+                int featureID = featureIDfromMenuDC;
 
-            this.dCFeaturesTableAdapter.InsertQuery(dcID, featureID, 1);
-            MessageBox.Show("הנתונים עודכנו בהצלחה", "הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.dCFeaturesTableAdapter.Fill(this.grilDataViewsSet.DCFeatures, dcID);
+                this.dCFeaturesTableAdapter.InsertQuery(dcID, featureID, 1);
+                MessageBox.Show("הנתונים עודכנו בהצלחה", "הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.dCFeaturesTableAdapter.Fill(this.grilDataViewsSet.DCFeatures, dcID);
+            }
+            catch(Exception)
+            {
+
+            }
+
 
         }
 
         private void DCFremove_Click(object sender, EventArgs e)
         {
+            try{
+                int dcID = int.Parse(degreeClassIDTextBox.Text);
 
-            int dcID = int.Parse(degreeClassIDTextBox.Text);
+                String msg = $"האם בטוח שרוצה למחוק את המאפיין?\n{dcID} - {featureIDDC}";
+                DialogResult yesno = MessageBox.Show(msg, "האם בטוח", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (yesno == DialogResult.Yes)
+                {
 
-            String msg = $"האם בטוח שרוצה למחוק את המאפיין?\n{dcID} - {featureIDDC}";
-            DialogResult yesno = MessageBox.Show(msg, "האם בטוח", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (yesno == DialogResult.Yes)
-            {
+                    this.dCFeaturesTableAdapter.DeleteQuery(dcID, featureIDDC);
+                    MessageBox.Show("המאפיין נמחק בהצלחה", "הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.dCFeaturesTableAdapter.Fill(this.grilDataViewsSet.DCFeatures, dcID);
 
-                this.dCFeaturesTableAdapter.DeleteQuery(dcID, featureIDDC);
-                MessageBox.Show("המאפיין נמחק בהצלחה", "הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.dCFeaturesTableAdapter.Fill(this.grilDataViewsSet.DCFeatures, dcID);
+                }
 
             }
+            catch
+            {
 
+            }
+            
         }
 
         private void DCFeatures_CellValidated(object sender, DataGridViewCellEventArgs e)
@@ -784,6 +808,14 @@ namespace Final_Project
 
         }
 
+        private void CampusPage_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

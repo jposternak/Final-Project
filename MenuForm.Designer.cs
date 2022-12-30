@@ -43,15 +43,17 @@
             // DBMaintBT
             // 
             this.DBMaintBT.AutoSize = true;
+            this.DBMaintBT.BackgroundImage = global::Final_Project.Properties.Resources.blue;
             this.DBMaintBT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DBMaintBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.DBMaintBT.Font = new System.Drawing.Font("Rubik Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.DBMaintBT.Image = global::Final_Project.Properties.Resources.icons8_database_administrator_50;
+            this.DBMaintBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DBMaintBT.Location = new System.Drawing.Point(715, 2);
             this.DBMaintBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DBMaintBT.Name = "DBMaintBT";
             this.DBMaintBT.Size = new System.Drawing.Size(705, 107);
             this.DBMaintBT.TabIndex = 0;
-            this.DBMaintBT.Text = "תחזק טבלאות מערכת";
+            this.DBMaintBT.Text = "ניהול המידע ותחזוק הטבלאות";
             this.DBMaintBT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.DBMaintBT.UseVisualStyleBackColor = true;
             this.DBMaintBT.Click += new System.EventHandler(this.DBMaintBT_Click);
@@ -59,9 +61,11 @@
             // SchedulerBT
             // 
             this.SchedulerBT.AutoSize = true;
+            this.SchedulerBT.BackgroundImage = global::Final_Project.Properties.Resources.blue;
             this.SchedulerBT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SchedulerBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.SchedulerBT.Font = new System.Drawing.Font("Rubik Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.SchedulerBT.Image = global::Final_Project.Properties.Resources.icons8_schedule_50;
+            this.SchedulerBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SchedulerBT.Location = new System.Drawing.Point(4, 4);
             this.SchedulerBT.Margin = new System.Windows.Forms.Padding(4);
             this.SchedulerBT.Name = "SchedulerBT";
@@ -90,7 +94,7 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
+            this.tableLayoutPanel2.BackgroundImage = global::Final_Project.Properties.Resources.background;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -109,9 +113,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Final_Project.Properties.Resources.ilutzon_COLO;
+            this.pictureBox1.BackgroundImage = global::Final_Project.Properties.Resources.background1;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Final_Project.Properties.Resources.ilutzon;
+            this.pictureBox1.Image = global::Final_Project.Properties.Resources.main_menu;
             this.pictureBox1.InitialImage = global::Final_Project.Properties.Resources.ilutzon;
             this.pictureBox1.Location = new System.Drawing.Point(3, 118);
             this.pictureBox1.Name = "pictureBox1";
@@ -119,6 +123,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 

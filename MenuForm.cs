@@ -39,5 +39,10 @@ namespace Final_Project
             Scheduler dbfrom = new Scheduler();
             dbfrom.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
