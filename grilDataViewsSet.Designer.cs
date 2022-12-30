@@ -1629,6 +1629,8 @@ namespace Final_Project {
             
             private global::System.Data.DataColumn columnCampusName;
             
+            private global::System.Data.DataColumn columnBuildingID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public BuildingsByCampusDataTable() {
@@ -1680,6 +1682,14 @@ namespace Final_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn BuildingIDColumn {
+                get {
+                    return this.columnBuildingID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1719,10 +1729,18 @@ namespace Final_Project {
                 BuildingsByCampusRow rowBuildingsByCampusRow = ((BuildingsByCampusRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         BuildingName,
-                        CampusName};
+                        CampusName,
+                        null};
                 rowBuildingsByCampusRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBuildingsByCampusRow);
                 return rowBuildingsByCampusRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public BuildingsByCampusRow FindByBuildingID(int BuildingID) {
+                return ((BuildingsByCampusRow)(this.Rows.Find(new object[] {
+                            BuildingID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1744,6 +1762,7 @@ namespace Final_Project {
             internal void InitVars() {
                 this.columnBuildingName = base.Columns["BuildingName"];
                 this.columnCampusName = base.Columns["CampusName"];
+                this.columnBuildingID = base.Columns["BuildingID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1753,10 +1772,20 @@ namespace Final_Project {
                 base.Columns.Add(this.columnBuildingName);
                 this.columnCampusName = new global::System.Data.DataColumn("CampusName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCampusName);
+                this.columnBuildingID = new global::System.Data.DataColumn("BuildingID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBuildingID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnBuildingID}, true));
                 this.columnBuildingName.AllowDBNull = false;
                 this.columnBuildingName.MaxLength = 50;
                 this.columnCampusName.AllowDBNull = false;
                 this.columnCampusName.MaxLength = 50;
+                this.columnBuildingID.AutoIncrement = true;
+                this.columnBuildingID.AutoIncrementSeed = -1;
+                this.columnBuildingID.AutoIncrementStep = -1;
+                this.columnBuildingID.AllowDBNull = false;
+                this.columnBuildingID.ReadOnly = true;
+                this.columnBuildingID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3990,6 +4019,17 @@ namespace Final_Project {
                     this[this.tableBuildingsByCampus.CampusNameColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int BuildingID {
+                get {
+                    return ((int)(this[this.tableBuildingsByCampus.BuildingIDColumn]));
+                }
+                set {
+                    this[this.tableBuildingsByCampus.BuildingIDColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -5598,6 +5638,7 @@ WHERE     (RoomFeatures.RoomID = @RoomID)";
             tableMapping.DataSetTable = "BuildingsByCampus";
             tableMapping.ColumnMappings.Add("BuildingName", "BuildingName");
             tableMapping.ColumnMappings.Add("CampusName", "CampusName");
+            tableMapping.ColumnMappings.Add("BuildingID", "BuildingID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -5614,8 +5655,8 @@ WHERE     (RoomFeatures.RoomID = @RoomID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        BuildingName, CampusName\r\nFROM            BuildingsByCampus\r\nWHERE " +
-                "       (CampusName = @CampusName)\r\nORDER BY BuildingName";
+            this._commandCollection[0].CommandText = "SELECT   BuildingName, CampusName, BuildingID\r\nFROM         BuildingsByCampus\r\nWH" +
+                "ERE     (CampusName = @CampusName)\r\nORDER BY BuildingName";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CampusName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "CampusName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

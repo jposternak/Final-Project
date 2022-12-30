@@ -115,6 +115,7 @@ namespace Final_Project
             // TODO: This line of code loads data into the 'grilDataSet.Room' table. You can move, or remove it, as needed.
             this.roomTableAdapter.Fill(this.grilDataSet.Room);
             populateTree();
+            populateBuildingsTree();
             fillNumbers();
 
         }
@@ -125,9 +126,12 @@ namespace Final_Project
             DataRowCollection rows = planexec.GetDataDCSem(this.dc.Id,this.semester.Id).Rows;
 
             tihnunLB.Text = rows[0][5].ToString();
+            hours_req.Text = tihnunLB.Text;
             bitzuaLB.Text = rows[0][6].ToString();
+            hours_used.Text = bitzuaLB.Text;
             itraLB.Text = rows[0][7].ToString();
-            if(int.Parse(itraLB.Text) < 0)
+            hours_remaining.Text = itraLB.Text;
+            if (int.Parse(itraLB.Text) < 0)
             {
                 itraLB.ForeColor = Color.Red;
             }
@@ -288,27 +292,89 @@ namespace Final_Project
 
         private void updatePlannerMatrix()
         {
+
+            decimal totalInMatrix = 0;
             //sun
             sun.Text = (sun_morning.Value + sun_evening.Value).ToString();
-
+            totalInMatrix += sun_morning.Value + sun_evening.Value;
 
             //mon
             mon.Text = (mon_morning.Value + mon_evening.Value).ToString();
+            totalInMatrix += mon_morning.Value + mon_evening.Value;
 
             //tue
             tue.Text = (tue_morning.Value + tue_evening.Value).ToString();
+            totalInMatrix += tue_morning.Value + tue_evening.Value;
 
             //wed
             wed.Text = (wed_morning.Value + wed_evening.Value).ToString();
+            totalInMatrix += wed_morning.Value + wed_evening.Value;
 
             //thu
             thu.Text = (thu_morning.Value + thu_evening.Value).ToString();
+            totalInMatrix += thu_morning.Value + thu_evening.Value;
 
             //fri
             fri.Text = (fri_morning.Value + fri_evening.Value).ToString();
+            totalInMatrix += fri_morning.Value + fri_evening.Value;
 
             //sat
             sat.Text = (sat_morning.Value + sat_evening.Value).ToString();
+            totalInMatrix += sat_morning.Value + sat_evening.Value;
+
+            //in plan
+            hours_matrix.Text = totalInMatrix.ToString();
+
+            //itra
+            int rem = int.Parse(hours_req.Text) - int.Parse(hours_used.Text) - (int)totalInMatrix;
+
+
+            hours_remaining.Text = rem.ToString();
+
+            if (int.Parse(hours_remaining.Text) < 0)
+            {
+                hours_remaining.ForeColor = Color.Red;
+            }
+            else if (int.Parse(hours_remaining.Text) == 0)
+            {
+                hours_remaining.ForeColor = Color.Green;
+            }
+        }
+
+        int selectedBuildingID = -1;
+        private void treeBuildings_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            int.TryParse(e.Node.Name, out selectedBuildingID);
+            selected_building.Text = e.Node.Text;
+        }
+
+        private void populateBuildingsTree()
+        {
+            treeBuildings.Nodes.Clear();
+            TreeNode root = treeBuildings.Nodes.Add("מכללת קרית אונו");
+
+            campusTableAdapter adapter = new campusTableAdapter();
+            DataRowCollection CRows = adapter.GetData().Rows;
+
+            for (int h = 0; h < CRows.Count; h++)
+            {
+                String campusName = (String)CRows[h][1];
+
+                BuildingsByCampusTableAdapter b_adapter = new BuildingsByCampusTableAdapter();
+
+                TreeNode campusNode = treeBuildings.Nodes[0].Nodes.Add(campusName);
+
+
+                DataRowCollection BRows = b_adapter.GetData(campusName).Rows;
+
+                for (int i = 0; i < BRows.Count; i++)
+                {
+                    String bldName = BRows[i][0].ToString();
+                    int bldID = (int)BRows[i][2];
+                    TreeNode buildingNode = treeBuildings.Nodes[0].Nodes[h].Nodes.Add(bldID.ToString(),bldName);
+                }
+            }
+
         }
     }
 }

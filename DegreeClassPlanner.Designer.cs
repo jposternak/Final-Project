@@ -112,11 +112,23 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
-            this.degreeClassPlanExec3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.hours_req = new System.Windows.Forms.Label();
+            this.hours_used = new System.Windows.Forms.Label();
+            this.hours_matrix = new System.Windows.Forms.Label();
+            this.hours_remaining = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.treeBuildings = new System.Windows.Forms.TreeView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.selected_building = new System.Windows.Forms.Label();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grilDataSet = new Final_Project.grilDataSet();
             this.roomTableAdapter = new Final_Project.grilDataSetTableAdapters.RoomTableAdapter();
+            this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
+            this.degreeClassPlanExec3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -149,10 +161,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.luz)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grilDataViewsSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.degreeClassPlanExec3BindingSource)).BeginInit();
+            this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grilDataViewsSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.degreeClassPlanExec3BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -764,6 +777,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.selected_building);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.treeBuildings);
+            this.tabPage2.Controls.Add(this.tableLayoutPanel8);
             this.tabPage2.Controls.Add(this.tableLayoutPanel7);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -813,7 +830,7 @@
             this.tableLayoutPanel7.Controls.Add(this.label31, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.label32, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.label33, 3, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(18, 20);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(17, 188);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 8;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -1292,18 +1309,152 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(813, 84);
             this.label19.TabIndex = 1;
-            this.label19.Text = "מסך תכנון הקצאות למחזור לימודים";
+            this.label19.Text = "תכנון הקצאות למחזור לימודים";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // grilDataViewsSet
+            // tableLayoutPanel8
             // 
-            this.grilDataViewsSet.DataSetName = "grilDataViewsSet";
-            this.grilDataViewsSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tableLayoutPanel8.ColumnCount = 4;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.Controls.Add(this.hours_req, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.hours_used, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.hours_matrix, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.hours_remaining, 3, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label28, 3, 1);
+            this.tableLayoutPanel8.Controls.Add(this.label29, 2, 1);
+            this.tableLayoutPanel8.Controls.Add(this.label30, 1, 1);
+            this.tableLayoutPanel8.Controls.Add(this.label34, 0, 1);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(17, 428);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 2;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(343, 42);
+            this.tableLayoutPanel8.TabIndex = 2;
             // 
-            // degreeClassPlanExec3BindingSource
+            // hours_req
             // 
-            this.degreeClassPlanExec3BindingSource.DataMember = "DegreeClassPlanExec3";
-            this.degreeClassPlanExec3BindingSource.DataSource = this.grilDataViewsSet;
+            this.hours_req.AutoSize = true;
+            this.hours_req.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hours_req.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.hours_req.Location = new System.Drawing.Point(261, 0);
+            this.hours_req.Name = "hours_req";
+            this.hours_req.Size = new System.Drawing.Size(79, 21);
+            this.hours_req.TabIndex = 0;
+            this.hours_req.Text = "0";
+            this.hours_req.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // hours_used
+            // 
+            this.hours_used.AutoSize = true;
+            this.hours_used.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hours_used.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.hours_used.Location = new System.Drawing.Point(176, 0);
+            this.hours_used.Name = "hours_used";
+            this.hours_used.Size = new System.Drawing.Size(79, 21);
+            this.hours_used.TabIndex = 0;
+            this.hours_used.Text = "0";
+            this.hours_used.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // hours_matrix
+            // 
+            this.hours_matrix.AutoSize = true;
+            this.hours_matrix.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hours_matrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.hours_matrix.Location = new System.Drawing.Point(91, 0);
+            this.hours_matrix.Name = "hours_matrix";
+            this.hours_matrix.Size = new System.Drawing.Size(79, 21);
+            this.hours_matrix.TabIndex = 0;
+            this.hours_matrix.Text = "0";
+            this.hours_matrix.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // hours_remaining
+            // 
+            this.hours_remaining.AutoSize = true;
+            this.hours_remaining.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hours_remaining.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.hours_remaining.Location = new System.Drawing.Point(3, 0);
+            this.hours_remaining.Name = "hours_remaining";
+            this.hours_remaining.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.hours_remaining.Size = new System.Drawing.Size(82, 21);
+            this.hours_remaining.TabIndex = 0;
+            this.hours_remaining.Text = "0";
+            this.hours_remaining.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label28.Location = new System.Drawing.Point(3, 21);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(82, 21);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "יתרה";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label29.Location = new System.Drawing.Point(91, 21);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(79, 21);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "בטיוטה";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label30.Location = new System.Drawing.Point(176, 21);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(79, 21);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "הוצקה";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label34.Location = new System.Drawing.Point(261, 21);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(79, 21);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "נדרשים";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // treeBuildings
+            // 
+            this.treeBuildings.Location = new System.Drawing.Point(17, 30);
+            this.treeBuildings.Name = "treeBuildings";
+            this.treeBuildings.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.treeBuildings.RightToLeftLayout = true;
+            this.treeBuildings.Size = new System.Drawing.Size(343, 152);
+            this.treeBuildings.TabIndex = 6;
+            this.treeBuildings.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeBuildings_NodeMouseClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(277, 14);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "רשימת בניינים:";
+            // 
+            // selected_building
+            // 
+            this.selected_building.AutoSize = true;
+            this.selected_building.Location = new System.Drawing.Point(57, 14);
+            this.selected_building.Name = "selected_building";
+            this.selected_building.Size = new System.Drawing.Size(35, 13);
+            this.selected_building.TabIndex = 7;
+            this.selected_building.Text = "label6";
             // 
             // roomBindingSource
             // 
@@ -1318,6 +1469,16 @@
             // roomTableAdapter
             // 
             this.roomTableAdapter.ClearBeforeFill = true;
+            // 
+            // grilDataViewsSet
+            // 
+            this.grilDataViewsSet.DataSetName = "grilDataViewsSet";
+            this.grilDataViewsSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // degreeClassPlanExec3BindingSource
+            // 
+            this.degreeClassPlanExec3BindingSource.DataMember = "DegreeClassPlanExec3";
+            this.degreeClassPlanExec3BindingSource.DataSource = this.grilDataViewsSet;
             // 
             // DegreeClassPlanner
             // 
@@ -1353,6 +1514,7 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sun_evening)).EndInit();
@@ -1373,10 +1535,12 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grilDataViewsSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.degreeClassPlanExec3BindingSource)).EndInit();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grilDataViewsSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.degreeClassPlanExec3BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1468,5 +1632,17 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Label hours_req;
+        private System.Windows.Forms.Label hours_used;
+        private System.Windows.Forms.Label hours_matrix;
+        private System.Windows.Forms.Label hours_remaining;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label selected_building;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TreeView treeBuildings;
     }
 }
