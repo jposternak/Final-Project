@@ -200,12 +200,12 @@ namespace Final_Project
 
         //done
         private static List<ScheduleBlock> list = new List<ScheduleBlock>();
-        public static List<ScheduleBlock> getListbyRoom(int RoomID, int SemesterID)
+        public static List<ScheduleBlock> getListbyRoom(int RoomID, int SemesterID,int dayOfweek)
         {
             list = new List<ScheduleBlock>();
 
             ScheduleBlockDetailsTableAdapter sbd = new ScheduleBlockDetailsTableAdapter();
-            DataRowCollection rows = sbd.GetDataByRoomIDSemester(RoomID, SemesterID).Rows;
+            DataRowCollection rows = sbd.GetDataByRoomIDSemester(RoomID, SemesterID, dayOfweek).Rows;
 
             for (int i = 0; i < rows.Count; i++)
             {
@@ -230,10 +230,21 @@ namespace Final_Project
 
         }
 
-        
-       
-        
-        public static List<ScheduleBlock> getListbyMahzorSemester(int MahzorID, int SemesterID)
+        private static List<ScheduleBlock> list_all_days = new List<ScheduleBlock>();
+        public static List<ScheduleBlock> getListbyRoom(int RoomID, int SemesterID)
+        {
+            list_all_days = new List<ScheduleBlock>();
+            for (int i = 0; i < 7; i++)
+            {
+                list_all_days.AddRange(getListbyRoom(RoomID, SemesterID, i));
+            }
+            return list_all_days;
+        }
+
+
+
+
+            public static List<ScheduleBlock> getListbyMahzorSemester(int MahzorID, int SemesterID)
         {
 
             list = new List<ScheduleBlock>();
@@ -262,25 +273,39 @@ namespace Final_Project
 
             return list;
 
+        }
 
+        public static List<ScheduleBlock> getListbyMahzorSemester(int MahzorID, int SemesterID, int DayOfWeek)
+        {
 
-
-
-            /*
             list = new List<ScheduleBlock>();
-            DataRowCollection rows = detailsAdapter.GetDataByMahzor(MahzorID, SemesterID).Rows;
+
+            ScheduleBlockDetailsTableAdapter sbd = new ScheduleBlockDetailsTableAdapter();
+            DataRowCollection rows = sbd.GetDataByMahzorAndDay(MahzorID, SemesterID,DayOfWeek).Rows;
 
             for (int i = 0; i < rows.Count; i++)
             {
+
                 int id = (int)rows[i][0];
-                ScheduleBlock block = ScheduleBlock.getFromDB(id);
+                int dayOfWeek = (int)rows[i][1];
+                TimeSpan startTime = (TimeSpan)rows[i][2];
+                ScheduleBlock block = new ScheduleBlock(id, dayOfWeek, startTime);
+
+                block.roomID = (int)rows[i][4];
+                block.roomName = rows[i][5].ToString();
+                block.roomFloor = (int)rows[i][6];
+                block.buildingName = rows[i][7].ToString();
+                block.campusName = rows[i][8].ToString();
+                block.DegreeClassName = rows[i][9].ToString();
+                block.FacultyName = rows[i][10].ToString();
                 list.Add(block);
+
             }
 
             return list;
-            */
+
         }
-        
+
 
     }
 }

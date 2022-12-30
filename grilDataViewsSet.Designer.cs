@@ -5846,7 +5846,7 @@ WHERE     (RoomFeatures.RoomID = @RoomID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        ScheduleBlockID, DayOfWeek, StartTime, EndTime, RoomID, RoomName, F" +
@@ -5855,18 +5855,32 @@ WHERE     (RoomFeatures.RoomID = @RoomID)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT ScheduleBlockDetails.BuildingName, ScheduleBlockDetails.CampusName, ScheduleBlockDetails.DayOfWeek, ScheduleBlockDetails.DegreeClassID, ScheduleBlockDetails.DegreeClassName, ScheduleBlockDetails.DegreeName, ScheduleBlockDetails.EndTime, ScheduleBlockDetails.FacultyName, ScheduleBlockDetails.Floor, ScheduleBlockDetails.RoomID, ScheduleBlockDetails.RoomName, ScheduleBlockDetails.ScheduleBlockID, ScheduleBlockDetails.SemesterID, ScheduleBlockDetails.StartTime FROM ScheduleBlockDetails INNER JOIN ScheduleBlock ON ScheduleBlockDetails.ScheduleBlockID = ScheduleBlock.ScheduleBlockID WHERE (ScheduleBlock.DegreeClassID = @mahzorID) AND (ScheduleBlock.SemesterID = @semesterID)";
+            this._commandCollection[1].CommandText = @"SELECT   ScheduleBlockDetails.BuildingName, ScheduleBlockDetails.CampusName, ScheduleBlockDetails.DayOfWeek, ScheduleBlockDetails.DegreeClassID, 
+                         ScheduleBlockDetails.DegreeClassName, ScheduleBlockDetails.DegreeName, ScheduleBlockDetails.EndTime, ScheduleBlockDetails.FacultyName, ScheduleBlockDetails.Floor, 
+                         ScheduleBlockDetails.RoomID, ScheduleBlockDetails.RoomName, ScheduleBlockDetails.ScheduleBlockID, ScheduleBlockDetails.SemesterID, ScheduleBlockDetails.StartTime
+FROM         ScheduleBlockDetails INNER JOIN
+                         ScheduleBlock ON ScheduleBlockDetails.ScheduleBlockID = ScheduleBlock.ScheduleBlockID
+WHERE     (ScheduleBlock.DegreeClassID = @mahzorID) AND (ScheduleBlock.SemesterID = @semesterID) AND (ScheduleBlockDetails.DayOfWeek = @DayOfWeek)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mahzorID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeClassID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@semesterID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "SemesterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DayOfWeek", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DayOfWeek", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT        BuildingName, CampusName, DayOfWeek, DegreeClassID, DegreeClassName, DegreeName, EndTime, FacultyName, Floor, RoomID, RoomName, ScheduleBlockID, SemesterID, StartTime
-FROM            ScheduleBlockDetails
-WHERE        (RoomID = @RoomID) AND (SemesterID = @SemesterID)";
+            this._commandCollection[2].CommandText = @"SELECT ScheduleBlockDetails.BuildingName, ScheduleBlockDetails.CampusName, ScheduleBlockDetails.DayOfWeek, ScheduleBlockDetails.DegreeClassID, ScheduleBlockDetails.DegreeClassName, ScheduleBlockDetails.DegreeName, ScheduleBlockDetails.EndTime, ScheduleBlockDetails.FacultyName, ScheduleBlockDetails.Floor, ScheduleBlockDetails.RoomID, ScheduleBlockDetails.RoomName, ScheduleBlockDetails.ScheduleBlockID, ScheduleBlockDetails.SemesterID, ScheduleBlockDetails.StartTime FROM ScheduleBlockDetails INNER JOIN ScheduleBlock ON ScheduleBlockDetails.ScheduleBlockID = ScheduleBlock.ScheduleBlockID WHERE (ScheduleBlock.DegreeClassID = @mahzorID) AND (ScheduleBlock.SemesterID = @semesterID)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoomID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RoomID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SemesterID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "SemesterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mahzorID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DegreeClassID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@semesterID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "SemesterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT   BuildingName, CampusName, DayOfWeek, DegreeClassID, DegreeClassName, DegreeName, EndTime, FacultyName, Floor, RoomID, RoomName, ScheduleBlockID, SemesterID, 
+                         StartTime
+FROM         ScheduleBlockDetails
+WHERE     (RoomID = @RoomID) AND (SemesterID = @SemesterID) AND (DayOfWeek = @DayOfWeek)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoomID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RoomID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SemesterID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "SemesterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DayOfWeek", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DayOfWeek", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5897,8 +5911,38 @@ WHERE        (RoomID = @RoomID) AND (SemesterID = @SemesterID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByMazhor(grilDataViewsSet.ScheduleBlockDetailsDataTable dataTable, int mahzorID, int semesterID) {
+        public virtual int FillByMahzorAndDay(grilDataViewsSet.ScheduleBlockDetailsDataTable dataTable, int mahzorID, int semesterID, int DayOfWeek) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(mahzorID));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(semesterID));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(DayOfWeek));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual grilDataViewsSet.ScheduleBlockDetailsDataTable GetDataByMahzorAndDay(int mahzorID, int semesterID, int DayOfWeek) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(mahzorID));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(semesterID));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(DayOfWeek));
+            grilDataViewsSet.ScheduleBlockDetailsDataTable dataTable = new grilDataViewsSet.ScheduleBlockDetailsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByMazhor(grilDataViewsSet.ScheduleBlockDetailsDataTable dataTable, int mahzorID, int semesterID) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(mahzorID));
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(semesterID));
             if ((this.ClearBeforeFill == true)) {
@@ -5913,7 +5957,7 @@ WHERE        (RoomID = @RoomID) AND (SemesterID = @SemesterID)";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual grilDataViewsSet.ScheduleBlockDetailsDataTable GetDataByMahzor(int mahzorID, int semesterID) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(mahzorID));
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(semesterID));
             grilDataViewsSet.ScheduleBlockDetailsDataTable dataTable = new grilDataViewsSet.ScheduleBlockDetailsDataTable();
@@ -5925,10 +5969,11 @@ WHERE        (RoomID = @RoomID) AND (SemesterID = @SemesterID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByRoomIDSemester(grilDataViewsSet.ScheduleBlockDetailsDataTable dataTable, int RoomID, int SemesterID) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+        public virtual int FillByRoomIDSemester(grilDataViewsSet.ScheduleBlockDetailsDataTable dataTable, int RoomID, int SemesterID, int DayOfWeek) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(RoomID));
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(SemesterID));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(DayOfWeek));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -5940,10 +5985,11 @@ WHERE        (RoomID = @RoomID) AND (SemesterID = @SemesterID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual grilDataViewsSet.ScheduleBlockDetailsDataTable GetDataByRoomIDSemester(int RoomID, int SemesterID) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+        public virtual grilDataViewsSet.ScheduleBlockDetailsDataTable GetDataByRoomIDSemester(int RoomID, int SemesterID, int DayOfWeek) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(RoomID));
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(SemesterID));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(DayOfWeek));
             grilDataViewsSet.ScheduleBlockDetailsDataTable dataTable = new grilDataViewsSet.ScheduleBlockDetailsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

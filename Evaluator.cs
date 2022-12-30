@@ -22,7 +22,7 @@ namespace Final_Project
             RoomFeatures.Clear();
 
             //shlifa
-            getFromDB();
+            getFromDB(sb.DayOfWeek);
 
             //eval
             evaluation();
@@ -31,7 +31,7 @@ namespace Final_Project
         }
 
         //funkziat shlifa
-        private static void getFromDB()
+        private static void getFromDB(int dayOfWeek)
         {
             //Room Features
             foreach (KeyValuePair<Features, int> entry in sb.room.getRoomFeatures())
@@ -43,7 +43,7 @@ namespace Final_Project
             }
 
             //All Blocks of Mahzor
-            blocksOfMahzor = ScheduleBlock.getListbyMahzorSemester(sb.degreeClass.Id, sb.semester.Id);
+            blocksOfMahzor = ScheduleBlock.getListbyMahzorSemester(sb.degreeClass.Id, sb.semester.Id,dayOfWeek);
 
         }
 
@@ -138,7 +138,7 @@ namespace Final_Project
             if (SB_1.Id != SB_2.Id && SB_1.DayOfWeek == SB_2.DayOfWeek)
             {
                 Boolean before = (SB_2.EndTime < SB_1.StartTime && SB_2.StartTime < SB_1.StartTime);
-                Boolean partialStart = (SB_2.StartTime < SB_1.StartTime && SB_2.EndTime < SB_1.StartTime);
+                Boolean partialStart = (SB_2.StartTime < SB_1.StartTime && SB_2.EndTime > SB_1.StartTime);
                 Boolean completeHafifa = (SB_2.StartTime >= SB_1.StartTime && SB_2.EndTime <= SB_1.EndTime);
                 Boolean partialEnd = (SB_2.StartTime < SB_1.EndTime && SB_2.EndTime > SB_1.EndTime);
                 Boolean after = (SB_2.StartTime > SB_1.EndTime && SB_2.EndTime > SB_1.EndTime);
@@ -180,7 +180,7 @@ namespace Final_Project
         private static void checkHafifa()
         {
 
-            List<ScheduleBlock> blocksInRoom = ScheduleBlock.getListbyRoom(sb.room.Id, sb.semester.Id);
+            List<ScheduleBlock> blocksInRoom = ScheduleBlock.getListbyRoom(sb.room.Id, sb.semester.Id,sb.DayOfWeek);
 
             //iterate all blocks in room and find 
             foreach (ScheduleBlock currBlock in blocksInRoom)
