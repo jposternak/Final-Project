@@ -478,7 +478,12 @@
     <None Include="Resources\icons8-waypoint-map-50.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\background.jpeg" />
+    <None Include="Resources\background1.jpeg" />
+    <None Include="Resources\black.jpeg" />
+    <None Include="Resources\blue.jpeg" />
     <Content Include="Resources\icons8-loading-circle.gif" />
+    <None Include="Resources\main_menu.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
