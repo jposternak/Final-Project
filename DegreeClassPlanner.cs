@@ -19,9 +19,6 @@ namespace Final_Project
             this.semester = semester;
             this.dc = dc;
             InitializeComponent();
-            fillUpperTable();
-            plotGraph();
-            //fillNumbers();
 
         }
 
@@ -115,6 +112,8 @@ namespace Final_Project
         {
             // TODO: This line of code loads data into the 'grilDataSet.Room' table. You can move, or remove it, as needed.
             this.roomTableAdapter.Fill(this.grilDataSet.Room);
+            fillUpperTable();
+            plotGraph();
             populateTree();
             populateBuildingsTree();
             fillNumbers();
@@ -127,11 +126,26 @@ namespace Final_Project
             DegreeClassPlanExecTableAdapter planexec = new DegreeClassPlanExecTableAdapter();
             DataRowCollection rows = planexec.GetDataDCSem(this.dc.Id, this.semester.Id).Rows;
 
-            tihnunLB.Text = rows[0][5].ToString();
+            int rowOfSem = 0;
+            if (rows.Count > 1)
+            {
+                for (int i = 0; i < rows.Count; i++)
+                {
+                    int ID = (int)rows[i][0];
+                    if (this.dc.Id == ID)
+                    {
+                        rowOfSem = i;
+                        break;
+                    }
+                }
+            }
+
+
+            tihnunLB.Text = rows[rowOfSem][5].ToString();
             hours_req.Text = tihnunLB.Text;
-            bitzuaLB.Text = rows[0][6].ToString();
+            bitzuaLB.Text = rows[rowOfSem][6].ToString();
             hours_used.Text = bitzuaLB.Text;
-            itraLB.Text = rows[0][7].ToString();
+            itraLB.Text = rows[rowOfSem][7].ToString();
             hours_remaining.Text = itraLB.Text;
             if (int.Parse(itraLB.Text) < 0)
             {
@@ -141,6 +155,7 @@ namespace Final_Project
             {
                 itraLB.ForeColor = Color.Green;
             }
+
         }
 
         private void populateTree()
@@ -501,22 +516,6 @@ namespace Final_Project
 
             bw.ReportProgress(100);
         }
-        /*
-        private Boolean isSimultaneous(List<Constraint> list)
-        {
-            Boolean pass = true;
-
-            foreach (Constraint c in list)
-            {
-                if (c.typeOfConstraint == Constraint.Type.Simultaneous)
-                {
-                    return false;
-                }
-            }
-
-            return pass;
-        }
-        */
 
         private Boolean evalConstraintList(List<Constraint> list)
         {
@@ -531,7 +530,7 @@ namespace Final_Project
                 if (c.constraintSeverity == Constraint.Severity.Warning)
                 {
                     //check penalty
-                    if (c.penalty > 50)
+                    if (c.penalty > 70)
                     {
                         return false;
                     }
@@ -545,30 +544,32 @@ namespace Final_Project
         String draftName = "draft";
         private void searchBT_Click(object sender, EventArgs e)
         {
+            if (selectedBuildingID != -1)
+            {
+                createSerie(draftName);
+                constraint_list.Clear();
+                constraintListBox.Items.Clear();
 
-            createSerie(draftName);
-            constraint_list.Clear();
-            constraintListBox.Items.Clear();
+                BackgroundWorker bw = new BackgroundWorker();
 
-            BackgroundWorker bw = new BackgroundWorker();
+                draftPB.Value = 0;
 
-            draftPB.Value = 0;
+                plotDraft();
 
-            plotDraft();
+                bw.WorkerReportsProgress = true;
+                bw.DoWork += createDraft;
+                bw.ProgressChanged += ChangePB;
+                bw.RunWorkerCompleted += DraftIsReady;
+                draftPB.Value = 5;
 
-            bw.WorkerReportsProgress = true;
-            bw.DoWork += createDraft;
-            bw.ProgressChanged += ChangePB;
-            bw.RunWorkerCompleted += DraftIsReady;
-            draftPB.Value = 5;
-
-            bw.RunWorkerAsync();
+                bw.RunWorkerAsync();
+            }
 
         }
 
         private void DraftIsReady(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (draftBlocks.Count == 0 && int.Parse(hours_matrix.Text)>0)
+            if (draftBlocks.Count == 0 && int.Parse(hours_matrix.Text) > 0)
             {
                 MessageBox.Show("לא הצלחנו לשריין, שנה פרמטרים ונסה שוב");
             }

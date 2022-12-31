@@ -50,6 +50,9 @@ namespace Final_Project
         public override string ToString()
         {
 
+            return $"{this.Comment}";
+
+            /*
             if (feature != null)
             {
                 return $"Constraint: {typeOfConstraint}\t Feature: {feature.Name}\t Type: {typeOfConstraint}\t Penalty:{penalty}";
@@ -58,6 +61,7 @@ namespace Final_Project
             {
                 return $"Constraint: {typeOfConstraint}\t Type: {typeOfConstraint}\t Penalty:{penalty}";
             }
+            */
 
         }
 
