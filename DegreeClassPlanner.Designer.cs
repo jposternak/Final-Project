@@ -75,8 +75,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.roomLB = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.clearDraft = new System.Windows.Forms.Button();
-            this.constraintListBox = new System.Windows.Forms.ListBox();
             this.draftPB = new System.Windows.Forms.ProgressBar();
             this.saveDraft = new System.Windows.Forms.Button();
             this.searchBT = new System.Windows.Forms.Button();
@@ -134,6 +132,8 @@
             this.roomTableAdapter = new Final_Project.grilDataSetTableAdapters.RoomTableAdapter();
             this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
             this.degreeClassPlanExec3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.constraintListBox = new System.Windows.Forms.ListBox();
+            this.clearDraft = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -1611,6 +1611,24 @@
             // 
             this.degreeClassPlanExec3BindingSource.DataMember = "DegreeClassPlanExec3";
             this.degreeClassPlanExec3BindingSource.DataSource = this.grilDataViewsSet;
+            // 
+            // constraintListBox
+            // 
+            this.constraintListBox.FormattingEnabled = true;
+            this.constraintListBox.Location = new System.Drawing.Point(108, 496);
+            this.constraintListBox.Name = "constraintListBox";
+            this.constraintListBox.Size = new System.Drawing.Size(252, 82);
+            this.constraintListBox.TabIndex = 11;
+            // 
+            // clearDraft
+            // 
+            this.clearDraft.Location = new System.Drawing.Point(14, 530);
+            this.clearDraft.Name = "clearDraft";
+            this.clearDraft.Size = new System.Drawing.Size(84, 23);
+            this.clearDraft.TabIndex = 12;
+            this.clearDraft.Text = "נקה טיוטה";
+            this.clearDraft.UseVisualStyleBackColor = true;
+            this.clearDraft.Click += new System.EventHandler(this.clearDraft_Click);
             // 
             // DegreeClassPlanner
             // 
