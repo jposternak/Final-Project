@@ -75,6 +75,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.roomLB = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.draftPB = new System.Windows.Forms.ProgressBar();
             this.saveDraft = new System.Windows.Forms.Button();
             this.searchBT = new System.Windows.Forms.Button();
             this.selected_building = new System.Windows.Forms.Label();
@@ -131,7 +132,8 @@
             this.roomTableAdapter = new Final_Project.grilDataSetTableAdapters.RoomTableAdapter();
             this.grilDataViewsSet = new Final_Project.grilDataViewsSet();
             this.degreeClassPlanExec3BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.draftPB = new System.Windows.Forms.ProgressBar();
+            this.constraintListBox = new System.Windows.Forms.ListBox();
+            this.clearDraft = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -780,6 +782,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.clearDraft);
+            this.tabPage2.Controls.Add(this.constraintListBox);
             this.tabPage2.Controls.Add(this.draftPB);
             this.tabPage2.Controls.Add(this.saveDraft);
             this.tabPage2.Controls.Add(this.searchBT);
@@ -796,9 +800,17 @@
             this.tabPage2.Text = "הקצאה חכמה";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // draftPB
+            // 
+            this.draftPB.Location = new System.Drawing.Point(108, 581);
+            this.draftPB.Name = "draftPB";
+            this.draftPB.RightToLeftLayout = true;
+            this.draftPB.Size = new System.Drawing.Size(252, 11);
+            this.draftPB.TabIndex = 10;
+            // 
             // saveDraft
             // 
-            this.saveDraft.Location = new System.Drawing.Point(14, 560);
+            this.saveDraft.Location = new System.Drawing.Point(13, 559);
             this.saveDraft.Name = "saveDraft";
             this.saveDraft.Size = new System.Drawing.Size(85, 46);
             this.saveDraft.TabIndex = 9;
@@ -810,7 +822,7 @@
             // 
             this.searchBT.Location = new System.Drawing.Point(14, 496);
             this.searchBT.Name = "searchBT";
-            this.searchBT.Size = new System.Drawing.Size(85, 23);
+            this.searchBT.Size = new System.Drawing.Size(85, 28);
             this.searchBT.TabIndex = 8;
             this.searchBT.Text = "חפש מיקום";
             this.searchBT.UseVisualStyleBackColor = true;
@@ -1506,13 +1518,23 @@
             this.degreeClassPlanExec3BindingSource.DataMember = "DegreeClassPlanExec3";
             this.degreeClassPlanExec3BindingSource.DataSource = this.grilDataViewsSet;
             // 
-            // draftPB
+            // constraintListBox
             // 
-            this.draftPB.Location = new System.Drawing.Point(14, 525);
-            this.draftPB.Name = "draftPB";
-            this.draftPB.RightToLeftLayout = true;
-            this.draftPB.Size = new System.Drawing.Size(85, 16);
-            this.draftPB.TabIndex = 10;
+            this.constraintListBox.FormattingEnabled = true;
+            this.constraintListBox.Location = new System.Drawing.Point(108, 496);
+            this.constraintListBox.Name = "constraintListBox";
+            this.constraintListBox.Size = new System.Drawing.Size(252, 82);
+            this.constraintListBox.TabIndex = 11;
+            // 
+            // clearDraft
+            // 
+            this.clearDraft.Location = new System.Drawing.Point(14, 530);
+            this.clearDraft.Name = "clearDraft";
+            this.clearDraft.Size = new System.Drawing.Size(84, 23);
+            this.clearDraft.TabIndex = 12;
+            this.clearDraft.Text = "נקה טיוטה";
+            this.clearDraft.UseVisualStyleBackColor = true;
+            this.clearDraft.Click += new System.EventHandler(this.clearDraft_Click);
             // 
             // DegreeClassPlanner
             // 
@@ -1681,5 +1703,7 @@
         private System.Windows.Forms.Button searchBT;
         private System.Windows.Forms.Button saveDraft;
         private System.Windows.Forms.ProgressBar draftPB;
+        private System.Windows.Forms.ListBox constraintListBox;
+        private System.Windows.Forms.Button clearDraft;
     }
 }

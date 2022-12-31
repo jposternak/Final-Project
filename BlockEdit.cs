@@ -30,7 +30,7 @@ namespace Final_Project
             InitializeComponent();
             this.block = ScheduleBlock.getFromDB(block.Id);
 
-            
+
             populateRoomProperties();
             populateDCProperties();
             populateBlockProperties();
@@ -168,7 +168,7 @@ namespace Final_Project
             bw.ProgressChanged += ChangePB;
             bw.RunWorkerCompleted += UpdateTable;
             bw.RunWorkerAsync();
-            
+
 
         }
 
@@ -280,6 +280,41 @@ namespace Final_Project
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void shabat_txt_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show(shabat_txt.Text, shabat_txt);
+        }
+
+        private void friday_txt_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show(friday_txt.Text, friday_txt);
+        }
+
+        private void simul_txt_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show(simul_txt.Text, simul_txt);
+        }
+
+        private void overlap_txt_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show(overlap_txt.Text, overlap_txt);
+        }
+
+        private void cap_txt_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show(cap_txt.Text, cap_txt);
+        }
+
+        private void movem_txt_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show(movem_txt.Text, movem_txt);
+        }
+
+        private void spacing_txt_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show(spacing_txt.Text, spacing_txt);
         }
     }
 }

@@ -35,7 +35,7 @@ namespace Final_Project
         }
         public Type typeOfConstraint { get; private set; }
 
-        double penalty { get; set; }
+        public double penalty { get; private set; }
 
         public Constraint(Type typeOfConstraint, ScheduleBlock scheduleBlock, Features feature, Severity constraintSeverity, double penalty)
         {
