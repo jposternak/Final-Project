@@ -2,6 +2,7 @@
 using Final_Project.grilDataViewsSetTableAdapters;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -37,6 +38,7 @@ namespace Final_Project
 
         Dictionary<int, ScheduleBlock> dataPoints = new Dictionary<int, ScheduleBlock>();
         Dictionary<int, ScheduleBlock> draftDataPoints = new Dictionary<int, ScheduleBlock>();
+        List<ScheduleBlock> draftBlocks = new List<ScheduleBlock>();
 
         private void plotGraph()
         {
@@ -386,19 +388,54 @@ namespace Final_Project
 
         }
 
+
         private void plotDraft()
         {
-            //draftMatrix[dayofweek-1,morning = 0 / evening =1]
-            String draftName = "draft";
+            //BackgroundWorker bw = sender as BackgroundWorker;
 
-            createSerie(draftName);
+            //draftMatrix[dayofweek-1,morning = 0 / evening =1]
+
+            if (draftBlocks.Count > 0)
+            {
+
+                for (int m = 0; m < 7; m++)
+                {
+
+                    int p = luz.Series[draftName].Points.AddXY(m + 1, 7.59, 7.591);
+                    draftDataPoints.Add(p, null);
+                    luz.Series[draftName].Points[p].Color = Color.Transparent;
+                    luz.Series[draftName].Points[p].BorderColor = Color.Transparent;
+                    luz.Series[draftName].Points[p].BorderWidth = 3;
+                }
+
+                //for plot from the draft list
+
+                foreach (ScheduleBlock sbDraft in draftBlocks)
+                {
+                    int p1 = luz.Series[draftName].Points.AddXY(sbDraft.DayOfWeek, sbDraft.StartTime, sbDraft.EndTime);
+                    draftDataPoints.Add(p1, sbDraft);
+                    luz.Series[draftName].Points[p1].BorderColor = Color.Black;
+                    luz.Series[draftName].Points[p1].BorderWidth = 3;
+                    luz.Series[draftName].Points[p1].Label = sbDraft.room.ToString();
+                    luz.Series[draftName].Points[p1].Color = Color.Orange;
+                }
+            }
+            else
+            {
+                luz.Series[draftName].Points.Clear();
+            }
+
+        }
+
+
+        private void createDraft(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker bw = sender as BackgroundWorker;
+
+            //draftMatrix[dayofweek-1,morning = 0 / evening =1]
             for (int m = 0; m < draftMatrix.GetLength(0); m++)
             {
-                int p = luz.Series[draftName].Points.AddXY(m + 1, 7.59, 7.591);
-                draftDataPoints.Add(p, null);
-                luz.Series[draftName].Points[p].Color = Color.Transparent;
-                luz.Series[draftName].Points[p].BorderColor = Color.Transparent;
-                luz.Series[draftName].Points[p].BorderWidth = 3;
+                int progress = (int)((m * 1.0) / draftMatrix.GetLength(0)) * 100;
 
                 for (int n = 0; n < draftMatrix.GetLength(1); n++)
                 {
@@ -432,47 +469,82 @@ namespace Final_Project
                             List<Constraint> list = Evaluator.evaluate(sbDraft);
                             if (list.Count == 0)
                             {
-                                int p1 = luz.Series[draftName].Points.AddXY(m + 1, sbDraft.StartTime, sbDraft.EndTime);
-                                draftDataPoints.Add(p1, sbDraft);
-                                luz.Series[draftName].Points[p1].BorderColor = Color.Black;
-                                luz.Series[draftName].Points[p1].BorderWidth = 3;
-                                luz.Series[draftName].Points[p1].Label = sbDraft.room.ToString();
-                                luz.Series[draftName].Points[p1].Color = Color.Orange;
+                                //draftDataPoints.Add(j, sbDraft);
+                                draftBlocks.Add(sbDraft);
                                 break;
                             }
                         }
-                        //sbDraft.changeProperties(m+1,startTime,)
-                        //ScheduleBlock.insertNew(m + 1,)
-                        //int p = luz.Series[draftName].Points.AddXY(m + 1, block.StartTime, block.EndTime);
-                        //int p1 = luz.Series[draftName].Points.AddXY(m + 1, sbDraft.StartTime, sbDraft.EndTime);
-                        //draftDataPoints.Add(p1, sbDraft);
-                        //luz.Series[draftName].Points[p1].BorderColor = Color.Black;
-                        //luz.Series[draftName].Points[p1].BorderWidth = 3;
-                        //luz.Series[draftName].Points[p1].Label = draftName;
-                        //luz.Series[draftName].Points[p1].Color = Color.Orange;
+
                     }
                 }
+                bw.ReportProgress(progress);
             }
 
-
+            bw.ReportProgress(100);
         }
 
-        private ScheduleBlock draftAblock()
-        {
-            return null;
-        }
-
-
+        String draftName = "draft";
         private void searchBT_Click(object sender, EventArgs e)
         {
+
+            createSerie(draftName);
+
+            BackgroundWorker bw = new BackgroundWorker();
+            bw.WorkerReportsProgress = true;
+            bw.DoWork += createDraft;
+            bw.ProgressChanged += ChangePB;
+            bw.RunWorkerCompleted += DraftIsReady;
+            bw.RunWorkerAsync();
+
+        }
+
+        private void DraftIsReady(object sender, RunWorkerCompletedEventArgs e)
+        {
+            //plot 
             plotDraft();
-            int p = 0;
+
+            //clear matrix and table
+            sun_morning.Value = 0;
+            sun_evening.Value = 0;
+
+            mon_morning.Value = 0;
+            mon_evening.Value = 0;
+
+            tue_morning.Value = 0;
+            tue_evening.Value = 0;
+
+            wed_morning.Value = 0;
+            wed_evening.Value = 0;
+
+            thu_morning.Value = 0;
+            thu_evening.Value = 0;
+
+            fri_morning.Value = 0;
+            fri_evening.Value = 0;
+
+            sat_morning.Value = 0;
+            sat_evening.Value = 0;
+
+            updatePlannerMatrix();
+
+            //open button for save
+            saveDraft.Enabled = true;
+
+            //close button of draft
+            searchBT.Enabled = false;
+
+        }
+
+        private void ChangePB(object sender, ProgressChangedEventArgs e)
+        {
+            draftPB.Value = e.ProgressPercentage;
         }
 
         #endregion
 
         private void saveDraft_Click(object sender, EventArgs e)
         {
+
 
             for (int i = 0; i < draftDataPoints.Count; i++)
             {
@@ -485,7 +557,7 @@ namespace Final_Project
 
                     int roomID = draftSB.room.Id;
                     DateTime start = new DateTime();
-                    
+
                     start = start.AddHours(draftSB.StartTimeT.Hours);
                     start = start.AddMinutes(draftSB.StartTimeT.Minutes);
 
@@ -495,45 +567,33 @@ namespace Final_Project
                         start = start.AddMinutes(45);
                     }
 
-
-
-
                 }
+
             }
 
             plotGraph();
             draftDataPoints.Clear();
+            searchBT_Click(null, null);
+
+
+            //clear draft data points
+            //close button for save
+            saveDraft.Enabled = false;
+
+            //open button of draft
+            searchBT.Enabled = true;
+
+            //delete draft
+            draftBlocks.Clear();
+            //replot draft
             plotDraft();
 
-        }
-
-
-        /*
-        private void add_Click(object sender, EventArgs e)
-        {
-            int weekday = int.Parse(dayCB.Text);
-
-            //DateTime startTime = startPicker.Value;
-            int numberOfBlocks = int.Parse(numberOfBlocksCB.SelectedItem.ToString());
-
-            if (selectedRoomID != -1)
-            {
-                int roomID = selectedRoomID;
-
-                for (int i = 0; i < numberOfBlocks; i++)
-                {
-                    ScheduleBlock.insertNew(weekday, startTime, roomID, dc.Id, semester.Id);
-                    startTime = startTime.AddMinutes(45);
-                }
-
-                plotGraph();
-                fillNumbers();
-            }
-
+            //success message
+            MessageBox.Show("Great Success");
 
         }
 
-        */
+
     }
 
 }
