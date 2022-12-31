@@ -178,6 +178,7 @@ namespace Final_Project
             //movement around campus & buildings & rooms
             checkMovement();
 
+            roomFeatures = null;
 
         }
 
@@ -230,7 +231,7 @@ namespace Final_Project
         private static void checkCapacity(int roomCapacity, int numberOfStudents, Features f)
         {
 
-            double penalty = (1.0 * numberOfStudents) / roomCapacity;
+            double penalty = Math.Round((1.0 * numberOfStudents) / roomCapacity,2);
             if (penalty > 1)
             {
                 //Constraint c = new Constraint("Exceeded Capacity", sb, f, Constraint.Severity.Error, penalty * 100);
@@ -248,7 +249,7 @@ namespace Final_Project
             else if (penalty < 0.40)
             {
                 //Constraint c = new Constraint("Almost Empty", sb, f, Constraint.Severity.Warning, 100 - penalty * 100);
-                Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.Warning, 100 - penalty * 100);
+                Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.Warning, 100 - (penalty * 100.0));
                 c.Comment = $"חדר כמעט ריק - {100 - penalty * 100}%";
                 constraints.Add(c);
             }

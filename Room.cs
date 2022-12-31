@@ -15,7 +15,7 @@ namespace Final_Project
         public int Floor { get; set; }
         public Building building { get; set; }
 
-        private static Dictionary<Features, int> RoomFeatures { get; set; }
+        public static Dictionary<Features, int> RoomFeatures { get; private set; }
 
 
         private static RoomTableAdapter adapter = new RoomTableAdapter();
