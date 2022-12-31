@@ -214,16 +214,21 @@ namespace Final_Project
 
             var r = luz.HitTest(e.X, e.Y);
 
-            if (r.ChartElementType == ChartElementType.DataPointLabel)
+            if (r.Series.Name != draftName)
             {
-                DataPoint p = (DataPoint)r.Object;
-                int idx = r.PointIndex;
-                ScheduleBlock sb = dataPoints[idx];
 
-                BlockEdit dbfrom = new BlockEdit(sb);
-                dbfrom.Show();
-                dbfrom.FormClosed += Dbfrom_FormClosed;
+                if (r.ChartElementType == ChartElementType.DataPointLabel)
+                {
+                    DataPoint p = (DataPoint)r.Object;
 
+
+                    int idx = r.PointIndex;
+                    ScheduleBlock sb = dataPoints[idx];
+                    BlockEdit dbfrom = new BlockEdit(sb);
+                    dbfrom.Show();
+                    dbfrom.FormClosed += Dbfrom_FormClosed;
+
+                }
             }
 
         }
@@ -427,18 +432,21 @@ namespace Final_Project
 
         }
 
-
+        private List<Constraint> constraint_list = new List<Constraint>();
         private void createDraft(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker bw = sender as BackgroundWorker;
-
+            int progress = 0;
             //draftMatrix[dayofweek-1,morning = 0 / evening =1]
             for (int m = 0; m < draftMatrix.GetLength(0); m++)
             {
-                int progress = (int)((m * 1.0) / draftMatrix.GetLength(0)) * 100;
+                progress = (int)((((m + 1 * 1.0) / draftMatrix.GetLength(0)) * 100) % 101);
+                bw.ReportProgress(progress);
+
 
                 for (int n = 0; n < draftMatrix.GetLength(1); n++)
                 {
+
                     if (draftMatrix[m, n] > 0)
                     {
                         int numOfBlocks = draftMatrix[m, n];
@@ -461,78 +469,146 @@ namespace Final_Project
                         sbDraft.degreeClass = dc;
                         sbDraft.semester = semester;
 
+                        //if simultaneous, then add 45 minutes and try again
                         List<Room> roomsInBuilding = Building.getBuildingRooms(selectedBuildingID);
+                        sbDraft.room = roomsInBuilding[0]; //random room from DB
+                        while (Evaluator.isSimultaneous(sbDraft))
+                        {
+                            StartTime = StartTime.Add(TimeSpan.FromMinutes(15));
+                            sbDraft.setStartTime(StartTime, numOfBlocks);
+                        }
 
                         for (int j = 0; j < roomsInBuilding.Count; j++)
                         {
                             sbDraft.room = roomsInBuilding[j];
                             List<Constraint> list = Evaluator.evaluate(sbDraft);
-                            if (list.Count == 0)
+                            //if simultaneous, then add 45 minutes and try again
+                            if (evalConstraintList(list))
                             {
-                                //draftDataPoints.Add(j, sbDraft);
+                                //save warning errors to list for show
+                                constraint_list.AddRange(list);
                                 draftBlocks.Add(sbDraft);
+
                                 break;
                             }
                         }
 
+
                     }
                 }
-                bw.ReportProgress(progress);
+
             }
 
             bw.ReportProgress(100);
         }
+        /*
+        private Boolean isSimultaneous(List<Constraint> list)
+        {
+            Boolean pass = true;
+
+            foreach (Constraint c in list)
+            {
+                if (c.typeOfConstraint == Constraint.Type.Simultaneous)
+                {
+                    return false;
+                }
+            }
+
+            return pass;
+        }
+        */
+
+        private Boolean evalConstraintList(List<Constraint> list)
+        {
+            Boolean pass = true;
+
+            foreach (Constraint c in list)
+            {
+                if (c.constraintSeverity == Constraint.Severity.Error)
+                {
+                    return false;
+                }
+                if (c.constraintSeverity == Constraint.Severity.Warning)
+                {
+                    //check penalty
+                    if (c.penalty > 50)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return pass;
+        }
+
 
         String draftName = "draft";
         private void searchBT_Click(object sender, EventArgs e)
         {
 
             createSerie(draftName);
+            constraint_list.Clear();
+            constraintListBox.Items.Clear();
 
             BackgroundWorker bw = new BackgroundWorker();
+
+            draftPB.Value = 0;
+
+            plotDraft();
+
             bw.WorkerReportsProgress = true;
             bw.DoWork += createDraft;
             bw.ProgressChanged += ChangePB;
             bw.RunWorkerCompleted += DraftIsReady;
+            draftPB.Value = 5;
+
             bw.RunWorkerAsync();
 
         }
 
         private void DraftIsReady(object sender, RunWorkerCompletedEventArgs e)
         {
-            //plot 
-            plotDraft();
+            if (draftBlocks.Count == 0 && int.Parse(hours_matrix.Text)>0)
+            {
+                MessageBox.Show("לא הצלחנו לשריין, שנה פרמטרים ונסה שוב");
+            }
+            else
+            {
+                //plot 
+                plotDraft();
 
-            //clear matrix and table
-            sun_morning.Value = 0;
-            sun_evening.Value = 0;
+                //clear matrix and table
+                sun_morning.Value = 0;
+                sun_evening.Value = 0;
 
-            mon_morning.Value = 0;
-            mon_evening.Value = 0;
+                mon_morning.Value = 0;
+                mon_evening.Value = 0;
 
-            tue_morning.Value = 0;
-            tue_evening.Value = 0;
+                tue_morning.Value = 0;
+                tue_evening.Value = 0;
 
-            wed_morning.Value = 0;
-            wed_evening.Value = 0;
+                wed_morning.Value = 0;
+                wed_evening.Value = 0;
 
-            thu_morning.Value = 0;
-            thu_evening.Value = 0;
+                thu_morning.Value = 0;
+                thu_evening.Value = 0;
 
-            fri_morning.Value = 0;
-            fri_evening.Value = 0;
+                fri_morning.Value = 0;
+                fri_evening.Value = 0;
 
-            sat_morning.Value = 0;
-            sat_evening.Value = 0;
+                sat_morning.Value = 0;
+                sat_evening.Value = 0;
 
-            updatePlannerMatrix();
+                updatePlannerMatrix();
 
-            //open button for save
-            saveDraft.Enabled = true;
+                constraintListBox.Items.AddRange(constraint_list.ToArray());
 
-            //close button of draft
-            searchBT.Enabled = false;
+                //open button for save
+                saveDraft.Enabled = true;
 
+                //close button of draft
+                searchBT.Enabled = true;
+            }
         }
 
         private void ChangePB(object sender, ProgressChangedEventArgs e)
@@ -540,58 +616,70 @@ namespace Final_Project
             draftPB.Value = e.ProgressPercentage;
         }
 
-        #endregion
+
 
         private void saveDraft_Click(object sender, EventArgs e)
         {
 
-
-            for (int i = 0; i < draftDataPoints.Count; i++)
+            if (selectedBuildingID != -1)
             {
-                ScheduleBlock draftSB = draftDataPoints[i];
-                if (draftSB != null)
+
+                for (int i = 0; i < draftDataPoints.Count; i++)
                 {
-                    int weekDay = draftSB.DayOfWeek;
-
-                    int numberOfBlocks = (int)Math.Round((draftSB.EndTimeT.TotalMinutes - draftSB.StartTimeT.TotalMinutes) / 45);
-
-                    int roomID = draftSB.room.Id;
-                    DateTime start = new DateTime();
-
-                    start = start.AddHours(draftSB.StartTimeT.Hours);
-                    start = start.AddMinutes(draftSB.StartTimeT.Minutes);
-
-                    for (int k = 0; k < numberOfBlocks; k++)
+                    ScheduleBlock draftSB = draftDataPoints[i];
+                    if (draftSB != null)
                     {
-                        ScheduleBlock.insertNew(weekDay, start, roomID, dc.Id, semester.Id);
-                        start = start.AddMinutes(45);
+                        int weekDay = draftSB.DayOfWeek;
+
+                        int numberOfBlocks = (int)Math.Round((draftSB.EndTimeT.TotalMinutes - draftSB.StartTimeT.TotalMinutes) / 45);
+
+                        int roomID = draftSB.room.Id;
+                        DateTime start = new DateTime();
+
+                        start = start.AddHours(draftSB.StartTimeT.Hours);
+                        start = start.AddMinutes(draftSB.StartTimeT.Minutes);
+
+                        for (int k = 0; k < numberOfBlocks; k++)
+                        {
+                            ScheduleBlock.insertNew(weekDay, start, roomID, dc.Id, semester.Id);
+                            start = start.AddMinutes(45);
+                        }
+
                     }
 
                 }
 
+                plotGraph();
+                draftDataPoints.Clear();
+                searchBT_Click(null, null);
+
+                //clear draft data points
+                //close button for save
+                saveDraft.Enabled = false;
+
+                //open button of draft
+                searchBT.Enabled = true;
+
+                //delete draft
+                draftBlocks.Clear();
+                //replot draft
+                plotDraft();
+
+                //success message
+                MessageBox.Show("טיוטה נשמרה בהצלחה");
             }
 
-            plotGraph();
-            draftDataPoints.Clear();
-            searchBT_Click(null, null);
-
-
-            //clear draft data points
-            //close button for save
-            saveDraft.Enabled = false;
-
-            //open button of draft
-            searchBT.Enabled = true;
-
-            //delete draft
-            draftBlocks.Clear();
-            //replot draft
-            plotDraft();
-
-            //success message
-            MessageBox.Show("Great Success");
-
         }
+
+        private void clearDraft_Click(object sender, EventArgs e)
+        {
+            draftDataPoints.Clear();
+            draftBlocks.Clear();
+            searchBT_Click(null, null);
+            plotDraft();
+        }
+
+        #endregion
 
 
     }

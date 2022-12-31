@@ -172,7 +172,9 @@ namespace Final_Project
             double decimalTime = StartTime - Math.Truncate(StartTime);
             if (decimalTime == 0) StartHour_str += ".00";
 
-            s += $"({StartTimeT.ToString()}-{EndTimeT.ToString()})\n";
+            //s += $"({StartTimeT.ToString()}\n{EndTimeT.ToString()})";
+
+            s += $"({StartTimeT.ToString().Substring(0, 5)} - {EndTimeT.ToString().Substring(0, 5)})";
 
             return s;
         }
@@ -180,8 +182,8 @@ namespace Final_Project
         //done
         public String RoomAndTime()
         {
-            String s = TimeToString();
-            s += roomName;
+            String s = TimeToString().Substring(0, 7);
+            s += "\n" + roomName;
             return s;
         }
 

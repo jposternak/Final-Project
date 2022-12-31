@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace Final_Project
 {
@@ -30,6 +31,19 @@ namespace Final_Project
             return constraints.Distinct().ToList();
         }
 
+        public static Boolean isSimultaneous(ScheduleBlock scheduleBlock)
+        {
+
+            sb = scheduleBlock;
+            constraints.Clear();
+            blocksOfMahzor.Clear();
+            RoomFeatures.Clear();
+
+            getFromDB(sb.DayOfWeek);
+
+            return !checkMultiplace();
+        }
+
         //funkziat shlifa
         private static void getFromDB(int dayOfWeek)
         {
@@ -43,7 +57,7 @@ namespace Final_Project
             }
 
             //All Blocks of Mahzor
-            blocksOfMahzor = ScheduleBlock.getListbyMahzorSemester(sb.degreeClass.Id, sb.semester.Id,dayOfWeek);
+            blocksOfMahzor = ScheduleBlock.getListbyMahzorSemester(sb.degreeClass.Id, sb.semester.Id, dayOfWeek);
 
         }
 
@@ -84,12 +98,15 @@ namespace Final_Project
 
         }
 
-        private static void checkMultiplace()
+
+        private static Boolean checkMultiplace()
         {
             //ind. pitzul?
+            List<ScheduleBlock> blocksOfMahzor_ext = blocksOfMahzor;
+            blocksOfMahzor_ext.Add(sb);
 
             //look for same times, in different place
-            foreach (ScheduleBlock SB_1 in blocksOfMahzor)
+            foreach (ScheduleBlock SB_1 in blocksOfMahzor_ext)
             {
                 List<ScheduleBlock> blocksOfMahzor_int = new List<ScheduleBlock>();
                 blocksOfMahzor_int.AddRange(blocksOfMahzor);
@@ -102,33 +119,21 @@ namespace Final_Project
                         //Check Same day
                         if (SB_1.DayOfWeek == SB_2.DayOfWeek)
                         {
-
-
-                            //Check Time
-                            if (SB_1.StartTime >= SB_2.EndTime || SB_1.EndTime <= SB_2.StartTime)
-                            {
-                                //OK
-                            }
-                            else if (SB_1.StartTime >= SB_2.EndTime || SB_1.EndTime <= SB_2.StartTime)
-                            {
-
-
-
-                            }
-                            else if (SB_1.roomID != SB_2.roomID)
+                            if (SB_1.roomID != SB_2.roomID && isOverlap(SB_1, SB_2))
                             {
                                 //same class, different places ->Simultaneous
                                 Constraint c = new Constraint(Constraint.Type.Simultaneous, sb, null, Constraint.Severity.Error, 90);
-                                c.Comment = $"מחזור זה משובץ בשני מקומות בו זמנית\n{SB_1.ToText()} & {SB_2.ToText()}";
+                                c.Comment = $"מחזור זה משובץ בשני מקומות בו זמנית - {SB_1.ToText()} & {SB_2.ToText()}";
                                 constraints.Add(c);
-
+                                return false;
                             }
-
 
                         }
                     }
                 }
             }
+
+            return true;
 
         }
 
@@ -180,7 +185,7 @@ namespace Final_Project
         private static void checkHafifa()
         {
 
-            List<ScheduleBlock> blocksInRoom = ScheduleBlock.getListbyRoom(sb.room.Id, sb.semester.Id,sb.DayOfWeek);
+            List<ScheduleBlock> blocksInRoom = ScheduleBlock.getListbyRoom(sb.room.Id, sb.semester.Id, sb.DayOfWeek);
 
             //iterate all blocks in room and find 
             foreach (ScheduleBlock currBlock in blocksInRoom)
@@ -190,7 +195,7 @@ namespace Final_Project
                 if (isOverlap(currBlock, sb))
                 {
                     Constraint c = new Constraint(Constraint.Type.Overlap, sb, null, Constraint.Severity.Error, 90);
-                    c.Comment = $"בחדר זה יש חפיפה בין הקצאות\n{currBlock.ToText()} & {sb.ToText()}";
+                    c.Comment = $"בחדר זה יש חפיפה בין הקצאות - {currBlock.ToText()} & {sb.ToText()}";
                     constraints.Add(c);
 
                 }
@@ -208,7 +213,7 @@ namespace Final_Project
                     {
                         // ====> Spacing
                         Constraint c = new Constraint(Constraint.Type.Spacing, sb, null, Constraint.Severity.Warning, 30);
-                        c.Comment = $"מרווח הזמן בין מחזורים קטן מ-15 דקות\n{currBlock.ToText()} & {sb.ToText()}";
+                        c.Comment = $"מרווח הזמן בין מחזורים קטן מ-15 דקות  -  {currBlock.ToText()} & {sb.ToText()}";
                         constraints.Add(c);
                     }
                 }
@@ -237,7 +242,7 @@ namespace Final_Project
             {
                 //Constraint c = new Constraint("Almost Full Capacity", sb, f, Constraint.Severity.Warning, penalty * 100);
                 Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.Warning, penalty * 100);
-                c.Comment = $"חדר כמעט מלא - {penalty*100}%";
+                c.Comment = $"חדר כמעט מלא - {penalty * 100}%";
                 constraints.Add(c);
             }
             else if (penalty < 0.40)
@@ -258,7 +263,9 @@ namespace Final_Project
 
         private static void checkMovement()
         {
-            foreach (ScheduleBlock mSB in blocksOfMahzor)
+            List<ScheduleBlock> blocksOfMahzor_int = blocksOfMahzor;
+            blocksOfMahzor_int.Remove(sb);
+            foreach (ScheduleBlock mSB in blocksOfMahzor_int)
             {
 
 
