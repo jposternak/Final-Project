@@ -242,8 +242,8 @@ namespace Final_Project
             else if (penalty > 0.80)
             {
                 //Constraint c = new Constraint("Almost Full Capacity", sb, f, Constraint.Severity.Warning, penalty * 100);
-                Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.Warning, penalty * 100);
-                c.Comment = $"חדר כמעט מלא - {penalty * 100}%";
+                Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.Warning, 100 - (penalty * 100.0));
+                c.Comment = $"חדר כמעט מלא - {100 - penalty * 100}%";
                 constraints.Add(c);
             }
             else if (penalty < 0.40)
@@ -256,7 +256,7 @@ namespace Final_Project
             else
             {
                 //Constraint c = new Constraint("Good", sb, f, Constraint.Severity.OK, 100 - penalty * 100);
-                Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.OK, 100 - penalty * 100);
+                Constraint c = new Constraint(Constraint.Type.Capacity, sb, f, Constraint.Severity.OK, 100 - (penalty * 100.0));
                 c.Comment = $"ניצול מיטבי - {100 - penalty * 100}%";
                 constraints.Add(c);
             }
