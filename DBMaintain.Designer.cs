@@ -233,6 +233,9 @@
             this.CampusPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridBuilding = new System.Windows.Forms.DataGridView();
+            this.buildingIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildingNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campusIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridCampus = new System.Windows.Forms.DataGridView();
             this.campusIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.campusNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -245,9 +248,6 @@
             this.dCFeaturesTableAdapter = new Final_Project.grilDataViewsSetTableAdapters.DCFeaturesTableAdapter();
             this.DCFSource = new System.Windows.Forms.BindingSource(this.components);
             this.degreeClassFeaturesTableAdapter = new Final_Project.grilDataSetTableAdapters.DegreeClassFeaturesTableAdapter();
-            this.buildingIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buildingNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campusIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             degreeClassIDLabel = new System.Windows.Forms.Label();
             degreeClassNameLabel = new System.Windows.Forms.Label();
             degreeIDLabel = new System.Windows.Forms.Label();
@@ -341,17 +341,18 @@
             // 
             numberOfStudentsLabel.AutoSize = true;
             numberOfStudentsLabel.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            numberOfStudentsLabel.Location = new System.Drawing.Point(249, 126);
+            numberOfStudentsLabel.Location = new System.Drawing.Point(249, 336);
             numberOfStudentsLabel.Name = "numberOfStudentsLabel";
             numberOfStudentsLabel.Size = new System.Drawing.Size(144, 25);
             numberOfStudentsLabel.TabIndex = 6;
             numberOfStudentsLabel.Text = "מספר סטודנטים";
+            numberOfStudentsLabel.Visible = false;
             // 
             // startingSemesterLabel
             // 
             startingSemesterLabel.AutoSize = true;
             startingSemesterLabel.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            startingSemesterLabel.Location = new System.Drawing.Point(255, 168);
+            startingSemesterLabel.Location = new System.Drawing.Point(255, 126);
             startingSemesterLabel.Name = "startingSemesterLabel";
             startingSemesterLabel.Size = new System.Drawing.Size(138, 25);
             startingSemesterLabel.TabIndex = 8;
@@ -381,7 +382,7 @@
             // 
             weeklyHoursLabel.AutoSize = true;
             weeklyHoursLabel.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            weeklyHoursLabel.Location = new System.Drawing.Point(267, 294);
+            weeklyHoursLabel.Location = new System.Drawing.Point(267, 168);
             weeklyHoursLabel.Name = "weeklyHoursLabel";
             weeklyHoursLabel.Size = new System.Drawing.Size(126, 25);
             weeklyHoursLabel.TabIndex = 14;
@@ -391,7 +392,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label19.Location = new System.Drawing.Point(332, 336);
+            label19.Location = new System.Drawing.Point(332, 294);
             label19.Name = "label19";
             label19.Size = new System.Drawing.Size(61, 25);
             label19.TabIndex = 14;
@@ -556,22 +557,22 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.76289F));
             this.tableLayoutPanel1.Controls.Add(degreeClassIDLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.classMegamaCB, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.numberOfStudentsNumericUpDown, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.degreeClassIDTextBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(degreeClassNameLabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.degreeClassNameTextBox, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.weeklyHoursNumericUpDown, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(weeklyHoursLabel, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(numberOfStudentsLabel, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.summerCheckBox, 1, 6);
             this.tableLayoutPanel1.Controls.Add(summerLabel, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.durationNumericUpDown, 1, 5);
             this.tableLayoutPanel1.Controls.Add(durationLabel, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.startingSemesterComboBox, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(startingSemesterLabel, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.numberOfStudentsNumericUpDown, 1, 3);
             this.tableLayoutPanel1.Controls.Add(degreeIDLabel, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(numberOfStudentsLabel, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(label19, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.isActive, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(startingSemesterLabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.startingSemesterComboBox, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(weeklyHoursLabel, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.weeklyHoursNumericUpDown, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(label19, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.isActive, 1, 7);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 43);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -630,7 +631,7 @@
             // 
             this.weeklyHoursNumericUpDown.Enabled = false;
             this.weeklyHoursNumericUpDown.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weeklyHoursNumericUpDown.Location = new System.Drawing.Point(3, 296);
+            this.weeklyHoursNumericUpDown.Location = new System.Drawing.Point(3, 170);
             this.weeklyHoursNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.weeklyHoursNumericUpDown.Name = "weeklyHoursNumericUpDown";
             this.weeklyHoursNumericUpDown.Size = new System.Drawing.Size(227, 31);
@@ -665,7 +666,7 @@
             this.startingSemesterComboBox.Enabled = false;
             this.startingSemesterComboBox.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startingSemesterComboBox.FormattingEnabled = true;
-            this.startingSemesterComboBox.Location = new System.Drawing.Point(3, 170);
+            this.startingSemesterComboBox.Location = new System.Drawing.Point(3, 128);
             this.startingSemesterComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startingSemesterComboBox.Name = "startingSemesterComboBox";
             this.startingSemesterComboBox.Size = new System.Drawing.Size(227, 33);
@@ -675,16 +676,17 @@
             // 
             this.numberOfStudentsNumericUpDown.Enabled = false;
             this.numberOfStudentsNumericUpDown.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberOfStudentsNumericUpDown.Location = new System.Drawing.Point(3, 128);
+            this.numberOfStudentsNumericUpDown.Location = new System.Drawing.Point(3, 338);
             this.numberOfStudentsNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numberOfStudentsNumericUpDown.Name = "numberOfStudentsNumericUpDown";
             this.numberOfStudentsNumericUpDown.Size = new System.Drawing.Size(227, 31);
             this.numberOfStudentsNumericUpDown.TabIndex = 7;
+            this.numberOfStudentsNumericUpDown.Visible = false;
             // 
             // isActive
             // 
             this.isActive.Enabled = false;
-            this.isActive.Location = new System.Drawing.Point(114, 338);
+            this.isActive.Location = new System.Drawing.Point(114, 296);
             this.isActive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.isActive.Name = "isActive";
             this.isActive.Size = new System.Drawing.Size(116, 25);
@@ -2501,6 +2503,33 @@
             this.dataGridBuilding.Size = new System.Drawing.Size(876, 265);
             this.dataGridBuilding.TabIndex = 1;
             // 
+            // buildingIDDataGridViewTextBoxColumn
+            // 
+            this.buildingIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.buildingIDDataGridViewTextBoxColumn.DataPropertyName = "BuildingID";
+            this.buildingIDDataGridViewTextBoxColumn.HeaderText = "מזהה בניין";
+            this.buildingIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.buildingIDDataGridViewTextBoxColumn.Name = "buildingIDDataGridViewTextBoxColumn";
+            this.buildingIDDataGridViewTextBoxColumn.Width = 117;
+            // 
+            // buildingNameDataGridViewTextBoxColumn
+            // 
+            this.buildingNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.buildingNameDataGridViewTextBoxColumn.DataPropertyName = "BuildingName";
+            this.buildingNameDataGridViewTextBoxColumn.HeaderText = "שם בניין";
+            this.buildingNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.buildingNameDataGridViewTextBoxColumn.Name = "buildingNameDataGridViewTextBoxColumn";
+            // 
+            // campusIDDataGridViewTextBoxColumn1
+            // 
+            this.campusIDDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.campusIDDataGridViewTextBoxColumn1.DataPropertyName = "CampusID";
+            this.campusIDDataGridViewTextBoxColumn1.HeaderText = "מזהה קמפוס";
+            this.campusIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.campusIDDataGridViewTextBoxColumn1.Name = "campusIDDataGridViewTextBoxColumn1";
+            this.campusIDDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.campusIDDataGridViewTextBoxColumn1.Width = 137;
+            // 
             // dataGridCampus
             // 
             this.dataGridCampus.AllowUserToAddRows = false;
@@ -2636,33 +2665,6 @@
             // degreeClassFeaturesTableAdapter
             // 
             this.degreeClassFeaturesTableAdapter.ClearBeforeFill = true;
-            // 
-            // buildingIDDataGridViewTextBoxColumn
-            // 
-            this.buildingIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.buildingIDDataGridViewTextBoxColumn.DataPropertyName = "BuildingID";
-            this.buildingIDDataGridViewTextBoxColumn.HeaderText = "מזהה בניין";
-            this.buildingIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.buildingIDDataGridViewTextBoxColumn.Name = "buildingIDDataGridViewTextBoxColumn";
-            this.buildingIDDataGridViewTextBoxColumn.Width = 127;
-            // 
-            // buildingNameDataGridViewTextBoxColumn
-            // 
-            this.buildingNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.buildingNameDataGridViewTextBoxColumn.DataPropertyName = "BuildingName";
-            this.buildingNameDataGridViewTextBoxColumn.HeaderText = "שם בניין";
-            this.buildingNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.buildingNameDataGridViewTextBoxColumn.Name = "buildingNameDataGridViewTextBoxColumn";
-            // 
-            // campusIDDataGridViewTextBoxColumn1
-            // 
-            this.campusIDDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.campusIDDataGridViewTextBoxColumn1.DataPropertyName = "CampusID";
-            this.campusIDDataGridViewTextBoxColumn1.HeaderText = "מזהה קמפוס";
-            this.campusIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.campusIDDataGridViewTextBoxColumn1.Name = "campusIDDataGridViewTextBoxColumn1";
-            this.campusIDDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.campusIDDataGridViewTextBoxColumn1.Width = 149;
             // 
             // DBMaintain
             // 
