@@ -229,13 +229,12 @@ namespace Final_Project
 
             var r = luz.HitTest(e.X, e.Y);
 
-            if (r.Series.Name != draftName)
+            if (r.Series != null && r.Series.Name != draftName)
             {
 
                 if (r.ChartElementType == ChartElementType.DataPointLabel)
                 {
                     DataPoint p = (DataPoint)r.Object;
-
 
                     int idx = r.PointIndex;
                     ScheduleBlock sb = dataPoints[idx];
